@@ -6,6 +6,7 @@ providing alternative models to try when a primary model fails.
 """
 
 from llm_fallbacks.core import (
+    calculate_cost_per_token,
     get_audio_input_models,
     get_audio_output_models,
     get_audio_speech_models,
@@ -31,6 +32,7 @@ from llm_fallbacks.filter_litellm import filter_models
 
 __version__ = "0.1.0"
 __all__ = [
+    "calculate_cost_per_token",
     "filter_models",
     "get_audio_input_models",
     "get_audio_output_models",

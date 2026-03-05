@@ -1,7 +1,7 @@
 # LLM Fallbacks
 
-[![PyPI version](https://badge.fury.io/py/llm-fallbacks.svg)](https://badge.fury.io/py/llm-fallbacks)
-[![Python Versions](https://img.shields.io/pypi/pyversions/llm-fallbacks.svg)](https://pypi.org/project/llm-fallbacks/)
+[![Python Package](https://github.com/bolabaden/llm_fallbacks/actions/workflows/python-package.yml/badge.svg)](https://github.com/bolabaden/llm_fallbacks/actions/workflows/python-package.yml)
+[![Daily Config Update](https://github.com/bolabaden/llm_fallbacks/actions/workflows/daily-config-update.yml/badge.svg)](https://github.com/bolabaden/llm_fallbacks/actions/workflows/daily-config-update.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A Python library for managing fallbacks for LLM API calls using the [LiteLLM](https://github.com/BerriAI/litellm) library.
@@ -12,6 +12,8 @@ A Python library for managing fallbacks for LLM API calls using the [LiteLLM](ht
 - 📊 **Model Filtering**: Filter models based on various criteria like cost, context length, and capabilities
 - 💰 **Cost Optimization**: Sort models by cost to optimize your API usage
 - 🧠 **Model Discovery**: Discover available models and their capabilities
+- 🏆 **Quality Scoring**: Transparent heuristic scoring of free models based on capabilities
+- 📦 **Machine-Consumable Artifacts**: Daily-updated JSON/text lists of free models, ready for downstream use
 - 🛠️ **GUI Tool**: Includes a GUI tool for exploring and filtering available models
 
 ## Installation
@@ -42,12 +44,96 @@ fallbacks = get_fallback_list("chat")
 print(f"Recommended fallback order: {fallbacks}")
 ```
 
+## Automated Model Lists
+
+The `configs/` directory contains machine-consumable model lists that are **automatically updated daily** at midnight UTC via GitHub Actions.
+
+### Available Artifacts
+
+| File | Description |
+|------|-------------|
+| [`free_models.json`](configs/free_models.json) | Rich array of free models sorted by quality score, with capabilities and metadata |
+| [`free_models_ids.txt`](configs/free_models_ids.txt) | Plain text list of free model IDs, one per line (same order as JSON) |
+| [`all_models.json`](configs/all_models.json) | Full model-id → spec map for all known models |
+| [`custom_providers.json`](configs/custom_providers.json) | Serialised custom provider configurations |
+| [`litellm_config.yaml`](configs/litellm_config.yaml) | LiteLLM proxy config with all models |
+| [`litellm_config_free.yaml`](configs/litellm_config_free.yaml) | LiteLLM proxy config with free models only |
+
+### Stable Raw URLs
+
+Downstream projects can fetch the latest lists directly:
+
+```
+https://raw.githubusercontent.com/bolabaden/llm_fallbacks/main/configs/free_models.json
+https://raw.githubusercontent.com/bolabaden/llm_fallbacks/main/configs/free_models_ids.txt
+```
+
+### Consumer Examples
+
+**Python:**
+```python
+import json
+import urllib.request
+
+url = "https://raw.githubusercontent.com/bolabaden/llm_fallbacks/main/configs/free_models.json"
+with urllib.request.urlopen(url) as resp:
+    free_models = json.loads(resp.read())
+
+# Get top 5 free models by quality
+for model in free_models[:5]:
+    print(f"{model['id']:50s}  quality={model['quality_score']:.1f}  mode={model['mode']}")
+```
+
+**curl:**
+```bash
+# Get just the model IDs
+curl -s https://raw.githubusercontent.com/bolabaden/llm_fallbacks/main/configs/free_models_ids.txt
+
+# Get full JSON
+curl -s https://raw.githubusercontent.com/bolabaden/llm_fallbacks/main/configs/free_models.json | python3 -m json.tool | head -30
+```
+
+### Quality Scoring
+
+Each free model in `free_models.json` includes a `quality_score` (0–100) computed from a transparent, deterministic heuristic (`heuristic_v1`):
+
+| Factor | Max Points | Description |
+|--------|-----------|-------------|
+| Context window | 30 | Log-scaled: 4K→0, 8K→5, 32K→15, 128K→25, 1M→30 |
+| Max output tokens | 10 | Log-scaled bonus for large output windows |
+| Function calling | 10 | Supports function/tool calling |
+| Vision | 8 | Supports image input |
+| Response schema | 7 | Supports structured output schemas |
+| Tool choice | 5 | Supports tool choice parameter |
+| System messages | 5 | Supports system message role |
+| Parallel function calling | 5 | Supports parallel tool calls |
+| Prompt caching | 3 | Supports prompt caching |
+| Audio input | 3 | Supports audio input |
+| Audio output | 3 | Supports audio output |
+| PDF input | 3 | Supports PDF document input |
+| Assistant prefill | 3 | Supports assistant message prefill |
+
+The raw sum is normalised to 0–100. The score is a **capability heuristic**, not a benchmark — it reflects what the model _can do_, not how well it does it.
+
+### OpenRouter Enrichment
+
+When the `OPENROUTER_API_KEY` repository secret is set, the daily workflow enriches the model list with additional models discovered via the OpenRouter `/models` API. This is optional — the generator works without it, using only LiteLLM's public model database.
+
+## Generating Configs Locally
+
+```bash
+# Generate all artifacts into configs/
+python -m llm_fallbacks.generate_configs --output-dir configs
+
+# With OpenRouter enrichment
+OPENROUTER_API_KEY=your-key python -m llm_fallbacks.generate_configs --output-dir configs
+```
+
 ## GUI Tool
 
 LLM Fallbacks includes a GUI tool for exploring and filtering available models:
 
 ```bash
-# Run the GUI tool
 python -m llm_fallbacks
 ```
 
@@ -73,6 +159,7 @@ python -m llm_fallbacks
 - `get_models()`: Get all available models
 - `get_fallback_list(model_type)`: Get a fallback list for a specific model type
 - `filter_models(model_type, **kwargs)`: Filter models based on various criteria
+- `calculate_cost_per_token(model_spec)`: Calculate the approximate cost per token for a model
 
 ### Filtering Models
 
