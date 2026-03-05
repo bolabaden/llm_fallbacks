@@ -6,7 +6,7 @@
 `llm-fallbacks` is a Python library for managing LLM API fallbacks on top of LiteLLM. It is a pure Python package (no web services, no Docker, no databases). Source lives in `src/llm_fallbacks/`, tests in `tests/`.
 
 ### Environment variable requirement
-The library's `config.py` module initializes an OpenRouter `CustomProviderConfig` with `api_key_required=True` at **import time**. You must set `OPENROUTER_API_KEY` (any non-empty value works for local dev/testing) before importing `llm_fallbacks` or running tests. Example:
+The OpenRouter provider is configured with `api_key_required=False`, so the library can be imported **without** setting `OPENROUTER_API_KEY`. However, when the key is set (even to a dummy value), OpenRouter model enrichment is attempted at import time. For tests, always set it so coverage includes the OpenRouter code paths:
 
 ```
 OPENROUTER_API_KEY=dummy pytest tests/
