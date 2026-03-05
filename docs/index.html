@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free LLM Chat — llm-fallbacks</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d1117;--surface:#161b22;--surface2:#21262d;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--accent:#58a6ff;--accent2:#1f6feb;--user-bg:#1f6feb22;--ai-bg:#161b22;--danger:#f85149;--success:#3fb950;--radius:12px}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+a{color:var(--accent)}
+
+/* Layout */
+.app{display:flex;flex-direction:column;height:100vh;max-width:900px;margin:0 auto}
+header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-shrink:0}
+header h1{font-size:16px;font-weight:600;white-space:nowrap}
+header .badge{font-size:11px;background:var(--accent2);color:#fff;padding:2px 8px;border-radius:10px}
+
+/* Settings bar */
+.settings{padding:10px 16px;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px;align-items:center;flex-shrink:0;background:var(--surface)}
+.settings label{font-size:12px;color:var(--text2);display:flex;flex-direction:column;gap:3px;flex:1;min-width:160px}
+.settings select,.settings input{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:13px;outline:none}
+.settings select:focus,.settings input:focus{border-color:var(--accent)}
+.settings input[type="password"]{font-family:monospace}
+.settings .status{font-size:11px;padding:4px 8px;border-radius:6px;align-self:flex-end;white-space:nowrap}
+.status.ok{background:var(--success);color:#000}
+.status.warn{background:#d2992244;color:#d29922}
+.status.err{background:#f8514922;color:var(--danger)}
+
+/* Chat area */
+.chat{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:85%;padding:10px 14px;border-radius:var(--radius);line-height:1.55;font-size:14px;word-wrap:break-word;white-space:pre-wrap}
+.msg.user{align-self:flex-end;background:var(--accent2);color:#fff;border-bottom-right-radius:4px}
+.msg.assistant{align-self:flex-start;background:var(--surface);border:1px solid var(--border);border-bottom-left-radius:4px}
+.msg.system{align-self:center;background:var(--surface2);color:var(--text2);font-size:12px;border-radius:8px;max-width:95%}
+.msg.error{align-self:center;background:#f8514922;border:1px solid var(--danger);color:var(--danger);font-size:13px;max-width:95%}
+.msg code{background:var(--surface2);padding:1px 5px;border-radius:4px;font-size:13px}
+.msg pre{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px;overflow-x:auto;margin:8px 0}
+.msg pre code{background:none;padding:0}
+.typing{display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:.2}50%{opacity:1}}
+
+/* Input area */
+.input-area{padding:12px 16px;border-top:1px solid var(--border);background:var(--surface);flex-shrink:0;display:flex;gap:8px}
+.input-area textarea{flex:1;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:var(--radius);padding:10px 14px;font-size:14px;font-family:inherit;resize:none;outline:none;min-height:44px;max-height:200px;line-height:1.4}
+.input-area textarea:focus{border-color:var(--accent)}
+.input-area button{background:var(--accent2);color:#fff;border:none;border-radius:var(--radius);padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .15s}
+.input-area button:hover{background:var(--accent)}
+.input-area button:disabled{opacity:.4;cursor:not-allowed}
+.input-area button.stop{background:var(--danger)}
+
+/* Footer */
+footer{padding:8px 16px;text-align:center;font-size:11px;color:var(--text2);border-top:1px solid var(--border);flex-shrink:0}
+
+/* Empty state */
+.empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text2);gap:8px;padding:40px}
+.empty h2{font-size:20px;color:var(--text)}
+.empty p{font-size:14px;max-width:400px;text-align:center;line-height:1.5}
+
+/* Responsive */
+@media(max-width:600px){
+  .settings{flex-direction:column}
+  .settings label{min-width:100%}
+  .msg{max-width:95%}
+  header h1{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>&#x1F916; Free LLM Chat</h1>
+    <span class="badge">llm-fallbacks</span>
+    <span id="modelCount" style="font-size:11px;color:var(--text2);margin-left:auto"></span>
+  </header>
+
+  <div class="settings">
+    <label>
+      Provider
+      <select id="providerSelect"></select>
+    </label>
+    <label>
+      Model
+      <select id="modelSelect"><option>Loading models...</option></select>
+    </label>
+    <label>
+      API Key
+      <input type="password" id="apiKey" placeholder="Enter your API key...">
+    </label>
+    <span id="statusBadge" class="status warn">No key</span>
+  </div>
+
+  <div class="chat" id="chat">
+    <div class="empty" id="emptyState">
+      <h2>Chat with Free LLMs</h2>
+      <p>Select a provider, choose a model, enter your API key, and start chatting. Your key stays in your browser and is sent directly to the provider.</p>
+      <p style="font-size:12px">Models loaded from <a href="https://github.com/bolabaden/llm_fallbacks" target="_blank">bolabaden/llm-fallbacks</a></p>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <textarea id="userInput" placeholder="Type a message... (Shift+Enter for newline)" rows="1"></textarea>
+    <button id="sendBtn" onclick="handleSend()">Send</button>
+  </div>
+
+  <footer>
+    Keys never leave your browser &bull; Requests go directly to the provider API &bull;
+    <a href="https://github.com/bolabaden/llm_fallbacks" target="_blank">Source</a>
+  </footer>
+</div>
+
+<script>
+// ── Provider base URLs ──────────────────────────────────────────────
+const PROVIDER_URLS = {
+  "openrouter":     "https://openrouter.ai/api/v1",
+  "groq":           "https://api.groq.com/openai/v1",
+  "cerebras":       "https://api.cerebras.ai/v1",
+  "gemini":         "https://generativelanguage.googleapis.com/v1beta/openai",
+  "google_ai_studio":"https://generativelanguage.googleapis.com/v1beta/openai",
+  "mistral":        "https://api.mistral.ai/v1",
+  "codestral":      "https://codestral.mistral.ai/v1",
+  "deepseek":       "https://api.deepseek.com/v1",
+  "together_ai":    "https://api.together.xyz/v1",
+  "fireworks_ai":   "https://api.fireworks.ai/inference/v1",
+  "sambanova":      "https://api.sambanova.ai/v1",
+  "nvidia_nim":     "https://integrate.api.nvidia.com/v1",
+  "cohere":         "https://api.cohere.com/v2",
+  "github_models":  "https://models.inference.ai.azure.com",
+  "huggingface":    "https://router.huggingface.co/v1",
+  "novita":         "https://api.novita.ai/v3/openai",
+  "hyperbolic":     "https://api.hyperbolic.xyz/v1",
+  "nebius":         "https://api.studio.nebius.ai/v1",
+  "chutes":         "https://api.chutes.ai/v1",
+  "glhf":           "https://glhf.chat/api/openai/v1",
+  "featherless":    "https://api.featherless.ai/v1",
+  "completions_me": "https://api.completions.me/v1",
+  // Fallbacks for litellm provider names
+  "vertex_ai":      "https://us-central1-aiplatform.googleapis.com/v1",
+  "openai":         "https://api.openai.com/v1",
+  "anthropic":      "https://api.anthropic.com/v1",
+};
+
+// ── State ───────────────────────────────────────────────────────────
+let allModels = [];
+let chatHistory = [];  // {role, content}
+let abortController = null;
+let streaming = false;
+
+const $ = id => document.getElementById(id);
+const providerSelect = $("providerSelect");
+const modelSelect = $("modelSelect");
+const apiKeyInput = $("apiKey");
+const chatEl = $("chat");
+const userInput = $("userInput");
+const sendBtn = $("sendBtn");
+const statusBadge = $("statusBadge");
+
+// ── Load models ─────────────────────────────────────────────────────
+const MODELS_URL = "https://raw.githubusercontent.com/bolabaden/llm_fallbacks/main/configs/free_models.json";
+// Fallback: try relative path (for local dev / GitHub Pages with configs copied)
+const MODELS_FALLBACK = "../configs/free_models.json";
+
+async function loadModels() {
+  let data;
+  try {
+    const resp = await fetch(MODELS_URL);
+    if (!resp.ok) throw new Error(resp.status);
+    data = await resp.json();
+  } catch {
+    try {
+      const resp2 = await fetch(MODELS_FALLBACK);
+      if (!resp2.ok) throw new Error(resp2.status);
+      data = await resp2.json();
+    } catch {
+      addSystemMsg("Failed to load model list. Check your connection.");
+      return;
+    }
+  }
+
+  // Filter to chat models only
+  allModels = data.filter(m => m.mode === "chat");
+  $("modelCount").textContent = allModels.length + " free chat models";
+
+  // Build provider list
+  const providers = [...new Set(allModels.map(m => m.provider))].sort();
+  providerSelect.innerHTML = '<option value="">All providers</option>' +
+    providers.map(p => `<option value="${p}">${p}</option>`).join("");
+
+  populateModels();
+}
+
+function populateModels() {
+  const prov = providerSelect.value;
+  const filtered = prov ? allModels.filter(m => m.provider === prov) : allModels;
+  // Group by provider
+  const groups = {};
+  for (const m of filtered) {
+    (groups[m.provider] = groups[m.provider] || []).push(m);
+  }
+  let html = "";
+  for (const [provider, models] of Object.entries(groups).sort((a,b) => a[0].localeCompare(b[0]))) {
+    html += `<optgroup label="${provider}">`;
+    for (const m of models) {
+      const label = m.id + (m.quality_score > 0 ? ` (q:${m.quality_score})` : "");
+      html += `<option value="${m.id}" data-provider="${m.provider}">${label}</option>`;
+    }
+    html += "</optgroup>";
+  }
+  modelSelect.innerHTML = html;
+}
+
+providerSelect.addEventListener("change", populateModels);
+
+// ── API key persistence ─────────────────────────────────────────────
+function getStorageKey() {
+  const opt = modelSelect.selectedOptions[0];
+  return opt ? "apikey_" + opt.dataset.provider : null;
+}
+
+function loadApiKey() {
+  const k = getStorageKey();
+  if (k) {
+    const saved = localStorage.getItem(k) || "";
+    apiKeyInput.value = saved;
+    updateStatus();
+  }
+}
+
+function saveApiKey() {
+  const k = getStorageKey();
+  if (k && apiKeyInput.value.trim()) {
+    localStorage.setItem(k, apiKeyInput.value.trim());
+  }
+  updateStatus();
+}
+
+function updateStatus() {
+  if (apiKeyInput.value.trim()) {
+    statusBadge.textContent = "Key set";
+    statusBadge.className = "status ok";
+  } else {
+    statusBadge.textContent = "No key";
+    statusBadge.className = "status warn";
+  }
+}
+
+modelSelect.addEventListener("change", loadApiKey);
+apiKeyInput.addEventListener("input", saveApiKey);
+
+// ── Chat logic ──────────────────────────────────────────────────────
+function addMsg(role, content) {
+  $("emptyState")?.remove();
+  const div = document.createElement("div");
+  div.className = "msg " + role;
+  div.textContent = content;
+  chatEl.appendChild(div);
+  chatEl.scrollTop = chatEl.scrollHeight;
+  return div;
+}
+
+function addSystemMsg(text) { addMsg("system", text); }
+
+function getBaseUrl() {
+  const opt = modelSelect.selectedOptions[0];
+  if (!opt) return null;
+  const provider = opt.dataset.provider;
+  return PROVIDER_URLS[provider] || null;
+}
+
+async function handleSend() {
+  if (streaming) {
+    // Stop
+    if (abortController) abortController.abort();
+    streaming = false;
+    sendBtn.textContent = "Send";
+    sendBtn.classList.remove("stop");
+    return;
+  }
+
+  const text = userInput.value.trim();
+  if (!text) return;
+
+  const apiKey = apiKeyInput.value.trim();
+  if (!apiKey) {
+    addMsg("error", "Please enter an API key for the selected provider.");
+    return;
+  }
+
+  const baseUrl = getBaseUrl();
+  if (!baseUrl) {
+    addMsg("error", "Unknown provider. Cannot determine API URL.");
+    return;
+  }
+
+  const modelId = modelSelect.value;
+  if (!modelId) {
+    addMsg("error", "Please select a model.");
+    return;
+  }
+
+  // Add user message
+  userInput.value = "";
+  autoResize();
+  chatHistory.push({ role: "user", content: text });
+  addMsg("user", text);
+
+  // Create assistant placeholder
+  const aiDiv = addMsg("assistant", "");
+  const typingSpan = document.createElement("span");
+  typingSpan.className = "typing";
+  aiDiv.appendChild(typingSpan);
+
+  // Setup streaming
+  streaming = true;
+  sendBtn.textContent = "Stop";
+  sendBtn.classList.add("stop");
+  abortController = new AbortController();
+
+  let fullResponse = "";
+
+  try {
+    const url = baseUrl + "/chat/completions";
+    const body = {
+      model: modelId,
+      messages: chatHistory,
+      stream: true,
+    };
+
+    const resp = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + apiKey,
+      },
+      body: JSON.stringify(body),
+      signal: abortController.signal,
+    });
+
+    if (!resp.ok) {
+      const errText = await resp.text().catch(() => resp.statusText);
+      throw new Error(`HTTP ${resp.status}: ${errText}`);
+    }
+
+    const reader = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+
+    typingSpan.remove();
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop() || "";
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || !trimmed.startsWith("data:")) continue;
+        const data = trimmed.slice(5).trim();
+        if (data === "[DONE]") continue;
+
+        try {
+          const json = JSON.parse(data);
+          const delta = json.choices?.[0]?.delta?.content;
+          if (delta) {
+            fullResponse += delta;
+            aiDiv.textContent = fullResponse;
+            chatEl.scrollTop = chatEl.scrollHeight;
+          }
+        } catch { /* skip malformed chunks */ }
+      }
+    }
+
+    if (!fullResponse) {
+      // Maybe non-streaming response was returned
+      try {
+        const json = JSON.parse(buffer || aiDiv.textContent);
+        if (json.choices?.[0]?.message?.content) {
+          fullResponse = json.choices[0].message.content;
+          aiDiv.textContent = fullResponse;
+        }
+      } catch { /* ignore */ }
+    }
+
+    if (fullResponse) {
+      chatHistory.push({ role: "assistant", content: fullResponse });
+    } else {
+      aiDiv.textContent = "(Empty response)";
+      aiDiv.style.color = "var(--text2)";
+    }
+
+  } catch (err) {
+    typingSpan.remove();
+    if (err.name === "AbortError") {
+      aiDiv.textContent = fullResponse || "(Stopped)";
+      if (fullResponse) chatHistory.push({ role: "assistant", content: fullResponse });
+    } else {
+      aiDiv.className = "msg error";
+      aiDiv.textContent = "Error: " + err.message;
+    }
+  } finally {
+    streaming = false;
+    abortController = null;
+    sendBtn.textContent = "Send";
+    sendBtn.classList.remove("stop");
+  }
+}
+
+// ── Textarea auto-resize + Enter to send ────────────────────────────
+function autoResize() {
+  userInput.style.height = "auto";
+  userInput.style.height = Math.min(userInput.scrollHeight, 200) + "px";
+}
+
+userInput.addEventListener("input", autoResize);
+userInput.addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    handleSend();
+  }
+});
+
+// ── Init ────────────────────────────────────────────────────────────
+loadModels().then(() => loadApiKey());
+</script>
+</body>
+</html>
