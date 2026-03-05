@@ -18,11 +18,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description: str = f.read()
 
 # Define requirements
-requirements: list[str] = [
-    "litellm>=1.0.0",
-    "numpy>=1.20.0",
-    "pandas>=1.3.0",
-]
+requirements: list[str] = ["litellm>=1.0.0", "numpy>=1.20.0", "pandas>=1.3.0"]
 
 setup(
     name="llm_fallbacks",
@@ -48,10 +44,6 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
     ],
-    entry_points={
-        "console_scripts": [
-            "llm-fallbacks=llm_fallbacks.__main__:main",
-        ],
-    },
+    entry_points={"console_scripts": ["llm-fallbacks=llm_fallbacks.__main__:main"]},
     keywords="llm, ai, fallbacks, litellm",
 )

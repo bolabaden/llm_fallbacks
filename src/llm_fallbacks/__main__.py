@@ -9,7 +9,6 @@ import pandas as pd
 
 from llm_fallbacks.core import get_litellm_model_specs
 
-
 if TYPE_CHECKING:
     from typing_extensions import Literal  # pyright: ignore[reportMissingModuleSource]
 
@@ -243,21 +242,13 @@ class ModelSpecsApp(tk.Tk):
         # Method Selection
         ttk.Label(filter_frame, text="Filter Method:").grid(row=0, column=0)
         self.method_var: tk.StringVar = tk.StringVar(value="value")
-        method_dropdown = ttk.Combobox(
-            filter_frame,
-            textvariable=self.method_var,
-            values=list(FilterMethod.__args__),
-        )
+        method_dropdown = ttk.Combobox(filter_frame, textvariable=self.method_var, values=list(FilterMethod.__args__))
         method_dropdown.grid(row=0, column=1)
 
         # Column Selection
         ttk.Label(filter_frame, text="Column:").grid(row=0, column=2)
         self.column_var: tk.StringVar = tk.StringVar()
-        column_dropdown = ttk.Combobox(
-            filter_frame,
-            textvariable=self.column_var,
-            values=list(self.df.columns),
-        )
+        column_dropdown = ttk.Combobox(filter_frame, textvariable=self.column_var, values=list(self.df.columns))
         column_dropdown.grid(row=0, column=3)
 
         # Value Input
@@ -266,10 +257,7 @@ class ModelSpecsApp(tk.Tk):
         self.value_entry.grid(row=0, column=5)
 
         # Filter Button
-        ttk.Button(filter_frame, text="Apply Filter", command=self.apply_filter).grid(
-            row=0,
-            column=6,
-        )
+        ttk.Button(filter_frame, text="Apply Filter", command=self.apply_filter).grid(row=0, column=6)
 
         # Treeview for displaying results
         self.tree: ttk.Treeview = ttk.Treeview(self, columns=list(self.df.columns), show="headings")
@@ -294,12 +282,7 @@ class ModelSpecsApp(tk.Tk):
 
             # Dynamic filtering based on method
             if method == "value":
-                filtered_data = filter_model_specs(
-                    method="value",
-                    columns=column,
-                    comparison="<=",
-                    value=float(value),
-                )
+                filtered_data = filter_model_specs(method="value", columns=column, comparison="<=", value=float(value))
             elif method == "topn":
                 filtered_data = filter_model_specs(method="topn", columns=column, n=int(value))
             elif method == "regex":
