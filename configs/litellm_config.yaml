@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-8a79cefab9b749eebd5fcf0b91bd0c77
+  master_key: sk-046f6f9057a548c6878ca094bdaf2e72
   alerting:
   - slack
   - email
@@ -594,13 +594,13 @@ model_list:
     model: openai/z-ai/glm-5
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 8.0e-07
+    input_cost_per_token: 6.0e-07
     litellm_provider: openrouter
     max_input_tokens: 202752
     max_output_tokens: 128000
     max_tokens: 128000
     mode: chat
-    output_cost_per_token: 2.56e-06
+    output_cost_per_token: 1.8999999999999998e-06
     source: https://openrouter.ai/z-ai/glm-5
     supports_function_calling: true
     supports_reasoning: true
@@ -613,8 +613,8 @@ model_list:
         deep backend reasoning, and iterative self-correction, GLM-5 moves beyond
         code generation to full-system construction and autonomous execution.
     z-ai/glm-5:
-      input_cost_per_token: 8.0e-07
-      output_cost_per_token: 2.56e-06
+      input_cost_per_token: 6.0e-07
+      output_cost_per_token: 1.8999999999999998e-06
       max_input_tokens: 202752
       metadata: *id019
       litellm_provider: openrouter
@@ -831,13 +831,13 @@ model_list:
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
     cache_read_input_token_cost: 1.0e-07
-    input_cost_per_token: 4.5e-07
+    input_cost_per_token: 4.1e-07
     litellm_provider: openrouter
     max_input_tokens: 262144
-    max_output_tokens: 65535
+    max_output_tokens: 262144
     max_tokens: 262144
     mode: chat
-    output_cost_per_token: 2.2e-06
+    output_cost_per_token: 2.06e-06
     source: https://openrouter.ai/moonshotai/kimi-k2.5
     supports_function_calling: true
     supports_tool_choice: true
@@ -850,10 +850,9 @@ model_list:
         text tokens, it delivers strong performance in general reasoning, visual coding,
         and agentic tool-calling.
     moonshotai/kimi-k2.5:
-      input_cost_per_token: 4.5e-07
-      output_cost_per_token: 2.2e-06
+      input_cost_per_token: 4.1e-07
+      output_cost_per_token: 2.06e-06
       max_input_tokens: 262144
-      max_output_tokens: 65535
       mode: chat
       supports_vision: true
       metadata: *id027

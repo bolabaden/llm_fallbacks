@@ -1,6 +1,6 @@
 """Quality scoring heuristic for LLM models.
 
-Computes a transparent capability-based quality score (0–100) from
+Computes a transparent capability-based quality score (0-100) from
 observable model spec fields.  The score is a weighted sum of feature
 flags and log-scaled capacity metrics, normalised to [0, 100].
 
@@ -40,7 +40,7 @@ _CAPABILITY_BONUSES: list[tuple[str, float]] = [
 
 
 def compute_quality_score(model_spec: dict[str, Any]) -> tuple[float, str]:
-    """Compute a quality score (0–100) from observable model capabilities.
+    """Compute a quality score (0-100) from observable model capabilities.
 
     Parameters
     ----------
@@ -72,6 +72,6 @@ def compute_quality_score(model_spec: dict[str, Any]) -> tuple[float, str]:
         if model_spec.get(key):
             raw += points
 
-    # --- Normalise to 0–100 ---
+    # --- Normalise to 0-100 ---
     score = min(100.0, raw * 100.0 / _MAX_RAW_SCORE)
     return round(score, 2), QUALITY_SOURCE

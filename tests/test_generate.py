@@ -6,7 +6,6 @@ import pytest
 
 from llm_fallbacks.generate_configs import build_free_models_list, is_local_model
 
-
 # ---------------------------------------------------------------------------
 # Fixtures
 # ---------------------------------------------------------------------------

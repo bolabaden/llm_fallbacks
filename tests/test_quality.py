@@ -87,11 +87,7 @@ class TestComputeQualityScore:
 
     def test_deterministic(self):
         """Same input should always produce the same score."""
-        spec = {
-            "max_input_tokens": 64_000,
-            "supports_vision": True,
-            "supports_function_calling": True,
-        }
+        spec = {"max_input_tokens": 64_000, "supports_vision": True, "supports_function_calling": True}
         score1, source1 = compute_quality_score(spec)
         score2, source2 = compute_quality_score(spec)
         assert score1 == score2

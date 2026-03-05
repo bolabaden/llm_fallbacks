@@ -6,12 +6,12 @@ Usage::
 
 Artifacts produced (all written to *output-dir*):
 
-* ``all_models.json``          – full model-id → spec map
-* ``free_models.json``         – rich array sorted by quality_score (desc)
-* ``free_models_ids.txt``      – one model ID per line, same order
-* ``custom_providers.json``    – serialised provider configs
-* ``litellm_config.yaml``      – LiteLLM proxy config (all models)
-* ``litellm_config_free.yaml`` – LiteLLM proxy config (free models only)
+* ``all_models.json``          - full model-id to spec map
+* ``free_models.json``         - rich array sorted by quality_score (desc)
+* ``free_models_ids.txt``      - one model ID per line, same order
+* ``custom_providers.json``    - serialised provider configs
+* ``litellm_config.yaml``      - LiteLLM proxy config (all models)
+* ``litellm_config_free.yaml`` - LiteLLM proxy config (free models only)
 """
 
 from __future__ import annotations
@@ -46,9 +46,7 @@ def is_local_model(model_id: str) -> bool:
     return any(model_id.startswith(f"{p}/") for p in LOCAL_PROVIDERS)
 
 
-def build_free_models_list(
-    free_models: list[tuple[str, dict[str, Any]]],
-) -> list[dict[str, Any]]:
+def build_free_models_list(free_models: list[tuple[str, dict[str, Any]]]) -> list[dict[str, Any]]:
     """Build the rich ``free_models.json`` payload.
 
     Parameters
@@ -190,7 +188,7 @@ def to_litellm_config_yaml(
                 or model_name.casefold().startswith("lmstudio/")
                 or "127.0.0.1" in p.base_url
                 or "localhost" in p.base_url
-                or "0.0.0.0" in p.base_url  # noqa: S104
+                or "0.0.0.0" in p.base_url
             )
             if free_only and (not is_free or is_local):
                 continue
@@ -259,7 +257,7 @@ def to_litellm_config_yaml(
                     or k.casefold().startswith("lmstudio/")
                     or "127.0.0.1" in p.base_url
                     or "localhost" in p.base_url
-                    or "0.0.0.0" in p.base_url  # noqa: S104
+                    or "0.0.0.0" in p.base_url
                 ):
                     continue
                 suitable_fallbacks.append(k_name)
@@ -308,18 +306,14 @@ def generate(output_dir: str = "configs") -> None:
     logger.info("Writing %s", free_ids_path)
     free_ids_path.write_text("\n".join(entry["id"] for entry in free_models_list) + "\n")
 
-    # 5. LiteLLM YAML configs (optional – requires pyyaml)
+    # 5. LiteLLM YAML configs (optional - requires pyyaml)
     try:
         import yaml
 
         litellm_config_free_path = out / "litellm_config_free.yaml"
         logger.info("Writing %s", litellm_config_free_path)
         litellm_config_free_path.write_text(
-            yaml.dump(
-                to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=True),
-                sort_keys=False,
-                allow_unicode=True,
-            ),
+            yaml.dump(to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=True), sort_keys=False, allow_unicode=True),
             errors="replace",
             encoding="utf-8",
         )
@@ -327,29 +321,21 @@ def generate(output_dir: str = "configs") -> None:
         litellm_config_path = out / "litellm_config.yaml"
         logger.info("Writing %s", litellm_config_path)
         litellm_config_path.write_text(
-            yaml.dump(
-                to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=False),
-                sort_keys=False,
-                allow_unicode=True,
-            ),
+            yaml.dump(to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=False), sort_keys=False, allow_unicode=True),
             errors="replace",
             encoding="utf-8",
         )
     except ImportError as e:
         logger.warning("Failed to generate YAML configs (pyyaml not installed): %s: %s", e.__class__.__name__, e)
 
-    logger.info("Done – artifacts written to %s/", out)
+    logger.info("Done - artifacts written to %s/", out)
 
 
 def main() -> None:
     """CLI entry-point for ``python -m llm_fallbacks.generate_configs``."""
-    parser = argparse.ArgumentParser(
-        description="Generate machine-consumable LLM model configuration artifacts.",
-    )
+    parser = argparse.ArgumentParser(description="Generate machine-consumable LLM model configuration artifacts.")
     parser.add_argument(
-        "--output-dir",
-        default="configs",
-        help="Directory to write generated artifacts (default: configs)",
+        "--output-dir", default="configs", help="Directory to write generated artifacts (default: configs)"
     )
     args = parser.parse_args()
 
