@@ -20,9 +20,7 @@ def _get_litellm_models() -> dict[str, Any]:
     def _local_fallback():
         import importlib.resources
 
-        with importlib.resources.open_text(
-            "litellm", "model_prices_and_context_window_backup.json"
-        ) as f:
+        with importlib.resources.open_text("litellm", "model_prices_and_context_window_backup.json") as f:
             return json.load(f)
 
     if os.getenv("LITELLM_LOCAL_MODEL_COST_MAP", False) in {True, "True"}:
@@ -44,10 +42,7 @@ if "CACHED_LITELLM_MODELS" not in globals():
     CACHED_LITELLM_MODELS: dict[str, LiteLLMBaseModelSpec] = {}
 
 
-def get_litellm_models(
-    *,
-    test_prepend_provider: bool = False,
-) -> dict[str, LiteLLMBaseModelSpec]:
+def get_litellm_models(*, test_prepend_provider: bool = False) -> dict[str, LiteLLMBaseModelSpec]:
     """Get all available LiteLLM models and their specifications.
 
     Args:
@@ -100,9 +95,7 @@ def get_litellm_models(
     return models
 
 
-def calculate_cost_per_token(
-    model_spec: LiteLLMBaseModelSpec,
-) -> float:
+def calculate_cost_per_token(model_spec: LiteLLMBaseModelSpec) -> float:
     final_cost: float = 0
     found: bool = False
     # Prioritize token-based costs first
@@ -115,16 +108,8 @@ def calculate_cost_per_token(
         ("input_dbu_cost_per_token", "output_dbu_cost_per_token", 1.0),
         ("cache_creation_input_token_cost", None, 1.0),
         ("cache_read_input_token_cost", None, 1.0),
-        (
-            "input_cost_per_character",
-            "output_cost_per_character",
-            4.0,
-        ),  # Assuming 4 chars per token
-        (
-            "input_cost_per_character_above_128k_tokens",
-            "output_cost_per_character_above_128k_tokens",
-            4.0,
-        ),
+        ("input_cost_per_character", "output_cost_per_character", 4.0),  # Assuming 4 chars per token
+        ("input_cost_per_character_above_128k_tokens", "output_cost_per_character_above_128k_tokens", 4.0),
         ("input_cost_per_second", "output_cost_per_second", 0.1),  # Assuming 10 tokens per second
         ("input_cost_per_audio_per_second", None, 0.1),
         ("input_cost_per_audio_per_second_above_128k_tokens", None, 0.1),
@@ -156,9 +141,7 @@ def calculate_cost_per_token(
     return final_cost
 
 
-def calculate_approx_max_tokens(
-    model_spec: LiteLLMBaseModelSpec,
-) -> float:
+def calculate_approx_max_tokens(model_spec: LiteLLMBaseModelSpec) -> float:
     final_total: float = 0.0
     found: bool = False
 
@@ -188,8 +171,7 @@ def calculate_approx_max_tokens(
 
 
 def sort_models_by_cost_and_limits(
-    models: dict[str, LiteLLMBaseModelSpec],
-    free_only: bool = False,
+    models: dict[str, LiteLLMBaseModelSpec], free_only: bool = False
 ) -> list[tuple[str, LiteLLMBaseModelSpec]]:
     """Sort models by cost (primary) and token limits (secondary).
 
@@ -238,9 +220,7 @@ def sort_models_by_cost_and_limits(
 
     # Sort models by cost (low to high)
     # If costs are exactly the same, sort by max tokens (high to low)
-    def _sort_key(
-        x: tuple[str, LiteLLMBaseModelSpec],
-    ) -> tuple[float, float]:
+    def _sort_key(x: tuple[str, LiteLLMBaseModelSpec]) -> tuple[float, float]:
         max_tokens = model_costs[x[0]]["approx_max_tokens"]
         sort_value = (
             _negative_one_to_inf(model_costs[x[0]]["approx_cost_per_token"]),
@@ -254,10 +234,7 @@ def sort_models_by_cost_and_limits(
     return sorted_models
 
 
-def get_litellm_model_specs(
-    *,
-    test_prepend_provider: bool = False,
-) -> dict[str, LiteLLMBaseModelSpec]:
+def get_litellm_model_specs(*, test_prepend_provider: bool = False) -> dict[str, LiteLLMBaseModelSpec]:
     """Convert LiteLLM model specifications into dataclasses and deserialize.
 
     Args:
@@ -377,9 +354,7 @@ def get_audio_transcription_models() -> dict[str, LiteLLMBaseModelSpec]:
     }
 
 
-def get_audio_speech_models(
-    cost_per_second: float | None = None,
-) -> dict[str, Any]:
+def get_audio_speech_models(cost_per_second: float | None = None) -> dict[str, Any]:
     """Get text-to-speech models, optionally filtered by cost.
 
     This function returns models that have mode set to "audio_speech"
@@ -538,9 +513,7 @@ def get_models() -> dict[str, LiteLLMBaseModelSpec]:
     return get_litellm_models()
 
 
-def get_fallback_list(
-    model_type: str,
-) -> list[str]:
+def get_fallback_list(model_type: str) -> list[str]:
     """Get the fallback list for a specific model type.
 
     Args:
@@ -573,8 +546,6 @@ def get_fallback_list(
     }
 
     if model_type not in fallbacks:
-        raise ValueError(
-            f"Unknown model type: {model_type}. Available types: {', '.join(sorted(fallbacks.keys()))}"
-        )
+        raise ValueError(f"Unknown model type: {model_type}. Available types: {', '.join(sorted(fallbacks.keys()))}")
 
     return [model for model, _ in fallbacks[model_type]]

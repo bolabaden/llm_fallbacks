@@ -10,6 +10,7 @@ from pathlib import Path
 
 if not importlib.util.find_spec("llm_fallbacks"):
     import sys
+
     sys.path.append(str(Path(__file__).parents[1]))
 from llm_fallbacks.config import ALL_MODELS, CUSTOM_PROVIDERS, FREE_MODELS, CustomProviderConfig, LiteLLMYAMLConfig
 from llm_fallbacks.core import calculate_cost_per_token
@@ -18,9 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 def to_litellm_config_yaml(
-    providers: list[CustomProviderConfig],
-    free_only: bool = False,
-    online_only: bool = False,
+    providers: list[CustomProviderConfig], free_only: bool = False, online_only: bool = False
 ) -> LiteLLMYAMLConfig:
     """Convert the provider config to a LiteLLM YAML config format."""
     # Create base config with all possible settings
@@ -30,12 +29,7 @@ def to_litellm_config_yaml(
             "mode": "default_off",
             "namespace": "litellm.caching.caching",
             "port": 6379,
-            "supported_call_types": [
-                "acompletion",
-                "atext_completion",
-                "aembedding",
-                "atranscription",
-            ],
+            "supported_call_types": ["acompletion", "atext_completion", "aembedding", "atranscription"],
             "ttl": 600,
             "type": "redis",
         },
@@ -105,7 +99,7 @@ def to_litellm_config_yaml(
 
     for p in providers:
         for model_name, model_spec in (p.free_models if free_only else p.model_specs).items():
-            is_free = calculate_cost_per_token(model_spec) == 0.0
+            is_free = calculate_cost_per_token(model_spec) <= 0.0
             is_local = (
                 model_name.casefold().startswith("ollama/")
                 or model_name.casefold().startswith("vllm/")
@@ -201,28 +195,12 @@ def to_litellm_config_yaml(
 if __name__ == "__main__":
     print("Saving custom_providers.json")
     Path("custom_providers.json").absolute().write_text(
-        json.dumps(
-            [provider.to_dict() for provider in CUSTOM_PROVIDERS],
-            indent=4,
-            ensure_ascii=True,
-        ),
+        json.dumps([provider.to_dict() for provider in CUSTOM_PROVIDERS], indent=4, ensure_ascii=True)
     )
     print("Saving all_models.json")
-    Path("all_models.json").absolute().write_text(
-        json.dumps(
-            dict(ALL_MODELS),
-            indent=4,
-            ensure_ascii=True,
-        ),
-    )
+    Path("all_models.json").absolute().write_text(json.dumps(dict(ALL_MODELS), indent=4, ensure_ascii=True))
     print("Saving free_chat_models.json")
-    Path("free_chat_models.json").absolute().write_text(
-        json.dumps(
-            dict(FREE_MODELS),
-            indent=4,
-            ensure_ascii=True,
-        ),
-    )
+    Path("free_chat_models.json").absolute().write_text(json.dumps(dict(FREE_MODELS), indent=4, ensure_ascii=True))
 
     # Generate and save LiteLLM config files
     try:
@@ -230,21 +208,13 @@ if __name__ == "__main__":
 
         print("Saving litellm_config_free.yaml")
         Path("litellm_config_free.yaml").write_text(
-            yaml.dump(
-                to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=True),
-                sort_keys=False,
-                allow_unicode=True,
-            ),
+            yaml.dump(to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=True), sort_keys=False, allow_unicode=True),
             errors="replace",
             encoding="utf-8",
         )
         print("Saving litellm_config.yaml")
         Path("litellm_config.yaml").write_text(
-            yaml.dump(
-                to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=False),
-                sort_keys=False,
-                allow_unicode=True,
-            ),
+            yaml.dump(to_litellm_config_yaml(CUSTOM_PROVIDERS, free_only=False), sort_keys=False, allow_unicode=True),
             errors="replace",
             encoding="utf-8",
         )

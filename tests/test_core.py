@@ -1,12 +1,6 @@
 from llm_fallbacks.config import LiteLLMBaseModelSpec
 import pytest
-from llm_fallbacks import (
-    get_chat_models,
-    get_completion_models,
-    get_embedding_models,
-    get_fallback_list,
-    filter_models,
-)
+from llm_fallbacks import get_chat_models, get_completion_models, get_embedding_models, get_fallback_list, filter_models
 
 
 def test_get_chat_models():
@@ -41,8 +35,5 @@ def test_filter_models():
 
 def test_filter_models_with_criteria():
     """Test that filter_models with criteria returns a list."""
-    models: list[str] = filter_models(
-        model_type="chat",
-        free_only=True,
-    )
+    models: list[str] = filter_models(model_type="chat", free_only=True)
     assert isinstance(models, list)

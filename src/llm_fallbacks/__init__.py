@@ -29,9 +29,9 @@ from llm_fallbacks.core import (
 )
 from llm_fallbacks.filter_litellm import filter_models
 
-
 __version__ = "0.1.0"
 __all__ = [
+    "filter_models",
     "get_audio_input_models",
     "get_audio_output_models",
     "get_audio_speech_models",
@@ -52,5 +52,4 @@ __all__ = [
     "get_rerank_models",
     "get_vision_models",
     "sort_models_by_cost_and_limits",
-    "filter_models",
 ]
