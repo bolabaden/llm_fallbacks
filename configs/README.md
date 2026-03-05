@@ -75,4 +75,8 @@ python -m llm_fallbacks.generate_configs --output-dir configs
 
 ## Quality Scoring
 
-The `quality_score` in `free_models.json` is a transparent capability heuristic (0–100) based on context window size, function calling support, vision, tool choice, and other observable features. See the [main README](../README.md#quality-scoring) for the full scoring breakdown.
+The `quality_score` in `free_models.json` is a transparent capability heuristic (0-100) based on context window size, function calling support, vision, tool choice, and other observable features. See the [main README](../README.md#quality-scoring) for the full scoring breakdown.
+
+## Web UI
+
+The `free_models.json` file is consumed by the [Chat UI](../docs/index.html) (deployed to GitHub Pages) to populate its model dropdown. The UI fetches the latest model list from the repo's raw URL on every page load.
