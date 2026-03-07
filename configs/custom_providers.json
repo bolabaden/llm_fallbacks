@@ -1006,8 +1006,8 @@
                 }
             },
             "z-ai/glm-4.7": {
-                "input_cost_per_token": 3e-07,
-                "output_cost_per_token": 1.4e-06,
+                "input_cost_per_token": 3.8e-07,
+                "output_cost_per_token": 1.98e-06,
                 "cache_creation_input_token_cost": 0.0,
                 "cache_read_input_token_cost": 0.0,
                 "litellm_provider": "openrouter",
@@ -1025,8 +1025,8 @@
                     "notes": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while delivering more natural conversational experiences and superior front-end aesthetics."
                 },
                 "z-ai/glm-4.7": {
-                    "input_cost_per_token": 3e-07,
-                    "output_cost_per_token": 1.4e-06,
+                    "input_cost_per_token": 3.8e-07,
+                    "output_cost_per_token": 1.98e-06,
                     "max_input_tokens": 202752,
                     "metadata": {
                         "notes": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while delivering more natural conversational experiences and superior front-end aesthetics."
@@ -3810,28 +3810,25 @@
                 }
             },
             "qwen/qwen3-235b-a22b-thinking-2507": {
-                "input_cost_per_token": 0.0,
+                "input_cost_per_token": 1.1e-07,
                 "litellm_provider": "openrouter",
-                "max_input_tokens": 131072,
+                "max_input_tokens": 262144,
                 "max_output_tokens": 262144,
                 "max_tokens": 262144,
                 "mode": "chat",
-                "output_cost_per_token": 0.0,
+                "output_cost_per_token": 6e-07,
                 "source": "https://openrouter.ai/qwen/qwen3-235b-a22b-thinking-2507",
                 "supports_function_calling": true,
                 "supports_reasoning": true,
                 "supports_tool_choice": true,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
                 "metadata": {
                     "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144 tokens of context. This \"thinking-only\" variant enhances structured logical reasoning, mathematics, science, and long-form generation, showing strong benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux. It enforces a special reasoning mode (</think>) and is designed for high-token outputs (up to 81,920 tokens) in challenging domains.\n\nThe model is instruction-tuned and excels at step-by-step reasoning, tool use, agentic workflows, and multilingual tasks. This release represents the most capable open-source variant in the Qwen3-235B series, surpassing many closed models in structured reasoning use cases."
                 },
                 "qwen/qwen3-235b-a22b-thinking-2507": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "input_cost_per_image": 0.0,
-                    "input_cost_per_query": 0.0,
-                    "max_input_tokens": 131072,
+                    "input_cost_per_token": 1.1e-07,
+                    "output_cost_per_token": 6e-07,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 262144,
                     "metadata": {
                         "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144 tokens of context. This \"thinking-only\" variant enhances structured logical reasoning, mathematics, science, and long-form generation, showing strong benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux. It enforces a special reasoning mode (</think>) and is designed for high-token outputs (up to 81,920 tokens) in challenging domains.\n\nThe model is instruction-tuned and excels at step-by-step reasoning, tool use, agentic workflows, and multilingual tasks. This release represents the most capable open-source variant in the Qwen3-235B series, surpassing many closed models in structured reasoning use cases."
                     },
@@ -8134,17 +8131,6 @@
                 "max_output_tokens": 96000,
                 "metadata": {
                     "notes": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter size. GLM-4.5-Air also supports hybrid inference modes, offering a \"thinking mode\" for advanced reasoning and tool use, and a \"non-thinking mode\" for real-time interaction. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
-                },
-                "litellm_provider": "openrouter"
-            },
-            "qwen/qwen3-235b-a22b-thinking-2507": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
-                "max_input_tokens": 131072,
-                "metadata": {
-                    "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144 tokens of context. This \"thinking-only\" variant enhances structured logical reasoning, mathematics, science, and long-form generation, showing strong benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux. It enforces a special reasoning mode (</think>) and is designed for high-token outputs (up to 81,920 tokens) in challenging domains.\n\nThe model is instruction-tuned and excels at step-by-step reasoning, tool use, agentic workflows, and multilingual tasks. This release represents the most capable open-source variant in the Qwen3-235B series, surpassing many closed models in structured reasoning use cases."
                 },
                 "litellm_provider": "openrouter"
             },

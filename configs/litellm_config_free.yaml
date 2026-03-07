@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-dbecd6405f8c462a84ebae8a7fdfce2f
+  master_key: sk-6df43813b6b940cd97f1c0c3bbc8bbd2
   alerting:
   - slack
   - email
@@ -381,32 +381,6 @@ model_list:
         mode" for advanced reasoning and tool use, and a "non-thinking mode" for real-time
         interaction. Users can control the reasoning behaviour with the `reasoning`
         `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)
-    litellm_provider: openrouter
-- model_name: qwen/qwen3-235b-a22b-thinking-2507
-  litellm_params:
-    model: openai/qwen/qwen3-235b-a22b-thinking-2507
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 0.0
-    output_cost_per_token: 0.0
-    input_cost_per_image: 0.0
-    input_cost_per_query: 0.0
-    max_input_tokens: 131072
-    metadata:
-      notes: 'Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts
-        (MoE) language model optimized for complex reasoning tasks. It activates 22B
-        of its 235B parameters per forward pass and natively supports up to 262,144
-        tokens of context. This "thinking-only" variant enhances structured logical
-        reasoning, mathematics, science, and long-form generation, showing strong
-        benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux.
-        It enforces a special reasoning mode (</think>) and is designed for high-token
-        outputs (up to 81,920 tokens) in challenging domains.
-
-
-        The model is instruction-tuned and excels at step-by-step reasoning, tool
-        use, agentic workflows, and multilingual tasks. This release represents the
-        most capable open-source variant in the Qwen3-235B series, surpassing many
-        closed models in structured reasoning use cases.'
     litellm_provider: openrouter
 - model_name: qwen/qwen3-coder:free
   litellm_params:
@@ -779,14 +753,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - stepfun/step-3.5-flash:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -805,14 +779,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
     - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/openai/gpt-oss-120b:free
   - arcee-ai/trinity-large-preview:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -831,14 +805,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - liquid/lfm-2.5-1.2b-thinking:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -857,14 +831,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - liquid/lfm-2.5-1.2b-instruct:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -883,14 +857,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - nvidia/nemotron-3-nano-30b-a3b:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -909,14 +883,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - openrouter/bodybuilder:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -935,14 +909,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - arcee-ai/trinity-mini:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -961,14 +935,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - nvidia/nemotron-nano-12b-v2-vl:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -987,14 +961,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - qwen/qwen3-vl-30b-a3b-thinking:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1013,14 +987,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - qwen/qwen3-vl-235b-a22b-thinking:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1039,14 +1013,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - qwen/qwen3-next-80b-a3b-instruct:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1065,14 +1039,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/openai/gpt-oss-120b:free
   - nvidia/nemotron-nano-9b-v2:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1091,14 +1065,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - openai/gpt-oss-120b:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1117,14 +1091,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - openai/gpt-oss-20b:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1143,14 +1117,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - z-ai/glm-4.5-air:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1169,33 +1143,6 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/qwen/qwen3-coder:free
-    - openrouter/stepfun/step-3.5-flash:free
-    - volcengine/glm-4-7-251222
-    - openrouter/openrouter/free
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - lemonade/qwen3-4b-instruct-2507-gguf
-  - qwen/qwen3-235b-a22b-thinking-2507:
-    - gemini/gemini-2.0-pro-exp-02-05
-    - gemini/gemini-exp-1206
-    - vertex_ai-language-models/gemini-2.0-flash-thinking-exp-01-21
-    - gemini/gemini-2.0-flash-thinking-exp
-    - gemini/gemini-2.0-flash-thinking-exp-01-21
-    - gemini/gemini-2.5-pro-exp-03-25
-    - vertex_ai-language-models/gemini-2.0-flash-thinking-exp
-    - gemini/gemini-1.5-flash-8b
-    - gemini/gemini-1.5-flash-8b-exp-0924
-    - gemini/gemini-1.5-flash-exp-0827
-    - gemini/gemini-2.0-flash-exp
-    - gemini/gemini-exp-1114
-    - gemini/gemini-1.5-flash-8b-exp-0827
-    - openrouter/openrouter/auto
-    - gemini/gemini-1.5-pro-exp-0827
-    - vertex_ai-language-models/gemini-flash-experimental
-    - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
@@ -1203,6 +1150,7 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
     - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - qwen/qwen3-coder:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1221,14 +1169,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
     - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/openai/gpt-oss-120b:free
   - cognitivecomputations/dolphin-mistral-24b-venice-edition:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1247,14 +1195,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - google/gemma-3n-e2b-it:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1273,14 +1221,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - google/gemma-3n-e4b-it:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1299,14 +1247,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - qwen/qwen3-4b:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1325,14 +1273,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - mistralai/mistral-small-3.1-24b-instruct:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1351,14 +1299,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - google/gemma-3-4b-it:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1377,14 +1325,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - google/gemma-3-12b-it:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1403,14 +1351,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - google/gemma-3-27b-it:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1429,14 +1377,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - meta-llama/llama-3.3-70b-instruct:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1455,14 +1403,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - meta-llama/llama-3.2-3b-instruct:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1481,14 +1429,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - nousresearch/hermes-3-llama-3.1-405b:free:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1507,14 +1455,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   - openrouter/auto:
     - gemini/gemini-2.0-pro-exp-02-05
     - gemini/gemini-exp-1206
@@ -1533,14 +1481,14 @@ router_settings:
     - gemini/gemini-1.5-pro-exp-0827
     - vertex_ai-language-models/gemini-flash-experimental
     - vertex_ai-language-models/gemini-pro-experimental
-    - openrouter/qwen/qwen3-235b-a22b-thinking-2507
-    - openrouter/openrouter/qwen/qwen3-235b-a22b-thinking-2507
     - openrouter/qwen/qwen3-coder:free
     - openrouter/stepfun/step-3.5-flash:free
     - volcengine/glm-4-7-251222
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
   retry_policy:
     AuthenticationErrorRetries: 3
     TimeoutErrorRetries: 3

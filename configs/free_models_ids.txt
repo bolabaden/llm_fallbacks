@@ -6,6 +6,8 @@ gemini/gemini-2.0-pro-exp-02-05
 gemini/gemini-2.0-flash-exp
 gemini/gemini-1.5-flash-8b
 gemini/gemini-1.5-flash-8b-exp-0924
+chatgpt/gpt-5.4
+chatgpt/gpt-5.4-pro
 gemini/gemini-1.5-flash-8b-exp-0827
 gemini/gemini-1.5-flash-exp-0827
 gemini/gemini-1.5-pro-exp-0827
@@ -14,11 +16,15 @@ gemini/gemini-exp-1206
 gemini-2.0-flash-thinking-exp-01-21
 chatgpt/gpt-5.1-codex-max
 chatgpt/gpt-5.2-codex
+chatgpt/gpt-5.3-codex
+chatgpt/gpt-5.3-codex-spark
 github_copilot/gpt-5
 github_copilot/gpt-5.1-codex-max
 github_copilot/gpt-5.3-codex
 chatgpt/gpt-5.1-codex-mini
 chatgpt/gpt-5.2
+chatgpt/gpt-5.3-chat-latest
+chatgpt/gpt-5.3-instant
 github_copilot/gpt-5-mini
 github_copilot/gpt-5.1
 github_copilot/gpt-5.2
@@ -58,8 +64,6 @@ gemini/learnlm-1.5-pro-experimental
 deepseek-v3-2-251201
 gigachat/gigachat-2-max
 gigachat/gigachat-2-pro
-openrouter/qwen/qwen3-235b-a22b-thinking-2507
-qwen/qwen3-235b-a22b-thinking-2507
 qwen/qwen3-coder:free
 lemonade/gemma-3-4b-it-gguf
 github_copilot/gpt-4o-2024-11-20
