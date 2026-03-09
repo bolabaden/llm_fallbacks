@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-e70ce77191be4640ab1a62a81e9965eb
+  master_key: sk-c4a14ac3eb93482e8f22a1ce280f775c
   alerting:
   - slack
   - email
@@ -7157,8 +7157,8 @@ model_list:
     model: openai/google/gemma-3-27b-it
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 4.0e-08
-    output_cost_per_token: 1.5e-07
+    input_cost_per_token: 3.0e-08
+    output_cost_per_token: 1.1e-07
     max_input_tokens: 128000
     max_output_tokens: 65536
     mode: chat
@@ -7172,8 +7172,8 @@ model_list:
     supports_function_calling: true
     litellm_provider: openrouter
     google/gemma-3-27b-it:
-      input_cost_per_token: 4.0e-08
-      output_cost_per_token: 1.5e-07
+      input_cost_per_token: 3.0e-08
+      output_cost_per_token: 1.1e-07
       max_input_tokens: 128000
       max_output_tokens: 65536
       mode: chat

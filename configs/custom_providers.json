@@ -5548,8 +5548,8 @@
                 }
             },
             "google/gemma-3-27b-it": {
-                "input_cost_per_token": 4e-08,
-                "output_cost_per_token": 1.5e-07,
+                "input_cost_per_token": 3e-08,
+                "output_cost_per_token": 1.1e-07,
                 "max_input_tokens": 128000,
                 "max_output_tokens": 65536,
                 "mode": "chat",
@@ -5560,8 +5560,8 @@
                 "supports_function_calling": true,
                 "litellm_provider": "openrouter",
                 "google/gemma-3-27b-it": {
-                    "input_cost_per_token": 4e-08,
-                    "output_cost_per_token": 1.5e-07,
+                    "input_cost_per_token": 3e-08,
+                    "output_cost_per_token": 1.1e-07,
                     "max_input_tokens": 128000,
                     "max_output_tokens": 65536,
                     "mode": "chat",

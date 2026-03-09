@@ -3718,6 +3718,32 @@
         "max_tokens": 131072,
         "supports_system_messages": true
     },
+    "google/gemma-3-27b-it": {
+        "input_cost_per_token": 3e-08,
+        "output_cost_per_token": 1.1e-07,
+        "max_input_tokens": 128000,
+        "max_output_tokens": 65536,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to [Gemma 2](google/gemma-2-27b-it)"
+        },
+        "supports_function_calling": true,
+        "litellm_provider": "openrouter",
+        "google/gemma-3-27b-it": {
+            "input_cost_per_token": 3e-08,
+            "output_cost_per_token": 1.1e-07,
+            "max_input_tokens": 128000,
+            "max_output_tokens": 65536,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to [Gemma 2](google/gemma-2-27b-it)"
+            },
+            "supports_function_calling": true,
+            "litellm_provider": "openrouter"
+        }
+    },
     "novita/qwen/qwen2.5-7b-instruct": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -4366,32 +4392,6 @@
         "supports_system_messages": true,
         "supports_response_schema": true,
         "supports_reasoning": true
-    },
-    "google/gemma-3-27b-it": {
-        "input_cost_per_token": 4e-08,
-        "output_cost_per_token": 1.5e-07,
-        "max_input_tokens": 128000,
-        "max_output_tokens": 65536,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to [Gemma 2](google/gemma-2-27b-it)"
-        },
-        "supports_function_calling": true,
-        "litellm_provider": "openrouter",
-        "google/gemma-3-27b-it": {
-            "input_cost_per_token": 4e-08,
-            "output_cost_per_token": 1.5e-07,
-            "max_input_tokens": 128000,
-            "max_output_tokens": 65536,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to [Gemma 2](google/gemma-2-27b-it)"
-            },
-            "supports_function_calling": true,
-            "litellm_provider": "openrouter"
-        }
     },
     "arcee-ai/trinity-mini": {
         "input_cost_per_token": 4.5e-08,
