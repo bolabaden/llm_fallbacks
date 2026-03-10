@@ -13826,7 +13826,7 @@
     "qwen/qwen3-next-80b-a3b-instruct": {
         "input_cost_per_token": 9e-08,
         "output_cost_per_token": 1.1e-06,
-        "max_input_tokens": 262144,
+        "max_input_tokens": 131072,
         "metadata": {
             "notes": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without \u201cthinking\u201d traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.\n\nThe model employs scaling-efficient training and decoding to improve parameter efficiency and inference speed, and has been validated on a broad set of public benchmarks where it reaches or approaches larger Qwen3 systems in several categories while outperforming earlier mid-sized baselines. It is best used as a general assistant, code helper, and long-context task solver in production settings where deterministic, instruction-following outputs are preferred."
         },
@@ -13834,7 +13834,7 @@
         "qwen/qwen3-next-80b-a3b-instruct": {
             "input_cost_per_token": 9e-08,
             "output_cost_per_token": 1.1e-06,
-            "max_input_tokens": 262144,
+            "max_input_tokens": 131072,
             "metadata": {
                 "notes": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without \u201cthinking\u201d traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.\n\nThe model employs scaling-efficient training and decoding to improve parameter efficiency and inference speed, and has been validated on a broad set of public benchmarks where it reaches or approaches larger Qwen3 systems in several categories while outperforming earlier mid-sized baselines. It is best used as a general assistant, code helper, and long-context task solver in production settings where deterministic, instruction-following outputs are preferred."
             },
@@ -41680,7 +41680,7 @@
         "max_input_tokens": 1050000,
         "max_output_tokens": 128000,
         "max_tokens": 128000,
-        "mode": "chat",
+        "mode": "responses",
         "output_cost_per_token": 0.00018,
         "output_cost_per_token_above_272k_tokens": 0.00027,
         "output_cost_per_token_flex": 9e-05,
@@ -41688,9 +41688,8 @@
         "output_cost_per_token_priority": 0.00027,
         "output_cost_per_token_above_272k_tokens_priority": 0.000405,
         "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/batch",
-            "/v1/responses"
+            "/v1/responses",
+            "/v1/batch"
         ],
         "supported_modalities": [
             "text",
@@ -41729,7 +41728,7 @@
         "max_input_tokens": 1050000,
         "max_output_tokens": 128000,
         "max_tokens": 128000,
-        "mode": "chat",
+        "mode": "responses",
         "output_cost_per_token": 0.00018,
         "output_cost_per_token_above_272k_tokens": 0.00027,
         "output_cost_per_token_flex": 9e-05,
@@ -41737,9 +41736,8 @@
         "output_cost_per_token_priority": 0.00027,
         "output_cost_per_token_above_272k_tokens_priority": 0.000405,
         "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/batch",
-            "/v1/responses"
+            "/v1/responses",
+            "/v1/batch"
         ],
         "supported_modalities": [
             "text",
@@ -42069,6 +42067,14 @@
         "max_tokens_per_document_chunk": 512,
         "mode": "rerank",
         "output_cost_per_token": 0.0
+    },
+    "serper/search": {
+        "input_cost_per_query": 0.001,
+        "litellm_provider": "serper",
+        "mode": "search",
+        "metadata": {
+            "notes": "Serper Google Search API. Pricing: $1.00/1k queries (Starter), $0.75/1k (Standard), $0.50/1k (Scale), $0.30/1k (Ultimate)."
+        }
     },
     "gemini-1.5-pro-preview-0215": {
         "deprecation_date": "2025-09-29",
@@ -44631,6 +44637,42 @@
         "output_cost_per_token": 0.022,
         "litellm_provider": "wandb",
         "mode": "chat"
+    },
+    "gemini/gemini-3.1-flash-image-preview": {
+        "input_cost_per_token": 2.5e-07,
+        "input_cost_per_token_batches": 1.25e-07,
+        "litellm_provider": "gemini",
+        "max_input_tokens": 65536,
+        "max_output_tokens": 32768,
+        "max_tokens": 32768,
+        "mode": "image_generation",
+        "output_cost_per_image": 0.045,
+        "output_cost_per_image_token": 6e-05,
+        "output_cost_per_image_token_batches": 3e-05,
+        "output_cost_per_token": 1.5e-06,
+        "output_cost_per_token_batches": 7.5e-07,
+        "rpm": 1000,
+        "tpm": 4000000,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-image-preview",
+        "supported_endpoints": [
+            "/v1/chat/completions",
+            "/v1/completions",
+            "/v1/batch"
+        ],
+        "supported_modalities": [
+            "text",
+            "image"
+        ],
+        "supported_output_modalities": [
+            "text",
+            "image"
+        ],
+        "supports_function_calling": false,
+        "supports_prompt_caching": true,
+        "supports_response_schema": true,
+        "supports_system_messages": true,
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "aiml/flux-realism": {
         "litellm_provider": "aiml",

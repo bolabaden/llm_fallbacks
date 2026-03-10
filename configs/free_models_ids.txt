@@ -399,6 +399,7 @@ sagemaker/meta-textgeneration-llama-2-70b-b-f
 sagemaker/meta-textgeneration-llama-2-7b
 sagemaker/meta-textgeneration-llama-2-7b-f
 searxng/search
+serper/search
 sora-2
 sora-2-pro
 sora-2-pro-high-res

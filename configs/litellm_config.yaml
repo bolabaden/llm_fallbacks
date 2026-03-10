@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-c4a14ac3eb93482e8f22a1ce280f775c
+  master_key: sk-eca96a60bb84485e9d9ebf007515c0fd
   alerting:
   - slack
   - email
@@ -3951,7 +3951,7 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 9.0e-08
     output_cost_per_token: 1.1e-06
-    max_input_tokens: 262144
+    max_input_tokens: 131072
     metadata: &id128
       notes: 'Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the
         Qwen3-Next series optimized for fast, stable responses without “thinking”
@@ -3973,7 +3973,7 @@ model_list:
     qwen/qwen3-next-80b-a3b-instruct:
       input_cost_per_token: 9.0e-08
       output_cost_per_token: 1.1e-06
-      max_input_tokens: 262144
+      max_input_tokens: 131072
       metadata: *id128
       litellm_provider: openrouter
 - model_name: meituan/longcat-flash-chat
