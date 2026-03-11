@@ -5288,26 +5288,6 @@
             "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation."
         }
     },
-    "openai/gpt-oss-120b:exacto": {
-        "input_cost_per_token": 3.9e-08,
-        "output_cost_per_token": 1.9e-07,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation."
-        },
-        "supports_function_calling": true,
-        "litellm_provider": "openrouter",
-        "openai/gpt-oss-120b:exacto": {
-            "input_cost_per_token": 3.9e-08,
-            "output_cost_per_token": 1.9e-07,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation."
-            },
-            "supports_function_calling": true,
-            "litellm_provider": "openrouter"
-        }
-    },
     "llamagate/deepseek-r1-7b-qwen": {
         "max_tokens": 16384,
         "max_input_tokens": 131072,
@@ -5509,6 +5489,24 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true
+    },
+    "qwen/qwen3.5-9b": {
+        "input_cost_per_token": 1e-07,
+        "output_cost_per_token": 1.5e-07,
+        "max_input_tokens": 262144,
+        "metadata": {
+            "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.5-9b": {
+            "input_cost_per_token": 1e-07,
+            "output_cost_per_token": 1.5e-07,
+            "max_input_tokens": 262144,
+            "metadata": {
+                "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "nvidia/nemotron-3-nano-30b-a3b": {
         "input_cost_per_token": 5e-08,
@@ -8396,24 +8394,6 @@
         "supports_tool_choice": true,
         "supports_vision": false
     },
-    "meta-llama/llama-guard-2-8b": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 2e-07,
-        "max_input_tokens": 8192,
-        "metadata": {
-            "notes": "This safeguard model has 8B parameters and is based on the Llama 3 family. Just like is predecessor, [LlamaGuard 1](https://huggingface.co/meta-llama/LlamaGuard-7b), it can do both prompt and response classification.\n\nLlamaGuard 2 acts as a normal LLM would, generating text that indicates whether the given input/output is safe/unsafe. If deemed unsafe, it will also share the content categories violated.\n\nFor best results, please use raw prompt input or the `/completions` endpoint, instead of the chat API.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-        },
-        "litellm_provider": "openrouter",
-        "meta-llama/llama-guard-2-8b": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 2e-07,
-            "max_input_tokens": 8192,
-            "metadata": {
-                "notes": "This safeguard model has 8B parameters and is based on the Llama 3 family. Just like is predecessor, [LlamaGuard 1](https://huggingface.co/meta-llama/LlamaGuard-7b), it can do both prompt and response classification.\n\nLlamaGuard 2 acts as a normal LLM would, generating text that indicates whether the given input/output is safe/unsafe. If deemed unsafe, it will also share the content categories violated.\n\nFor best results, please use raw prompt input or the `/completions` endpoint, instead of the chat API.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "fireworks_ai/accounts/fireworks/models/pythia-12b": {
         "max_tokens": 2048,
         "max_input_tokens": 2048,
@@ -9028,6 +9008,7 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -9065,6 +9046,7 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -10172,8 +10154,7 @@
     "nousresearch/hermes-3-llama-3.1-70b": {
         "input_cost_per_token": 3e-07,
         "output_cost_per_token": 3e-07,
-        "max_input_tokens": 65536,
-        "max_output_tokens": 65536,
+        "max_input_tokens": 131072,
         "metadata": {
             "notes": "Hermes 3 is a generalist language model with many improvements over [Hermes 2](/models/nousresearch/nous-hermes-2-mistral-7b-dpo), including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.\n\nHermes 3 70B is a competitive, if not superior finetune of the [Llama-3.1 70B foundation model](/models/meta-llama/llama-3.1-70b-instruct), focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.\n\nThe Hermes 3 series builds and expands on the Hermes 2 set of capabilities, including more powerful and reliable function calling and structured output capabilities, generalist assistant capabilities, and improved code generation skills."
         },
@@ -10182,8 +10163,7 @@
         "nousresearch/hermes-3-llama-3.1-70b": {
             "input_cost_per_token": 3e-07,
             "output_cost_per_token": 3e-07,
-            "max_input_tokens": 65536,
-            "max_output_tokens": 65536,
+            "max_input_tokens": 131072,
             "metadata": {
                 "notes": "Hermes 3 is a generalist language model with many improvements over [Hermes 2](/models/nousresearch/nous-hermes-2-mistral-7b-dpo), including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.\n\nHermes 3 70B is a competitive, if not superior finetune of the [Llama-3.1 70B foundation model](/models/meta-llama/llama-3.1-70b-instruct), focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.\n\nThe Hermes 3 series builds and expands on the Hermes 2 set of capabilities, including more powerful and reliable function calling and structured output capabilities, generalist assistant capabilities, and improved code generation skills."
             },
@@ -10550,26 +10530,6 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
-    },
-    "neversleep/llama-3.1-lumimaid-8b": {
-        "input_cost_per_token": 9e-08,
-        "output_cost_per_token": 6e-07,
-        "max_input_tokens": 32768,
-        "max_output_tokens": 4096,
-        "metadata": {
-            "notes": "Lumimaid v0.2 8B is a finetune of [Llama 3.1 8B](/models/meta-llama/llama-3.1-8b-instruct) with a \"HUGE step up dataset wise\" compared to Lumimaid v0.1. Sloppy chats output were purged.\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-        },
-        "litellm_provider": "openrouter",
-        "neversleep/llama-3.1-lumimaid-8b": {
-            "input_cost_per_token": 9e-08,
-            "output_cost_per_token": 6e-07,
-            "max_input_tokens": 32768,
-            "max_output_tokens": 4096,
-            "metadata": {
-                "notes": "Lumimaid v0.2 8B is a finetune of [Llama 3.1 8B](/models/meta-llama/llama-3.1-8b-instruct) with a \"HUGE step up dataset wise\" compared to Lumimaid v0.1. Sloppy chats output were purged.\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "x-ai/grok-4.1-fast": {
         "input_cost_per_token": 2e-07,
@@ -12919,7 +12879,7 @@
         "input_cost_per_token": 2e-07,
         "litellm_provider": "openrouter",
         "max_input_tokens": 163840,
-        "max_output_tokens": 163840,
+        "max_output_tokens": 8192,
         "max_tokens": 8192,
         "mode": "chat",
         "output_cost_per_token": 7.7e-07,
@@ -12932,7 +12892,6 @@
             "input_cost_per_token": 2e-07,
             "output_cost_per_token": 7.7e-07,
             "max_input_tokens": 163840,
-            "max_output_tokens": 163840,
             "metadata": {
                 "notes": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team.\n\nIt succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) model and performs really well on a variety of tasks."
             },
@@ -12943,7 +12902,7 @@
         "input_cost_per_token": 2e-07,
         "litellm_provider": "openrouter",
         "max_input_tokens": 163840,
-        "max_output_tokens": 163840,
+        "max_output_tokens": 8192,
         "max_tokens": 8192,
         "mode": "chat",
         "output_cost_per_token": 7.7e-07,
@@ -13101,24 +13060,6 @@
             "max_output_tokens": 50000,
             "metadata": {
                 "notes": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM).\nInstead of generating tokens sequentially, Mercury 2 produces and refines multiple tokens in parallel, achieving >1,000 tokens/sec on standard GPUs. Mercury 2 is 5x+ faster than leading speed-optimized LLMs like Claude 4.5 Haiku and GPT 5 Mini, at a fraction of the cost. \nMercury 2 supports tunable reasoning levels, 128K context, native tool use, and schema-aligned JSON output. Built for coding workflows where latency compounds, real-time voice/search, and agent loops. OpenAI API compatible. Read more in the [blog post](https://www.inceptionlabs.ai/blog/introducing-mercury-2)."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "deepseek/deepseek-v3.1-terminus:exacto": {
-        "input_cost_per_token": 2.1e-07,
-        "output_cost_per_token": 7.9e-07,
-        "max_input_tokens": 163840,
-        "metadata": {
-            "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
-        },
-        "litellm_provider": "openrouter",
-        "deepseek/deepseek-v3.1-terminus:exacto": {
-            "input_cost_per_token": 2.1e-07,
-            "output_cost_per_token": 7.9e-07,
-            "max_input_tokens": 163840,
-            "metadata": {
-                "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
             },
             "litellm_provider": "openrouter"
         }
@@ -15263,26 +15204,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "sao10k/l3.1-euryale-70b": {
-        "input_cost_per_token": 6.5e-07,
-        "output_cost_per_token": 7.5e-07,
-        "max_input_tokens": 32768,
-        "max_output_tokens": 32768,
-        "metadata": {
-            "notes": "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b)."
-        },
-        "litellm_provider": "openrouter",
-        "sao10k/l3.1-euryale-70b": {
-            "input_cost_per_token": 6.5e-07,
-            "output_cost_per_token": 7.5e-07,
-            "max_input_tokens": 32768,
-            "max_output_tokens": 32768,
-            "metadata": {
-                "notes": "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b)."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "watsonx/meta-llama/llama-3-3-70b-instruct": {
         "max_tokens": 128000,
         "max_input_tokens": 128000,
@@ -16145,6 +16066,68 @@
         "cache_read_input_token_cost": 6e-08,
         "input_cost_per_token_cache_hit": 6e-08
     },
+    "minimax/minimax-m2.5": {
+        "input_cost_per_token": 2.7e-07,
+        "output_cost_per_token": 9.5e-07,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 8192,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        },
+        "minimax/minimax-m2.5": {
+            "input_cost_per_token": 2.7e-07,
+            "output_cost_per_token": 9.5e-07,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 8192,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+            }
+        }
+    },
+    "openrouter/minimax/minimax-m2.5": {
+        "input_cost_per_token": 2.7e-07,
+        "output_cost_per_token": 9.5e-07,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 8192,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        }
+    },
     "minimax/minimax-m2.1": {
         "input_cost_per_token": 2.7e-07,
         "output_cost_per_token": 9.5e-07,
@@ -16458,6 +16441,26 @@
             "max_output_tokens": 10000,
             "metadata": {
                 "notes": "Grok Code Fast 1 is a speedy and economical reasoning model that excels at agentic coding. With reasoning traces visible in the response, developers can steer Grok Code for high-quality work flows."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "sao10k/l3.1-euryale-70b": {
+        "input_cost_per_token": 8.5e-07,
+        "output_cost_per_token": 8.5e-07,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b)."
+        },
+        "litellm_provider": "openrouter",
+        "sao10k/l3.1-euryale-70b": {
+            "input_cost_per_token": 8.5e-07,
+            "output_cost_per_token": 8.5e-07,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b)."
             },
             "litellm_provider": "openrouter"
         }
@@ -17764,68 +17767,6 @@
         "cache_read_input_token_cost": 2.5e-08,
         "cache_creation_input_token_cost": 3.125e-07
     },
-    "minimax/minimax-m2.5": {
-        "input_cost_per_token": 2.95e-07,
-        "output_cost_per_token": 1.2e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-        },
-        "minimax/minimax-m2.5": {
-            "input_cost_per_token": 2.95e-07,
-            "output_cost_per_token": 1.2e-06,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 196608,
-            "metadata": {
-                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-            }
-        }
-    },
-    "openrouter/minimax/minimax-m2.5": {
-        "input_cost_per_token": 2.95e-07,
-        "output_cost_per_token": 1.2e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-        }
-    },
     "arcee-ai/virtuoso-large": {
         "input_cost_per_token": 7.5e-07,
         "output_cost_per_token": 1.2e-06,
@@ -18588,28 +18529,6 @@
         "supports_reasoning": true,
         "supports_tool_choice": true
     },
-    "qwen/qwen3-coder:exacto": {
-        "input_cost_per_token": 2.2e-07,
-        "output_cost_per_token": 1.8e-06,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 65536,
-        "metadata": {
-            "notes": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).\n\nPricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used."
-        },
-        "supports_function_calling": true,
-        "litellm_provider": "openrouter",
-        "qwen/qwen3-coder:exacto": {
-            "input_cost_per_token": 2.2e-07,
-            "output_cost_per_token": 1.8e-06,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).\n\nPricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used."
-            },
-            "supports_function_calling": true,
-            "litellm_provider": "openrouter"
-        }
-    },
     "bedrock/ap-northeast-1/qwen.qwen3-coder-next": {
         "input_cost_per_token": 6e-07,
         "litellm_provider": "bedrock",
@@ -19015,50 +18934,6 @@
         "supports_vision": true,
         "supports_web_search": true
     },
-    "z-ai/glm-4.6:exacto": {
-        "input_cost_per_token": 4.4e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 204800,
-        "max_output_tokens": 131072,
-        "max_tokens": 131000,
-        "mode": "chat",
-        "output_cost_per_token": 1.76e-06,
-        "source": "https://openrouter.ai/z-ai/glm-4.6:exacto",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "Compared with GLM-4.5, this generation brings several key improvements:\n\nLonger context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex agentic tasks.\nSuperior coding performance: The model achieves higher scores on code benchmarks and demonstrates better real-world performance in applications such as Claude Code\u3001Cline\u3001Roo Code and Kilo Code, including improvements in generating visually polished front-end pages.\nAdvanced reasoning: GLM-4.6 shows a clear improvement in reasoning performance and supports tool use during inference, leading to stronger overall capability.\nMore capable agents: GLM-4.6 exhibits stronger performance in tool using and search-based agents, and integrates more effectively within agent frameworks.\nRefined writing: Better aligns with human preferences in style and readability, and performs more naturally in role-playing scenarios."
-        },
-        "z-ai/glm-4.6:exacto": {
-            "input_cost_per_token": 4.4e-07,
-            "output_cost_per_token": 1.76e-06,
-            "max_input_tokens": 204800,
-            "max_output_tokens": 131072,
-            "metadata": {
-                "notes": "Compared with GLM-4.5, this generation brings several key improvements:\n\nLonger context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex agentic tasks.\nSuperior coding performance: The model achieves higher scores on code benchmarks and demonstrates better real-world performance in applications such as Claude Code\u3001Cline\u3001Roo Code and Kilo Code, including improvements in generating visually polished front-end pages.\nAdvanced reasoning: GLM-4.6 shows a clear improvement in reasoning performance and supports tool use during inference, leading to stronger overall capability.\nMore capable agents: GLM-4.6 exhibits stronger performance in tool using and search-based agents, and integrates more effectively within agent frameworks.\nRefined writing: Better aligns with human preferences in style and readability, and performs more naturally in role-playing scenarios."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "openrouter/z-ai/glm-4.6:exacto": {
-        "input_cost_per_token": 4.4e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 204800,
-        "max_output_tokens": 131072,
-        "max_tokens": 131000,
-        "mode": "chat",
-        "output_cost_per_token": 1.76e-06,
-        "source": "https://openrouter.ai/z-ai/glm-4.6:exacto",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "Compared with GLM-4.5, this generation brings several key improvements:\n\nLonger context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex agentic tasks.\nSuperior coding performance: The model achieves higher scores on code benchmarks and demonstrates better real-world performance in applications such as Claude Code\u3001Cline\u3001Roo Code and Kilo Code, including improvements in generating visually polished front-end pages.\nAdvanced reasoning: GLM-4.6 shows a clear improvement in reasoning performance and supports tool use during inference, leading to stronger overall capability.\nMore capable agents: GLM-4.6 exhibits stronger performance in tool using and search-based agents, and integrates more effectively within agent frameworks.\nRefined writing: Better aligns with human preferences in style and readability, and performs more naturally in role-playing scenarios."
-        }
-    },
     "moonshot/moonshot-v1-8k": {
         "input_cost_per_token": 2e-07,
         "litellm_provider": "moonshot",
@@ -19237,6 +19112,26 @@
             "supports_vision": true,
             "metadata": {
                 "notes": "GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex"
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "bytedance-seed/seed-2.0-lite": {
+        "input_cost_per_token": 2.5e-07,
+        "output_cost_per_token": 2e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 131072,
+        "metadata": {
+            "notes": "Seed-2.0-Lite is a balanced model designed for high-frequency enterprise workloads, optimizing for both capability and cost. Its overall performance surpasses the previous-generation Seed-1.8. It is well-suited for production tasks such as unstructured information processing, text content creation, search and recommendation, and data analysis. The model supports long-context processing, multi-source information fusion, multi-step instruction execution, and high-fidelity structured outputs\u2014delivering stable quality while significantly reducing cost."
+        },
+        "litellm_provider": "openrouter",
+        "bytedance-seed/seed-2.0-lite": {
+            "input_cost_per_token": 2.5e-07,
+            "output_cost_per_token": 2e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "Seed-2.0-Lite is a balanced model designed for high-frequency enterprise workloads, optimizing for both capability and cost. Its overall performance surpasses the previous-generation Seed-1.8. It is well-suited for production tasks such as unstructured information processing, text content creation, search and recommendation, and data analysis. The model supports long-context processing, multi-source information fusion, multi-step instruction execution, and high-fidelity structured outputs\u2014delivering stable quality while significantly reducing cost."
             },
             "litellm_provider": "openrouter"
         }
@@ -19731,6 +19626,7 @@
         "supports_system_messages": false,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -19772,6 +19668,7 @@
         "supports_tool_choice": true,
         "supports_service_tier": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -19813,6 +19710,7 @@
         "supports_tool_choice": true,
         "supports_service_tier": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -19904,6 +19802,20 @@
             },
             "litellm_provider": "openrouter"
         }
+    },
+    "openrouter/z-ai/glm-4.6:exacto": {
+        "input_cost_per_token": 4.5e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 202800,
+        "max_output_tokens": 131000,
+        "max_tokens": 131000,
+        "mode": "chat",
+        "output_cost_per_token": 1.9e-06,
+        "source": "https://openrouter.ai/z-ai/glm-4.6:exacto",
+        "supports_function_calling": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true
     },
     "moonshot/kimi-latest-8k": {
         "cache_read_input_token_cost": 1.5e-07,
@@ -21100,26 +21012,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "neversleep/noromaid-20b": {
-        "input_cost_per_token": 1e-06,
-        "output_cost_per_token": 1.75e-06,
-        "max_input_tokens": 4096,
-        "max_output_tokens": 2048,
-        "metadata": {
-            "notes": "A collab between IkariDev and Undi. This merge is suitable for RP, ERP, and general knowledge.\n\n#merge #uncensored"
-        },
-        "litellm_provider": "openrouter",
-        "neversleep/noromaid-20b": {
-            "input_cost_per_token": 1e-06,
-            "output_cost_per_token": 1.75e-06,
-            "max_input_tokens": 4096,
-            "max_output_tokens": 2048,
-            "metadata": {
-                "notes": "A collab between IkariDev and Undi. This merge is suitable for RP, ERP, and general knowledge.\n\n#merge #uncensored"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "morph/morph-v3-large": {
         "input_cost_per_token": 9e-07,
         "litellm_provider": "openrouter",
@@ -21733,6 +21625,48 @@
         "input_cost_per_token_cache_hit": 1.1e-07,
         "supports_reasoning": true
     },
+    "z-ai/glm-5": {
+        "input_cost_per_token": 7.2e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 202752,
+        "max_output_tokens": 131072,
+        "max_tokens": 128000,
+        "mode": "chat",
+        "output_cost_per_token": 2.3e-06,
+        "source": "https://openrouter.ai/z-ai/glm-5",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution."
+        },
+        "z-ai/glm-5": {
+            "input_cost_per_token": 7.2e-07,
+            "output_cost_per_token": 2.3e-06,
+            "max_input_tokens": 202752,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/z-ai/glm-5": {
+        "input_cost_per_token": 7.2e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 202752,
+        "max_output_tokens": 131072,
+        "max_tokens": 128000,
+        "mode": "chat",
+        "output_cost_per_token": 2.3e-06,
+        "source": "https://openrouter.ai/z-ai/glm-5",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution."
+        }
+    },
     "novita/zai-org/glm-4.5": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -21883,7 +21817,8 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "gpt-4.1-mini-2025-04-14": {
         "cache_read_input_token_cost": 1e-07,
@@ -21917,7 +21852,8 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "bedrock/us-east-1/moonshotai.kimi-k2-thinking": {
         "input_cost_per_token": 6e-07,
@@ -22040,24 +21976,6 @@
         "supports_function_calling": true,
         "supports_response_schema": true,
         "supports_tool_choice": true
-    },
-    "moonshotai/kimi-k2-0905:exacto": {
-        "input_cost_per_token": 6e-07,
-        "output_cost_per_token": 2.5e-06,
-        "max_input_tokens": 262144,
-        "metadata": {
-            "notes": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It supports long-context inference up to 256k tokens, extended from the previous 128k.\n\nThis update improves agentic coding with higher accuracy and better generalization across scaffolds, and enhances frontend coding with more aesthetic and functional outputs for web, 3D, and related tasks. Kimi K2 is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. It excels across coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) benchmarks. The model is trained with a novel stack incorporating the MuonClip optimizer for stable large-scale MoE training."
-        },
-        "litellm_provider": "openrouter",
-        "moonshotai/kimi-k2-0905:exacto": {
-            "input_cost_per_token": 6e-07,
-            "output_cost_per_token": 2.5e-06,
-            "max_input_tokens": 262144,
-            "metadata": {
-                "notes": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It supports long-context inference up to 256k tokens, extended from the previous 128k.\n\nThis update improves agentic coding with higher accuracy and better generalization across scaffolds, and enhances frontend coding with more aesthetic and functional outputs for web, 3D, and related tasks. Kimi K2 is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. It excels across coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) benchmarks. The model is trained with a novel stack incorporating the MuonClip optimizer for stable large-scale MoE training."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "fireworks_ai/accounts/fireworks/models/kimi-k2-instruct": {
         "input_cost_per_token": 6e-07,
@@ -22735,47 +22653,6 @@
         "supports_tool_choice": true,
         "metadata": {
             "notes": "DeepSeek R1 is here: Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active in an inference pass.\n\nFully open-source model & [technical report](https://api-docs.deepseek.com/news/news250120).\n\nMIT licensed: Distill & commercialize freely!"
-        }
-    },
-    "z-ai/glm-5": {
-        "input_cost_per_token": 8e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 202752,
-        "max_output_tokens": 128000,
-        "max_tokens": 128000,
-        "mode": "chat",
-        "output_cost_per_token": 2.56e-06,
-        "source": "https://openrouter.ai/z-ai/glm-5",
-        "supports_function_calling": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution."
-        },
-        "z-ai/glm-5": {
-            "input_cost_per_token": 8e-07,
-            "output_cost_per_token": 2.56e-06,
-            "max_input_tokens": 202752,
-            "metadata": {
-                "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "openrouter/z-ai/glm-5": {
-        "input_cost_per_token": 8e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 202752,
-        "max_output_tokens": 128000,
-        "max_tokens": 128000,
-        "mode": "chat",
-        "output_cost_per_token": 2.56e-06,
-        "source": "https://openrouter.ai/z-ai/glm-5",
-        "supports_function_calling": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution."
         }
     },
     "vertex_ai/deepseek-ai/deepseek-v3.2-maas": {
@@ -25590,7 +25467,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "o4-mini-2025-04-16": {
         "cache_read_input_token_cost": 2.75e-07,
@@ -25609,7 +25487,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "vercel_ai_gateway/openai/o4-mini": {
         "cache_creation_input_token_cost": 0.0,
@@ -27728,24 +27607,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true
     },
-    "raifle/sorcererlm-8x22b": {
-        "input_cost_per_token": 4.5e-06,
-        "output_cost_per_token": 4.5e-06,
-        "max_input_tokens": 16000,
-        "metadata": {
-            "notes": "SorcererLM is an advanced RP and storytelling model, built as a Low-rank 16-bit LoRA fine-tuned on [WizardLM-2 8x22B](/microsoft/wizardlm-2-8x22b).\n\n- Advanced reasoning and emotional intelligence for engaging and immersive interactions\n- Vivid writing capabilities enriched with spatial and contextual awareness\n- Enhanced narrative depth, promoting creative and dynamic storytelling"
-        },
-        "litellm_provider": "openrouter",
-        "raifle/sorcererlm-8x22b": {
-            "input_cost_per_token": 4.5e-06,
-            "output_cost_per_token": 4.5e-06,
-            "max_input_tokens": 16000,
-            "metadata": {
-                "notes": "SorcererLM is an advanced RP and storytelling model, built as a Low-rank 16-bit LoRA fine-tuned on [WizardLM-2 8x22B](/microsoft/wizardlm-2-8x22b).\n\n- Advanced reasoning and emotional intelligence for engaging and immersive interactions\n- Vivid writing capabilities enriched with spatial and contextual awareness\n- Enhanced narrative depth, promoting creative and dynamic storytelling"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "ft:gpt-3.5-turbo-0613": {
         "input_cost_per_token": 3e-06,
         "litellm_provider": "openai",
@@ -28455,7 +28316,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "o3-2025-04-16": {
         "cache_read_input_token_cost": 5e-07,
@@ -28487,7 +28349,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "vercel_ai_gateway/openai/o3": {
         "cache_creation_input_token_cost": 0.0,
@@ -29538,6 +29401,7 @@
         "supports_tool_choice": true,
         "supports_service_tier": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -29657,6 +29521,7 @@
         "supports_tool_choice": true,
         "supports_service_tier": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -29689,6 +29554,7 @@
         "supports_system_messages": false,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -29724,6 +29590,7 @@
         "supports_system_messages": false,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -29756,6 +29623,7 @@
         "supports_system_messages": false,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": true
     },
@@ -31968,7 +31836,8 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "gpt-4.1-2025-04-14": {
         "cache_read_input_token_cost": 5e-07,
@@ -32002,7 +31871,8 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_service_tier": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "o4-mini-deep-research": {
         "cache_read_input_token_cost": 5e-07,
@@ -32035,7 +31905,8 @@
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "o4-mini-deep-research-2025-06-26": {
         "cache_read_input_token_cost": 5e-07,
@@ -32068,7 +31939,8 @@
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "openai/gpt-5.3-codex": {
         "input_cost_per_token": 1.75e-06,
@@ -32472,6 +32344,7 @@
         "supports_system_messages": false,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": true
     },
@@ -32507,6 +32380,7 @@
         "supports_system_messages": false,
         "supports_tool_choice": true,
         "supports_vision": true,
+        "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
     },
@@ -32604,6 +32478,41 @@
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
+        "supports_vision": true
+    },
+    "azure/gpt-5.3-chat": {
+        "cache_read_input_token_cost": 1.75e-07,
+        "cache_read_input_token_cost_priority": 3.5e-07,
+        "input_cost_per_token": 1.75e-06,
+        "input_cost_per_token_priority": 3.5e-06,
+        "litellm_provider": "azure",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 16384,
+        "max_tokens": 16384,
+        "mode": "chat",
+        "output_cost_per_token": 1.4e-05,
+        "output_cost_per_token_priority": 2.8e-05,
+        "supported_endpoints": [
+            "/v1/chat/completions",
+            "/v1/responses"
+        ],
+        "supported_modalities": [
+            "text",
+            "image"
+        ],
+        "supported_output_modalities": [
+            "text"
+        ],
+        "supports_function_calling": true,
+        "supports_native_streaming": true,
+        "supports_parallel_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_system_messages": true,
+        "supports_tool_choice": true,
+        "supports_service_tier": true,
         "supports_vision": true
     },
     "gpt-5.2-chat-latest": {
@@ -33050,6 +32959,90 @@
             },
             "litellm_provider": "openrouter"
         }
+    },
+    "azure/gpt-5.4": {
+        "cache_read_input_token_cost": 2.5e-07,
+        "cache_read_input_token_cost_above_272k_tokens": 5e-07,
+        "cache_read_input_token_cost_priority": 5e-07,
+        "cache_read_input_token_cost_above_272k_tokens_priority": 1e-06,
+        "input_cost_per_token": 2.5e-06,
+        "input_cost_per_token_above_272k_tokens": 5e-06,
+        "input_cost_per_token_priority": 5e-06,
+        "input_cost_per_token_above_272k_tokens_priority": 1e-05,
+        "litellm_provider": "azure",
+        "max_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "max_tokens": 128000,
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-05,
+        "output_cost_per_token_above_272k_tokens": 2.25e-05,
+        "output_cost_per_token_priority": 3e-05,
+        "output_cost_per_token_above_272k_tokens_priority": 4.5e-05,
+        "supported_endpoints": [
+            "/v1/chat/completions",
+            "/v1/batch",
+            "/v1/responses"
+        ],
+        "supported_modalities": [
+            "text",
+            "image"
+        ],
+        "supported_output_modalities": [
+            "text"
+        ],
+        "supports_function_calling": true,
+        "supports_native_streaming": true,
+        "supports_parallel_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_system_messages": true,
+        "supports_tool_choice": true,
+        "supports_service_tier": true,
+        "supports_vision": true
+    },
+    "azure/gpt-5.4-2026-03-05": {
+        "cache_read_input_token_cost": 2.5e-07,
+        "cache_read_input_token_cost_above_272k_tokens": 5e-07,
+        "cache_read_input_token_cost_priority": 5e-07,
+        "cache_read_input_token_cost_above_272k_tokens_priority": 1e-06,
+        "input_cost_per_token": 2.5e-06,
+        "input_cost_per_token_above_272k_tokens": 5e-06,
+        "input_cost_per_token_priority": 5e-06,
+        "input_cost_per_token_above_272k_tokens_priority": 1e-05,
+        "litellm_provider": "azure",
+        "max_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "max_tokens": 128000,
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-05,
+        "output_cost_per_token_above_272k_tokens": 2.25e-05,
+        "output_cost_per_token_priority": 3e-05,
+        "output_cost_per_token_above_272k_tokens_priority": 4.5e-05,
+        "supported_endpoints": [
+            "/v1/chat/completions",
+            "/v1/batch",
+            "/v1/responses"
+        ],
+        "supported_modalities": [
+            "text",
+            "image"
+        ],
+        "supported_output_modalities": [
+            "text"
+        ],
+        "supports_function_calling": true,
+        "supports_native_streaming": true,
+        "supports_parallel_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_system_messages": true,
+        "supports_tool_choice": true,
+        "supports_service_tier": true,
+        "supports_vision": true
     },
     "x-ai/grok-4": {
         "input_cost_per_token": 3e-06,
@@ -38928,7 +38921,8 @@
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "o3-deep-research-2025-06-26": {
         "cache_read_input_token_cost": 2.5e-06,
@@ -38961,7 +38955,8 @@
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "luminous-base-control": {
         "input_cost_per_token": 3.75e-05,
@@ -40978,7 +40973,8 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "o3-pro-2025-06-10": {
         "input_cost_per_token": 2e-05,
@@ -41008,7 +41004,8 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "multimodalembedding": {
         "input_cost_per_character": 2e-07,
@@ -41518,6 +41515,76 @@
             },
             "litellm_provider": "openrouter"
         }
+    },
+    "azure/gpt-5.4-pro": {
+        "cache_read_input_token_cost": 3e-06,
+        "cache_read_input_token_cost_above_272k_tokens": 6e-06,
+        "input_cost_per_token": 3e-05,
+        "input_cost_per_token_above_272k_tokens": 6e-05,
+        "litellm_provider": "azure",
+        "max_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "max_tokens": 128000,
+        "mode": "responses",
+        "output_cost_per_token": 0.00018,
+        "output_cost_per_token_above_272k_tokens": 0.00027,
+        "supported_endpoints": [
+            "/v1/batch",
+            "/v1/responses"
+        ],
+        "supported_modalities": [
+            "text",
+            "image"
+        ],
+        "supported_output_modalities": [
+            "text"
+        ],
+        "supports_function_calling": true,
+        "supports_native_streaming": true,
+        "supports_parallel_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": false,
+        "supports_system_messages": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "supports_web_search": true
+    },
+    "azure/gpt-5.4-pro-2026-03-05": {
+        "cache_read_input_token_cost": 3e-06,
+        "cache_read_input_token_cost_above_272k_tokens": 6e-06,
+        "input_cost_per_token": 3e-05,
+        "input_cost_per_token_above_272k_tokens": 6e-05,
+        "litellm_provider": "azure",
+        "max_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "max_tokens": 128000,
+        "mode": "responses",
+        "output_cost_per_token": 0.00018,
+        "output_cost_per_token_above_272k_tokens": 0.00027,
+        "supported_endpoints": [
+            "/v1/batch",
+            "/v1/responses"
+        ],
+        "supported_modalities": [
+            "text",
+            "image"
+        ],
+        "supported_output_modalities": [
+            "text"
+        ],
+        "supports_function_calling": true,
+        "supports_native_streaming": true,
+        "supports_parallel_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": false,
+        "supports_system_messages": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "supports_web_search": true
     },
     "bedrock/*/6-month-commitment/cohere.command-light-text-v14": {
         "input_cost_per_second": 0.0011416,
