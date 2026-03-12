@@ -1,45 +1,4 @@
 {
-    "gemini/gemini-2.0-pro-exp-02-05": {
-        "cache_read_input_token_cost": 0.0,
-        "input_cost_per_audio_per_second": 0,
-        "input_cost_per_audio_per_second_above_128k_tokens": 0,
-        "input_cost_per_character": 0,
-        "input_cost_per_character_above_128k_tokens": 0,
-        "input_cost_per_image": 0,
-        "input_cost_per_image_above_128k_tokens": 0,
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "input_cost_per_video_per_second": 0,
-        "input_cost_per_video_per_second_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_character_above_128k_tokens": 0,
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 2,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
-        "supports_audio_input": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_video_input": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 1000000
-    },
     "gemini/gemini-exp-1206": {
         "input_cost_per_token": 0,
         "input_cost_per_token_above_128k_tokens": 0,
@@ -67,379 +26,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini-2.0-flash-thinking-exp-01-21": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 0.0,
-        "input_cost_per_audio_per_second": 0,
-        "input_cost_per_audio_per_second_above_128k_tokens": 0,
-        "input_cost_per_character": 0,
-        "input_cost_per_character_above_128k_tokens": 0,
-        "input_cost_per_image": 0,
-        "input_cost_per_image_above_128k_tokens": 0,
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "input_cost_per_video_per_second": 0,
-        "input_cost_per_video_per_second_above_128k_tokens": 0,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65536,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65536,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_character_above_128k_tokens": 0,
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-2.0-flash",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": false,
-        "supports_parallel_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": false,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
-    "gemini/gemini-2.0-flash-thinking-exp": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 0.0,
-        "input_cost_per_audio_per_second": 0,
-        "input_cost_per_audio_per_second_above_128k_tokens": 0,
-        "input_cost_per_character": 0,
-        "input_cost_per_character_above_128k_tokens": 0,
-        "input_cost_per_image": 0,
-        "input_cost_per_image_above_128k_tokens": 0,
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "input_cost_per_video_per_second": 0,
-        "input_cost_per_video_per_second_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65536,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65536,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_character_above_128k_tokens": 0,
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 10,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-2.0-flash",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-2.0-flash-thinking-exp-01-21": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 0.0,
-        "input_cost_per_audio_per_second": 0,
-        "input_cost_per_audio_per_second_above_128k_tokens": 0,
-        "input_cost_per_character": 0,
-        "input_cost_per_character_above_128k_tokens": 0,
-        "input_cost_per_image": 0,
-        "input_cost_per_image_above_128k_tokens": 0,
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "input_cost_per_video_per_second": 0,
-        "input_cost_per_video_per_second_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65536,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65536,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_character_above_128k_tokens": 0,
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 10,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-2.0-flash",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-2.5-pro-exp-03-25": {
-        "cache_read_input_token_cost": 0.0,
-        "input_cost_per_token": 0.0,
-        "input_cost_per_token_above_200k_tokens": 0.0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 0.0,
-        "output_cost_per_token_above_200k_tokens": 0.0,
-        "rpm": 5,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_input": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_video_input": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 250000
-    },
-    "gemini-2.0-flash-thinking-exp": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 0.0,
-        "input_cost_per_audio_per_second": 0,
-        "input_cost_per_audio_per_second_above_128k_tokens": 0,
-        "input_cost_per_character": 0,
-        "input_cost_per_character_above_128k_tokens": 0,
-        "input_cost_per_image": 0,
-        "input_cost_per_image_above_128k_tokens": 0,
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "input_cost_per_video_per_second": 0,
-        "input_cost_per_video_per_second_above_128k_tokens": 0,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_character_above_128k_tokens": 0,
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-2.0-flash",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
-    "gemini/gemini-1.5-flash-8b": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 4000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-1.5-flash-8b-exp-0924": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 4000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-1.5-flash-exp-0827": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 2000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-2.0-flash-exp": {
-        "cache_read_input_token_cost": 0.0,
-        "input_cost_per_audio_per_second": 0,
-        "input_cost_per_audio_per_second_above_128k_tokens": 0,
-        "input_cost_per_character": 0,
-        "input_cost_per_character_above_128k_tokens": 0,
-        "input_cost_per_image": 0,
-        "input_cost_per_image_above_128k_tokens": 0,
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "input_cost_per_video_per_second": 0,
-        "input_cost_per_video_per_second_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_character_above_128k_tokens": 0,
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 10,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-2.0-flash",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
         "tpm": 4000000
     },
     "gemini/gemini-exp-1114": {
@@ -471,32 +57,6 @@
         "supports_vision": true,
         "tpm": 4000000
     },
-    "gemini/gemini-1.5-flash-8b-exp-0827": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 4000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
     "openrouter/openrouter/auto": {
         "input_cost_per_token": 0,
         "output_cost_per_token": 0,
@@ -512,55 +72,53 @@
         "supports_audio_input": true,
         "supports_video_input": true
     },
-    "gemini/gemini-1.5-pro-exp-0827": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 0,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 0,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "rpm": 1000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
+    "openrouter/hunter-alpha": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "input_cost_per_image": 0.0,
+        "input_cost_per_query": 0.0,
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+        },
+        "litellm_provider": "openrouter",
+        "openrouter/hunter-alpha": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "input_cost_per_image": 0.0,
+            "input_cost_per_query": 0.0,
+            "max_input_tokens": 1048576,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
-    "gemini-flash-experimental": {
-        "input_cost_per_character": 0,
-        "input_cost_per_token": 0,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_token": 0,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental",
-        "supports_function_calling": false,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
-    },
-    "gemini-pro-experimental": {
-        "input_cost_per_character": 0,
-        "input_cost_per_token": 0,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_token": 0,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental",
-        "supports_function_calling": false,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "input_cost_per_image": 0.0,
+        "input_cost_per_query": 0.0,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "metadata": {
+            "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
+        },
+        "litellm_provider": "openrouter",
+        "nvidia/nemotron-3-super-120b-a12b:free": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "input_cost_per_image": 0.0,
+            "input_cost_per_query": 0.0,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "metadata": {
+                "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "qwen/qwen3-coder:free": {
         "input_cost_per_token": 0.0,
@@ -630,6 +188,30 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_vision": true
+    },
+    "openrouter/healer-alpha": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "input_cost_per_image": 0.0,
+        "input_cost_per_query": 0.0,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+        },
+        "litellm_provider": "openrouter",
+        "openrouter/healer-alpha": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "input_cost_per_image": 0.0,
+            "input_cost_per_query": 0.0,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "lemonade/qwen3-coder-30b-a3b-instruct-gguf": {
         "input_cost_per_token": 0,
@@ -840,62 +422,6 @@
         "supports_function_calling": true,
         "supports_response_schema": true,
         "supports_tool_choice": true
-    },
-    "qwen/qwen3-vl-30b-a3b-thinking": {
-        "input_cost_per_token": 0.0,
-        "output_cost_per_token": 0.0,
-        "input_cost_per_image": 0.0,
-        "input_cost_per_query": 0.0,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 32768,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels in perception of real-world/synthetic categories, 2D/3D spatial grounding, and long-form visual comprehension, achieving competitive multimodal benchmark results. For agentic use, it handles multi-image multi-turn instructions, video timeline alignments, GUI automation, and visual coding from sketches to debugged UI. Text performance matches flagship Qwen3 models, suiting document AI, OCR, UI assistance, spatial tasks, and agent research."
-        },
-        "litellm_provider": "openrouter",
-        "qwen/qwen3-vl-30b-a3b-thinking": {
-            "input_cost_per_token": 0.0,
-            "output_cost_per_token": 0.0,
-            "input_cost_per_image": 0.0,
-            "input_cost_per_query": 0.0,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 32768,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels in perception of real-world/synthetic categories, 2D/3D spatial grounding, and long-form visual comprehension, achieving competitive multimodal benchmark results. For agentic use, it handles multi-image multi-turn instructions, video timeline alignments, GUI automation, and visual coding from sketches to debugged UI. Text performance matches flagship Qwen3 models, suiting document AI, OCR, UI assistance, spatial tasks, and agent research."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "qwen/qwen3-vl-235b-a22b-thinking": {
-        "input_cost_per_token": 0.0,
-        "output_cost_per_token": 0.0,
-        "input_cost_per_image": 0.0,
-        "input_cost_per_query": 0.0,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 32768,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STEM and math. The series emphasizes robust perception (recognition of diverse real-world and synthetic categories), spatial understanding (2D/3D grounding), and long-form visual comprehension, with competitive results on public multimodal benchmarks for both perception and reasoning.\n\nBeyond analysis, Qwen3-VL supports agentic interaction and tool use: it can follow complex instructions over multi-image, multi-turn dialogues; align text to video timelines for precise temporal queries; and operate GUI elements for automation tasks. The models also enable visual coding workflows, turning sketches or mockups into code and assisting with UI debugging, while maintaining strong text-only performance comparable to the flagship Qwen3 language models. This makes Qwen3-VL suitable for production scenarios spanning document AI, multilingual OCR, software/UI assistance, spatial/embodied tasks, and research on vision-language agents."
-        },
-        "litellm_provider": "openrouter",
-        "qwen/qwen3-vl-235b-a22b-thinking": {
-            "input_cost_per_token": 0.0,
-            "output_cost_per_token": 0.0,
-            "input_cost_per_image": 0.0,
-            "input_cost_per_query": 0.0,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 32768,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STEM and math. The series emphasizes robust perception (recognition of diverse real-world and synthetic categories), spatial understanding (2D/3D grounding), and long-form visual comprehension, with competitive results on public multimodal benchmarks for both perception and reasoning.\n\nBeyond analysis, Qwen3-VL supports agentic interaction and tool use: it can follow complex instructions over multi-image, multi-turn dialogues; align text to video timelines for precise temporal queries; and operate GUI elements for automation tasks. The models also enable visual coding workflows, turning sketches or mockups into code and assisting with UI debugging, while maintaining strong text-only performance comparable to the flagship Qwen3 language models. This makes Qwen3-VL suitable for production scenarios spanning document AI, multilingual OCR, software/UI assistance, spatial/embodied tasks, and research on vision-language agents."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "deepseek-v3-2-251201": {
         "input_cost_per_token": 0.0,
@@ -1545,15 +1071,6 @@
         "mode": "moderation",
         "output_cost_per_token": 0.0
     },
-    "omni-moderation-latest-intents": {
-        "input_cost_per_token": 0.0,
-        "litellm_provider": "openai",
-        "max_input_tokens": 32768,
-        "max_output_tokens": 0,
-        "max_tokens": 0,
-        "mode": "moderation",
-        "output_cost_per_token": 0.0
-    },
     "text-moderation-007": {
         "input_cost_per_token": 0.0,
         "litellm_provider": "openai",
@@ -2064,16 +1581,6 @@
         "output_cost_per_token": 0.0,
         "output_vector_size": 1024,
         "source": "https://docs.perplexity.ai/docs/embeddings/quickstart"
-    },
-    "text-multilingual-embedding-preview-0409": {
-        "input_cost_per_token": 6.25e-09,
-        "litellm_provider": "vertex_ai-embedding-models",
-        "max_input_tokens": 3072,
-        "max_tokens": 3072,
-        "mode": "embedding",
-        "output_cost_per_token": 0,
-        "output_vector_size": 768,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
     },
     "azure/medium/1536-x-1024/gpt-image-1-mini": {
         "input_cost_per_pixel": 7.9752604167e-09,
@@ -3882,6 +3389,31 @@
         "supports_system_messages": true,
         "supports_tool_choice": true
     },
+    "vertex_ai/gemini-embedding-2-preview": {
+        "input_cost_per_token": 1.5e-07,
+        "litellm_provider": "vertex_ai",
+        "max_input_tokens": 8192,
+        "max_tokens": 8192,
+        "mode": "embedding",
+        "output_cost_per_token": 0,
+        "output_vector_size": 3072,
+        "source": "https://ai.google.dev/gemini-api/docs/embeddings#multimodal",
+        "supports_multimodal": true,
+        "uses_embed_content": true
+    },
+    "gemini/gemini-embedding-2-preview": {
+        "input_cost_per_token": 1.5e-07,
+        "litellm_provider": "gemini",
+        "max_input_tokens": 8192,
+        "max_tokens": 8192,
+        "mode": "embedding",
+        "output_cost_per_token": 0,
+        "output_vector_size": 3072,
+        "rpm": 10000,
+        "source": "https://ai.google.dev/gemini-api/docs/embeddings#multimodal",
+        "supports_multimodal": true,
+        "tpm": 10000000
+    },
     "mistral/codestral-embed": {
         "input_cost_per_token": 1.5e-07,
         "litellm_provider": "mistral",
@@ -5097,61 +4629,6 @@
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
     },
-    "textembedding-gecko": {
-        "input_cost_per_character": 2.5e-08,
-        "input_cost_per_token": 1e-07,
-        "litellm_provider": "vertex_ai-embedding-models",
-        "max_input_tokens": 3072,
-        "max_tokens": 3072,
-        "mode": "embedding",
-        "output_cost_per_token": 0,
-        "output_vector_size": 768,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "textembedding-gecko-multilingual": {
-        "input_cost_per_character": 2.5e-08,
-        "input_cost_per_token": 1e-07,
-        "litellm_provider": "vertex_ai-embedding-models",
-        "max_input_tokens": 3072,
-        "max_tokens": 3072,
-        "mode": "embedding",
-        "output_cost_per_token": 0,
-        "output_vector_size": 768,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "textembedding-gecko-multilingual@001": {
-        "input_cost_per_character": 2.5e-08,
-        "input_cost_per_token": 1e-07,
-        "litellm_provider": "vertex_ai-embedding-models",
-        "max_input_tokens": 3072,
-        "max_tokens": 3072,
-        "mode": "embedding",
-        "output_cost_per_token": 0,
-        "output_vector_size": 768,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "textembedding-gecko@001": {
-        "input_cost_per_character": 2.5e-08,
-        "input_cost_per_token": 1e-07,
-        "litellm_provider": "vertex_ai-embedding-models",
-        "max_input_tokens": 3072,
-        "max_tokens": 3072,
-        "mode": "embedding",
-        "output_cost_per_token": 0,
-        "output_vector_size": 768,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "textembedding-gecko@003": {
-        "input_cost_per_character": 2.5e-08,
-        "input_cost_per_token": 1e-07,
-        "litellm_provider": "vertex_ai-embedding-models",
-        "max_input_tokens": 3072,
-        "max_tokens": 3072,
-        "mode": "embedding",
-        "output_cost_per_token": 0,
-        "output_vector_size": 768,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
     "fireworks_ai/accounts/fireworks/models/phi-2-3b": {
         "max_tokens": 2048,
         "max_input_tokens": 2048,
@@ -5637,46 +5114,6 @@
         "max_input_tokens": 8192,
         "max_output_tokens": 1024,
         "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-gecko": {
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 2048,
-        "max_output_tokens": 64,
-        "max_tokens": 64,
-        "mode": "completion",
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-gecko-latest": {
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 2048,
-        "max_output_tokens": 64,
-        "max_tokens": 64,
-        "mode": "completion",
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-gecko@001": {
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 2048,
-        "max_output_tokens": 64,
-        "max_tokens": 64,
-        "mode": "completion",
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-gecko@002": {
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 2048,
-        "max_output_tokens": 64,
-        "max_tokens": 64,
         "mode": "completion",
         "output_cost_per_token": 1.25e-07,
         "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
@@ -7329,16 +6766,6 @@
         "mode": "chat",
         "output_cost_per_token": 2e-07
     },
-    "perplexity/llama-3.1-sonar-small-128k-chat": {
-        "deprecation_date": "2025-02-22",
-        "input_cost_per_token": 2e-07,
-        "litellm_provider": "perplexity",
-        "max_input_tokens": 131072,
-        "max_output_tokens": 131072,
-        "max_tokens": 131072,
-        "mode": "chat",
-        "output_cost_per_token": 2e-07
-    },
     "fireworks_ai/accounts/fireworks/models/cogito-v1-preview-llama-8b": {
         "max_tokens": 131072,
         "max_input_tokens": 131072,
@@ -7531,16 +6958,6 @@
         "output_cost_per_token": 2e-07,
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
-    },
-    "perplexity/llama-3.1-sonar-small-128k-online": {
-        "deprecation_date": "2025-02-22",
-        "input_cost_per_token": 2e-07,
-        "litellm_provider": "perplexity",
-        "max_input_tokens": 127072,
-        "max_output_tokens": 127072,
-        "max_tokens": 127072,
-        "mode": "chat",
-        "output_cost_per_token": 2e-07
     },
     "fireworks_ai/accounts/fireworks/models/code-qwen-1p5-7b": {
         "max_tokens": 65536,
@@ -9253,44 +8670,6 @@
         "supports_web_search": true,
         "tpm": 4000000
     },
-    "gemini/gemini-2.0-flash-lite-preview-02-05": {
-        "deprecation_date": "2025-12-09",
-        "cache_read_input_token_cost": 1.875e-08,
-        "input_cost_per_audio_token": 7.5e-08,
-        "input_cost_per_token": 7.5e-08,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 3e-07,
-        "rpm": 60000,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-2.0-flash-lite",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 10000000
-    },
     "zai.glm-4.7-flash": {
         "input_cost_per_token": 7e-08,
         "litellm_provider": "bedrock_converse",
@@ -9333,13 +8712,20 @@
     },
     "qwen/qwen3.5-flash-02-23": {
         "input_cost_per_token": 1e-07,
-        "output_cost_per_token": 4e-07,
+        "litellm_provider": "openrouter",
         "max_input_tokens": 1000000,
         "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 4e-07,
+        "source": "https://openrouter.ai/qwen/qwen3.5-flash-02-23",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
         "metadata": {
             "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the 3 series, these models deliver a leap forward in performance for both pure text and multimodal tasks, offering fast response times while balancing inference speed and overall performance."
         },
-        "litellm_provider": "openrouter",
         "qwen/qwen3.5-flash-02-23": {
             "input_cost_per_token": 1e-07,
             "output_cost_per_token": 4e-07,
@@ -9349,6 +8735,23 @@
                 "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the 3 series, these models deliver a leap forward in performance for both pure text and multimodal tasks, offering fast response times while balancing inference speed and overall performance."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/qwen/qwen3.5-flash-02-23": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 4e-07,
+        "source": "https://openrouter.ai/qwen/qwen3.5-flash-02-23",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the 3 series, these models deliver a leap forward in performance for both pure text and multimodal tasks, offering fast response times while balancing inference speed and overall performance."
         }
     },
     "mistral/codestral-mamba-latest": {
@@ -10427,6 +9830,60 @@
         "supports_tool_choice": true,
         "supports_vision": false
     },
+    "deepseek/deepseek-v3.2": {
+        "input_cost_per_token": 2.6e-07,
+        "input_cost_per_token_cache_hit": 2.8e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 163840,
+        "max_output_tokens": 163840,
+        "max_tokens": 163840,
+        "mode": "chat",
+        "output_cost_per_token": 3.8e-07,
+        "supports_assistant_prefill": true,
+        "supports_function_calling": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
+        },
+        "deepseek/deepseek-v3.2": {
+            "input_cost_per_token": 2.6e-07,
+            "input_cost_per_token_cache_hit": 2.8e-08,
+            "litellm_provider": "openrouter",
+            "max_input_tokens": 163840,
+            "max_output_tokens": 163840,
+            "max_tokens": 163840,
+            "mode": "chat",
+            "output_cost_per_token": 3.8e-07,
+            "supports_assistant_prefill": true,
+            "supports_function_calling": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_tool_choice": true,
+            "metadata": {
+                "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
+            }
+        }
+    },
+    "openrouter/deepseek/deepseek-v3.2": {
+        "input_cost_per_token": 2.6e-07,
+        "input_cost_per_token_cache_hit": 2.8e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 163840,
+        "max_output_tokens": 163840,
+        "max_tokens": 163840,
+        "mode": "chat",
+        "output_cost_per_token": 3.8e-07,
+        "supports_assistant_prefill": true,
+        "supports_function_calling": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
+        }
+    },
     "novita/qwen/qwen3-235b-a22b-instruct-2507": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -10440,60 +9897,6 @@
         "supports_tool_choice": true,
         "supports_system_messages": true,
         "supports_response_schema": true
-    },
-    "deepseek/deepseek-v3.2": {
-        "input_cost_per_token": 2.5e-07,
-        "input_cost_per_token_cache_hit": 2.8e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 163840,
-        "max_output_tokens": 65536,
-        "max_tokens": 163840,
-        "mode": "chat",
-        "output_cost_per_token": 4e-07,
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
-        },
-        "deepseek/deepseek-v3.2": {
-            "input_cost_per_token": 2.5e-07,
-            "input_cost_per_token_cache_hit": 2.8e-08,
-            "litellm_provider": "openrouter",
-            "max_input_tokens": 163840,
-            "max_output_tokens": 65536,
-            "max_tokens": 163840,
-            "mode": "chat",
-            "output_cost_per_token": 4e-07,
-            "supports_assistant_prefill": true,
-            "supports_function_calling": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_tool_choice": true,
-            "metadata": {
-                "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
-            }
-        }
-    },
-    "openrouter/deepseek/deepseek-v3.2": {
-        "input_cost_per_token": 2.5e-07,
-        "input_cost_per_token_cache_hit": 2.8e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 163840,
-        "max_output_tokens": 65536,
-        "max_tokens": 163840,
-        "mode": "chat",
-        "output_cost_per_token": 4e-07,
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
-        }
     },
     "novita/deepseek/deepseek-v3.2-exp": {
         "litellm_provider": "novita",
@@ -11631,54 +11034,6 @@
         "supports_response_schema": true,
         "supports_reasoning": true
     },
-    "gemini-2.0-flash-exp": {
-        "cache_read_input_token_cost": 3.75e-08,
-        "input_cost_per_audio_per_second": 0,
-        "input_cost_per_audio_per_second_above_128k_tokens": 0,
-        "input_cost_per_character": 0,
-        "input_cost_per_character_above_128k_tokens": 0,
-        "input_cost_per_image": 0,
-        "input_cost_per_image_above_128k_tokens": 0,
-        "input_cost_per_token": 1.5e-07,
-        "input_cost_per_token_above_128k_tokens": 0,
-        "input_cost_per_video_per_second": 0,
-        "input_cost_per_video_per_second_above_128k_tokens": 0,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 0,
-        "output_cost_per_character_above_128k_tokens": 0,
-        "output_cost_per_token": 6e-07,
-        "output_cost_per_token_above_128k_tokens": 0,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
     "nebius/qwen/qwen3-235b-a22b": {
         "max_tokens": 262144,
         "max_input_tokens": 262144,
@@ -12563,6 +11918,28 @@
         "supports_response_schema": false,
         "supports_tool_choice": true,
         "supports_web_search": true
+    },
+    "qwen/qwen3-next-80b-a3b-thinking": {
+        "input_cost_per_token": 9.75e-08,
+        "output_cost_per_token": 7.8e-07,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 32768,
+        "metadata": {
+            "notes": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured \u201cthinking\u201d traces by default. It\u2019s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic planning, and reports strong results across knowledge, reasoning, coding, alignment, and multilingual evaluations. Compared with prior Qwen3 variants, it emphasizes stability under long chains of thought and efficient scaling during inference, and it is tuned to follow complex instructions while reducing repetitive or off-task behavior.\n\nThe model is suitable for agent frameworks and tool use (function calling), retrieval-heavy workflows, and standardized benchmarking where step-by-step solutions are required. It supports long, detailed completions and leverages throughput-oriented techniques (e.g., multi-token prediction) for faster generation. Note that it operates in thinking-only mode."
+        },
+        "supports_function_calling": true,
+        "litellm_provider": "openrouter",
+        "qwen/qwen3-next-80b-a3b-thinking": {
+            "input_cost_per_token": 9.75e-08,
+            "output_cost_per_token": 7.8e-07,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 32768,
+            "metadata": {
+                "notes": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured \u201cthinking\u201d traces by default. It\u2019s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic planning, and reports strong results across knowledge, reasoning, coding, alignment, and multilingual evaluations. Compared with prior Qwen3 variants, it emphasizes stability under long chains of thought and efficient scaling during inference, and it is tuned to follow complex instructions while reducing repetitive or off-task behavior.\n\nThe model is suitable for agent frameworks and tool use (function calling), retrieval-heavy workflows, and standardized benchmarking where step-by-step solutions are required. It supports long, detailed completions and leverages throughput-oriented techniques (e.g., multi-token prediction) for faster generation. Note that it operates in thinking-only mode."
+            },
+            "supports_function_calling": true,
+            "litellm_provider": "openrouter"
+        }
     },
     "groq/qwen/qwen3-32b": {
         "input_cost_per_token": 2.9e-07,
@@ -13631,59 +13008,6 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
-    "gemini/gemini-1.5-flash": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1.5e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 3e-07,
-        "output_cost_per_token_above_128k_tokens": 6e-07,
-        "rpm": 2000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-1.5-flash-latest": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1.5e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 3e-07,
-        "output_cost_per_token_above_128k_tokens": 6e-07,
-        "rpm": 2000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
     "deepinfra/deepseek-ai/deepseek-v3-0324": {
         "max_tokens": 163840,
         "max_input_tokens": 163840,
@@ -14263,45 +13587,6 @@
         "supports_vision": true,
         "supports_web_search": true
     },
-    "gemini-2.0-flash-preview-image-generation": {
-        "deprecation_date": "2025-11-14",
-        "cache_read_input_token_cost": 2.5e-08,
-        "input_cost_per_audio_token": 7e-07,
-        "input_cost_per_token": 1e-07,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 4e-07,
-        "source": "https://ai.google.dev/pricing#2_0flash",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_input": true,
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
     "gemini/gemini-2.0-flash": {
         "cache_read_input_token_cost": 2.5e-08,
         "deprecation_date": "2026-06-01",
@@ -14373,46 +13658,6 @@
             "image"
         ],
         "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 10000000
-    },
-    "gemini/gemini-2.0-flash-preview-image-generation": {
-        "deprecation_date": "2025-11-14",
-        "cache_read_input_token_cost": 2.5e-08,
-        "input_cost_per_audio_token": 7e-07,
-        "input_cost_per_token": 1e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 4e-07,
-        "rpm": 10000,
-        "source": "https://ai.google.dev/pricing#2_0flash",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_input": true,
-        "supports_audio_output": true,
         "supports_function_calling": true,
         "supports_prompt_caching": true,
         "supports_response_schema": true,
@@ -15029,26 +14274,6 @@
         "supports_function_calling": true,
         "supports_system_messages": true
     },
-    "qwen/qwen3-next-80b-a3b-thinking": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 1.2e-06,
-        "max_input_tokens": 128000,
-        "metadata": {
-            "notes": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured \u201cthinking\u201d traces by default. It\u2019s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic planning, and reports strong results across knowledge, reasoning, coding, alignment, and multilingual evaluations. Compared with prior Qwen3 variants, it emphasizes stability under long chains of thought and efficient scaling during inference, and it is tuned to follow complex instructions while reducing repetitive or off-task behavior.\n\nThe model is suitable for agent frameworks and tool use (function calling), retrieval-heavy workflows, and standardized benchmarking where step-by-step solutions are required. It supports long, detailed completions and leverages throughput-oriented techniques (e.g., multi-token prediction) for faster generation. Note that it operates in thinking-only mode."
-        },
-        "supports_function_calling": true,
-        "litellm_provider": "openrouter",
-        "qwen/qwen3-next-80b-a3b-thinking": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 1.2e-06,
-            "max_input_tokens": 128000,
-            "metadata": {
-                "notes": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured \u201cthinking\u201d traces by default. It\u2019s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic planning, and reports strong results across knowledge, reasoning, coding, alignment, and multilingual evaluations. Compared with prior Qwen3 variants, it emphasizes stability under long chains of thought and efficient scaling during inference, and it is tuned to follow complex instructions while reducing repetitive or off-task behavior.\n\nThe model is suitable for agent frameworks and tool use (function calling), retrieval-heavy workflows, and standardized benchmarking where step-by-step solutions are required. It supports long, detailed completions and leverages throughput-oriented techniques (e.g., multi-token prediction) for faster generation. Note that it operates in thinking-only mode."
-            },
-            "supports_function_calling": true,
-            "litellm_provider": "openrouter"
-        }
-    },
     "thedrummer/skyfall-36b-v2": {
         "input_cost_per_token": 5.5e-07,
         "output_cost_per_token": 8e-07,
@@ -15321,13 +14546,20 @@
     },
     "qwen/qwen3.5-35b-a3b": {
         "input_cost_per_token": 1.625e-07,
-        "output_cost_per_token": 1.3e-06,
+        "litellm_provider": "openrouter",
         "max_input_tokens": 262144,
         "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1.3e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-35b-a3b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
         "metadata": {
             "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall performance is comparable to that of the Qwen3.5-27B."
         },
-        "litellm_provider": "openrouter",
         "qwen/qwen3.5-35b-a3b": {
             "input_cost_per_token": 1.625e-07,
             "output_cost_per_token": 1.3e-06,
@@ -15337,6 +14569,23 @@
                 "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall performance is comparable to that of the Qwen3.5-27B."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/qwen/qwen3.5-35b-a3b": {
+        "input_cost_per_token": 1.625e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1.3e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-35b-a3b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall performance is comparable to that of the Qwen3.5-27B."
         }
     },
     "azure_ai/meta-llama-3-70b-instruct": {
@@ -16349,6 +15598,30 @@
             "litellm_provider": "openrouter"
         }
     },
+    "qwen/qwen3-vl-30b-a3b-thinking": {
+        "input_cost_per_token": 1.3e-07,
+        "output_cost_per_token": 1.56e-06,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 32768,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels in perception of real-world/synthetic categories, 2D/3D spatial grounding, and long-form visual comprehension, achieving competitive multimodal benchmark results. For agentic use, it handles multi-image multi-turn instructions, video timeline alignments, GUI automation, and visual coding from sketches to debugged UI. Text performance matches flagship Qwen3 models, suiting document AI, OCR, UI assistance, spatial tasks, and agent research."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3-vl-30b-a3b-thinking": {
+            "input_cost_per_token": 1.3e-07,
+            "output_cost_per_token": 1.56e-06,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 32768,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels in perception of real-world/synthetic categories, 2D/3D spatial grounding, and long-form visual comprehension, achieving competitive multimodal benchmark results. For agentic use, it handles multi-image multi-turn instructions, video timeline alignments, GUI automation, and visual coding from sketches to debugged UI. Text performance matches flagship Qwen3 models, suiting document AI, OCR, UI assistance, spatial tasks, and agent research."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "gmi/qwen/qwen3-vl-235b-a22b-instruct-fp8": {
         "input_cost_per_token": 3e-07,
         "litellm_provider": "gmi",
@@ -16613,13 +15886,20 @@
     },
     "qwen/qwen3.5-27b": {
         "input_cost_per_token": 1.95e-07,
-        "output_cost_per_token": 1.56e-06,
+        "litellm_provider": "openrouter",
         "max_input_tokens": 262144,
         "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1.56e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-27b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
         "metadata": {
             "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of the Qwen3.5-122B-A10B."
         },
-        "litellm_provider": "openrouter",
         "qwen/qwen3.5-27b": {
             "input_cost_per_token": 1.95e-07,
             "output_cost_per_token": 1.56e-06,
@@ -16629,6 +15909,23 @@
                 "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of the Qwen3.5-122B-A10B."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/qwen/qwen3.5-27b": {
+        "input_cost_per_token": 1.95e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1.56e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-27b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of the Qwen3.5-122B-A10B."
         }
     },
     "azure_ai/llama-4-maverick-17b-128e-instruct-fp8": {
@@ -16673,94 +15970,6 @@
         "litellm_provider": "deepinfra",
         "mode": "chat",
         "supports_tool_choice": false
-    },
-    "gemini-2.5-flash-preview-04-17": {
-        "cache_read_input_token_cost": 3.75e-08,
-        "input_cost_per_audio_token": 1e-06,
-        "input_cost_per_token": 1.5e-07,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_reasoning_token": 3.5e-06,
-        "output_cost_per_token": 6e-07,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions",
-            "/v1/batch"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
-    "gemini/gemini-2.5-flash-preview-04-17": {
-        "cache_read_input_token_cost": 3.75e-08,
-        "input_cost_per_audio_token": 1e-06,
-        "input_cost_per_token": 1.5e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_reasoning_token": 3.5e-06,
-        "output_cost_per_token": 6e-07,
-        "rpm": 10,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 250000
     },
     "gemini-2.0-flash-001": {
         "cache_read_input_token_cost": 3.75e-08,
@@ -17634,13 +16843,22 @@
     },
     "qwen/qwen3.5-plus-02-15": {
         "input_cost_per_token": 2.6e-07,
-        "output_cost_per_token": 1.56e-06,
+        "input_cost_per_token_above_256k_tokens": 5e-07,
+        "litellm_provider": "openrouter",
         "max_input_tokens": 1000000,
         "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1.56e-06,
+        "output_cost_per_token_above_256k_tokens": 3e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-plus-02-15",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
         "metadata": {
             "notes": "The Qwen3.5 native vision-language series Plus models are built on a hybrid architecture that integrates linear attention mechanisms with sparse mixture-of-experts models, achieving higher inference efficiency. In a variety of task evaluations, the 3.5 series consistently demonstrates performance on par with state-of-the-art leading models. Compared to the 3 series, these models show a leap forward in both pure-text and multimodal capabilities."
         },
-        "litellm_provider": "openrouter",
         "qwen/qwen3.5-plus-02-15": {
             "input_cost_per_token": 2.6e-07,
             "output_cost_per_token": 1.56e-06,
@@ -17650,6 +16868,25 @@
                 "notes": "The Qwen3.5 native vision-language series Plus models are built on a hybrid architecture that integrates linear attention mechanisms with sparse mixture-of-experts models, achieving higher inference efficiency. In a variety of task evaluations, the 3.5 series consistently demonstrates performance on par with state-of-the-art leading models. Compared to the 3 series, these models show a leap forward in both pure-text and multimodal capabilities."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/qwen/qwen3.5-plus-02-15": {
+        "input_cost_per_token": 2.6e-07,
+        "input_cost_per_token_above_256k_tokens": 5e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1.56e-06,
+        "output_cost_per_token_above_256k_tokens": 3e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-plus-02-15",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "The Qwen3.5 native vision-language series Plus models are built on a hybrid architecture that integrates linear attention mechanisms with sparse mixture-of-experts models, achieving higher inference efficiency. In a variety of task evaluations, the 3.5 series consistently demonstrates performance on par with state-of-the-art leading models. Compared to the 3 series, these models show a leap forward in both pure-text and multimodal capabilities."
         }
     },
     "claude-3-haiku-20240307": {
@@ -18003,16 +17240,6 @@
         "mode": "chat",
         "output_cost_per_token": 1e-06
     },
-    "perplexity/llama-3.1-sonar-large-128k-chat": {
-        "deprecation_date": "2025-02-22",
-        "input_cost_per_token": 1e-06,
-        "litellm_provider": "perplexity",
-        "max_input_tokens": 131072,
-        "max_output_tokens": 131072,
-        "max_tokens": 131072,
-        "mode": "chat",
-        "output_cost_per_token": 1e-06
-    },
     "nebius/deepseek-ai/deepseek-v3": {
         "max_tokens": 128000,
         "max_input_tokens": 128000,
@@ -18034,16 +17261,6 @@
         "mode": "chat",
         "supports_function_calling": true,
         "source": "https://nebius.com/prices-ai-studio"
-    },
-    "perplexity/llama-3.1-sonar-large-128k-online": {
-        "deprecation_date": "2025-02-22",
-        "input_cost_per_token": 1e-06,
-        "litellm_provider": "perplexity",
-        "max_input_tokens": 127072,
-        "max_output_tokens": 127072,
-        "max_tokens": 127072,
-        "mode": "chat",
-        "output_cost_per_token": 1e-06
     },
     "gmi/moonshotai/kimi-k2-thinking": {
         "input_cost_per_token": 8e-07,
@@ -18746,64 +17963,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "gemini/gemini-1.5-flash-001": {
-        "cache_creation_input_token_cost": 1e-06,
-        "cache_read_input_token_cost": 1.875e-08,
-        "deprecation_date": "2025-05-24",
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1.5e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 3e-07,
-        "output_cost_per_token_above_128k_tokens": 6e-07,
-        "rpm": 2000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-1.5-flash-002": {
-        "cache_creation_input_token_cost": 1e-06,
-        "cache_read_input_token_cost": 1.875e-08,
-        "deprecation_date": "2025-09-24",
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1.5e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 3e-07,
-        "output_cost_per_token_above_128k_tokens": 6e-07,
-        "rpm": 2000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
     "xai/grok-4-fast-reasoning": {
         "litellm_provider": "xai",
         "max_input_tokens": 2000000.0,
@@ -18970,19 +18129,6 @@
         "supports_function_calling": true,
         "supports_tool_choice": true,
         "supports_vision": true
-    },
-    "azure/gpt-35-turbo-0301": {
-        "deprecation_date": "2025-02-13",
-        "input_cost_per_token": 2e-07,
-        "litellm_provider": "azure",
-        "max_input_tokens": 4097,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 2e-06,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
     },
     "azure/gpt-image-1-mini": {
         "cache_read_input_image_token_cost": 2.5e-07,
@@ -19785,13 +18931,20 @@
     },
     "qwen/qwen3.5-122b-a10b": {
         "input_cost_per_token": 2.6e-07,
-        "output_cost_per_token": 2.08e-06,
+        "litellm_provider": "openrouter",
         "max_input_tokens": 262144,
         "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 2.08e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-122b-a10b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
         "metadata": {
             "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of overall performance, this model is second only to Qwen3.5-397B-A17B. Its text capabilities significantly outperform those of Qwen3-235B-2507, and its visual capabilities surpass those of Qwen3-VL-235B."
         },
-        "litellm_provider": "openrouter",
         "qwen/qwen3.5-122b-a10b": {
             "input_cost_per_token": 2.6e-07,
             "output_cost_per_token": 2.08e-06,
@@ -19801,6 +18954,23 @@
                 "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of overall performance, this model is second only to Qwen3.5-397B-A17B. Its text capabilities significantly outperform those of Qwen3-235B-2507, and its visual capabilities surpass those of Qwen3-VL-235B."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/qwen/qwen3.5-122b-a10b": {
+        "input_cost_per_token": 2.6e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 2.08e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-122b-a10b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of overall performance, this model is second only to Qwen3.5-397B-A17B. Its text capabilities significantly outperform those of Qwen3-235B-2507, and its visual capabilities surpass those of Qwen3-VL-235B."
         }
     },
     "openrouter/z-ai/glm-4.6:exacto": {
@@ -20795,13 +19965,20 @@
     },
     "qwen/qwen3.5-397b-a17b": {
         "input_cost_per_token": 3.9e-07,
-        "output_cost_per_token": 2.34e-06,
+        "litellm_provider": "openrouter",
         "max_input_tokens": 262144,
         "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 2.34e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-397b-a17b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
         "metadata": {
             "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers state-of-the-art performance comparable to leading-edge models across a wide range of tasks, including language understanding, logical reasoning, code generation, agent-based tasks, image understanding, video understanding, and graphical user interface (GUI) interactions. With its robust code-generation and agent capabilities, the model exhibits strong generalization across diverse agent."
         },
-        "litellm_provider": "openrouter",
         "qwen/qwen3.5-397b-a17b": {
             "input_cost_per_token": 3.9e-07,
             "output_cost_per_token": 2.34e-06,
@@ -20811,6 +19988,23 @@
                 "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers state-of-the-art performance comparable to leading-edge models across a wide range of tasks, including language understanding, logical reasoning, code generation, agent-based tasks, image understanding, video understanding, and graphical user interface (GUI) interactions. With its robust code-generation and agent capabilities, the model exhibits strong generalization across diverse agent."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/qwen/qwen3.5-397b-a17b": {
+        "input_cost_per_token": 3.9e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 2.34e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-397b-a17b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers state-of-the-art performance comparable to leading-edge models across a wide range of tasks, including language understanding, logical reasoning, code generation, agent-based tasks, image understanding, video understanding, and graphical user interface (GUI) interactions. With its robust code-generation and agent capabilities, the model exhibits strong generalization across diverse agent."
         }
     },
     "fireworks_ai/accounts/fireworks/models/glm-4p6": {
@@ -21204,6 +20398,30 @@
             "/v1/audio/speech"
         ]
     },
+    "qwen/qwen3-vl-235b-a22b-thinking": {
+        "input_cost_per_token": 2.6e-07,
+        "output_cost_per_token": 2.6e-06,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 32768,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STEM and math. The series emphasizes robust perception (recognition of diverse real-world and synthetic categories), spatial understanding (2D/3D grounding), and long-form visual comprehension, with competitive results on public multimodal benchmarks for both perception and reasoning.\n\nBeyond analysis, Qwen3-VL supports agentic interaction and tool use: it can follow complex instructions over multi-image, multi-turn dialogues; align text to video timelines for precise temporal queries; and operate GUI elements for automation tasks. The models also enable visual coding workflows, turning sketches or mockups into code and assisting with UI debugging, while maintaining strong text-only performance comparable to the flagship Qwen3 language models. This makes Qwen3-VL suitable for production scenarios spanning document AI, multilingual OCR, software/UI assistance, spatial/embodied tasks, and research on vision-language agents."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3-vl-235b-a22b-thinking": {
+            "input_cost_per_token": 2.6e-07,
+            "output_cost_per_token": 2.6e-06,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 32768,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STEM and math. The series emphasizes robust perception (recognition of diverse real-world and synthetic categories), spatial understanding (2D/3D grounding), and long-form visual comprehension, with competitive results on public multimodal benchmarks for both perception and reasoning.\n\nBeyond analysis, Qwen3-VL supports agentic interaction and tool use: it can follow complex instructions over multi-image, multi-turn dialogues; align text to video timelines for precise temporal queries; and operate GUI elements for automation tasks. The models also enable visual coding workflows, turning sketches or mockups into code and assisting with UI debugging, while maintaining strong text-only performance comparable to the flagship Qwen3 language models. This makes Qwen3-VL suitable for production scenarios spanning document AI, multilingual OCR, software/UI assistance, spatial/embodied tasks, and research on vision-language agents."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "novita/moonshotai/kimi-k2-instruct": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -21557,36 +20775,6 @@
         "max_tokens": 4096,
         "mode": "completion",
         "output_cost_per_token": 2e-06
-    },
-    "text-bison": {
-        "input_cost_per_character": 2.5e-07,
-        "litellm_provider": "vertex_ai-text-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 2048,
-        "max_tokens": 2048,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "text-bison@001": {
-        "input_cost_per_character": 2.5e-07,
-        "litellm_provider": "vertex_ai-text-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "text-bison@002": {
-        "input_cost_per_character": 2.5e-07,
-        "litellm_provider": "vertex_ai-text-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
     },
     "openai/gpt-3.5-turbo-0613": {
         "input_cost_per_token": 1e-06,
@@ -22338,235 +21526,6 @@
         "source": "https://platform.moonshot.ai/docs/pricing/chat#generation-model-kimi-k2",
         "supports_vision": true
     },
-    "chat-bison-32k": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-chat-models",
-        "max_input_tokens": 32000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "chat-bison-32k@002": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-chat-models",
-        "max_input_tokens": 32000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "codechat-bison-32k": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-chat-models",
-        "max_input_tokens": 32000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "codechat-bison-32k@002": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-chat-models",
-        "max_input_tokens": 32000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "chat-bison": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-chat-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "chat-bison@001": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-chat-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "chat-bison@002": {
-        "deprecation_date": "2025-04-09",
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-chat-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "text-bison32k": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-text-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "text-bison32k@002": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-text-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-bison": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "code-bison-32k@002": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-bison32k": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-bison@001": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "code-bison@002": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-text-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "completion",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models"
-    },
-    "codechat-bison": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-chat-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "codechat-bison@001": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-chat-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "codechat-bison@002": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-chat-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
-    "codechat-bison@latest": {
-        "input_cost_per_character": 2.5e-07,
-        "input_cost_per_token": 1.25e-07,
-        "litellm_provider": "vertex_ai-code-chat-models",
-        "max_input_tokens": 6144,
-        "max_output_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "chat",
-        "output_cost_per_character": 5e-07,
-        "output_cost_per_token": 1.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_tool_choice": true
-    },
     "together_ai/moonshotai/kimi-k2.5": {
         "input_cost_per_token": 5e-07,
         "litellm_provider": "together_ai",
@@ -22815,44 +21774,6 @@
         "max_tokens": 4096,
         "mode": "chat",
         "output_cost_per_token": 2e-06
-    },
-    "azure/gpt-35-turbo-0613": {
-        "deprecation_date": "2025-02-13",
-        "input_cost_per_token": 1.5e-06,
-        "litellm_provider": "azure",
-        "max_input_tokens": 4097,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 2e-06,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
-    },
-    "gpt-3.5-turbo-0301": {
-        "input_cost_per_token": 1.5e-06,
-        "litellm_provider": "openai",
-        "max_input_tokens": 4097,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 2e-06,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
-    "gpt-3.5-turbo-0613": {
-        "input_cost_per_token": 1.5e-06,
-        "litellm_provider": "openai",
-        "max_input_tokens": 4097,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 2e-06,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
     },
     "cohere.command-text-v14": {
         "input_cost_per_token": 1.5e-06,
@@ -23695,52 +22616,6 @@
         "supports_vision": true,
         "supports_web_search": true
     },
-    "gemini-2.5-flash-preview-05-20": {
-        "deprecation_date": "2025-11-18",
-        "cache_read_input_token_cost": 7.5e-08,
-        "input_cost_per_audio_token": 1e-06,
-        "input_cost_per_token": 3e-07,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_reasoning_token": 2.5e-06,
-        "output_cost_per_token": 2.5e-06,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions",
-            "/v1/batch"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
     "gemini/gemini-2.5-flash-preview-09-2025": {
         "cache_read_input_token_cost": 7.5e-08,
         "input_cost_per_audio_token": 1e-06,
@@ -23824,52 +22699,6 @@
         "supports_audio_output": false,
         "supports_function_calling": true,
         "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 250000
-    },
-    "gemini/gemini-2.5-flash-preview-05-20": {
-        "deprecation_date": "2025-11-18",
-        "cache_read_input_token_cost": 7.5e-08,
-        "input_cost_per_audio_token": 1e-06,
-        "input_cost_per_token": 3e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_reasoning_token": 2.5e-06,
-        "output_cost_per_token": 2.5e-06,
-        "rpm": 10,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
         "supports_pdf_input": true,
         "supports_prompt_caching": true,
         "supports_reasoning": true,
@@ -24386,41 +23215,6 @@
         "supports_parallel_function_calling": true,
         "supports_response_schema": true,
         "supports_tool_choice": true
-    },
-    "gemini/gemini-pro": {
-        "input_cost_per_token": 3.5e-07,
-        "input_cost_per_token_above_128k_tokens": 7e-07,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 32760,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.05e-06,
-        "output_cost_per_token_above_128k_tokens": 2.1e-06,
-        "rpd": 30000,
-        "rpm": 360,
-        "source": "https://ai.google.dev/gemini-api/docs/models/gemini",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "tpm": 120000
-    },
-    "gemini/gemini-pro-vision": {
-        "input_cost_per_token": 3.5e-07,
-        "input_cost_per_token_above_128k_tokens": 7e-07,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 30720,
-        "max_output_tokens": 2048,
-        "max_tokens": 2048,
-        "mode": "chat",
-        "output_cost_per_token": 1.05e-06,
-        "output_cost_per_token_above_128k_tokens": 2.1e-06,
-        "rpd": 30000,
-        "rpm": 360,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 120000
     },
     "apac.amazon.nova-pro-v1:0": {
         "input_cost_per_token": 8.4e-07,
@@ -25539,33 +24333,6 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
-    "claude-3-5-haiku-20241022": {
-        "cache_creation_input_token_cost": 1e-06,
-        "cache_creation_input_token_cost_above_1hr": 6e-06,
-        "cache_read_input_token_cost": 8e-08,
-        "deprecation_date": "2025-10-01",
-        "input_cost_per_token": 8e-07,
-        "litellm_provider": "anthropic",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 4e-06,
-        "search_context_cost_per_query": {
-            "search_context_size_high": 0.01,
-            "search_context_size_low": 0.01,
-            "search_context_size_medium": 0.01
-        },
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tool_use_system_prompt_tokens": 264
-    },
     "us.anthropic.claude-3-5-haiku-20241022-v1:0": {
         "cache_creation_input_token_cost": 1e-06,
         "cache_read_input_token_cost": 8e-08,
@@ -25840,19 +24607,6 @@
         "supports_prompt_caching": true,
         "supports_reasoning": true,
         "supports_vision": false
-    },
-    "o1-mini": {
-        "cache_read_input_token_cost": 5.5e-07,
-        "input_cost_per_token": 1.1e-06,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "output_cost_per_token": 4.4e-06,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_vision": true
     },
     "elevenlabs/scribe_v1": {
         "input_cost_per_second": 6.11e-05,
@@ -26277,18 +25031,6 @@
         "supports_tool_choice": true
     },
     "gpt-3.5-turbo-16k": {
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "openai",
-        "max_input_tokens": 16385,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 4e-06,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
-    "gpt-3.5-turbo-16k-0613": {
         "input_cost_per_token": 3e-06,
         "litellm_provider": "openai",
         "max_input_tokens": 16385,
@@ -26916,33 +25658,6 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true
-    },
-    "claude-3-5-haiku-latest": {
-        "cache_creation_input_token_cost": 1.25e-06,
-        "cache_creation_input_token_cost_above_1hr": 6e-06,
-        "cache_read_input_token_cost": 1e-07,
-        "deprecation_date": "2025-10-01",
-        "input_cost_per_token": 1e-06,
-        "litellm_provider": "anthropic",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 5e-06,
-        "search_context_cost_per_query": {
-            "search_context_size_high": 0.01,
-            "search_context_size_low": 0.01,
-            "search_context_size_medium": 0.01
-        },
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tool_use_system_prompt_tokens": 264
     },
     "vertex_ai/claude-haiku-4-5@20251001": {
         "cache_creation_input_token_cost": 1.25e-06,
@@ -28053,16 +26768,6 @@
         "supports_tool_choice": true,
         "supports_response_schema": true
     },
-    "perplexity/llama-3.1-sonar-huge-128k-online": {
-        "deprecation_date": "2025-02-22",
-        "input_cost_per_token": 5e-06,
-        "litellm_provider": "perplexity",
-        "max_input_tokens": 127072,
-        "max_output_tokens": 127072,
-        "max_tokens": 127072,
-        "mode": "chat",
-        "output_cost_per_token": 5e-06
-    },
     "deepgram/whisper": {
         "input_cost_per_second": 0.0001,
         "litellm_provider": "deepgram",
@@ -28671,50 +27376,6 @@
         "supports_pdf_input": true,
         "supports_prompt_caching": true,
         "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_video_input": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
-    "gemini-2.5-pro-exp-03-25": {
-        "cache_read_input_token_cost": 1.25e-07,
-        "cache_read_input_token_cost_above_200k_tokens": 2.5e-07,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_input": true,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
@@ -30043,49 +28704,6 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
-    "gemini-2.0-pro-exp-02-05": {
-        "cache_read_input_token_cost": 3.125e-07,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_input": true,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_video_input": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
     "xai/grok-2": {
         "input_cost_per_token": 2e-06,
         "litellm_provider": "xai",
@@ -30234,133 +28852,6 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "supports_web_search": true
-    },
-    "gemini/gemini-2.5-pro-preview-03-25": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 1.25e-07,
-        "cache_read_input_token_cost_above_200k_tokens": 2.5e-07,
-        "input_cost_per_audio_token": 7e-07,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "rpm": 10000,
-        "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 10000000
-    },
-    "gemini/gemini-2.5-pro-preview-05-06": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 1.25e-07,
-        "cache_read_input_token_cost_above_200k_tokens": 2.5e-07,
-        "input_cost_per_audio_token": 7e-07,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "rpm": 10000,
-        "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 10000000
-    },
-    "gemini/gemini-2.5-pro-preview-06-05": {
-        "cache_read_input_token_cost": 1.25e-07,
-        "cache_read_input_token_cost_above_200k_tokens": 2.5e-07,
-        "input_cost_per_audio_token": 7e-07,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "rpm": 10000,
-        "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview",
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 10000000
     },
     "gemini/gemini-2.5-pro-preview-tts": {
         "cache_read_input_token_cost": 1.25e-07,
@@ -31041,149 +29532,6 @@
         "supports_vision": true,
         "supports_none_reasoning_effort": true
     },
-    "gemini-2.5-pro-preview-03-25": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 1.25e-07,
-        "cache_read_input_token_cost_above_200k_tokens": 2.5e-07,
-        "input_cost_per_audio_token": 1.25e-06,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions",
-            "/v1/batch"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
-    "gemini-2.5-pro-preview-05-06": {
-        "deprecation_date": "2025-12-02",
-        "cache_read_input_token_cost": 1.25e-07,
-        "cache_read_input_token_cost_above_200k_tokens": 2.5e-07,
-        "input_cost_per_audio_token": 1.25e-06,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions",
-            "/v1/batch"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supported_regions": [
-            "global"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
-    "gemini-2.5-pro-preview-06-05": {
-        "cache_read_input_token_cost": 1.25e-07,
-        "cache_read_input_token_cost_above_200k_tokens": 2.5e-07,
-        "input_cost_per_audio_token": 1.25e-06,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_200k_tokens": 2.5e-06,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_token": 1e-05,
-        "output_cost_per_token_above_200k_tokens": 1.5e-05,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions",
-            "/v1/batch"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true
-    },
     "watsonx/mistralai/mistral-medium-2505": {
         "max_tokens": 128000,
         "max_input_tokens": 128000,
@@ -31482,55 +29830,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_response_schema": true
-    },
-    "gemini/gemini-2.0-flash-live-001": {
-        "deprecation_date": "2025-12-09",
-        "cache_read_input_token_cost": 7.5e-08,
-        "input_cost_per_audio_token": 2.1e-06,
-        "input_cost_per_image": 2.1e-06,
-        "input_cost_per_token": 3.5e-07,
-        "input_cost_per_video_per_second": 2.1e-06,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_audio_token": 8.5e-06,
-        "output_cost_per_token": 1.5e-06,
-        "rpm": 10,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2-0-flash-live-001",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "audio"
-        ],
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 250000
     },
     "azure/gpt-4o-2024-11-20": {
         "deprecation_date": "2026-03-01",
@@ -32801,21 +31100,6 @@
         "supports_vision": true,
         "supports_pdf_input": true
     },
-    "o1-mini-2024-09-12": {
-        "deprecation_date": "2025-10-27",
-        "cache_read_input_token_cost": 1.5e-06,
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "output_cost_per_token": 1.2e-05,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_vision": true
-    },
     "azure/us/gpt-4.1-2025-04-14": {
         "deprecation_date": "2026-11-04",
         "cache_read_input_token_cost": 5.5e-07,
@@ -33263,36 +31547,6 @@
         }
     },
     "vertex_ai/claude-3-5-sonnet": {
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "vertex_ai-anthropic_models",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-05,
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "vertex_ai/claude-3-5-sonnet-v2": {
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "vertex_ai-anthropic_models",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-05,
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "vertex_ai/claude-3-5-sonnet-v2@20241022": {
         "input_cost_per_token": 3e-06,
         "litellm_provider": "vertex_ai-anthropic_models",
         "max_input_tokens": 200000,
@@ -34059,54 +32313,6 @@
         "supported_endpoints": [
             "/v1/audio/transcriptions"
         ]
-    },
-    "gemini-2.0-flash-live-preview-04-09": {
-        "cache_read_input_token_cost": 7.5e-08,
-        "input_cost_per_audio_token": 3e-06,
-        "input_cost_per_image": 3e-06,
-        "input_cost_per_token": 5e-07,
-        "input_cost_per_video_per_second": 3e-06,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_audio_token": 1.2e-05,
-        "output_cost_per_token": 2e-06,
-        "rpm": 10,
-        "source": "https://cloud.google.com/vertex-ai/docs/generative-ai/model-reference/gemini#gemini-2-0-flash-live-preview-04-09",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "audio"
-        ],
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 250000
     },
     "vertex_ai/meta/llama-3.1-405b-instruct-maas": {
         "input_cost_per_token": 5e-06,
@@ -35018,34 +33224,6 @@
         "supports_web_search": true,
         "tool_use_system_prompt_tokens": 159
     },
-    "claude-3-7-sonnet-latest": {
-        "cache_creation_input_token_cost": 3.75e-06,
-        "cache_creation_input_token_cost_above_1hr": 6e-06,
-        "cache_read_input_token_cost": 3e-07,
-        "deprecation_date": "2025-06-01",
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "anthropic",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 64000,
-        "max_tokens": 64000,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-05,
-        "search_context_cost_per_query": {
-            "search_context_size_high": 0.01,
-            "search_context_size_low": 0.01,
-            "search_context_size_medium": 0.01
-        },
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159
-    },
     "claude-sonnet-4-5": {
         "cache_creation_input_token_cost": 3.75e-06,
         "cache_read_input_token_cost": 3e-07,
@@ -35357,83 +33535,6 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
-    "claude-3-5-sonnet-20240620": {
-        "cache_creation_input_token_cost": 3.75e-06,
-        "cache_creation_input_token_cost_above_1hr": 6e-06,
-        "cache_read_input_token_cost": 3e-07,
-        "deprecation_date": "2025-06-01",
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "anthropic",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-05,
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159
-    },
-    "claude-3-5-sonnet-20241022": {
-        "cache_creation_input_token_cost": 3.75e-06,
-        "cache_creation_input_token_cost_above_1hr": 6e-06,
-        "cache_read_input_token_cost": 3e-07,
-        "deprecation_date": "2025-10-01",
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "anthropic",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-05,
-        "search_context_cost_per_query": {
-            "search_context_size_high": 0.01,
-            "search_context_size_low": 0.01,
-            "search_context_size_medium": 0.01
-        },
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tool_use_system_prompt_tokens": 159
-    },
-    "claude-3-5-sonnet-latest": {
-        "cache_creation_input_token_cost": 3.75e-06,
-        "cache_creation_input_token_cost_above_1hr": 6e-06,
-        "cache_read_input_token_cost": 3e-07,
-        "deprecation_date": "2025-06-01",
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "anthropic",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-05,
-        "search_context_cost_per_query": {
-            "search_context_size_high": 0.01,
-            "search_context_size_low": 0.01,
-            "search_context_size_medium": 0.01
-        },
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tool_use_system_prompt_tokens": 159
-    },
     "eu.anthropic.claude-3-5-sonnet-20241022-v2:0": {
         "input_cost_per_token": 3e-06,
         "litellm_provider": "bedrock",
@@ -35566,7 +33667,7 @@
     "vertex_ai/claude-3-7-sonnet@20250219": {
         "cache_creation_input_token_cost": 3.75e-06,
         "cache_read_input_token_cost": 3e-07,
-        "deprecation_date": "2025-06-01",
+        "deprecation_date": "2026-05-11",
         "input_cost_per_token": 3e-06,
         "litellm_provider": "vertex_ai-anthropic_models",
         "max_input_tokens": 200000,
@@ -36920,26 +35021,6 @@
         "output_cost_per_token": 2.4e-05,
         "supports_function_calling": true
     },
-    "gemini/gemini-1.5-pro-latest": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 3.5e-06,
-        "input_cost_per_token_above_128k_tokens": 7e-06,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.05e-06,
-        "output_cost_per_token_above_128k_tokens": 2.1e-05,
-        "rpm": 1000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
     "azure/gpt-audio-mini-2025-10-06": {
         "input_cost_per_audio_token": 1e-05,
         "input_cost_per_token": 6e-07,
@@ -38054,21 +36135,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true
     },
-    "gpt-4-1106-vision-preview": {
-        "deprecation_date": "2024-12-06",
-        "input_cost_per_token": 1e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 3e-05,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
     "gpt-4-turbo": {
         "input_cost_per_token": 1e-05,
         "litellm_provider": "openai",
@@ -38115,21 +36181,6 @@
         "supports_prompt_caching": true,
         "supports_system_messages": true,
         "supports_tool_choice": true
-    },
-    "gpt-4-vision-preview": {
-        "deprecation_date": "2024-12-06",
-        "input_cost_per_token": 1e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 3e-05,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
     },
     "vercel_ai_gateway/openai/gpt-4-turbo": {
         "input_cost_per_token": 1e-05,
@@ -38338,88 +36389,6 @@
         "mode": "chat",
         "output_cost_per_token": 3.12e-05,
         "supports_function_calling": true
-    },
-    "gemini/gemini-1.5-pro": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 3.5e-06,
-        "input_cost_per_token_above_128k_tokens": 7e-06,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.05e-05,
-        "output_cost_per_token_above_128k_tokens": 2.1e-05,
-        "rpm": 1000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-1.5-pro-001": {
-        "deprecation_date": "2025-05-24",
-        "input_cost_per_token": 3.5e-06,
-        "input_cost_per_token_above_128k_tokens": 7e-06,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.05e-05,
-        "output_cost_per_token_above_128k_tokens": 2.1e-05,
-        "rpm": 1000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-1.5-pro-002": {
-        "deprecation_date": "2025-09-24",
-        "input_cost_per_token": 3.5e-06,
-        "input_cost_per_token_above_128k_tokens": 7e-06,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.05e-05,
-        "output_cost_per_token_above_128k_tokens": 2.1e-05,
-        "rpm": 1000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
-    },
-    "gemini/gemini-1.5-pro-exp-0801": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_token": 3.5e-06,
-        "input_cost_per_token_above_128k_tokens": 7e-06,
-        "litellm_provider": "gemini",
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.05e-05,
-        "output_cost_per_token_above_128k_tokens": 2.1e-05,
-        "rpm": 1000,
-        "source": "https://ai.google.dev/pricing",
-        "supports_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tpm": 4000000
     },
     "databricks/databricks-gemini-2-5-flash": {
         "input_cost_per_token": 3.0001999999999996e-07,
@@ -38696,75 +36665,6 @@
         ],
         "source": "https://aws.amazon.com/polly/pricing/"
     },
-    "gemini-1.5-flash-exp-0827": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_audio_per_second": 2e-06,
-        "input_cost_per_audio_per_second_above_128k_tokens": 4e-06,
-        "input_cost_per_character": 1.875e-08,
-        "input_cost_per_character_above_128k_tokens": 2.5e-07,
-        "input_cost_per_image": 2e-05,
-        "input_cost_per_image_above_128k_tokens": 4e-05,
-        "input_cost_per_token": 4.688e-09,
-        "input_cost_per_token_above_128k_tokens": 1e-06,
-        "input_cost_per_video_per_second": 2e-05,
-        "input_cost_per_video_per_second_above_128k_tokens": 4e-05,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 1.875e-08,
-        "output_cost_per_character_above_128k_tokens": 3.75e-08,
-        "output_cost_per_token": 4.6875e-09,
-        "output_cost_per_token_above_128k_tokens": 9.375e-09,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.5-flash-preview-0514": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_audio_per_second": 2e-06,
-        "input_cost_per_audio_per_second_above_128k_tokens": 4e-06,
-        "input_cost_per_character": 1.875e-08,
-        "input_cost_per_character_above_128k_tokens": 2.5e-07,
-        "input_cost_per_image": 2e-05,
-        "input_cost_per_image_above_128k_tokens": 4e-05,
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1e-06,
-        "input_cost_per_video_per_second": 2e-05,
-        "input_cost_per_video_per_second_above_128k_tokens": 4e-05,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 1.875e-08,
-        "output_cost_per_character_above_128k_tokens": 3.75e-08,
-        "output_cost_per_token": 4.6875e-09,
-        "output_cost_per_token_above_128k_tokens": 9.375e-09,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
     "twelvelabs.marengo-embed-2-7-v1:0": {
         "input_cost_per_token": 7e-05,
         "litellm_provider": "bedrock",
@@ -38775,111 +36675,6 @@
         "output_vector_size": 1024,
         "supports_embedding_image_input": true,
         "supports_image_input": true
-    },
-    "gemini-1.5-flash-002": {
-        "deprecation_date": "2025-09-24",
-        "input_cost_per_audio_per_second": 2e-06,
-        "input_cost_per_audio_per_second_above_128k_tokens": 4e-06,
-        "input_cost_per_character": 1.875e-08,
-        "input_cost_per_character_above_128k_tokens": 2.5e-07,
-        "input_cost_per_image": 2e-05,
-        "input_cost_per_image_above_128k_tokens": 4e-05,
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1e-06,
-        "input_cost_per_video_per_second": 2e-05,
-        "input_cost_per_video_per_second_above_128k_tokens": 4e-05,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 7.5e-08,
-        "output_cost_per_character_above_128k_tokens": 1.5e-07,
-        "output_cost_per_token": 3e-07,
-        "output_cost_per_token_above_128k_tokens": 6e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-1.5-flash",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.5-flash": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_audio_per_second": 2e-06,
-        "input_cost_per_audio_per_second_above_128k_tokens": 4e-06,
-        "input_cost_per_character": 1.875e-08,
-        "input_cost_per_character_above_128k_tokens": 2.5e-07,
-        "input_cost_per_image": 2e-05,
-        "input_cost_per_image_above_128k_tokens": 4e-05,
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1e-06,
-        "input_cost_per_video_per_second": 2e-05,
-        "input_cost_per_video_per_second_above_128k_tokens": 4e-05,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 7.5e-08,
-        "output_cost_per_character_above_128k_tokens": 1.5e-07,
-        "output_cost_per_token": 3e-07,
-        "output_cost_per_token_above_128k_tokens": 6e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.5-flash-001": {
-        "deprecation_date": "2025-05-24",
-        "input_cost_per_audio_per_second": 2e-06,
-        "input_cost_per_audio_per_second_above_128k_tokens": 4e-06,
-        "input_cost_per_character": 1.875e-08,
-        "input_cost_per_character_above_128k_tokens": 2.5e-07,
-        "input_cost_per_image": 2e-05,
-        "input_cost_per_image_above_128k_tokens": 4e-05,
-        "input_cost_per_token": 7.5e-08,
-        "input_cost_per_token_above_128k_tokens": 1e-06,
-        "input_cost_per_video_per_second": 2e-05,
-        "input_cost_per_video_per_second_above_128k_tokens": 4e-05,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 8192,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "chat",
-        "output_cost_per_character": 7.5e-08,
-        "output_cost_per_character_above_128k_tokens": 1.5e-07,
-        "output_cost_per_token": 3e-07,
-        "output_cost_per_token_above_128k_tokens": 6e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
     },
     "replicate/openai/o1": {
         "input_cost_per_token": 1.5e-05,
@@ -39142,34 +36937,6 @@
         "supports_reasoning": true,
         "supports_vision": false
     },
-    "o1-preview": {
-        "cache_read_input_token_cost": 7.5e-06,
-        "input_cost_per_token": 1.5e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 32768,
-        "max_tokens": 32768,
-        "mode": "chat",
-        "output_cost_per_token": 6e-05,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_vision": true
-    },
-    "o1-preview-2024-09-12": {
-        "cache_read_input_token_cost": 7.5e-06,
-        "input_cost_per_token": 1.5e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 32768,
-        "max_tokens": 32768,
-        "mode": "chat",
-        "output_cost_per_token": 6e-05,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_vision": true
-    },
     "v0/v0-1.5-lg": {
         "input_cost_per_token": 1.5e-05,
         "litellm_provider": "v0",
@@ -39315,18 +37082,6 @@
         "mode": "chat",
         "output_cost_per_token": 6e-05,
         "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
-    "gpt-4-0314": {
-        "input_cost_per_token": 3e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 6e-05,
         "supports_prompt_caching": true,
         "supports_system_messages": true,
         "supports_tool_choice": true
@@ -40045,26 +37800,6 @@
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 395
     },
-    "claude-3-opus-latest": {
-        "cache_creation_input_token_cost": 1.875e-05,
-        "cache_creation_input_token_cost_above_1hr": 6e-06,
-        "cache_read_input_token_cost": 1.5e-06,
-        "deprecation_date": "2025-03-01",
-        "input_cost_per_token": 1.5e-05,
-        "litellm_provider": "anthropic",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 7.5e-05,
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tool_use_system_prompt_tokens": 395
-    },
     "eu.anthropic.claude-3-opus-20240229-v1:0": {
         "input_cost_per_token": 1.5e-05,
         "litellm_provider": "bedrock",
@@ -40447,23 +38182,6 @@
         "supports_vision": false
     },
     "gpt-4o-audio-preview": {
-        "input_cost_per_audio_token": 4e-05,
-        "input_cost_per_token": 2.5e-06,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "max_tokens": 16384,
-        "mode": "chat",
-        "output_cost_per_audio_token": 8e-05,
-        "output_cost_per_token": 1e-05,
-        "supports_audio_input": true,
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
-    "gpt-4o-audio-preview-2024-10-01": {
         "input_cost_per_audio_token": 4e-05,
         "input_cost_per_token": 2.5e-06,
         "litellm_provider": "openai",
@@ -41208,42 +38926,6 @@
         "output_cost_per_token": 0.00012,
         "supports_tool_choice": true
     },
-    "gpt-4-32k": {
-        "input_cost_per_token": 6e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 32768,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 0.00012,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
-    "gpt-4-32k-0314": {
-        "input_cost_per_token": 6e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 32768,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 0.00012,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
-    "gpt-4-32k-0613": {
-        "input_cost_per_token": 6e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 32768,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_token": 0.00012,
-        "supports_prompt_caching": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
     "openai/gpt-5.2-pro": {
         "input_cost_per_image": 0,
         "input_cost_per_token": 2.1e-05,
@@ -41847,25 +39529,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true
     },
-    "gpt-4o-realtime-preview-2024-10-01": {
-        "cache_creation_input_audio_token_cost": 2e-05,
-        "cache_read_input_token_cost": 2.5e-06,
-        "input_cost_per_audio_token": 0.0001,
-        "input_cost_per_token": 5e-06,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 4096,
-        "max_tokens": 4096,
-        "mode": "chat",
-        "output_cost_per_audio_token": 0.0002,
-        "output_cost_per_token": 2e-05,
-        "supports_audio_input": true,
-        "supports_audio_output": true,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
     "azure/eu/gpt-4o-realtime-preview-2024-10-01": {
         "cache_creation_input_audio_token_cost": 2.2e-05,
         "cache_read_input_token_cost": 2.75e-06,
@@ -41924,47 +39587,6 @@
         "output_cost_per_token_batches": 7.5e-05,
         "supports_function_calling": true,
         "supports_parallel_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gpt-4.5-preview": {
-        "cache_read_input_token_cost": 3.75e-05,
-        "input_cost_per_token": 7.5e-05,
-        "input_cost_per_token_batches": 3.75e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "max_tokens": 16384,
-        "mode": "chat",
-        "output_cost_per_token": 0.00015,
-        "output_cost_per_token_batches": 7.5e-05,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gpt-4.5-preview-2025-02-27": {
-        "cache_read_input_token_cost": 3.75e-05,
-        "deprecation_date": "2025-07-14",
-        "input_cost_per_token": 7.5e-05,
-        "input_cost_per_token_batches": 3.75e-05,
-        "litellm_provider": "openai",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "max_tokens": 16384,
-        "mode": "chat",
-        "output_cost_per_token": 0.00015,
-        "output_cost_per_token_batches": 7.5e-05,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
         "supports_prompt_caching": true,
         "supports_response_schema": true,
         "supports_system_messages": true,
@@ -42143,89 +39765,6 @@
             "notes": "Serper Google Search API. Pricing: $1.00/1k queries (Starter), $0.75/1k (Standard), $0.50/1k (Scale), $0.30/1k (Ultimate)."
         }
     },
-    "gemini-1.5-pro-preview-0215": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_audio_per_second": 3.125e-05,
-        "input_cost_per_audio_per_second_above_128k_tokens": 6.25e-05,
-        "input_cost_per_character": 3.125e-07,
-        "input_cost_per_character_above_128k_tokens": 6.25e-07,
-        "input_cost_per_image": 0.00032875,
-        "input_cost_per_image_above_128k_tokens": 0.0006575,
-        "input_cost_per_token": 7.8125e-08,
-        "input_cost_per_token_above_128k_tokens": 1.5625e-07,
-        "input_cost_per_video_per_second": 0.00032875,
-        "input_cost_per_video_per_second_above_128k_tokens": 0.0006575,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 1.25e-06,
-        "output_cost_per_character_above_128k_tokens": 2.5e-06,
-        "output_cost_per_token": 3.125e-07,
-        "output_cost_per_token_above_128k_tokens": 6.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
-    "gemini-1.5-pro-preview-0409": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_audio_per_second": 3.125e-05,
-        "input_cost_per_audio_per_second_above_128k_tokens": 6.25e-05,
-        "input_cost_per_character": 3.125e-07,
-        "input_cost_per_character_above_128k_tokens": 6.25e-07,
-        "input_cost_per_image": 0.00032875,
-        "input_cost_per_image_above_128k_tokens": 0.0006575,
-        "input_cost_per_token": 7.8125e-08,
-        "input_cost_per_token_above_128k_tokens": 1.5625e-07,
-        "input_cost_per_video_per_second": 0.00032875,
-        "input_cost_per_video_per_second_above_128k_tokens": 0.0006575,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 1.25e-06,
-        "output_cost_per_character_above_128k_tokens": 2.5e-06,
-        "output_cost_per_token": 3.125e-07,
-        "output_cost_per_token_above_128k_tokens": 6.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true
-    },
-    "gemini-1.5-pro-preview-0514": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_audio_per_second": 3.125e-05,
-        "input_cost_per_audio_per_second_above_128k_tokens": 6.25e-05,
-        "input_cost_per_character": 3.125e-07,
-        "input_cost_per_character_above_128k_tokens": 6.25e-07,
-        "input_cost_per_image": 0.00032875,
-        "input_cost_per_image_above_128k_tokens": 0.0006575,
-        "input_cost_per_token": 7.8125e-08,
-        "input_cost_per_token_above_128k_tokens": 1.5625e-07,
-        "input_cost_per_video_per_second": 0.00032875,
-        "input_cost_per_video_per_second_above_128k_tokens": 0.0006575,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 1.25e-06,
-        "output_cost_per_character_above_128k_tokens": 2.5e-06,
-        "output_cost_per_token": 3.125e-07,
-        "output_cost_per_token_above_128k_tokens": 6.25e-07,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true
-    },
     "o1-pro": {
         "input_cost_per_token": 0.00015,
         "input_cost_per_token_batches": 7.5e-05,
@@ -42285,94 +39824,6 @@
         "supports_pdf_input": true,
         "supports_prompt_caching": true,
         "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.5-pro": {
-        "deprecation_date": "2025-09-29",
-        "input_cost_per_audio_per_second": 3.125e-05,
-        "input_cost_per_audio_per_second_above_128k_tokens": 6.25e-05,
-        "input_cost_per_character": 3.125e-07,
-        "input_cost_per_character_above_128k_tokens": 6.25e-07,
-        "input_cost_per_image": 0.00032875,
-        "input_cost_per_image_above_128k_tokens": 0.0006575,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_128k_tokens": 2.5e-06,
-        "input_cost_per_video_per_second": 0.00032875,
-        "input_cost_per_video_per_second_above_128k_tokens": 0.0006575,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 1.25e-06,
-        "output_cost_per_character_above_128k_tokens": 2.5e-06,
-        "output_cost_per_token": 5e-06,
-        "output_cost_per_token_above_128k_tokens": 1e-05,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.5-pro-002": {
-        "deprecation_date": "2025-09-24",
-        "input_cost_per_audio_per_second": 3.125e-05,
-        "input_cost_per_audio_per_second_above_128k_tokens": 6.25e-05,
-        "input_cost_per_character": 3.125e-07,
-        "input_cost_per_character_above_128k_tokens": 6.25e-07,
-        "input_cost_per_image": 0.00032875,
-        "input_cost_per_image_above_128k_tokens": 0.0006575,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_128k_tokens": 2.5e-06,
-        "input_cost_per_video_per_second": 0.00032875,
-        "input_cost_per_video_per_second_above_128k_tokens": 0.0006575,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 2097152,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 1.25e-06,
-        "output_cost_per_character_above_128k_tokens": 2.5e-06,
-        "output_cost_per_token": 5e-06,
-        "output_cost_per_token_above_128k_tokens": 1e-05,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-1.5-pro",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.5-pro-001": {
-        "deprecation_date": "2025-05-24",
-        "input_cost_per_audio_per_second": 3.125e-05,
-        "input_cost_per_audio_per_second_above_128k_tokens": 6.25e-05,
-        "input_cost_per_character": 3.125e-07,
-        "input_cost_per_character_above_128k_tokens": 6.25e-07,
-        "input_cost_per_image": 0.00032875,
-        "input_cost_per_image_above_128k_tokens": 0.0006575,
-        "input_cost_per_token": 1.25e-06,
-        "input_cost_per_token_above_128k_tokens": 2.5e-06,
-        "input_cost_per_video_per_second": 0.00032875,
-        "input_cost_per_video_per_second_above_128k_tokens": 0.0006575,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 1.25e-06,
-        "output_cost_per_character_above_128k_tokens": 2.5e-06,
-        "output_cost_per_token": 5e-06,
-        "output_cost_per_token_above_128k_tokens": 1e-05,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
@@ -42694,164 +40145,19 @@
         "supports_parallel_function_calling": false,
         "supports_vision": false
     },
-    "gemini-1.0-pro-vision": {
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "litellm_provider": "vertex_ai-vision-models",
-        "max_images_per_prompt": 16,
-        "max_input_tokens": 16384,
-        "max_output_tokens": 2048,
-        "max_tokens": 2048,
-        "max_video_length": 2,
-        "max_videos_per_prompt": 1,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-06,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.0-pro-vision-001": {
-        "deprecation_date": "2025-04-09",
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "litellm_provider": "vertex_ai-vision-models",
-        "max_images_per_prompt": 16,
-        "max_input_tokens": 16384,
-        "max_output_tokens": 2048,
-        "max_tokens": 2048,
-        "max_video_length": 2,
-        "max_videos_per_prompt": 1,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-06,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-pro-vision": {
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "litellm_provider": "vertex_ai-vision-models",
-        "max_images_per_prompt": 16,
-        "max_input_tokens": 16384,
-        "max_output_tokens": 2048,
-        "max_tokens": 2048,
-        "max_video_length": 2,
-        "max_videos_per_prompt": 1,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-06,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_vision": true
-    },
-    "gemini-1.0-pro": {
-        "input_cost_per_character": 1.25e-07,
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "input_cost_per_video_per_second": 0.002,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 32760,
-        "max_output_tokens": 8192,
+    "gemini-embedding-2-preview": {
+        "input_cost_per_audio_per_second": 0.00016,
+        "input_cost_per_image": 0.00012,
+        "input_cost_per_token": 2e-07,
+        "input_cost_per_video_per_second": 0.0237,
+        "litellm_provider": "vertex_ai-embedding-models",
+        "max_input_tokens": 8192,
         "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 3.75e-07,
-        "output_cost_per_token": 1.5e-06,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing#google_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
-    },
-    "gemini-1.0-pro-001": {
-        "deprecation_date": "2025-04-09",
-        "input_cost_per_character": 1.25e-07,
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "input_cost_per_video_per_second": 0.002,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 32760,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 3.75e-07,
-        "output_cost_per_token": 1.5e-06,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
-    },
-    "gemini-1.0-pro-002": {
-        "deprecation_date": "2025-04-09",
-        "input_cost_per_character": 1.25e-07,
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "input_cost_per_video_per_second": 0.002,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 32760,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 3.75e-07,
-        "output_cost_per_token": 1.5e-06,
-        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
-    },
-    "gemini-pro": {
-        "input_cost_per_character": 1.25e-07,
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "input_cost_per_video_per_second": 0.002,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 32760,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_character": 3.75e-07,
-        "output_cost_per_token": 1.5e-06,
+        "mode": "embedding",
+        "output_cost_per_token": 0,
+        "output_vector_size": 3072,
         "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
-    },
-    "gemini-1.0-ultra": {
-        "input_cost_per_character": 1.25e-07,
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "input_cost_per_video_per_second": 0.002,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 2048,
-        "max_tokens": 2048,
-        "mode": "chat",
-        "output_cost_per_character": 3.75e-07,
-        "output_cost_per_token": 1.5e-06,
-        "source": "As of Jun, 2024. There is no available doc on vertex ai pricing gemini-1.0-ultra-001. Using gemini-1.0-pro pricing. Got max_tokens info here: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
-    },
-    "gemini-1.0-ultra-001": {
-        "input_cost_per_character": 1.25e-07,
-        "input_cost_per_image": 0.0025,
-        "input_cost_per_token": 5e-07,
-        "input_cost_per_video_per_second": 0.002,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_input_tokens": 8192,
-        "max_output_tokens": 2048,
-        "max_tokens": 2048,
-        "mode": "chat",
-        "output_cost_per_character": 3.75e-07,
-        "output_cost_per_token": 1.5e-06,
-        "source": "As of Jun, 2024. There is no available doc on vertex ai pricing gemini-1.0-ultra-001. Using gemini-1.0-pro pricing. Got max_tokens info here: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_tool_choice": true
+        "uses_embed_content": true
     },
     "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-instant-v1": {
         "input_cost_per_second": 0.01475,
@@ -43767,21 +41073,6 @@
             "video"
         ]
     },
-    "vertex_ai/veo-3.0-fast-generate-preview": {
-        "deprecation_date": "2025-11-12",
-        "litellm_provider": "vertex_ai-video-models",
-        "max_input_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "video_generation",
-        "output_cost_per_second": 0.15,
-        "source": "https://ai.google.dev/gemini-api/docs/video",
-        "supported_modalities": [
-            "text"
-        ],
-        "supported_output_modalities": [
-            "video"
-        ]
-    },
     "vertex_ai/veo-3.0-fast-generate-001": {
         "litellm_provider": "vertex_ai-video-models",
         "max_input_tokens": 1024,
@@ -43955,6 +41246,15 @@
         "output_cost_per_token": 0.02,
         "litellm_provider": "wandb",
         "mode": "chat"
+    },
+    "black_forest_labs/flux-dev": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_generation",
+        "output_cost_per_image": 0.025,
+        "source": "https://bfl.ai/pricing",
+        "supported_endpoints": [
+            "/v1/images/generations"
+        ]
     },
     "aiml/dall-e-2": {
         "litellm_provider": "aiml",
@@ -44282,107 +41582,6 @@
         "supports_web_search": false,
         "tpm": 8000000
     },
-    "gemini-2.5-flash-image-preview": {
-        "deprecation_date": "2026-01-15",
-        "cache_read_input_token_cost": 7.5e-08,
-        "input_cost_per_audio_token": 1e-06,
-        "input_cost_per_image_token": 3e-07,
-        "input_cost_per_token": 3e-07,
-        "litellm_provider": "vertex_ai-language-models",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "image_generation",
-        "output_cost_per_image": 0.039,
-        "output_cost_per_image_token": 3e-05,
-        "output_cost_per_reasoning_token": 3e-05,
-        "output_cost_per_token": 3e-05,
-        "rpm": 100000,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions",
-            "/v1/batch"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 8000000
-    },
-    "gemini/gemini-2.5-flash-image-preview": {
-        "deprecation_date": "2026-01-15",
-        "cache_read_input_token_cost": 7.5e-08,
-        "input_cost_per_audio_token": 1e-06,
-        "input_cost_per_token": 3e-07,
-        "litellm_provider": "gemini",
-        "max_audio_length_hours": 8.4,
-        "max_audio_per_prompt": 1,
-        "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 65535,
-        "max_pdf_size_mb": 30,
-        "max_tokens": 65535,
-        "max_video_length": 1,
-        "max_videos_per_prompt": 10,
-        "mode": "image_generation",
-        "output_cost_per_image": 0.039,
-        "output_cost_per_image_token": 3e-05,
-        "output_cost_per_reasoning_token": 3e-05,
-        "output_cost_per_token": 3e-05,
-        "rpm": 100000,
-        "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-        "supported_endpoints": [
-            "/v1/chat/completions",
-            "/v1/completions",
-            "/v1/batch"
-        ],
-        "supported_modalities": [
-            "text",
-            "image",
-            "audio",
-            "video"
-        ],
-        "supported_output_modalities": [
-            "text",
-            "image"
-        ],
-        "supports_audio_output": false,
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_url_context": true,
-        "supports_vision": true,
-        "supports_web_search": true,
-        "tpm": 8000000
-    },
     "fal_ai/bria/text-to-image/3.2": {
         "litellm_provider": "fal_ai",
         "mode": "image_generation",
@@ -44459,6 +41658,25 @@
         "mode": "image_generation",
         "output_cost_per_image": 0.04,
         "source": "https://ai.azure.com/explore/models/flux.2-pro/version/1/registry/azureml-blackforestlabs",
+        "supported_endpoints": [
+            "/v1/images/generations"
+        ]
+    },
+    "black_forest_labs/flux-kontext-pro": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_edit",
+        "output_cost_per_image": 0.04,
+        "source": "https://bfl.ai/pricing",
+        "supported_endpoints": [
+            "/v1/images/edits",
+            "/v1/images/generations"
+        ]
+    },
+    "black_forest_labs/flux-pro-1.1": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_generation",
+        "output_cost_per_image": 0.04,
+        "source": "https://bfl.ai/pricing",
         "supported_endpoints": [
             "/v1/images/generations"
         ]
@@ -44577,21 +41795,6 @@
             "comment": "2 credits per image (any resolution) @ $0.01 per credit = $0.02 per image"
         }
     },
-    "gemini/veo-3.0-fast-generate-preview": {
-        "deprecation_date": "2025-11-12",
-        "litellm_provider": "gemini",
-        "max_input_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "video_generation",
-        "output_cost_per_second": 0.4,
-        "source": "https://ai.google.dev/gemini-api/docs/video",
-        "supported_modalities": [
-            "text"
-        ],
-        "supported_output_modalities": [
-            "video"
-        ]
-    },
     "gemini/veo-3.1-generate-preview": {
         "litellm_provider": "gemini",
         "max_input_tokens": 1024,
@@ -44608,21 +41811,6 @@
     },
     "gemini/veo-3.1-generate-001": {
         "litellm_provider": "gemini",
-        "max_input_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "video_generation",
-        "output_cost_per_second": 0.4,
-        "source": "https://ai.google.dev/gemini-api/docs/video",
-        "supported_modalities": [
-            "text"
-        ],
-        "supported_output_modalities": [
-            "video"
-        ]
-    },
-    "vertex_ai/veo-3.0-generate-preview": {
-        "deprecation_date": "2025-11-12",
-        "litellm_provider": "vertex_ai-video-models",
         "max_input_tokens": 1024,
         "max_tokens": 1024,
         "mode": "video_generation",
@@ -44753,6 +41941,33 @@
             "/v1/images/generations"
         ]
     },
+    "black_forest_labs/flux-pro-1.0-fill": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_edit",
+        "output_cost_per_image": 0.05,
+        "source": "https://bfl.ai/pricing",
+        "supported_endpoints": [
+            "/v1/images/edits"
+        ]
+    },
+    "black_forest_labs/flux-pro-1.0-expand": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_edit",
+        "output_cost_per_image": 0.05,
+        "source": "https://bfl.ai/pricing",
+        "supported_endpoints": [
+            "/v1/images/edits"
+        ]
+    },
+    "black_forest_labs/flux-pro": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_generation",
+        "output_cost_per_image": 0.05,
+        "source": "https://bfl.ai/pricing",
+        "supported_endpoints": [
+            "/v1/images/generations"
+        ]
+    },
     "medium/1024-x-1536/gpt-image-1.5": {
         "input_cost_per_image": 0.05,
         "litellm_provider": "openai",
@@ -44851,6 +42066,15 @@
         "max_input_tokens": 77,
         "mode": "image_edit",
         "output_cost_per_image": 0.06
+    },
+    "black_forest_labs/flux-pro-1.1-ultra": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_generation",
+        "output_cost_per_image": 0.06,
+        "source": "https://bfl.ai/pricing",
+        "supported_endpoints": [
+            "/v1/images/generations"
+        ]
     },
     "fal_ai/fal-ai/flux-pro/v1.1-ultra": {
         "litellm_provider": "fal_ai",
@@ -45069,21 +42293,6 @@
         "litellm_provider": "wandb",
         "mode": "chat"
     },
-    "gemini/veo-3.0-generate-preview": {
-        "deprecation_date": "2025-11-12",
-        "litellm_provider": "gemini",
-        "max_input_tokens": 1024,
-        "max_tokens": 1024,
-        "mode": "video_generation",
-        "output_cost_per_second": 0.75,
-        "source": "https://ai.google.dev/gemini-api/docs/video",
-        "supported_modalities": [
-            "text"
-        ],
-        "supported_output_modalities": [
-            "video"
-        ]
-    },
     "aiml/google/imagen-4.0-ultra-generate-001": {
         "litellm_provider": "aiml",
         "metadata": {
@@ -45122,6 +42331,16 @@
         "max_input_tokens": 77,
         "mode": "image_edit",
         "output_cost_per_image": 0.08
+    },
+    "black_forest_labs/flux-kontext-max": {
+        "litellm_provider": "black_forest_labs",
+        "mode": "image_edit",
+        "output_cost_per_image": 0.08,
+        "source": "https://bfl.ai/pricing",
+        "supported_endpoints": [
+            "/v1/images/edits",
+            "/v1/images/generations"
+        ]
     },
     "stability/stable-image-ultra": {
         "litellm_provider": "stability",

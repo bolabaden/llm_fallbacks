@@ -5,6 +5,78 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "openrouter/hunter-alpha": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "input_cost_per_image": 0.0,
+                "input_cost_per_query": 0.0,
+                "max_input_tokens": 1048576,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+                },
+                "litellm_provider": "openrouter",
+                "openrouter/hunter-alpha": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "input_cost_per_image": 0.0,
+                    "input_cost_per_query": 0.0,
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 65536,
+                    "metadata": {
+                        "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "openrouter/healer-alpha": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "input_cost_per_image": 0.0,
+                "input_cost_per_query": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+                },
+                "litellm_provider": "openrouter",
+                "openrouter/healer-alpha": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "input_cost_per_image": 0.0,
+                    "input_cost_per_query": 0.0,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 65536,
+                    "metadata": {
+                        "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "nvidia/nemotron-3-super-120b-a12b:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "input_cost_per_image": 0.0,
+                "input_cost_per_query": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 262144,
+                "metadata": {
+                    "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
+                },
+                "litellm_provider": "openrouter",
+                "nvidia/nemotron-3-super-120b-a12b:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "input_cost_per_image": 0.0,
+                    "input_cost_per_query": 0.0,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 262144,
+                    "metadata": {
+                        "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "bytedance-seed/seed-2.0-lite": {
                 "input_cost_per_token": 2.5e-07,
                 "output_cost_per_token": 2e-06,
@@ -187,13 +259,20 @@
             },
             "qwen/qwen3.5-35b-a3b": {
                 "input_cost_per_token": 1.625e-07,
-                "output_cost_per_token": 1.3e-06,
+                "litellm_provider": "openrouter",
                 "max_input_tokens": 262144,
                 "max_output_tokens": 65536,
+                "max_tokens": 65536,
+                "mode": "chat",
+                "output_cost_per_token": 1.3e-06,
+                "source": "https://openrouter.ai/qwen/qwen3.5-35b-a3b",
+                "supports_function_calling": true,
+                "supports_reasoning": true,
+                "supports_tool_choice": true,
+                "supports_vision": true,
                 "metadata": {
                     "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall performance is comparable to that of the Qwen3.5-27B."
                 },
-                "litellm_provider": "openrouter",
                 "qwen/qwen3.5-35b-a3b": {
                     "input_cost_per_token": 1.625e-07,
                     "output_cost_per_token": 1.3e-06,
@@ -207,13 +286,20 @@
             },
             "qwen/qwen3.5-27b": {
                 "input_cost_per_token": 1.95e-07,
-                "output_cost_per_token": 1.56e-06,
+                "litellm_provider": "openrouter",
                 "max_input_tokens": 262144,
                 "max_output_tokens": 65536,
+                "max_tokens": 65536,
+                "mode": "chat",
+                "output_cost_per_token": 1.56e-06,
+                "source": "https://openrouter.ai/qwen/qwen3.5-27b",
+                "supports_function_calling": true,
+                "supports_reasoning": true,
+                "supports_tool_choice": true,
+                "supports_vision": true,
                 "metadata": {
                     "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of the Qwen3.5-122B-A10B."
                 },
-                "litellm_provider": "openrouter",
                 "qwen/qwen3.5-27b": {
                     "input_cost_per_token": 1.95e-07,
                     "output_cost_per_token": 1.56e-06,
@@ -227,13 +313,20 @@
             },
             "qwen/qwen3.5-122b-a10b": {
                 "input_cost_per_token": 2.6e-07,
-                "output_cost_per_token": 2.08e-06,
+                "litellm_provider": "openrouter",
                 "max_input_tokens": 262144,
                 "max_output_tokens": 65536,
+                "max_tokens": 65536,
+                "mode": "chat",
+                "output_cost_per_token": 2.08e-06,
+                "source": "https://openrouter.ai/qwen/qwen3.5-122b-a10b",
+                "supports_function_calling": true,
+                "supports_reasoning": true,
+                "supports_tool_choice": true,
+                "supports_vision": true,
                 "metadata": {
                     "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of overall performance, this model is second only to Qwen3.5-397B-A17B. Its text capabilities significantly outperform those of Qwen3-235B-2507, and its visual capabilities surpass those of Qwen3-VL-235B."
                 },
-                "litellm_provider": "openrouter",
                 "qwen/qwen3.5-122b-a10b": {
                     "input_cost_per_token": 2.6e-07,
                     "output_cost_per_token": 2.08e-06,
@@ -247,13 +340,20 @@
             },
             "qwen/qwen3.5-flash-02-23": {
                 "input_cost_per_token": 1e-07,
-                "output_cost_per_token": 4e-07,
+                "litellm_provider": "openrouter",
                 "max_input_tokens": 1000000,
                 "max_output_tokens": 65536,
+                "max_tokens": 65536,
+                "mode": "chat",
+                "output_cost_per_token": 4e-07,
+                "source": "https://openrouter.ai/qwen/qwen3.5-flash-02-23",
+                "supports_function_calling": true,
+                "supports_reasoning": true,
+                "supports_tool_choice": true,
+                "supports_vision": true,
                 "metadata": {
                     "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the 3 series, these models deliver a leap forward in performance for both pure text and multimodal tasks, offering fast response times while balancing inference speed and overall performance."
                 },
-                "litellm_provider": "openrouter",
                 "qwen/qwen3.5-flash-02-23": {
                     "input_cost_per_token": 1e-07,
                     "output_cost_per_token": 4e-07,
@@ -440,13 +540,22 @@
             },
             "qwen/qwen3.5-plus-02-15": {
                 "input_cost_per_token": 2.6e-07,
-                "output_cost_per_token": 1.56e-06,
+                "input_cost_per_token_above_256k_tokens": 5e-07,
+                "litellm_provider": "openrouter",
                 "max_input_tokens": 1000000,
                 "max_output_tokens": 65536,
+                "max_tokens": 65536,
+                "mode": "chat",
+                "output_cost_per_token": 1.56e-06,
+                "output_cost_per_token_above_256k_tokens": 3e-06,
+                "source": "https://openrouter.ai/qwen/qwen3.5-plus-02-15",
+                "supports_function_calling": true,
+                "supports_reasoning": true,
+                "supports_tool_choice": true,
+                "supports_vision": true,
                 "metadata": {
                     "notes": "The Qwen3.5 native vision-language series Plus models are built on a hybrid architecture that integrates linear attention mechanisms with sparse mixture-of-experts models, achieving higher inference efficiency. In a variety of task evaluations, the 3.5 series consistently demonstrates performance on par with state-of-the-art leading models. Compared to the 3 series, these models show a leap forward in both pure-text and multimodal capabilities."
                 },
-                "litellm_provider": "openrouter",
                 "qwen/qwen3.5-plus-02-15": {
                     "input_cost_per_token": 2.6e-07,
                     "output_cost_per_token": 1.56e-06,
@@ -460,13 +569,20 @@
             },
             "qwen/qwen3.5-397b-a17b": {
                 "input_cost_per_token": 3.9e-07,
-                "output_cost_per_token": 2.34e-06,
+                "litellm_provider": "openrouter",
                 "max_input_tokens": 262144,
                 "max_output_tokens": 65536,
+                "max_tokens": 65536,
+                "mode": "chat",
+                "output_cost_per_token": 2.34e-06,
+                "source": "https://openrouter.ai/qwen/qwen3.5-397b-a17b",
+                "supports_function_calling": true,
+                "supports_reasoning": true,
+                "supports_tool_choice": true,
+                "supports_vision": true,
                 "metadata": {
                     "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers state-of-the-art performance comparable to leading-edge models across a wide range of tasks, including language understanding, logical reasoning, code generation, agent-based tasks, image understanding, video understanding, and graphical user interface (GUI) interactions. With its robust code-generation and agent capabilities, the model exhibits strong generalization across diverse agent."
                 },
-                "litellm_provider": "openrouter",
                 "qwen/qwen3.5-397b-a17b": {
                     "input_cost_per_token": 3.9e-07,
                     "output_cost_per_token": 2.34e-06,
@@ -1678,14 +1794,14 @@
                 }
             },
             "deepseek/deepseek-v3.2": {
-                "input_cost_per_token": 2.5e-07,
+                "input_cost_per_token": 2.6e-07,
                 "input_cost_per_token_cache_hit": 2.8e-08,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 163840,
-                "max_output_tokens": 65536,
+                "max_output_tokens": 163840,
                 "max_tokens": 163840,
                 "mode": "chat",
-                "output_cost_per_token": 4e-07,
+                "output_cost_per_token": 3.8e-07,
                 "supports_assistant_prefill": true,
                 "supports_function_calling": true,
                 "supports_prompt_caching": true,
@@ -1695,14 +1811,14 @@
                     "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
                 },
                 "deepseek/deepseek-v3.2": {
-                    "input_cost_per_token": 2.5e-07,
+                    "input_cost_per_token": 2.6e-07,
                     "input_cost_per_token_cache_hit": 2.8e-08,
                     "litellm_provider": "openrouter",
                     "max_input_tokens": 163840,
-                    "max_output_tokens": 65536,
+                    "max_output_tokens": 163840,
                     "max_tokens": 163840,
                     "mode": "chat",
-                    "output_cost_per_token": 4e-07,
+                    "output_cost_per_token": 3.8e-07,
                     "supports_assistant_prefill": true,
                     "supports_function_calling": true,
                     "supports_prompt_caching": true,
@@ -2539,10 +2655,8 @@
                 }
             },
             "qwen/qwen3-vl-30b-a3b-thinking": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
+                "input_cost_per_token": 1.3e-07,
+                "output_cost_per_token": 1.56e-06,
                 "max_input_tokens": 131072,
                 "max_output_tokens": 32768,
                 "mode": "chat",
@@ -2552,10 +2666,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwen3-vl-30b-a3b-thinking": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "input_cost_per_image": 0.0,
-                    "input_cost_per_query": 0.0,
+                    "input_cost_per_token": 1.3e-07,
+                    "output_cost_per_token": 1.56e-06,
                     "max_input_tokens": 131072,
                     "max_output_tokens": 32768,
                     "mode": "chat",
@@ -2765,10 +2877,8 @@
                 }
             },
             "qwen/qwen3-vl-235b-a22b-thinking": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
+                "input_cost_per_token": 2.6e-07,
+                "output_cost_per_token": 2.6e-06,
                 "max_input_tokens": 131072,
                 "max_output_tokens": 32768,
                 "mode": "chat",
@@ -2778,10 +2888,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwen3-vl-235b-a22b-thinking": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "input_cost_per_image": 0.0,
-                    "input_cost_per_query": 0.0,
+                    "input_cost_per_token": 2.6e-07,
+                    "output_cost_per_token": 2.6e-06,
                     "max_input_tokens": 131072,
                     "max_output_tokens": 32768,
                     "mode": "chat",
@@ -2978,18 +3086,20 @@
                 }
             },
             "qwen/qwen3-next-80b-a3b-thinking": {
-                "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 1.2e-06,
-                "max_input_tokens": 128000,
+                "input_cost_per_token": 9.75e-08,
+                "output_cost_per_token": 7.8e-07,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 32768,
                 "metadata": {
                     "notes": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured \u201cthinking\u201d traces by default. It\u2019s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic planning, and reports strong results across knowledge, reasoning, coding, alignment, and multilingual evaluations. Compared with prior Qwen3 variants, it emphasizes stability under long chains of thought and efficient scaling during inference, and it is tuned to follow complex instructions while reducing repetitive or off-task behavior.\n\nThe model is suitable for agent frameworks and tool use (function calling), retrieval-heavy workflows, and standardized benchmarking where step-by-step solutions are required. It supports long, detailed completions and leverages throughput-oriented techniques (e.g., multi-token prediction) for faster generation. Note that it operates in thinking-only mode."
                 },
                 "supports_function_calling": true,
                 "litellm_provider": "openrouter",
                 "qwen/qwen3-next-80b-a3b-thinking": {
-                    "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 1.2e-06,
-                    "max_input_tokens": 128000,
+                    "input_cost_per_token": 9.75e-08,
+                    "output_cost_per_token": 7.8e-07,
+                    "max_input_tokens": 131072,
+                    "max_output_tokens": 32768,
                     "metadata": {
                         "notes": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured \u201cthinking\u201d traces by default. It\u2019s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic planning, and reports strong results across knowledge, reasoning, coding, alignment, and multilingual evaluations. Compared with prior Qwen3 variants, it emphasizes stability under long chains of thought and efficient scaling during inference, and it is tuned to follow complex instructions while reducing repetitive or off-task behavior.\n\nThe model is suitable for agent frameworks and tool use (function calling), retrieval-heavy workflows, and standardized benchmarking where step-by-step solutions are required. It supports long, detailed completions and leverages throughput-oriented techniques (e.g., multi-token prediction) for faster generation. Note that it operates in thinking-only mode."
                     },
@@ -7825,6 +7935,42 @@
             }
         },
         "free_models": {
+            "openrouter/hunter-alpha": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "input_cost_per_image": 0.0,
+                "input_cost_per_query": 0.0,
+                "max_input_tokens": 1048576,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+                },
+                "litellm_provider": "openrouter"
+            },
+            "openrouter/healer-alpha": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "input_cost_per_image": 0.0,
+                "input_cost_per_query": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
+                },
+                "litellm_provider": "openrouter"
+            },
+            "nvidia/nemotron-3-super-120b-a12b:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "input_cost_per_image": 0.0,
+                "input_cost_per_query": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 262144,
+                "metadata": {
+                    "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
+                },
+                "litellm_provider": "openrouter"
+            },
             "openrouter/free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
@@ -7908,34 +8054,6 @@
                 "max_output_tokens": 128000,
                 "metadata": {
                     "notes": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba\u2019s memory-efficient sequence modeling for significantly higher throughput and lower latency.\n\nThe model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets optimized for optical-character recognition, chart reasoning, and multimodal comprehension.\n\nNemotron Nano 2 VL achieves leading results on OCRBench v2 and scores \u2248 74 average across MMMU, MathVista, AI2D, OCRBench, OCR-Reasoning, ChartQA, DocVQA, and Video-MME\u2014surpassing prior open VL baselines. With Efficient Video Sampling (EVS), it handles long-form videos while reducing inference cost.\n\nOpen-weights, training data, and fine-tuning recipes are released under a permissive NVIDIA open license, with deployment supported across NeMo, NIM, and major inference runtimes."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "qwen/qwen3-vl-30b-a3b-thinking": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 32768,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels in perception of real-world/synthetic categories, 2D/3D spatial grounding, and long-form visual comprehension, achieving competitive multimodal benchmark results. For agentic use, it handles multi-image multi-turn instructions, video timeline alignments, GUI automation, and visual coding from sketches to debugged UI. Text performance matches flagship Qwen3 models, suiting document AI, OCR, UI assistance, spatial tasks, and agent research."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "qwen/qwen3-vl-235b-a22b-thinking": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 32768,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STEM and math. The series emphasizes robust perception (recognition of diverse real-world and synthetic categories), spatial understanding (2D/3D grounding), and long-form visual comprehension, with competitive results on public multimodal benchmarks for both perception and reasoning.\n\nBeyond analysis, Qwen3-VL supports agentic interaction and tool use: it can follow complex instructions over multi-image, multi-turn dialogues; align text to video timelines for precise temporal queries; and operate GUI elements for automation tasks. The models also enable visual coding workflows, turning sketches or mockups into code and assisting with UI debugging, while maintaining strong text-only performance comparable to the flagship Qwen3 language models. This makes Qwen3-VL suitable for production scenarios spanning document AI, multilingual OCR, software/UI assistance, spatial/embodied tasks, and research on vision-language agents."
                 },
                 "litellm_provider": "openrouter"
             },
