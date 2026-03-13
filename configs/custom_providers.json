@@ -5,13 +5,57 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "x-ai/grok-4.20-multi-agent-beta": {
+                "input_cost_per_token": 2e-06,
+                "output_cost_per_token": 6e-06,
+                "max_input_tokens": 2000000,
+                "mode": "chat",
+                "supports_vision": true,
+                "metadata": {
+                    "notes": "Grok 4.20 Multi-Agent Beta is a variant of xAI\u2019s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.\n\nReasoning effort behavior:\n- low / medium: 4 agents\n- high / xhigh: 16 agents"
+                },
+                "litellm_provider": "openrouter",
+                "x-ai/grok-4.20-multi-agent-beta": {
+                    "input_cost_per_token": 2e-06,
+                    "output_cost_per_token": 6e-06,
+                    "max_input_tokens": 2000000,
+                    "mode": "chat",
+                    "supports_vision": true,
+                    "metadata": {
+                        "notes": "Grok 4.20 Multi-Agent Beta is a variant of xAI\u2019s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.\n\nReasoning effort behavior:\n- low / medium: 4 agents\n- high / xhigh: 16 agents"
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "x-ai/grok-4.20-beta": {
+                "input_cost_per_token": 2e-06,
+                "output_cost_per_token": 6e-06,
+                "max_input_tokens": 2000000,
+                "mode": "chat",
+                "supports_vision": true,
+                "metadata": {
+                    "notes": "Grok 4.20 Beta is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
+                },
+                "litellm_provider": "openrouter",
+                "x-ai/grok-4.20-beta": {
+                    "input_cost_per_token": 2e-06,
+                    "output_cost_per_token": 6e-06,
+                    "max_input_tokens": 2000000,
+                    "mode": "chat",
+                    "supports_vision": true,
+                    "metadata": {
+                        "notes": "Grok 4.20 Beta is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "openrouter/hunter-alpha": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
                 "input_cost_per_image": 0.0,
                 "input_cost_per_query": 0.0,
                 "max_input_tokens": 1048576,
-                "max_output_tokens": 65536,
+                "max_output_tokens": 32000,
                 "metadata": {
                     "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
                 },
@@ -22,7 +66,7 @@
                     "input_cost_per_image": 0.0,
                     "input_cost_per_query": 0.0,
                     "max_input_tokens": 1048576,
-                    "max_output_tokens": 65536,
+                    "max_output_tokens": 32000,
                     "metadata": {
                         "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
                     },
@@ -35,7 +79,7 @@
                 "input_cost_per_image": 0.0,
                 "input_cost_per_query": 0.0,
                 "max_input_tokens": 262144,
-                "max_output_tokens": 65536,
+                "max_output_tokens": 32000,
                 "metadata": {
                     "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
                 },
@@ -46,7 +90,7 @@
                     "input_cost_per_image": 0.0,
                     "input_cost_per_query": 0.0,
                     "max_input_tokens": 262144,
-                    "max_output_tokens": 65536,
+                    "max_output_tokens": 32000,
                     "metadata": {
                         "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
                     },
@@ -83,7 +127,7 @@
                 "max_input_tokens": 262144,
                 "max_output_tokens": 131072,
                 "metadata": {
-                    "notes": "Seed-2.0-Lite is a balanced model designed for high-frequency enterprise workloads, optimizing for both capability and cost. Its overall performance surpasses the previous-generation Seed-1.8. It is well-suited for production tasks such as unstructured information processing, text content creation, search and recommendation, and data analysis. The model supports long-context processing, multi-source information fusion, multi-step instruction execution, and high-fidelity structured outputs\u2014delivering stable quality while significantly reducing cost."
+                    "notes": "Seed-2.0-Lite is a versatile, cost\u2011efficient enterprise workhorse that delivers strong multimodal and agent capabilities while offering noticeably lower latency, making it a practical default choice for most production workloads across text, vision, and tools. Engineered for high-frequency visual understanding and agentic workflows, it's an ideal choice for deployment at scale with minimal latency."
                 },
                 "litellm_provider": "openrouter",
                 "bytedance-seed/seed-2.0-lite": {
@@ -92,7 +136,7 @@
                     "max_input_tokens": 262144,
                     "max_output_tokens": 131072,
                     "metadata": {
-                        "notes": "Seed-2.0-Lite is a balanced model designed for high-frequency enterprise workloads, optimizing for both capability and cost. Its overall performance surpasses the previous-generation Seed-1.8. It is well-suited for production tasks such as unstructured information processing, text content creation, search and recommendation, and data analysis. The model supports long-context processing, multi-source information fusion, multi-step instruction execution, and high-fidelity structured outputs\u2014delivering stable quality while significantly reducing cost."
+                        "notes": "Seed-2.0-Lite is a versatile, cost\u2011efficient enterprise workhorse that delivers strong multimodal and agent capabilities while offering noticeably lower latency, making it a practical default choice for most production workloads across text, vision, and tools. Engineered for high-frequency visual understanding and agentic workflows, it's an ideal choice for deployment at scale with minimal latency."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7941,7 +7985,7 @@
                 "input_cost_per_image": 0.0,
                 "input_cost_per_query": 0.0,
                 "max_input_tokens": 1048576,
-                "max_output_tokens": 65536,
+                "max_output_tokens": 32000,
                 "metadata": {
                     "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
                 },
@@ -7953,7 +7997,7 @@
                 "input_cost_per_image": 0.0,
                 "input_cost_per_query": 0.0,
                 "max_input_tokens": 262144,
-                "max_output_tokens": 65536,
+                "max_output_tokens": 32000,
                 "metadata": {
                     "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
                 },
