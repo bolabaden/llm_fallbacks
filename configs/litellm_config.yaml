@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-a2d9b2051f2d499fae6ae620f6cf4f62
+  master_key: sk-8c9f0548a9cf4576b5c355a2a853f1fa
   alerting:
   - slack
   - email
@@ -236,9 +236,9 @@ model_list:
     model: openai/qwen/qwen3.5-9b
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.0e-07
+    input_cost_per_token: 5.0e-08
     output_cost_per_token: 1.5e-07
-    max_input_tokens: 262144
+    max_input_tokens: 256000
     metadata: &id007
       notes: Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family,
         designed to deliver strong reasoning, coding, and visual understanding in
@@ -247,9 +247,9 @@ model_list:
         and reason across text and images within the same context.
     litellm_provider: openrouter
     qwen/qwen3.5-9b:
-      input_cost_per_token: 1.0e-07
+      input_cost_per_token: 5.0e-08
       output_cost_per_token: 1.5e-07
-      max_input_tokens: 262144
+      max_input_tokens: 256000
       metadata: *id007
       litellm_provider: openrouter
 - model_name: openai/gpt-5.4-pro

@@ -4168,6 +4168,24 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
+    "qwen/qwen3.5-9b": {
+        "input_cost_per_token": 5e-08,
+        "output_cost_per_token": 1.5e-07,
+        "max_input_tokens": 256000,
+        "metadata": {
+            "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.5-9b": {
+            "input_cost_per_token": 5e-08,
+            "output_cost_per_token": 1.5e-07,
+            "max_input_tokens": 256000,
+            "metadata": {
+                "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "zai/glm-4-32b-0414-128k": {
         "input_cost_per_token": 1e-07,
         "output_cost_per_token": 1e-07,
@@ -4981,24 +4999,6 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true
-    },
-    "qwen/qwen3.5-9b": {
-        "input_cost_per_token": 1e-07,
-        "output_cost_per_token": 1.5e-07,
-        "max_input_tokens": 262144,
-        "metadata": {
-            "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
-        },
-        "litellm_provider": "openrouter",
-        "qwen/qwen3.5-9b": {
-            "input_cost_per_token": 1e-07,
-            "output_cost_per_token": 1.5e-07,
-            "max_input_tokens": 262144,
-            "metadata": {
-                "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "nvidia/nemotron-3-nano-30b-a3b": {
         "input_cost_per_token": 5e-08,
