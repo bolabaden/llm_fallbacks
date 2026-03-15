@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-8c9f0548a9cf4576b5c355a2a853f1fa
+  master_key: sk-0969c802d6f145899eaa5b079bb7d4d6
   alerting:
   - slack
   - email
@@ -845,12 +845,12 @@ model_list:
     model: openai/minimax/minimax-m2.5
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 2.7e-07
-    output_cost_per_token: 9.5e-07
+    input_cost_per_token: 2.5e-07
+    output_cost_per_token: 1.2e-06
     cache_read_input_token_cost: 3.0e-08
     litellm_provider: openrouter
     max_input_tokens: 196608
-    max_output_tokens: 8192
+    max_output_tokens: 196608
     max_tokens: 65536
     mode: chat
     source: https://openrouter.ai/minimax/minimax-m2.5
@@ -873,8 +873,8 @@ model_list:
         efficient than previous generations, having been trained to optimize its actions
         and output through planning.
     minimax/minimax-m2.5:
-      input_cost_per_token: 2.7e-07
-      output_cost_per_token: 9.5e-07
+      input_cost_per_token: 2.5e-07
+      output_cost_per_token: 1.2e-06
       cache_read_input_token_cost: 3.0e-08
       cache_creation_input_token_cost: 3.75e-07
       litellm_provider: openrouter
@@ -885,7 +885,7 @@ model_list:
       supports_reasoning: true
       supports_system_messages: true
       max_input_tokens: 196608
-      max_output_tokens: 8192
+      max_output_tokens: 196608
       metadata: *id027
 - model_name: z-ai/glm-5
   litellm_params:
