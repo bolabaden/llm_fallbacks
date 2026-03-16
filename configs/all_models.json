@@ -79,6 +79,8 @@
         "input_cost_per_query": 0.0,
         "max_input_tokens": 1048576,
         "max_output_tokens": 32000,
+        "mode": "chat",
+        "supports_vision": true,
         "metadata": {
             "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
         },
@@ -90,6 +92,8 @@
             "input_cost_per_query": 0.0,
             "max_input_tokens": 1048576,
             "max_output_tokens": 32000,
+            "mode": "chat",
+            "supports_vision": true,
             "metadata": {
                 "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
             },
@@ -201,6 +205,26 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_vision": true
+    },
+    "minimax/minimax-m2.5:free": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        },
+        "litellm_provider": "openrouter",
+        "minimax/minimax-m2.5:free": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 196608,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "lemonade/qwen3-coder-30b-a3b-instruct-gguf": {
         "input_cost_per_token": 0,
@@ -23223,6 +23247,26 @@
         "supports_function_calling": true,
         "supports_tool_choice": true,
         "supports_vision": true
+    },
+    "z-ai/glm-5-turbo": {
+        "input_cost_per_token": 9.6e-07,
+        "output_cost_per_token": 3.2e-06,
+        "max_input_tokens": 202752,
+        "max_output_tokens": 131072,
+        "metadata": {
+            "notes": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows involving long execution chains, with improved complex instruction decomposition, tool use, scheduled and persistent execution, and overall stability across extended tasks."
+        },
+        "litellm_provider": "openrouter",
+        "z-ai/glm-5-turbo": {
+            "input_cost_per_token": 9.6e-07,
+            "output_cost_per_token": 3.2e-06,
+            "max_input_tokens": 202752,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows involving long execution chains, with improved complex instruction decomposition, tool use, scheduled and persistent execution, and overall stability across extended tasks."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "together_ai/qwen/qwen3.5-397b-a17b": {
         "input_cost_per_token": 6e-07,

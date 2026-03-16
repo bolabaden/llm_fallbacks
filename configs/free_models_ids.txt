@@ -57,6 +57,7 @@ lemonade/gemma-3-4b-it-gguf
 github_copilot/gpt-4o-2024-11-20
 zai/glm-4.5-flash
 google/gemma-3-27b-it:free
+openrouter/hunter-alpha
 meta_llama/llama-4-maverick-17b-128e-instruct-fp8
 meta_llama/llama-4-scout-17b-16e-instruct-fp8
 openai/gpt-oss-120b:free
@@ -74,8 +75,8 @@ github_copilot/gpt-4o-2024-08-06
 meta_llama/llama-3.3-70b-instruct
 meta_llama/llama-3.3-8b-instruct
 stepfun/step-3.5-flash:free
+minimax/minimax-m2.5:free
 openrouter/healer-alpha
-openrouter/hunter-alpha
 google/gemma-3-12b-it:free
 google/gemma-3-4b-it:free
 arcee-ai/trinity-mini:free
