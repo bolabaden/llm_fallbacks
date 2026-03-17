@@ -407,13 +407,13 @@
                 }
             },
             "qwen/qwen3.5-flash-02-23": {
-                "input_cost_per_token": 1e-07,
+                "input_cost_per_token": 6.5e-08,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 1000000,
                 "max_output_tokens": 65536,
                 "max_tokens": 65536,
                 "mode": "chat",
-                "output_cost_per_token": 4e-07,
+                "output_cost_per_token": 2.6e-07,
                 "source": "https://openrouter.ai/qwen/qwen3.5-flash-02-23",
                 "supports_function_calling": true,
                 "supports_reasoning": true,
@@ -423,8 +423,8 @@
                     "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the 3 series, these models deliver a leap forward in performance for both pure text and multimodal tasks, offering fast response times while balancing inference speed and overall performance."
                 },
                 "qwen/qwen3.5-flash-02-23": {
-                    "input_cost_per_token": 1e-07,
-                    "output_cost_per_token": 4e-07,
+                    "input_cost_per_token": 6.5e-08,
+                    "output_cost_per_token": 2.6e-07,
                     "max_input_tokens": 1000000,
                     "max_output_tokens": 65536,
                     "metadata": {
@@ -480,8 +480,6 @@
                 "output_cost_per_token": 1.4e-05,
                 "max_input_tokens": 400000,
                 "max_output_tokens": 128000,
-                "mode": "chat",
-                "supports_vision": true,
                 "metadata": {
                     "notes": "GPT-5.3-Codex is OpenAI\u2019s most advanced agentic coding model, combining the frontier software engineering performance of GPT-5.2-Codex with the broader reasoning and professional knowledge capabilities of GPT-5.2. It achieves state-of-the-art results on SWE-Bench Pro and strong performance on Terminal-Bench 2.0 and OSWorld-Verified, reflecting improved multi-language coding, terminal proficiency, and real-world computer-use skills. The model is optimized for long-running, tool-using workflows and supports interactive steering during execution, making it suitable for complex development tasks, debugging, deployment, and iterative product work.\n\nBeyond coding, GPT-5.3-Codex performs strongly on structured knowledge-work benchmarks such as GDPval, supporting tasks like document drafting, spreadsheet analysis, slide creation, and operational research across domains. It is trained with enhanced cybersecurity awareness, including vulnerability identification capabilities, and deployed with additional safeguards for high-risk use cases. Compared to prior Codex models, it is more token-efficient and approximately 25% faster, targeting professional end-to-end workflows that span reasoning, execution, and computer interaction."
                 },
@@ -491,8 +489,6 @@
                     "output_cost_per_token": 1.4e-05,
                     "max_input_tokens": 400000,
                     "max_output_tokens": 128000,
-                    "mode": "chat",
-                    "supports_vision": true,
                     "metadata": {
                         "notes": "GPT-5.3-Codex is OpenAI\u2019s most advanced agentic coding model, combining the frontier software engineering performance of GPT-5.2-Codex with the broader reasoning and professional knowledge capabilities of GPT-5.2. It achieves state-of-the-art results on SWE-Bench Pro and strong performance on Terminal-Bench 2.0 and OSWorld-Verified, reflecting improved multi-language coding, terminal proficiency, and real-world computer-use skills. The model is optimized for long-running, tool-using workflows and supports interactive steering during execution, making it suitable for complex development tasks, debugging, deployment, and iterative product work.\n\nBeyond coding, GPT-5.3-Codex performs strongly on structured knowledge-work benchmarks such as GDPval, supporting tasks like document drafting, spreadsheet analysis, slide creation, and operational research across domains. It is trained with enhanced cybersecurity awareness, including vulnerability identification capabilities, and deployed with additional safeguards for high-risk use cases. Compared to prior Codex models, it is more token-efficient and approximately 25% faster, targeting professional end-to-end workflows that span reasoning, execution, and computer interaction."
                     },
@@ -3011,8 +3007,8 @@
                 }
             },
             "qwen/qwen3-max": {
-                "input_cost_per_token": 1.2e-06,
-                "output_cost_per_token": 6e-06,
+                "input_cost_per_token": 7.8e-07,
+                "output_cost_per_token": 3.9e-06,
                 "max_input_tokens": 262144,
                 "max_output_tokens": 32768,
                 "metadata": {
@@ -3020,8 +3016,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwen3-max": {
-                    "input_cost_per_token": 1.2e-06,
-                    "output_cost_per_token": 6e-06,
+                    "input_cost_per_token": 7.8e-07,
+                    "output_cost_per_token": 3.9e-06,
                     "max_input_tokens": 262144,
                     "max_output_tokens": 32768,
                     "metadata": {
@@ -6122,8 +6118,8 @@
                 }
             },
             "qwen/qwen-vl-max": {
-                "input_cost_per_token": 8e-07,
-                "output_cost_per_token": 3.2e-06,
+                "input_cost_per_token": 5.2e-07,
+                "output_cost_per_token": 2.08e-06,
                 "max_input_tokens": 131072,
                 "max_output_tokens": 32768,
                 "mode": "chat",
@@ -6133,8 +6129,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwen-vl-max": {
-                    "input_cost_per_token": 8e-07,
-                    "output_cost_per_token": 3.2e-06,
+                    "input_cost_per_token": 5.2e-07,
+                    "output_cost_per_token": 2.08e-06,
                     "max_input_tokens": 131072,
                     "max_output_tokens": 32768,
                     "mode": "chat",
@@ -6190,8 +6186,8 @@
                 }
             },
             "qwen/qwen-plus": {
-                "input_cost_per_token": 4e-07,
-                "output_cost_per_token": 1.2e-06,
+                "input_cost_per_token": 2.6e-07,
+                "output_cost_per_token": 7.8e-07,
                 "max_input_tokens": 1000000,
                 "max_output_tokens": 32768,
                 "metadata": {
@@ -6199,8 +6195,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwen-plus": {
-                    "input_cost_per_token": 4e-07,
-                    "output_cost_per_token": 1.2e-06,
+                    "input_cost_per_token": 2.6e-07,
+                    "output_cost_per_token": 7.8e-07,
                     "max_input_tokens": 1000000,
                     "max_output_tokens": 32768,
                     "metadata": {
@@ -6764,22 +6760,21 @@
                 }
             },
             "qwen/qwen-2.5-coder-32b-instruct": {
-                "input_cost_per_token": 2.0000000000000002e-07,
+                "input_cost_per_token": 6.6e-07,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 32768,
-                "max_output_tokens": 8192,
+                "max_output_tokens": 33792,
                 "max_tokens": 33792,
                 "mode": "chat",
-                "output_cost_per_token": 2.0000000000000002e-07,
+                "output_cost_per_token": 1e-06,
                 "supports_tool_choice": true,
                 "metadata": {
                     "notes": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5:\n\n- Significantly improvements in **code generation**, **code reasoning** and **code fixing**. \n- A more comprehensive foundation for real-world applications such as **Code Agents**. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies.\n\nTo read more about its evaluation results, check out [Qwen 2.5 Coder's blog](https://qwenlm.github.io/blog/qwen2.5-coder-family/)."
                 },
                 "qwen/qwen-2.5-coder-32b-instruct": {
-                    "input_cost_per_token": 2.0000000000000002e-07,
-                    "output_cost_per_token": 2.0000000000000002e-07,
+                    "input_cost_per_token": 6.6e-07,
+                    "output_cost_per_token": 1e-06,
                     "max_input_tokens": 32768,
-                    "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5:\n\n- Significantly improvements in **code generation**, **code reasoning** and **code fixing**. \n- A more comprehensive foundation for real-world applications such as **Code Agents**. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies.\n\nTo read more about its evaluation results, check out [Qwen 2.5 Coder's blog](https://qwenlm.github.io/blog/qwen2.5-coder-family/)."
                     },
@@ -7292,24 +7287,6 @@
                     "max_output_tokens": 16384,
                     "metadata": {
                         "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "meta-llama/llama-3.1-405b-instruct": {
-                "input_cost_per_token": 4e-06,
-                "output_cost_per_token": 4e-06,
-                "max_input_tokens": 131000,
-                "metadata": {
-                    "notes": "The highly anticipated 400B class of Llama3 is here! Clocking in at 128k context with impressive eval scores, the Meta AI team continues to push the frontier of open-source LLMs.\n\nMeta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 405B instruct-tuned version is optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models including GPT-4o and Claude 3.5 Sonnet in evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-                },
-                "litellm_provider": "openrouter",
-                "meta-llama/llama-3.1-405b-instruct": {
-                    "input_cost_per_token": 4e-06,
-                    "output_cost_per_token": 4e-06,
-                    "max_input_tokens": 131000,
-                    "metadata": {
-                        "notes": "The highly anticipated 400B class of Llama3 is here! Clocking in at 128k context with impressive eval scores, the Meta AI team continues to push the frontier of open-source LLMs.\n\nMeta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 405B instruct-tuned version is optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models including GPT-4o and Claude 3.5 Sonnet in evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
                     },
                     "litellm_provider": "openrouter"
                 }
