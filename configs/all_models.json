@@ -4467,26 +4467,6 @@
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
     },
-    "microsoft/phi-4": {
-        "input_cost_per_token": 6e-08,
-        "output_cost_per_token": 1.4e-07,
-        "max_input_tokens": 16384,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. \n\nAt 14 billion parameters, it was trained on a mix of high-quality synthetic datasets, data from curated websites, and academic materials. It has undergone careful improvement to follow instructions accurately and maintain strong safety standards. It works best with English language inputs.\n\nFor more information, please see [Phi-4 Technical Report](https://arxiv.org/pdf/2412.08905)\n"
-        },
-        "litellm_provider": "openrouter",
-        "microsoft/phi-4": {
-            "input_cost_per_token": 6e-08,
-            "output_cost_per_token": 1.4e-07,
-            "max_input_tokens": 16384,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. \n\nAt 14 billion parameters, it was trained on a mix of high-quality synthetic datasets, data from curated websites, and academic materials. It has undergone careful improvement to follow instructions accurately and maintain strong safety standards. It works best with English language inputs.\n\nFor more information, please see [Phi-4 Technical Report](https://arxiv.org/pdf/2412.08905)\n"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "friendliai/meta-llama-3.1-8b-instruct": {
         "input_cost_per_token": 1e-07,
         "litellm_provider": "friendliai",
@@ -4719,6 +4699,26 @@
         "litellm_provider": "together_ai",
         "mode": "chat",
         "output_cost_per_token": 1e-07
+    },
+    "microsoft/phi-4": {
+        "input_cost_per_token": 6.5e-08,
+        "output_cost_per_token": 1.4e-07,
+        "max_input_tokens": 16384,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. \n\nAt 14 billion parameters, it was trained on a mix of high-quality synthetic datasets, data from curated websites, and academic materials. It has undergone careful improvement to follow instructions accurately and maintain strong safety standards. It works best with English language inputs.\n\nFor more information, please see [Phi-4 Technical Report](https://arxiv.org/pdf/2412.08905)\n"
+        },
+        "litellm_provider": "openrouter",
+        "microsoft/phi-4": {
+            "input_cost_per_token": 6.5e-08,
+            "output_cost_per_token": 1.4e-07,
+            "max_input_tokens": 16384,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex reasoning tasks and can operate efficiently in situations with limited memory or where quick responses are needed. \n\nAt 14 billion parameters, it was trained on a mix of high-quality synthetic datasets, data from curated websites, and academic materials. It has undergone careful improvement to follow instructions accurately and maintain strong safety standards. It works best with English language inputs.\n\nFor more information, please see [Phi-4 Technical Report](https://arxiv.org/pdf/2412.08905)\n"
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "novita/mistralai/mistral-nemo": {
         "litellm_provider": "novita",
@@ -9833,60 +9833,6 @@
         "supports_tool_choice": true,
         "supports_vision": false
     },
-    "deepseek/deepseek-v3.2": {
-        "input_cost_per_token": 2.6e-07,
-        "input_cost_per_token_cache_hit": 2.8e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 163840,
-        "max_output_tokens": 163840,
-        "max_tokens": 163840,
-        "mode": "chat",
-        "output_cost_per_token": 3.8e-07,
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
-        },
-        "deepseek/deepseek-v3.2": {
-            "input_cost_per_token": 2.6e-07,
-            "input_cost_per_token_cache_hit": 2.8e-08,
-            "litellm_provider": "openrouter",
-            "max_input_tokens": 163840,
-            "max_output_tokens": 163840,
-            "max_tokens": 163840,
-            "mode": "chat",
-            "output_cost_per_token": 3.8e-07,
-            "supports_assistant_prefill": true,
-            "supports_function_calling": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_tool_choice": true,
-            "metadata": {
-                "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
-            }
-        }
-    },
-    "openrouter/deepseek/deepseek-v3.2": {
-        "input_cost_per_token": 2.6e-07,
-        "input_cost_per_token_cache_hit": 2.8e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 163840,
-        "max_output_tokens": 163840,
-        "max_tokens": 163840,
-        "mode": "chat",
-        "output_cost_per_token": 3.8e-07,
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
-        }
-    },
     "novita/qwen/qwen3-235b-a22b-instruct-2507": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -9925,6 +9871,60 @@
         "mode": "chat",
         "output_cost_per_token": 4e-07,
         "supports_function_calling": true
+    },
+    "deepseek/deepseek-v3.2": {
+        "input_cost_per_token": 2.55e-07,
+        "input_cost_per_token_cache_hit": 2.8e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 163840,
+        "max_output_tokens": 163840,
+        "max_tokens": 163840,
+        "mode": "chat",
+        "output_cost_per_token": 4e-07,
+        "supports_assistant_prefill": true,
+        "supports_function_calling": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
+        },
+        "deepseek/deepseek-v3.2": {
+            "input_cost_per_token": 2.55e-07,
+            "input_cost_per_token_cache_hit": 2.8e-08,
+            "litellm_provider": "openrouter",
+            "max_input_tokens": 163840,
+            "max_output_tokens": 163840,
+            "max_tokens": 163840,
+            "mode": "chat",
+            "output_cost_per_token": 4e-07,
+            "supports_assistant_prefill": true,
+            "supports_function_calling": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_tool_choice": true,
+            "metadata": {
+                "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
+            }
+        }
+    },
+    "openrouter/deepseek/deepseek-v3.2": {
+        "input_cost_per_token": 2.55e-07,
+        "input_cost_per_token_cache_hit": 2.8e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 163840,
+        "max_output_tokens": 163840,
+        "max_tokens": 163840,
+        "mode": "chat",
+        "output_cost_per_token": 4e-07,
+        "supports_assistant_prefill": true,
+        "supports_function_calling": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
+        }
     },
     "deepinfra/qwen/qwen3-235b-a22b-instruct-2507": {
         "max_tokens": 262144,
@@ -10503,6 +10503,28 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true
+    },
+    "mistralai/mistral-small-2603": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 6e-07,
+        "max_input_tokens": 262144,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from Magistral, multimodal understanding from Pixtral, and agentic coding capabilities from Devstral, enabling one model to handle complex analysis, software development, and visual tasks within the same workflow."
+        },
+        "litellm_provider": "openrouter",
+        "mistralai/mistral-small-2603": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 6e-07,
+            "max_input_tokens": 262144,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from Magistral, multimodal understanding from Pixtral, and agentic coding capabilities from Devstral, enabling one model to handle complex analysis, software development, and visual tasks within the same workflow."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "bedrock_mantle/openai.gpt-oss-safeguard-120b": {
         "input_cost_per_token": 1.5e-07,
@@ -14567,6 +14589,26 @@
         "supports_function_calling": true,
         "supports_response_schema": false
     },
+    "openai/gpt-5.4-nano": {
+        "input_cost_per_token": 2e-07,
+        "output_cost_per_token": 1.25e-06,
+        "max_input_tokens": 400000,
+        "max_output_tokens": 128000,
+        "metadata": {
+            "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency use cases such as classification, data extraction, ranking, and sub-agent execution.\n\nThe model prioritizes responsiveness and efficiency over deep reasoning, making it ideal for pipelines that require fast, reliable outputs at scale. GPT-5.4 nano is well suited for background tasks, real-time systems, and distributed agent architectures where minimizing cost and latency is essential."
+        },
+        "litellm_provider": "openrouter",
+        "openai/gpt-5.4-nano": {
+            "input_cost_per_token": 2e-07,
+            "output_cost_per_token": 1.25e-06,
+            "max_input_tokens": 400000,
+            "max_output_tokens": 128000,
+            "metadata": {
+                "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency use cases such as classification, data extraction, ranking, and sub-agent execution.\n\nThe model prioritizes responsiveness and efficiency over deep reasoning, making it ideal for pipelines that require fast, reliable outputs at scale. GPT-5.4 nano is well suited for background tasks, real-time systems, and distributed agent architectures where minimizing cost and latency is essential."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "qwen/qwen3.5-35b-a3b": {
         "input_cost_per_token": 1.625e-07,
         "litellm_provider": "openrouter",
@@ -16761,6 +16803,68 @@
         "supports_system_messages": true,
         "supports_response_schema": true
     },
+    "minimax/minimax-m2.5": {
+        "input_cost_per_token": 2e-07,
+        "output_cost_per_token": 1.2e-06,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        },
+        "minimax/minimax-m2.5": {
+            "input_cost_per_token": 2e-07,
+            "output_cost_per_token": 1.2e-06,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 196608,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+            }
+        }
+    },
+    "openrouter/minimax/minimax-m2.5": {
+        "input_cost_per_token": 2e-07,
+        "output_cost_per_token": 1.2e-06,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        }
+    },
     "meta.llama4-maverick-17b-instruct-v1:0": {
         "input_cost_per_token": 2.4e-07,
         "input_cost_per_token_batches": 1.2e-07,
@@ -16979,68 +17083,6 @@
         "supports_vision": true,
         "cache_read_input_token_cost": 2.5e-08,
         "cache_creation_input_token_cost": 3.125e-07
-    },
-    "minimax/minimax-m2.5": {
-        "input_cost_per_token": 2.5e-07,
-        "output_cost_per_token": 1.2e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-        },
-        "minimax/minimax-m2.5": {
-            "input_cost_per_token": 2.5e-07,
-            "output_cost_per_token": 1.2e-06,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 196608,
-            "metadata": {
-                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-            }
-        }
-    },
-    "openrouter/minimax/minimax-m2.5": {
-        "input_cost_per_token": 2.5e-07,
-        "output_cost_per_token": 1.2e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-        }
     },
     "arcee-ai/virtuoso-large": {
         "input_cost_per_token": 7.5e-07,
@@ -20881,7 +20923,7 @@
     "z-ai/glm-5": {
         "input_cost_per_token": 7.2e-07,
         "litellm_provider": "openrouter",
-        "max_input_tokens": 202752,
+        "max_input_tokens": 80000,
         "max_output_tokens": 131072,
         "max_tokens": 128000,
         "mode": "chat",
@@ -20896,7 +20938,7 @@
         "z-ai/glm-5": {
             "input_cost_per_token": 7.2e-07,
             "output_cost_per_token": 2.3e-06,
-            "max_input_tokens": 202752,
+            "max_input_tokens": 80000,
             "max_output_tokens": 131072,
             "metadata": {
                 "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution."
@@ -20907,7 +20949,7 @@
     "openrouter/z-ai/glm-5": {
         "input_cost_per_token": 7.2e-07,
         "litellm_provider": "openrouter",
-        "max_input_tokens": 202752,
+        "max_input_tokens": 80000,
         "max_output_tokens": 131072,
         "max_tokens": 128000,
         "mode": "chat",
@@ -24075,6 +24117,26 @@
         "supports_prompt_caching": true,
         "supports_response_schema": true,
         "supports_vision": true
+    },
+    "openai/gpt-5.4-mini": {
+        "input_cost_per_token": 7.5e-07,
+        "output_cost_per_token": 4.5e-06,
+        "max_input_tokens": 400000,
+        "max_output_tokens": 128000,
+        "metadata": {
+            "notes": "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding, and tool use, while reducing latency and cost for large-scale deployments.\n\nThe model is designed for production environments that require a balance of capability and efficiency, making it well suited for chat applications, coding assistants, and agent workflows that operate at scale. GPT-5.4 mini delivers reliable instruction following, solid multi-step reasoning, and consistent performance across diverse tasks with improved cost efficiency."
+        },
+        "litellm_provider": "openrouter",
+        "openai/gpt-5.4-mini": {
+            "input_cost_per_token": 7.5e-07,
+            "output_cost_per_token": 4.5e-06,
+            "max_input_tokens": 400000,
+            "max_output_tokens": 128000,
+            "metadata": {
+                "notes": "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding, and tool use, while reducing latency and cost for large-scale deployments.\n\nThe model is designed for production environments that require a balance of capability and efficiency, making it well suited for chat applications, coding assistants, and agent workflows that operate at scale. GPT-5.4 mini delivers reliable instruction following, solid multi-step reasoning, and consistent performance across diverse tasks with improved cost efficiency."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "openai/o3-mini-high": {
         "input_cost_per_token": 1.1e-06,
