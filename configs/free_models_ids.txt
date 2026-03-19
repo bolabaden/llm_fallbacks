@@ -57,7 +57,6 @@ lemonade/gemma-3-4b-it-gguf
 github_copilot/gpt-4o-2024-11-20
 zai/glm-4.5-flash
 google/gemma-3-27b-it:free
-openrouter/hunter-alpha
 meta_llama/llama-4-maverick-17b-128e-instruct-fp8
 meta_llama/llama-4-scout-17b-16e-instruct-fp8
 openai/gpt-oss-120b:free
@@ -76,7 +75,6 @@ meta_llama/llama-3.3-70b-instruct
 meta_llama/llama-3.3-8b-instruct
 stepfun/step-3.5-flash:free
 minimax/minimax-m2.5:free
-openrouter/healer-alpha
 google/gemma-3-12b-it:free
 google/gemma-3-4b-it:free
 arcee-ai/trinity-mini:free
@@ -85,7 +83,6 @@ z-ai/glm-4.5-air:free
 github_copilot/gpt-4-o-preview
 github_copilot/gpt-4o-mini
 github_copilot/gpt-4o-mini-2024-07-18
-meta-llama/llama-3.3-70b-instruct:free
 nvidia/nemotron-nano-12b-v2-vl:free
 github_copilot/claude-opus-41
 gemini-flash-experimental
@@ -140,6 +137,7 @@ cohere.rerank-v3-5:0
 github_copilot/gpt-3.5-turbo
 github_copilot/gpt-3.5-turbo-0613
 heroku/claude-3-5-haiku
+meta-llama/llama-3.3-70b-instruct:free
 publicai/aisingapore/gemma-sea-lion-v4-27b-it
 publicai/bsc-lt/alia-40b-instruct_q8_0
 together_ai/mistralai/mistral-small-24b-instruct-2501

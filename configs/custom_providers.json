@@ -5,6 +5,66 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "xiaomi/mimo-v2-omni": {
+                "input_cost_per_token": 4e-07,
+                "output_cost_per_token": 2e-06,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - visual grounding, multi-step planning, tool use, and code execution - making it well-suited for complex real-world tasks that span modalities. 256K context window."
+                },
+                "litellm_provider": "openrouter",
+                "xiaomi/mimo-v2-omni": {
+                    "input_cost_per_token": 4e-07,
+                    "output_cost_per_token": 2e-06,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 65536,
+                    "metadata": {
+                        "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - visual grounding, multi-step planning, tool use, and code execution - making it well-suited for complex real-world tasks that span modalities. 256K context window."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "xiaomi/mimo-v2-pro": {
+                "input_cost_per_token": 1e-06,
+                "output_cost_per_token": 3e-06,
+                "max_input_tokens": 1048576,
+                "max_output_tokens": 131072,
+                "metadata": {
+                    "notes": "MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios. It is highly adaptable to general agent frameworks like OpenClaw. It ranks among the global top tier in the standard PinchBench and ClawBench benchmarks, with perceived performance approaching that of Opus 4.6. MiMo-V2-Pro is designed to serve as the brain of agent systems, orchestrating complex workflows, driving production engineering tasks, and delivering results reliably."
+                },
+                "litellm_provider": "openrouter",
+                "xiaomi/mimo-v2-pro": {
+                    "input_cost_per_token": 1e-06,
+                    "output_cost_per_token": 3e-06,
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 131072,
+                    "metadata": {
+                        "notes": "MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios. It is highly adaptable to general agent frameworks like OpenClaw. It ranks among the global top tier in the standard PinchBench and ClawBench benchmarks, with perceived performance approaching that of Opus 4.6. MiMo-V2-Pro is designed to serve as the brain of agent systems, orchestrating complex workflows, driving production engineering tasks, and delivering results reliably."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "minimax/minimax-m2.7": {
+                "input_cost_per_token": 3e-07,
+                "output_cost_per_token": 1.2e-06,
+                "max_input_tokens": 204800,
+                "max_output_tokens": 131072,
+                "metadata": {
+                    "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent collaboration, enabling it to plan, execute, and refine complex tasks across dynamic environments.\n\nTrained for production-grade performance, M2.7 handles workflows such as live debugging, root cause analysis, financial modeling, and full document generation across Word, Excel, and PowerPoint. It delivers strong results on benchmarks including 56.2% on SWE-Pro and 57.0% on Terminal Bench 2, while achieving a 1495 ELO on GDPval-AA, setting a new standard for multi-agent systems operating in real-world digital workflows."
+                },
+                "litellm_provider": "openrouter",
+                "minimax/minimax-m2.7": {
+                    "input_cost_per_token": 3e-07,
+                    "output_cost_per_token": 1.2e-06,
+                    "max_input_tokens": 204800,
+                    "max_output_tokens": 131072,
+                    "metadata": {
+                        "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent collaboration, enabling it to plan, execute, and refine complex tasks across dynamic environments.\n\nTrained for production-grade performance, M2.7 handles workflows such as live debugging, root cause analysis, financial modeling, and full document generation across Word, Excel, and PowerPoint. It delivers strong results on benchmarks including 56.2% on SWE-Pro and 57.0% on Terminal Bench 2, while achieving a 1495 ELO on GDPval-AA, setting a new standard for multi-agent systems operating in real-world digital workflows."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "openai/gpt-5.4-nano": {
                 "input_cost_per_token": 2e-07,
                 "output_cost_per_token": 1.25e-06,
@@ -131,63 +191,9 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "openrouter/hunter-alpha": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
-                "max_input_tokens": 1048576,
-                "max_output_tokens": 32000,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
-                },
-                "litellm_provider": "openrouter",
-                "openrouter/hunter-alpha": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "input_cost_per_image": 0.0,
-                    "input_cost_per_query": 0.0,
-                    "max_input_tokens": 1048576,
-                    "max_output_tokens": 32000,
-                    "mode": "chat",
-                    "supports_vision": true,
-                    "metadata": {
-                        "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "openrouter/healer-alpha": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
-                "max_input_tokens": 262144,
-                "max_output_tokens": 32000,
-                "metadata": {
-                    "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
-                },
-                "litellm_provider": "openrouter",
-                "openrouter/healer-alpha": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "input_cost_per_image": 0.0,
-                    "input_cost_per_query": 0.0,
-                    "max_input_tokens": 262144,
-                    "max_output_tokens": 32000,
-                    "metadata": {
-                        "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "nvidia/nemotron-3-super-120b-a12b:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
                 "max_input_tokens": 262144,
                 "max_output_tokens": 262144,
                 "metadata": {
@@ -197,10 +203,26 @@
                 "nvidia/nemotron-3-super-120b-a12b:free": {
                     "input_cost_per_token": 0.0,
                     "output_cost_per_token": 0.0,
-                    "input_cost_per_image": 0.0,
-                    "input_cost_per_query": 0.0,
                     "max_input_tokens": 262144,
                     "max_output_tokens": 262144,
+                    "metadata": {
+                        "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "nvidia/nemotron-3-super-120b-a12b": {
+                "input_cost_per_token": 1e-07,
+                "output_cost_per_token": 5e-07,
+                "max_input_tokens": 262144,
+                "metadata": {
+                    "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
+                },
+                "litellm_provider": "openrouter",
+                "nvidia/nemotron-3-super-120b-a12b": {
+                    "input_cost_per_token": 1e-07,
+                    "output_cost_per_token": 5e-07,
+                    "max_input_tokens": 262144,
                     "metadata": {
                         "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere \u2014 from workstation to cloud."
                     },
@@ -1307,8 +1329,8 @@
                 }
             },
             "z-ai/glm-4.7": {
-                "input_cost_per_token": 3.8e-07,
-                "output_cost_per_token": 1.98e-06,
+                "input_cost_per_token": 4e-07,
+                "output_cost_per_token": 1.75e-06,
                 "cache_creation_input_token_cost": 0.0,
                 "cache_read_input_token_cost": 0.0,
                 "litellm_provider": "openrouter",
@@ -1326,8 +1348,8 @@
                     "notes": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while delivering more natural conversational experiences and superior front-end aesthetics."
                 },
                 "z-ai/glm-4.7": {
-                    "input_cost_per_token": 3.8e-07,
-                    "output_cost_per_token": 1.98e-06,
+                    "input_cost_per_token": 4e-07,
+                    "output_cost_per_token": 1.75e-06,
                     "max_input_tokens": 202752,
                     "metadata": {
                         "notes": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while delivering more natural conversational experiences and superior front-end aesthetics."
@@ -1940,14 +1962,14 @@
                 }
             },
             "deepseek/deepseek-v3.2": {
-                "input_cost_per_token": 2.55e-07,
+                "input_cost_per_token": 2.6e-07,
                 "input_cost_per_token_cache_hit": 2.8e-08,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 163840,
                 "max_output_tokens": 163840,
                 "max_tokens": 163840,
                 "mode": "chat",
-                "output_cost_per_token": 4e-07,
+                "output_cost_per_token": 3.8e-07,
                 "supports_assistant_prefill": true,
                 "supports_function_calling": true,
                 "supports_prompt_caching": true,
@@ -1957,14 +1979,14 @@
                     "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism that reduces training and inference cost while preserving quality in long-context scenarios. A scalable reinforcement learning post-training framework further improves reasoning, with reported performance in the GPT-5 class, and the model has demonstrated gold-medal results on the 2025 IMO and IOI. V3.2 also uses a large-scale agentic task synthesis pipeline to better integrate reasoning into tool-use settings, boosting compliance and generalization in interactive environments.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)"
                 },
                 "deepseek/deepseek-v3.2": {
-                    "input_cost_per_token": 2.55e-07,
+                    "input_cost_per_token": 2.6e-07,
                     "input_cost_per_token_cache_hit": 2.8e-08,
                     "litellm_provider": "openrouter",
                     "max_input_tokens": 163840,
                     "max_output_tokens": 163840,
                     "max_tokens": 163840,
                     "mode": "chat",
-                    "output_cost_per_token": 4e-07,
+                    "output_cost_per_token": 3.8e-07,
                     "supports_assistant_prefill": true,
                     "supports_function_calling": true,
                     "supports_prompt_caching": true,
@@ -3274,7 +3296,7 @@
             "qwen/qwen3-next-80b-a3b-instruct": {
                 "input_cost_per_token": 9e-08,
                 "output_cost_per_token": 1.1e-06,
-                "max_input_tokens": 131072,
+                "max_input_tokens": 262144,
                 "metadata": {
                     "notes": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without \u201cthinking\u201d traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.\n\nThe model employs scaling-efficient training and decoding to improve parameter efficiency and inference speed, and has been validated on a broad set of public benchmarks where it reaches or approaches larger Qwen3 systems in several categories while outperforming earlier mid-sized baselines. It is best used as a general assistant, code helper, and long-context task solver in production settings where deterministic, instruction-following outputs are preferred."
                 },
@@ -3282,7 +3304,7 @@
                 "qwen/qwen3-next-80b-a3b-instruct": {
                     "input_cost_per_token": 9e-08,
                     "output_cost_per_token": 1.1e-06,
-                    "max_input_tokens": 131072,
+                    "max_input_tokens": 262144,
                     "metadata": {
                         "notes": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without \u201cthinking\u201d traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.\n\nThe model employs scaling-efficient training and decoding to improve parameter efficiency and inference speed, and has been validated on a broad set of public benchmarks where it reaches or approaches larger Qwen3 systems in several categories while outperforming earlier mid-sized baselines. It is best used as a general assistant, code helper, and long-context task solver in production settings where deterministic, instruction-following outputs are preferred."
                     },
@@ -3404,17 +3426,19 @@
                 }
             },
             "qwen/qwen3-30b-a3b-thinking-2507": {
-                "input_cost_per_token": 5.1e-08,
-                "output_cost_per_token": 3.4e-07,
-                "max_input_tokens": 32768,
+                "input_cost_per_token": 8e-08,
+                "output_cost_per_token": 4e-07,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 131072,
                 "metadata": {
                     "notes": "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for \u201cthinking mode,\u201d where internal reasoning traces are separated from final answers.\n\nCompared to earlier Qwen3-30B releases, this version improves performance across logical reasoning, mathematics, science, coding, and multilingual benchmarks. It also demonstrates stronger instruction following, tool use, and alignment with human preferences. With higher reasoning efficiency and extended output budgets, it is best suited for advanced research, competitive problem solving, and agentic applications requiring structured long-context reasoning."
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwen3-30b-a3b-thinking-2507": {
-                    "input_cost_per_token": 5.1e-08,
-                    "output_cost_per_token": 3.4e-07,
-                    "max_input_tokens": 32768,
+                    "input_cost_per_token": 8e-08,
+                    "output_cost_per_token": 4e-07,
+                    "max_input_tokens": 131072,
+                    "max_output_tokens": 131072,
                     "metadata": {
                         "notes": "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for \u201cthinking mode,\u201d where internal reasoning traces are separated from final answers.\n\nCompared to earlier Qwen3-30B releases, this version improves performance across logical reasoning, mathematics, science, coding, and multilingual benchmarks. It also demonstrates stronger instruction following, tool use, and alignment with human preferences. With higher reasoning efficiency and extended output budgets, it is best suited for advanced research, competitive problem solving, and agentic applications requiring structured long-context reasoning."
                     },
@@ -4022,13 +4046,13 @@
                 }
             },
             "qwen/qwen3-235b-a22b-thinking-2507": {
-                "input_cost_per_token": 1.1e-07,
+                "input_cost_per_token": 1.495e-07,
                 "litellm_provider": "openrouter",
-                "max_input_tokens": 262144,
+                "max_input_tokens": 131072,
                 "max_output_tokens": 262144,
                 "max_tokens": 262144,
                 "mode": "chat",
-                "output_cost_per_token": 6e-07,
+                "output_cost_per_token": 1.495e-06,
                 "source": "https://openrouter.ai/qwen/qwen3-235b-a22b-thinking-2507",
                 "supports_function_calling": true,
                 "supports_reasoning": true,
@@ -4037,10 +4061,9 @@
                     "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144 tokens of context. This \"thinking-only\" variant enhances structured logical reasoning, mathematics, science, and long-form generation, showing strong benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux. It enforces a special reasoning mode (</think>) and is designed for high-token outputs (up to 81,920 tokens) in challenging domains.\n\nThe model is instruction-tuned and excels at step-by-step reasoning, tool use, agentic workflows, and multilingual tasks. This release represents the most capable open-source variant in the Qwen3-235B series, surpassing many closed models in structured reasoning use cases."
                 },
                 "qwen/qwen3-235b-a22b-thinking-2507": {
-                    "input_cost_per_token": 1.1e-07,
-                    "output_cost_per_token": 6e-07,
-                    "max_input_tokens": 262144,
-                    "max_output_tokens": 262144,
+                    "input_cost_per_token": 1.495e-07,
+                    "output_cost_per_token": 1.495e-06,
+                    "max_input_tokens": 131072,
                     "metadata": {
                         "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144 tokens of context. This \"thinking-only\" variant enhances structured logical reasoning, mathematics, science, and long-form generation, showing strong benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux. It enforces a special reasoning mode (</think>) and is designed for high-token outputs (up to 81,920 tokens) in challenging domains.\n\nThe model is instruction-tuned and excels at step-by-step reasoning, tool use, agentic workflows, and multilingual tasks. This release represents the most capable open-source variant in the Qwen3-235B series, surpassing many closed models in structured reasoning use cases."
                     },
@@ -4504,24 +4527,22 @@
                 }
             },
             "mistralai/mistral-small-3.2-24b-instruct": {
-                "input_cost_per_token": 6e-08,
+                "input_cost_per_token": 7.5e-08,
                 "litellm_provider": "openrouter",
                 "max_tokens": 32000,
                 "mode": "chat",
-                "output_cost_per_token": 1.8e-07,
+                "output_cost_per_token": 2e-07,
                 "supports_tool_choice": true,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 131072,
+                "max_input_tokens": 128000,
                 "supports_vision": true,
                 "metadata": {
                     "notes": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on WildBench and Arena Hard, reduces infinite generations, and delivers gains in tool use and structured output tasks.\n\nIt supports image and text inputs with structured outputs, function/tool calling, and strong performance across coding (HumanEval+, MBPP), STEM (MMLU, MATH, GPQA), and vision benchmarks (ChartQA, DocVQA)."
                 },
                 "supports_function_calling": true,
                 "mistralai/mistral-small-3.2-24b-instruct": {
-                    "input_cost_per_token": 6e-08,
-                    "output_cost_per_token": 1.8e-07,
-                    "max_input_tokens": 131072,
-                    "max_output_tokens": 131072,
+                    "input_cost_per_token": 7.5e-08,
+                    "output_cost_per_token": 2e-07,
+                    "max_input_tokens": 128000,
                     "mode": "chat",
                     "supports_vision": true,
                     "metadata": {
@@ -5737,10 +5758,10 @@
                 }
             },
             "google/gemma-3-27b-it": {
-                "input_cost_per_token": 3e-08,
-                "output_cost_per_token": 1.1e-07,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 65536,
+                "input_cost_per_token": 8e-08,
+                "output_cost_per_token": 1.6e-07,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 16384,
                 "mode": "chat",
                 "supports_vision": true,
                 "metadata": {
@@ -5749,10 +5770,10 @@
                 "supports_function_calling": true,
                 "litellm_provider": "openrouter",
                 "google/gemma-3-27b-it": {
-                    "input_cost_per_token": 3e-08,
-                    "output_cost_per_token": 1.1e-07,
-                    "max_input_tokens": 128000,
-                    "max_output_tokens": 65536,
+                    "input_cost_per_token": 8e-08,
+                    "output_cost_per_token": 1.6e-07,
+                    "max_input_tokens": 131072,
+                    "max_output_tokens": 16384,
                     "mode": "chat",
                     "supports_vision": true,
                     "metadata": {
@@ -5900,18 +5921,18 @@
             },
             "qwen/qwq-32b": {
                 "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 4e-07,
-                "max_input_tokens": 32768,
-                "max_output_tokens": 32768,
+                "output_cost_per_token": 5.8e-07,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 131072,
                 "metadata": {
                     "notes": "QwQ is the reasoning model of the Qwen series. Compared with conventional instruction-tuned models, QwQ, which is capable of thinking and reasoning, can achieve significantly enhanced performance in downstream tasks, especially hard problems. QwQ-32B is the medium-sized reasoning model, which is capable of achieving competitive performance against state-of-the-art reasoning models, e.g., DeepSeek-R1, o1-mini."
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwq-32b": {
                     "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 4e-07,
-                    "max_input_tokens": 32768,
-                    "max_output_tokens": 32768,
+                    "output_cost_per_token": 5.8e-07,
+                    "max_input_tokens": 131072,
+                    "max_output_tokens": 131072,
                     "metadata": {
                         "notes": "QwQ is the reasoning model of the Qwen series. Compared with conventional instruction-tuned models, QwQ, which is capable of thinking and reasoning, can achieve significantly enhanced performance in downstream tasks, especially hard problems. QwQ-32B is the medium-sized reasoning model, which is capable of achieving competitive performance against state-of-the-art reasoning models, e.g., DeepSeek-R1, o1-mini."
                     },
@@ -6636,8 +6657,7 @@
             "meta-llama/llama-3.3-70b-instruct:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 128000,
+                "max_input_tokens": 65536,
                 "metadata": {
                     "notes": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.\n\nSupported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.\n\n[Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md)"
                 },
@@ -6645,8 +6665,7 @@
                 "meta-llama/llama-3.3-70b-instruct:free": {
                     "input_cost_per_token": 0.0,
                     "output_cost_per_token": 0.0,
-                    "max_input_tokens": 128000,
-                    "max_output_tokens": 128000,
+                    "max_input_tokens": 65536,
                     "metadata": {
                         "notes": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.\n\nSupported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.\n\n[Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md)"
                     },
@@ -8062,37 +8081,9 @@
             }
         },
         "free_models": {
-            "openrouter/hunter-alpha": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
-                "max_input_tokens": 1048576,
-                "max_output_tokens": 32000,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "openrouter/healer-alpha": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
-                "max_input_tokens": 262144,
-                "max_output_tokens": 32000,
-                "metadata": {
-                    "notes": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model."
-                },
-                "litellm_provider": "openrouter"
-            },
             "nvidia/nemotron-3-super-120b-a12b:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
-                "input_cost_per_image": 0.0,
-                "input_cost_per_query": 0.0,
                 "max_input_tokens": 262144,
                 "max_output_tokens": 262144,
                 "metadata": {
@@ -8349,8 +8340,7 @@
             "meta-llama/llama-3.3-70b-instruct:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 128000,
+                "max_input_tokens": 65536,
                 "metadata": {
                     "notes": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.\n\nSupported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.\n\n[Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md)"
                 },
