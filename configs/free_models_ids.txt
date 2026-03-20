@@ -25,6 +25,10 @@ lemonade/qwen3-4b-instruct-2507-gguf
 lemonade/qwen3-coder-30b-a3b-instruct-gguf
 glm-4-7-251222
 openrouter/openrouter/free
+volcengine/doubao-seed-2-0-code-preview-260215
+volcengine/doubao-seed-2-0-lite-260215
+volcengine/doubao-seed-2-0-mini-260215
+volcengine/doubao-seed-2-0-pro-260215
 github_copilot/gemini-2.5-pro
 github_copilot/gemini-3-pro-preview
 kimi-k2-thinking-251104

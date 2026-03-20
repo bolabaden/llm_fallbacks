@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-6cdcd8536b7a4e5fa0a37dd2e35e830e
+  master_key: sk-89e1641487154d21b2a560997b4d5923
   alerting:
   - slack
   - email
@@ -1708,13 +1708,13 @@ model_list:
     model: openai/z-ai/glm-4.7
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 4.0e-07
+    input_cost_per_token: 3.9e-07
     output_cost_per_token: 1.75e-06
     cache_creation_input_token_cost: 0.0
     cache_read_input_token_cost: 0.0
     litellm_provider: openrouter
     max_input_tokens: 202752
-    max_output_tokens: 64000
+    max_output_tokens: 65535
     max_tokens: 64000
     mode: chat
     supports_function_calling: true
@@ -1730,9 +1730,10 @@ model_list:
         while delivering more natural conversational experiences and superior front-end
         aesthetics.'
     z-ai/glm-4.7:
-      input_cost_per_token: 4.0e-07
+      input_cost_per_token: 3.9e-07
       output_cost_per_token: 1.75e-06
       max_input_tokens: 202752
+      max_output_tokens: 65535
       metadata: *id058
       litellm_provider: openrouter
 - model_name: google/gemini-3-flash-preview
@@ -4101,8 +4102,9 @@ model_list:
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 2.1e-07
-    output_cost_per_token: 7.9e-07
+    output_cost_per_token: 7.8e-07
     max_input_tokens: 163840
+    max_output_tokens: 65536
     metadata: &id134
       notes: 'DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1)
         that maintains the model''s original capabilities while addressing issues
@@ -4122,8 +4124,9 @@ model_list:
     litellm_provider: openrouter
     deepseek/deepseek-v3.1-terminus:
       input_cost_per_token: 2.1e-07
-      output_cost_per_token: 7.9e-07
+      output_cost_per_token: 7.8e-07
       max_input_tokens: 163840
+      max_output_tokens: 65536
       metadata: *id134
       litellm_provider: openrouter
 - model_name: x-ai/grok-4-fast

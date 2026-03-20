@@ -1329,13 +1329,13 @@
                 }
             },
             "z-ai/glm-4.7": {
-                "input_cost_per_token": 4e-07,
+                "input_cost_per_token": 3.9e-07,
                 "output_cost_per_token": 1.75e-06,
                 "cache_creation_input_token_cost": 0.0,
                 "cache_read_input_token_cost": 0.0,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 202752,
-                "max_output_tokens": 64000,
+                "max_output_tokens": 65535,
                 "max_tokens": 64000,
                 "mode": "chat",
                 "supports_function_calling": true,
@@ -1348,9 +1348,10 @@
                     "notes": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while delivering more natural conversational experiences and superior front-end aesthetics."
                 },
                 "z-ai/glm-4.7": {
-                    "input_cost_per_token": 4e-07,
+                    "input_cost_per_token": 3.9e-07,
                     "output_cost_per_token": 1.75e-06,
                     "max_input_tokens": 202752,
+                    "max_output_tokens": 65535,
                     "metadata": {
                         "notes": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while delivering more natural conversational experiences and superior front-end aesthetics."
                     },
@@ -3173,16 +3174,18 @@
             },
             "deepseek/deepseek-v3.1-terminus": {
                 "input_cost_per_token": 2.1e-07,
-                "output_cost_per_token": 7.9e-07,
+                "output_cost_per_token": 7.8e-07,
                 "max_input_tokens": 163840,
+                "max_output_tokens": 65536,
                 "metadata": {
                     "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
                 },
                 "litellm_provider": "openrouter",
                 "deepseek/deepseek-v3.1-terminus": {
                     "input_cost_per_token": 2.1e-07,
-                    "output_cost_per_token": 7.9e-07,
+                    "output_cost_per_token": 7.8e-07,
                     "max_input_tokens": 163840,
+                    "max_output_tokens": 65536,
                     "metadata": {
                         "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
                     },
