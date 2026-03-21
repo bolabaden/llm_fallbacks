@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-89e1641487154d21b2a560997b4d5923
+  master_key: sk-e25b5934c81a4a06be8e2f03e32c0627
   alerting:
   - slack
   - email
@@ -1018,11 +1018,11 @@ model_list:
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 2.0e-07
-    output_cost_per_token: 1.2e-06
+    output_cost_per_token: 1.17e-06
     cache_read_input_token_cost: 3.0e-08
     litellm_provider: openrouter
     max_input_tokens: 196608
-    max_output_tokens: 196608
+    max_output_tokens: 65536
     max_tokens: 65536
     mode: chat
     source: https://openrouter.ai/minimax/minimax-m2.5
@@ -1046,7 +1046,7 @@ model_list:
         and output through planning.
     minimax/minimax-m2.5:
       input_cost_per_token: 2.0e-07
-      output_cost_per_token: 1.2e-06
+      output_cost_per_token: 1.17e-06
       cache_read_input_token_cost: 3.0e-08
       cache_creation_input_token_cost: 3.75e-07
       litellm_provider: openrouter
@@ -1057,7 +1057,7 @@ model_list:
       supports_reasoning: true
       supports_system_messages: true
       max_input_tokens: 196608
-      max_output_tokens: 196608
+      max_output_tokens: 65536
       metadata: *id034
 - model_name: z-ai/glm-5
   litellm_params:
@@ -7151,13 +7151,14 @@ model_list:
     model: openai/mistralai/mistral-small-3.1-24b-instruct
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 3.5e-07
+    input_cost_per_token: 3.0e-08
     litellm_provider: openrouter
     max_tokens: 32000
     mode: chat
-    output_cost_per_token: 5.6e-07
+    output_cost_per_token: 1.1e-07
     supports_tool_choice: true
-    max_input_tokens: 128000
+    max_input_tokens: 131072
+    max_output_tokens: 131072
     supports_vision: true
     metadata: &id238
       notes: Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small
@@ -7171,9 +7172,10 @@ model_list:
         Small 3.2](mistralai/mistral-small-3.2-24b-instruct)
     supports_function_calling: true
     mistralai/mistral-small-3.1-24b-instruct:
-      input_cost_per_token: 3.5e-07
-      output_cost_per_token: 5.6e-07
-      max_input_tokens: 128000
+      input_cost_per_token: 3.0e-08
+      output_cost_per_token: 1.1e-07
+      max_input_tokens: 131072
+      max_output_tokens: 131072
       mode: chat
       supports_vision: true
       metadata: *id238
@@ -10259,6 +10261,8 @@ model_list:
 
         - [mistralai/codestral-2508](/mistralai/codestral-2508)
 
+        - [mistralai/mistral-7b-instruct-v0.1](/mistralai/mistral-7b-instruct-v0.1)
+
         - [mistralai/mistral-large](/mistralai/mistral-large)
 
         - [mistralai/mistral-medium-3.1](/mistralai/mistral-medium-3.1)
@@ -10281,6 +10285,8 @@ model_list:
 
         - [openai/gpt-5.2-pro](/openai/gpt-5.2-pro)
 
+        - [openai/gpt-5.3-chat](/openai/gpt-5.3-chat)
+
         - [openai/gpt-oss-120b](/openai/gpt-oss-120b)
 
         - [perplexity/sonar](/perplexity/sonar)
@@ -10292,6 +10298,8 @@ model_list:
         - [x-ai/grok-3-mini](/x-ai/grok-3-mini)
 
         - [x-ai/grok-4](/x-ai/grok-4)
+
+        - [x-ai/grok-4.1-fast](/x-ai/grok-4.1-fast)
 
         - [z-ai/glm-5](/z-ai/glm-5)'
     litellm_provider: openrouter

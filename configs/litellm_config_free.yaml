@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-f832821b62d54a269e4986a8c11f08d9
+  master_key: sk-fea266848bbe4bd2be7aeefe98a779a8
   alerting:
   - slack
   - email
@@ -671,6 +671,8 @@ model_list:
 
         - [mistralai/codestral-2508](/mistralai/codestral-2508)
 
+        - [mistralai/mistral-7b-instruct-v0.1](/mistralai/mistral-7b-instruct-v0.1)
+
         - [mistralai/mistral-large](/mistralai/mistral-large)
 
         - [mistralai/mistral-medium-3.1](/mistralai/mistral-medium-3.1)
@@ -693,6 +695,8 @@ model_list:
 
         - [openai/gpt-5.2-pro](/openai/gpt-5.2-pro)
 
+        - [openai/gpt-5.3-chat](/openai/gpt-5.3-chat)
+
         - [openai/gpt-oss-120b](/openai/gpt-oss-120b)
 
         - [perplexity/sonar](/perplexity/sonar)
@@ -704,6 +708,8 @@ model_list:
         - [x-ai/grok-3-mini](/x-ai/grok-3-mini)
 
         - [x-ai/grok-4](/x-ai/grok-4)
+
+        - [x-ai/grok-4.1-fast](/x-ai/grok-4.1-fast)
 
         - [z-ai/glm-5](/z-ai/glm-5)'
     litellm_provider: openrouter
