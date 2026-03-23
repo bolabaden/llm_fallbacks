@@ -5624,26 +5624,6 @@
             "notes": "UI-TARS-1.5 is a multimodal vision-language agent optimized for GUI-based environments, including desktop interfaces, web browsers, mobile systems, and games. Built by ByteDance, it builds upon the UI-TARS framework with reinforcement learning-based reasoning, enabling robust action planning and execution across virtual interfaces.\n\nThis model achieves state-of-the-art results on a range of interactive and grounding benchmarks, including OSworld, WebVoyager, AndroidWorld, and ScreenSpot. It also demonstrates perfect task completion across diverse Poki games and outperforms prior models in Minecraft agent tasks. UI-TARS-1.5 supports thought decomposition during inference and shows strong scaling across variants, with the 1.5 version notably exceeding the performance of earlier 72B and 7B checkpoints."
         }
     },
-    "allenai/olmo-3-7b-instruct": {
-        "input_cost_per_token": 1e-07,
-        "output_cost_per_token": 2e-07,
-        "max_input_tokens": 65536,
-        "max_output_tokens": 65536,
-        "metadata": {
-            "notes": "Olmo 3 7B Instruct is a supervised instruction-fine-tuned variant of the Olmo 3 7B base model, optimized for instruction-following, question-answering, and natural conversational dialogue. By leveraging high-quality instruction data and an open training pipeline, it delivers strong performance across everyday NLP tasks while remaining accessible and easy to integrate. Developed by Ai2 under the Apache 2.0 license, the model offers a transparent, community-friendly option for instruction-driven applications."
-        },
-        "litellm_provider": "openrouter",
-        "allenai/olmo-3-7b-instruct": {
-            "input_cost_per_token": 1e-07,
-            "output_cost_per_token": 2e-07,
-            "max_input_tokens": 65536,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "Olmo 3 7B Instruct is a supervised instruction-fine-tuned variant of the Olmo 3 7B base model, optimized for instruction-following, question-answering, and natural conversational dialogue. By leveraging high-quality instruction data and an open training pipeline, it delivers strong performance across everyday NLP tasks while remaining accessible and easy to integrate. Developed by Ai2 under the Apache 2.0 license, the model offers a transparent, community-friendly option for instruction-driven applications."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "deepinfra/qwen/qwen3-14b": {
         "max_tokens": 40960,
         "max_input_tokens": 40960,
@@ -5952,26 +5932,6 @@
         "supports_vision": true,
         "supports_function_calling": true,
         "supports_tool_choice": true
-    },
-    "allenai/olmo-3-7b-think": {
-        "input_cost_per_token": 1.2e-07,
-        "output_cost_per_token": 2e-07,
-        "max_input_tokens": 65536,
-        "max_output_tokens": 65536,
-        "metadata": {
-            "notes": "Olmo 3 7B Think is a research-oriented language model in the Olmo family designed for advanced reasoning and instruction-driven tasks. It excels at multi-step problem solving, logical inference, and maintaining coherent conversational context. Developed by Ai2 under the Apache 2.0 license, Olmo 3 7B Think supports transparent, fully open experimentation and provides a lightweight yet capable foundation for academic research and practical NLP workflows."
-        },
-        "litellm_provider": "openrouter",
-        "allenai/olmo-3-7b-think": {
-            "input_cost_per_token": 1.2e-07,
-            "output_cost_per_token": 2e-07,
-            "max_input_tokens": 65536,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "Olmo 3 7B Think is a research-oriented language model in the Olmo family designed for advanced reasoning and instruction-driven tasks. It excels at multi-step problem solving, logical inference, and maintaining coherent conversational context. Developed by Ai2 under the Apache 2.0 license, Olmo 3 7B Think supports transparent, fully open experimentation and provides a lightweight yet capable foundation for academic research and practical NLP workflows."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "nebius/qwen/qwen3-14b": {
         "max_tokens": 32768,
@@ -7387,26 +7347,6 @@
         "supports_function_calling": true,
         "supports_parallel_function_calling": true,
         "supports_vision": false
-    },
-    "allenai/molmo-2-8b": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 2e-07,
-        "max_input_tokens": 36864,
-        "max_output_tokens": 36864,
-        "metadata": {
-            "notes": "Molmo2-8B is an open vision-language model developed by the Allen Institute for AI (Ai2) as part of the Molmo2 family, supporting image, video, and multi-image understanding and grounding. It is based on Qwen3-8B and uses SigLIP 2 as its vision backbone, outperforming other open-weight, open-data models on short videos, counting, and captioning, while remaining competitive on long-video tasks."
-        },
-        "litellm_provider": "openrouter",
-        "allenai/molmo-2-8b": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 2e-07,
-            "max_input_tokens": 36864,
-            "max_output_tokens": 36864,
-            "metadata": {
-                "notes": "Molmo2-8B is an open vision-language model developed by the Allen Institute for AI (Ai2) as part of the Molmo2 family, supporting image, video, and multi-image understanding and grounding. It is based on Qwen3-8B and uses SigLIP 2 as its vision backbone, outperforming other open-weight, open-data models on short videos, counting, and captioning, while remaining competitive on long-video tasks."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "vercel_ai_gateway/alibaba/qwen-3-30b": {
         "input_cost_per_token": 1e-07,
@@ -12315,26 +12255,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "deepseek/deepseek-v3.1-terminus": {
-        "input_cost_per_token": 2.1e-07,
-        "output_cost_per_token": 7.8e-07,
-        "max_input_tokens": 163840,
-        "max_output_tokens": 65536,
-        "metadata": {
-            "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
-        },
-        "litellm_provider": "openrouter",
-        "deepseek/deepseek-v3.1-terminus": {
-            "input_cost_per_token": 2.1e-07,
-            "output_cost_per_token": 7.8e-07,
-            "max_input_tokens": 163840,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "fireworks_ai/accounts/fireworks/models/qwen3-30b-a3b-instruct-2507": {
         "max_tokens": 262144,
         "max_input_tokens": 262144,
@@ -12427,6 +12347,24 @@
             "max_output_tokens": 50000,
             "metadata": {
                 "notes": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM).\nInstead of generating tokens sequentially, Mercury 2 produces and refines multiple tokens in parallel, achieving >1,000 tokens/sec on standard GPUs. Mercury 2 is 5x+ faster than leading speed-optimized LLMs like Claude 4.5 Haiku and GPT 5 Mini, at a fraction of the cost. \nMercury 2 supports tunable reasoning levels, 128K context, native tool use, and schema-aligned JSON output. Built for coding workflows where latency compounds, real-time voice/search, and agent loops. OpenAI API compatible. Read more in the [blog post](https://www.inceptionlabs.ai/blog/introducing-mercury-2)."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "deepseek/deepseek-v3.1-terminus": {
+        "input_cost_per_token": 2.1e-07,
+        "output_cost_per_token": 7.9e-07,
+        "max_input_tokens": 163840,
+        "metadata": {
+            "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
+        },
+        "litellm_provider": "openrouter",
+        "deepseek/deepseek-v3.1-terminus": {
+            "input_cost_per_token": 2.1e-07,
+            "output_cost_per_token": 7.9e-07,
+            "max_input_tokens": 163840,
+            "metadata": {
+                "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
             },
             "litellm_provider": "openrouter"
         }
@@ -12871,26 +12809,6 @@
         "output_cost_per_token": 8.8e-07,
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
-    },
-    "tngtech/deepseek-r1t2-chimera": {
-        "input_cost_per_token": 2.5e-07,
-        "output_cost_per_token": 8.5e-07,
-        "max_input_tokens": 163840,
-        "max_output_tokens": 163840,
-        "metadata": {
-            "notes": "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tech. It is a 671 B-parameter mixture-of-experts text-generation model assembled from DeepSeek-AI\u2019s R1-0528, R1, and V3-0324 checkpoints with an Assembly-of-Experts merge. The tri-parent design yields strong reasoning performance while running roughly 20 % faster than the original R1 and more than 2\u00d7 faster than R1-0528 under vLLM, giving a favorable cost-to-intelligence trade-off. The checkpoint supports contexts up to 60 k tokens in standard use (tested to ~130 k) and maintains consistent <think> token behaviour, making it suitable for long-context analysis, dialogue and other open-ended generation tasks."
-        },
-        "litellm_provider": "openrouter",
-        "tngtech/deepseek-r1t2-chimera": {
-            "input_cost_per_token": 2.5e-07,
-            "output_cost_per_token": 8.5e-07,
-            "max_input_tokens": 163840,
-            "max_output_tokens": 163840,
-            "metadata": {
-                "notes": "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tech. It is a 671 B-parameter mixture-of-experts text-generation model assembled from DeepSeek-AI\u2019s R1-0528, R1, and V3-0324 checkpoints with an Assembly-of-Experts merge. The tri-parent design yields strong reasoning performance while running roughly 20 % faster than the original R1 and more than 2\u00d7 faster than R1-0528 under vLLM, giving a favorable cost-to-intelligence trade-off. The checkpoint supports contexts up to 60 k tokens in standard use (tested to ~130 k) and maintains consistent <think> token behaviour, making it suitable for long-context analysis, dialogue and other open-ended generation tasks."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "fireworks_ai/accounts/fireworks/models/glm-4p5-air": {
         "input_cost_per_token": 2.2e-07,
@@ -14400,6 +14318,26 @@
         "litellm_provider": "deepinfra",
         "mode": "chat",
         "supports_tool_choice": false
+    },
+    "tngtech/deepseek-r1t2-chimera": {
+        "input_cost_per_token": 3e-07,
+        "output_cost_per_token": 1.1e-06,
+        "max_input_tokens": 163840,
+        "max_output_tokens": 163840,
+        "metadata": {
+            "notes": "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tech. It is a 671 B-parameter mixture-of-experts text-generation model assembled from DeepSeek-AI\u2019s R1-0528, R1, and V3-0324 checkpoints with an Assembly-of-Experts merge. The tri-parent design yields strong reasoning performance while running roughly 20 % faster than the original R1 and more than 2\u00d7 faster than R1-0528 under vLLM, giving a favorable cost-to-intelligence trade-off. The checkpoint supports contexts up to 60 k tokens in standard use (tested to ~130 k) and maintains consistent <think> token behaviour, making it suitable for long-context analysis, dialogue and other open-ended generation tasks."
+        },
+        "litellm_provider": "openrouter",
+        "tngtech/deepseek-r1t2-chimera": {
+            "input_cost_per_token": 3e-07,
+            "output_cost_per_token": 1.1e-06,
+            "max_input_tokens": 163840,
+            "max_output_tokens": 163840,
+            "metadata": {
+                "notes": "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tech. It is a 671 B-parameter mixture-of-experts text-generation model assembled from DeepSeek-AI\u2019s R1-0528, R1, and V3-0324 checkpoints with an Assembly-of-Experts merge. The tri-parent design yields strong reasoning performance while running roughly 20 % faster than the original R1 and more than 2\u00d7 faster than R1-0528 under vLLM, giving a favorable cost-to-intelligence trade-off. The checkpoint supports contexts up to 60 k tokens in standard use (tested to ~130 k) and maintains consistent <think> token behaviour, making it suitable for long-context analysis, dialogue and other open-ended generation tasks."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "sao10k/l3.3-euryale-70b": {
         "input_cost_per_token": 6.5e-07,

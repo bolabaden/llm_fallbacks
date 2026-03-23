@@ -1211,26 +1211,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "allenai/molmo-2-8b": {
-                "input_cost_per_token": 2e-07,
-                "output_cost_per_token": 2e-07,
-                "max_input_tokens": 36864,
-                "max_output_tokens": 36864,
-                "metadata": {
-                    "notes": "Molmo2-8B is an open vision-language model developed by the Allen Institute for AI (Ai2) as part of the Molmo2 family, supporting image, video, and multi-image understanding and grounding. It is based on Qwen3-8B and uses SigLIP 2 as its vision backbone, outperforming other open-weight, open-data models on short videos, counting, and captioning, while remaining competitive on long-video tasks."
-                },
-                "litellm_provider": "openrouter",
-                "allenai/molmo-2-8b": {
-                    "input_cost_per_token": 2e-07,
-                    "output_cost_per_token": 2e-07,
-                    "max_input_tokens": 36864,
-                    "max_output_tokens": 36864,
-                    "metadata": {
-                        "notes": "Molmo2-8B is an open vision-language model developed by the Allen Institute for AI (Ai2) as part of the Molmo2 family, supporting image, video, and multi-image understanding and grounding. It is based on Qwen3-8B and uses SigLIP 2 as its vision backbone, outperforming other open-weight, open-data models on short videos, counting, and captioning, while remaining competitive on long-video tasks."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "allenai/olmo-3.1-32b-instruct": {
                 "input_cost_per_token": 2e-07,
                 "output_cost_per_token": 6e-07,
@@ -2066,46 +2046,6 @@
                     "max_output_tokens": 65536,
                     "metadata": {
                         "notes": "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built for deep reasoning, complex logic chains and advanced instruction-following scenarios. Its capacity enables strong performance on demanding evaluation tasks and highly nuanced conversational reasoning. Developed by Ai2 under the Apache 2.0 license, Olmo 3 32B Think embodies the Olmo initiative\u2019s commitment to openness, offering full transparency across weights, code and training methodology."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "allenai/olmo-3-7b-instruct": {
-                "input_cost_per_token": 1e-07,
-                "output_cost_per_token": 2e-07,
-                "max_input_tokens": 65536,
-                "max_output_tokens": 65536,
-                "metadata": {
-                    "notes": "Olmo 3 7B Instruct is a supervised instruction-fine-tuned variant of the Olmo 3 7B base model, optimized for instruction-following, question-answering, and natural conversational dialogue. By leveraging high-quality instruction data and an open training pipeline, it delivers strong performance across everyday NLP tasks while remaining accessible and easy to integrate. Developed by Ai2 under the Apache 2.0 license, the model offers a transparent, community-friendly option for instruction-driven applications."
-                },
-                "litellm_provider": "openrouter",
-                "allenai/olmo-3-7b-instruct": {
-                    "input_cost_per_token": 1e-07,
-                    "output_cost_per_token": 2e-07,
-                    "max_input_tokens": 65536,
-                    "max_output_tokens": 65536,
-                    "metadata": {
-                        "notes": "Olmo 3 7B Instruct is a supervised instruction-fine-tuned variant of the Olmo 3 7B base model, optimized for instruction-following, question-answering, and natural conversational dialogue. By leveraging high-quality instruction data and an open training pipeline, it delivers strong performance across everyday NLP tasks while remaining accessible and easy to integrate. Developed by Ai2 under the Apache 2.0 license, the model offers a transparent, community-friendly option for instruction-driven applications."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "allenai/olmo-3-7b-think": {
-                "input_cost_per_token": 1.2e-07,
-                "output_cost_per_token": 2e-07,
-                "max_input_tokens": 65536,
-                "max_output_tokens": 65536,
-                "metadata": {
-                    "notes": "Olmo 3 7B Think is a research-oriented language model in the Olmo family designed for advanced reasoning and instruction-driven tasks. It excels at multi-step problem solving, logical inference, and maintaining coherent conversational context. Developed by Ai2 under the Apache 2.0 license, Olmo 3 7B Think supports transparent, fully open experimentation and provides a lightweight yet capable foundation for academic research and practical NLP workflows."
-                },
-                "litellm_provider": "openrouter",
-                "allenai/olmo-3-7b-think": {
-                    "input_cost_per_token": 1.2e-07,
-                    "output_cost_per_token": 2e-07,
-                    "max_input_tokens": 65536,
-                    "max_output_tokens": 65536,
-                    "metadata": {
-                        "notes": "Olmo 3 7B Think is a research-oriented language model in the Olmo family designed for advanced reasoning and instruction-driven tasks. It excels at multi-step problem solving, logical inference, and maintaining coherent conversational context. Developed by Ai2 under the Apache 2.0 license, Olmo 3 7B Think supports transparent, fully open experimentation and provides a lightweight yet capable foundation for academic research and practical NLP workflows."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -3174,18 +3114,16 @@
             },
             "deepseek/deepseek-v3.1-terminus": {
                 "input_cost_per_token": 2.1e-07,
-                "output_cost_per_token": 7.8e-07,
+                "output_cost_per_token": 7.9e-07,
                 "max_input_tokens": 163840,
-                "max_output_tokens": 65536,
                 "metadata": {
                     "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
                 },
                 "litellm_provider": "openrouter",
                 "deepseek/deepseek-v3.1-terminus": {
                     "input_cost_per_token": 2.1e-07,
-                    "output_cost_per_token": 7.8e-07,
+                    "output_cost_per_token": 7.9e-07,
                     "max_input_tokens": 163840,
-                    "max_output_tokens": 65536,
                     "metadata": {
                         "notes": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)\n\nThe model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows. "
                     },
@@ -4379,8 +4317,8 @@
                 }
             },
             "tngtech/deepseek-r1t2-chimera": {
-                "input_cost_per_token": 2.5e-07,
-                "output_cost_per_token": 8.5e-07,
+                "input_cost_per_token": 3e-07,
+                "output_cost_per_token": 1.1e-06,
                 "max_input_tokens": 163840,
                 "max_output_tokens": 163840,
                 "metadata": {
@@ -4388,8 +4326,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "tngtech/deepseek-r1t2-chimera": {
-                    "input_cost_per_token": 2.5e-07,
-                    "output_cost_per_token": 8.5e-07,
+                    "input_cost_per_token": 3e-07,
+                    "output_cost_per_token": 1.1e-06,
                     "max_input_tokens": 163840,
                     "max_output_tokens": 163840,
                     "metadata": {
