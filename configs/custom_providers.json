@@ -128,8 +128,8 @@
                 }
             },
             "z-ai/glm-5-turbo": {
-                "input_cost_per_token": 9.6e-07,
-                "output_cost_per_token": 3.2e-06,
+                "input_cost_per_token": 1.2e-06,
+                "output_cost_per_token": 4e-06,
                 "max_input_tokens": 202752,
                 "max_output_tokens": 131072,
                 "metadata": {
@@ -137,8 +137,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "z-ai/glm-5-turbo": {
-                    "input_cost_per_token": 9.6e-07,
-                    "output_cost_per_token": 3.2e-06,
+                    "input_cost_per_token": 1.2e-06,
+                    "output_cost_per_token": 4e-06,
                     "max_input_tokens": 202752,
                     "max_output_tokens": 131072,
                     "metadata": {
@@ -253,6 +253,7 @@
                 "input_cost_per_token": 5e-08,
                 "output_cost_per_token": 1.5e-07,
                 "max_input_tokens": 256000,
+                "max_output_tokens": 65536,
                 "metadata": {
                     "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
                 },
@@ -261,6 +262,7 @@
                     "input_cost_per_token": 5e-08,
                     "output_cost_per_token": 1.5e-07,
                     "max_input_tokens": 256000,
+                    "max_output_tokens": 65536,
                     "metadata": {
                         "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
                     },
@@ -6920,6 +6922,7 @@
                 "input_cost_per_token": 4e-08,
                 "output_cost_per_token": 1e-07,
                 "max_input_tokens": 32768,
+                "max_output_tokens": 32768,
                 "metadata": {
                     "notes": "Qwen2.5 7B is the latest series of Qwen large language models. Qwen2.5 brings the following improvements upon Qwen2:\n\n- Significantly more knowledge and has greatly improved capabilities in coding and mathematics, thanks to our specialized expert models in these domains.\n\n- Significant improvements in instruction following, generating long texts (over 8K tokens), understanding structured data (e.g, tables), and generating structured outputs especially JSON. More resilient to the diversity of system prompts, enhancing role-play implementation and condition-setting for chatbots.\n\n- Long-context Support up to 128K tokens and can generate up to 8K tokens.\n\n- Multilingual support for over 29 languages, including Chinese, English, French, Spanish, Portuguese, German, Italian, Russian, Japanese, Korean, Vietnamese, Thai, Arabic, and more.\n\nUsage of this model is subject to [Tongyi Qianwen LICENSE AGREEMENT](https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/LICENSE)."
                 },
@@ -6928,6 +6931,7 @@
                     "input_cost_per_token": 4e-08,
                     "output_cost_per_token": 1e-07,
                     "max_input_tokens": 32768,
+                    "max_output_tokens": 32768,
                     "metadata": {
                         "notes": "Qwen2.5 7B is the latest series of Qwen large language models. Qwen2.5 brings the following improvements upon Qwen2:\n\n- Significantly more knowledge and has greatly improved capabilities in coding and mathematics, thanks to our specialized expert models in these domains.\n\n- Significant improvements in instruction following, generating long texts (over 8K tokens), understanding structured data (e.g, tables), and generating structured outputs especially JSON. More resilient to the diversity of system prompts, enhancing role-play implementation and condition-setting for chatbots.\n\n- Long-context Support up to 128K tokens and can generate up to 8K tokens.\n\n- Multilingual support for over 29 languages, including Chinese, English, French, Spanish, Portuguese, German, Italian, Russian, Japanese, Korean, Vietnamese, Thai, Arabic, and more.\n\nUsage of this model is subject to [Tongyi Qianwen LICENSE AGREEMENT](https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/LICENSE)."
                     },

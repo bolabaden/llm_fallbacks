@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-9b9f1a17926d40db8a0374fae92c13ce
+  master_key: sk-ccaed01fb5b54e23ad773f5e143233da
   alerting:
   - slack
   - email
@@ -219,8 +219,8 @@ model_list:
     model: openai/z-ai/glm-5-turbo
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 9.6e-07
-    output_cost_per_token: 3.2e-06
+    input_cost_per_token: 1.2e-06
+    output_cost_per_token: 4.0e-06
     max_input_tokens: 202752
     max_output_tokens: 131072
     metadata: &id007
@@ -231,8 +231,8 @@ model_list:
         and persistent execution, and overall stability across extended tasks.
     litellm_provider: openrouter
     z-ai/glm-5-turbo:
-      input_cost_per_token: 9.6e-07
-      output_cost_per_token: 3.2e-06
+      input_cost_per_token: 1.2e-06
+      output_cost_per_token: 4.0e-06
       max_input_tokens: 202752
       max_output_tokens: 131072
       metadata: *id007
@@ -388,6 +388,7 @@ model_list:
     input_cost_per_token: 5.0e-08
     output_cost_per_token: 1.5e-07
     max_input_tokens: 256000
+    max_output_tokens: 65536
     metadata: &id013
       notes: Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family,
         designed to deliver strong reasoning, coding, and visual understanding in
@@ -399,6 +400,7 @@ model_list:
       input_cost_per_token: 5.0e-08
       output_cost_per_token: 1.5e-07
       max_input_tokens: 256000
+      max_output_tokens: 65536
       metadata: *id013
       litellm_provider: openrouter
 - model_name: openai/gpt-5.4-pro
@@ -8840,6 +8842,7 @@ model_list:
     input_cost_per_token: 4.0e-08
     output_cost_per_token: 1.0e-07
     max_input_tokens: 32768
+    max_output_tokens: 32768
     metadata: &id300
       notes: 'Qwen2.5 7B is the latest series of Qwen large language models. Qwen2.5
         brings the following improvements upon Qwen2:
@@ -8869,6 +8872,7 @@ model_list:
       input_cost_per_token: 4.0e-08
       output_cost_per_token: 1.0e-07
       max_input_tokens: 32768
+      max_output_tokens: 32768
       metadata: *id300
       litellm_provider: openrouter
 - model_name: nvidia/llama-3.1-nemotron-70b-instruct
