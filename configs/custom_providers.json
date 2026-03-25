@@ -1659,8 +1659,8 @@
                 }
             },
             "nex-agi/deepseek-v3.1-nex-n1": {
-                "input_cost_per_token": 2.7e-07,
-                "output_cost_per_token": 1e-06,
+                "input_cost_per_token": 1.35e-07,
+                "output_cost_per_token": 5e-07,
                 "max_input_tokens": 131072,
                 "max_output_tokens": 163840,
                 "metadata": {
@@ -1668,8 +1668,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "nex-agi/deepseek-v3.1-nex-n1": {
-                    "input_cost_per_token": 2.7e-07,
-                    "output_cost_per_token": 1e-06,
+                    "input_cost_per_token": 1.35e-07,
+                    "output_cost_per_token": 5e-07,
                     "max_input_tokens": 131072,
                     "max_output_tokens": 163840,
                     "metadata": {
@@ -4176,17 +4176,19 @@
                 }
             },
             "moonshotai/kimi-k2": {
-                "input_cost_per_token": 5.5e-07,
-                "output_cost_per_token": 2.2e-06,
-                "max_input_tokens": 131000,
+                "input_cost_per_token": 5.7e-07,
+                "output_cost_per_token": 2.3e-06,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 131072,
                 "metadata": {
                     "notes": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training."
                 },
                 "litellm_provider": "openrouter",
                 "moonshotai/kimi-k2": {
-                    "input_cost_per_token": 5.5e-07,
-                    "output_cost_per_token": 2.2e-06,
-                    "max_input_tokens": 131000,
+                    "input_cost_per_token": 5.7e-07,
+                    "output_cost_per_token": 2.3e-06,
+                    "max_input_tokens": 131072,
+                    "max_output_tokens": 131072,
                     "metadata": {
                         "notes": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training."
                     },
@@ -6870,26 +6872,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "anthracite-org/magnum-v4-72b": {
-                "input_cost_per_token": 3e-06,
-                "output_cost_per_token": 5e-06,
-                "max_input_tokens": 16384,
-                "max_output_tokens": 2048,
-                "metadata": {
-                    "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
-                },
-                "litellm_provider": "openrouter",
-                "anthracite-org/magnum-v4-72b": {
-                    "input_cost_per_token": 3e-06,
-                    "output_cost_per_token": 5e-06,
-                    "max_input_tokens": 16384,
-                    "max_output_tokens": 2048,
-                    "metadata": {
-                        "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "anthropic/claude-3.5-sonnet": {
                 "input_cost_per_token": 6e-06,
                 "litellm_provider": "openrouter",
@@ -6914,6 +6896,26 @@
                     "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "New Claude 3.5 Sonnet delivers better-than-Opus capabilities, faster-than-Sonnet speeds, at the same Sonnet prices. Sonnet is particularly good at:\n\n- Coding: Scores ~49% on SWE-Bench Verified, higher than the last best score, and without any fancy prompt scaffolding\n- Data science: Augments human data science expertise; navigates unstructured data while using multiple tools for insights\n- Visual processing: excelling at interpreting charts, graphs, and images, accurately transcribing text to derive insights beyond just the text alone\n- Agentic tasks: exceptional tool use, making it great at agentic tasks (i.e. complex, multi-step problem solving tasks that require engaging with other systems)\n\n#multimodal"
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "anthracite-org/magnum-v4-72b": {
+                "input_cost_per_token": 3e-06,
+                "output_cost_per_token": 5e-06,
+                "max_input_tokens": 16384,
+                "max_output_tokens": 2048,
+                "metadata": {
+                    "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
+                },
+                "litellm_provider": "openrouter",
+                "anthracite-org/magnum-v4-72b": {
+                    "input_cost_per_token": 3e-06,
+                    "output_cost_per_token": 5e-06,
+                    "max_input_tokens": 16384,
+                    "max_output_tokens": 2048,
+                    "metadata": {
+                        "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -6958,26 +6960,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "inflection/inflection-3-pi": {
-                "input_cost_per_token": 2.5e-06,
-                "output_cost_per_token": 1e-05,
-                "max_input_tokens": 8000,
-                "max_output_tokens": 1024,
-                "metadata": {
-                    "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
-                },
-                "litellm_provider": "openrouter",
-                "inflection/inflection-3-pi": {
-                    "input_cost_per_token": 2.5e-06,
-                    "output_cost_per_token": 1e-05,
-                    "max_input_tokens": 8000,
-                    "max_output_tokens": 1024,
-                    "metadata": {
-                        "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "inflection/inflection-3-productivity": {
                 "input_cost_per_token": 2.5e-06,
                 "output_cost_per_token": 1e-05,
@@ -6994,6 +6976,26 @@
                     "max_output_tokens": 1024,
                     "metadata": {
                         "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "inflection/inflection-3-pi": {
+                "input_cost_per_token": 2.5e-06,
+                "output_cost_per_token": 1e-05,
+                "max_input_tokens": 8000,
+                "max_output_tokens": 1024,
+                "metadata": {
+                    "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
+                },
+                "litellm_provider": "openrouter",
+                "inflection/inflection-3-pi": {
+                    "input_cost_per_token": 2.5e-06,
+                    "output_cost_per_token": 1e-05,
+                    "max_input_tokens": 8000,
+                    "max_output_tokens": 1024,
+                    "metadata": {
+                        "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7116,24 +7118,22 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "mistralai/pixtral-12b": {
-                "input_cost_per_token": 1.0000000000000001e-07,
-                "output_cost_per_token": 1.0000000000000001e-07,
-                "max_input_tokens": 32768,
-                "mode": "chat",
-                "supports_vision": true,
+            "cohere/command-r-plus-08-2024": {
+                "input_cost_per_token": 2.5e-06,
+                "output_cost_per_token": 1e-05,
+                "max_input_tokens": 128000,
+                "max_output_tokens": 4000,
                 "metadata": {
-                    "notes": "The first multi-modal, text+image-to-text model from Mistral AI. Its weights were launched via torrent: https://x.com/mistralai/status/1833758285167722836."
+                    "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint the same.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
                 },
                 "litellm_provider": "openrouter",
-                "mistralai/pixtral-12b": {
-                    "input_cost_per_token": 1.0000000000000001e-07,
-                    "output_cost_per_token": 1.0000000000000001e-07,
-                    "max_input_tokens": 32768,
-                    "mode": "chat",
-                    "supports_vision": true,
+                "cohere/command-r-plus-08-2024": {
+                    "input_cost_per_token": 2.5e-06,
+                    "output_cost_per_token": 1e-05,
+                    "max_input_tokens": 128000,
+                    "max_output_tokens": 4000,
                     "metadata": {
-                        "notes": "The first multi-modal, text+image-to-text model from Mistral AI. Its weights were launched via torrent: https://x.com/mistralai/status/1833758285167722836."
+                        "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint the same.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7158,26 +7158,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "cohere/command-r-plus-08-2024": {
-                "input_cost_per_token": 2.5e-06,
-                "output_cost_per_token": 1e-05,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 4000,
-                "metadata": {
-                    "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint the same.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
-                },
-                "litellm_provider": "openrouter",
-                "cohere/command-r-plus-08-2024": {
-                    "input_cost_per_token": 2.5e-06,
-                    "output_cost_per_token": 1e-05,
-                    "max_input_tokens": 128000,
-                    "max_output_tokens": 4000,
-                    "metadata": {
-                        "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint the same.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "sao10k/l3.1-euryale-70b": {
                 "input_cost_per_token": 8.5e-07,
                 "output_cost_per_token": 8.5e-07,
@@ -7194,28 +7174,6 @@
                     "max_output_tokens": 16384,
                     "metadata": {
                         "notes": "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "qwen/qwen-2.5-vl-7b-instruct": {
-                "input_cost_per_token": 2.0000000000000002e-07,
-                "output_cost_per_token": 2.0000000000000002e-07,
-                "max_input_tokens": 32768,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Qwen2.5 VL 7B is a multimodal LLM from the Qwen Team with the following key enhancements:\n\n- SoTA understanding of images of various resolution & ratio: Qwen2.5-VL achieves state-of-the-art performance on visual understanding benchmarks, including MathVista, DocVQA, RealWorldQA, MTVQA, etc.\n\n- Understanding videos of 20min+: Qwen2.5-VL can understand videos over 20 minutes for high-quality video-based question answering, dialog, content creation, etc.\n\n- Agent that can operate your mobiles, robots, etc.: with the abilities of complex reasoning and decision making, Qwen2.5-VL can be integrated with devices like mobile phones, robots, etc., for automatic operation based on visual environment and text instructions.\n\n- Multilingual Support: to serve global users, besides English and Chinese, Qwen2.5-VL now supports the understanding of texts in different languages inside images, including most European languages, Japanese, Korean, Arabic, Vietnamese, etc.\n\nFor more details, see this [blog post](https://qwenlm.github.io/blog/qwen2-vl/) and [GitHub repo](https://github.com/QwenLM/Qwen2-VL).\n\nUsage of this model is subject to [Tongyi Qianwen LICENSE AGREEMENT](https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/LICENSE)."
-                },
-                "litellm_provider": "openrouter",
-                "qwen/qwen-2.5-vl-7b-instruct": {
-                    "input_cost_per_token": 2.0000000000000002e-07,
-                    "output_cost_per_token": 2.0000000000000002e-07,
-                    "max_input_tokens": 32768,
-                    "mode": "chat",
-                    "supports_vision": true,
-                    "metadata": {
-                        "notes": "Qwen2.5 VL 7B is a multimodal LLM from the Qwen Team with the following key enhancements:\n\n- SoTA understanding of images of various resolution & ratio: Qwen2.5-VL achieves state-of-the-art performance on visual understanding benchmarks, including MathVista, DocVQA, RealWorldQA, MTVQA, etc.\n\n- Understanding videos of 20min+: Qwen2.5-VL can understand videos over 20 minutes for high-quality video-based question answering, dialog, content creation, etc.\n\n- Agent that can operate your mobiles, robots, etc.: with the abilities of complex reasoning and decision making, Qwen2.5-VL can be integrated with devices like mobile phones, robots, etc., for automatic operation based on visual environment and text instructions.\n\n- Multilingual Support: to serve global users, besides English and Chinese, Qwen2.5-VL now supports the understanding of texts in different languages inside images, including most European languages, Japanese, Korean, Arabic, Vietnamese, etc.\n\nFor more details, see this [blog post](https://qwenlm.github.io/blog/qwen2-vl/) and [GitHub repo](https://github.com/QwenLM/Qwen2-VL).\n\nUsage of this model is subject to [Tongyi Qianwen LICENSE AGREEMENT](https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/LICENSE)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7316,26 +7274,6 @@
                     "max_output_tokens": 16384,
                     "metadata": {
                         "notes": "The 2024-08-06 version of GPT-4o offers improved performance in structured outputs, with the ability to supply a JSON schema in the respone_format. Read more [here](https://openai.com/index/introducing-structured-outputs-in-the-api/).\n\nGPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.\n\nFor benchmarking against other models, it was briefly called [\"im-also-a-good-gpt2-chatbot\"](https://twitter.com/LiamFedus/status/1790064963966370209)"
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "meta-llama/llama-3.1-405b": {
-                "input_cost_per_token": 4e-06,
-                "output_cost_per_token": 4e-06,
-                "max_input_tokens": 32768,
-                "max_output_tokens": 32768,
-                "metadata": {
-                    "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This is the base 405B pre-trained version.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-                },
-                "litellm_provider": "openrouter",
-                "meta-llama/llama-3.1-405b": {
-                    "input_cost_per_token": 4e-06,
-                    "output_cost_per_token": 4e-06,
-                    "max_input_tokens": 32768,
-                    "max_output_tokens": 32768,
-                    "metadata": {
-                        "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This is the base 405B pre-trained version.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7592,6 +7530,26 @@
                     "litellm_provider": "openrouter"
                 }
             },
+            "meta-llama/llama-3-8b-instruct": {
+                "input_cost_per_token": 3e-08,
+                "output_cost_per_token": 4e-08,
+                "max_input_tokens": 8192,
+                "max_output_tokens": 16384,
+                "metadata": {
+                    "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
+                },
+                "litellm_provider": "openrouter",
+                "meta-llama/llama-3-8b-instruct": {
+                    "input_cost_per_token": 3e-08,
+                    "output_cost_per_token": 4e-08,
+                    "max_input_tokens": 8192,
+                    "max_output_tokens": 16384,
+                    "metadata": {
+                        "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "meta-llama/llama-3-70b-instruct": {
                 "input_cost_per_token": 5.1e-07,
                 "litellm_provider": "openrouter",
@@ -7611,26 +7569,6 @@
                     "max_output_tokens": 8000,
                     "metadata": {
                         "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "meta-llama/llama-3-8b-instruct": {
-                "input_cost_per_token": 3e-08,
-                "output_cost_per_token": 4e-08,
-                "max_input_tokens": 8192,
-                "max_output_tokens": 16384,
-                "metadata": {
-                    "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-                },
-                "litellm_provider": "openrouter",
-                "meta-llama/llama-3-8b-instruct": {
-                    "input_cost_per_token": 3e-08,
-                    "output_cost_per_token": 4e-08,
-                    "max_input_tokens": 8192,
-                    "max_output_tokens": 16384,
-                    "metadata": {
-                        "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7751,26 +7689,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "openai/gpt-3.5-turbo-0613": {
-                "input_cost_per_token": 1e-06,
-                "output_cost_per_token": 2e-06,
-                "max_input_tokens": 4095,
-                "max_output_tokens": 4096,
-                "metadata": {
-                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                },
-                "litellm_provider": "openrouter",
-                "openai/gpt-3.5-turbo-0613": {
-                    "input_cost_per_token": 1e-06,
-                    "output_cost_per_token": 2e-06,
-                    "max_input_tokens": 4095,
-                    "max_output_tokens": 4096,
-                    "metadata": {
-                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "openai/gpt-4-turbo-preview": {
                 "input_cost_per_token": 1e-05,
                 "output_cost_per_token": 3e-05,
@@ -7790,6 +7708,26 @@
                         "notes": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023.\n\n**Note:** heavily rate limited by OpenAI while in preview."
                     },
                     "supports_function_calling": true,
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "openai/gpt-3.5-turbo-0613": {
+                "input_cost_per_token": 1e-06,
+                "output_cost_per_token": 2e-06,
+                "max_input_tokens": 4095,
+                "max_output_tokens": 4096,
+                "metadata": {
+                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                },
+                "litellm_provider": "openrouter",
+                "openai/gpt-3.5-turbo-0613": {
+                    "input_cost_per_token": 1e-06,
+                    "output_cost_per_token": 2e-06,
+                    "max_input_tokens": 4095,
+                    "max_output_tokens": 4096,
+                    "metadata": {
+                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                    },
                     "litellm_provider": "openrouter"
                 }
             },

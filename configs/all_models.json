@@ -4664,28 +4664,6 @@
         "mode": "chat",
         "output_cost_per_token": 1e-07
     },
-    "mistralai/pixtral-12b": {
-        "input_cost_per_token": 1.0000000000000001e-07,
-        "output_cost_per_token": 1.0000000000000001e-07,
-        "max_input_tokens": 32768,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "The first multi-modal, text+image-to-text model from Mistral AI. Its weights were launched via torrent: https://x.com/mistralai/status/1833758285167722836."
-        },
-        "litellm_provider": "openrouter",
-        "mistralai/pixtral-12b": {
-            "input_cost_per_token": 1.0000000000000001e-07,
-            "output_cost_per_token": 1.0000000000000001e-07,
-            "max_input_tokens": 32768,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "The first multi-modal, text+image-to-text model from Mistral AI. Its weights were launched via torrent: https://x.com/mistralai/status/1833758285167722836."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "microsoft/phi-4": {
         "input_cost_per_token": 6.5e-08,
         "output_cost_per_token": 1.4e-07,
@@ -7884,28 +7862,6 @@
         "mode": "chat",
         "output_cost_per_token": 2e-07
     },
-    "qwen/qwen-2.5-vl-7b-instruct": {
-        "input_cost_per_token": 2.0000000000000002e-07,
-        "output_cost_per_token": 2.0000000000000002e-07,
-        "max_input_tokens": 32768,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Qwen2.5 VL 7B is a multimodal LLM from the Qwen Team with the following key enhancements:\n\n- SoTA understanding of images of various resolution & ratio: Qwen2.5-VL achieves state-of-the-art performance on visual understanding benchmarks, including MathVista, DocVQA, RealWorldQA, MTVQA, etc.\n\n- Understanding videos of 20min+: Qwen2.5-VL can understand videos over 20 minutes for high-quality video-based question answering, dialog, content creation, etc.\n\n- Agent that can operate your mobiles, robots, etc.: with the abilities of complex reasoning and decision making, Qwen2.5-VL can be integrated with devices like mobile phones, robots, etc., for automatic operation based on visual environment and text instructions.\n\n- Multilingual Support: to serve global users, besides English and Chinese, Qwen2.5-VL now supports the understanding of texts in different languages inside images, including most European languages, Japanese, Korean, Arabic, Vietnamese, etc.\n\nFor more details, see this [blog post](https://qwenlm.github.io/blog/qwen2-vl/) and [GitHub repo](https://github.com/QwenLM/Qwen2-VL).\n\nUsage of this model is subject to [Tongyi Qianwen LICENSE AGREEMENT](https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/LICENSE)."
-        },
-        "litellm_provider": "openrouter",
-        "qwen/qwen-2.5-vl-7b-instruct": {
-            "input_cost_per_token": 2.0000000000000002e-07,
-            "output_cost_per_token": 2.0000000000000002e-07,
-            "max_input_tokens": 32768,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Qwen2.5 VL 7B is a multimodal LLM from the Qwen Team with the following key enhancements:\n\n- SoTA understanding of images of various resolution & ratio: Qwen2.5-VL achieves state-of-the-art performance on visual understanding benchmarks, including MathVista, DocVQA, RealWorldQA, MTVQA, etc.\n\n- Understanding videos of 20min+: Qwen2.5-VL can understand videos over 20 minutes for high-quality video-based question answering, dialog, content creation, etc.\n\n- Agent that can operate your mobiles, robots, etc.: with the abilities of complex reasoning and decision making, Qwen2.5-VL can be integrated with devices like mobile phones, robots, etc., for automatic operation based on visual environment and text instructions.\n\n- Multilingual Support: to serve global users, besides English and Chinese, Qwen2.5-VL now supports the understanding of texts in different languages inside images, including most European languages, Japanese, Korean, Arabic, Vietnamese, etc.\n\nFor more details, see this [blog post](https://qwenlm.github.io/blog/qwen2-vl/) and [GitHub repo](https://github.com/QwenLM/Qwen2-VL).\n\nUsage of this model is subject to [Tongyi Qianwen LICENSE AGREEMENT](https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/LICENSE)."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "groq/openai/gpt-oss-safeguard-20b": {
         "cache_read_input_token_cost": 3.7e-08,
         "input_cost_per_token": 7.5e-08,
@@ -9671,6 +9627,26 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
+    },
+    "nex-agi/deepseek-v3.1-nex-n1": {
+        "input_cost_per_token": 1.35e-07,
+        "output_cost_per_token": 5e-07,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 163840,
+        "metadata": {
+            "notes": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series \u2014 a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity. \n\nNex-N1 demonstrates competitive performance across all evaluation scenarios, showing particularly strong results in practical coding and HTML generation tasks."
+        },
+        "litellm_provider": "openrouter",
+        "nex-agi/deepseek-v3.1-nex-n1": {
+            "input_cost_per_token": 1.35e-07,
+            "output_cost_per_token": 5e-07,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 163840,
+            "metadata": {
+                "notes": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series \u2014 a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity. \n\nNex-N1 demonstrates competitive performance across all evaluation scenarios, showing particularly strong results in practical coding and HTML generation tasks."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "allenai/olmo-3.1-32b-think": {
         "input_cost_per_token": 1.5e-07,
@@ -13829,26 +13805,6 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
-    },
-    "nex-agi/deepseek-v3.1-nex-n1": {
-        "input_cost_per_token": 2.7e-07,
-        "output_cost_per_token": 1e-06,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 163840,
-        "metadata": {
-            "notes": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series \u2014 a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity. \n\nNex-N1 demonstrates competitive performance across all evaluation scenarios, showing particularly strong results in practical coding and HTML generation tasks."
-        },
-        "litellm_provider": "openrouter",
-        "nex-agi/deepseek-v3.1-nex-n1": {
-            "input_cost_per_token": 2.7e-07,
-            "output_cost_per_token": 1e-06,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 163840,
-            "metadata": {
-                "notes": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series \u2014 a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity. \n\nNex-N1 demonstrates competitive performance across all evaluation scenarios, showing particularly strong results in practical coding and HTML generation tasks."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "google/gemini-2.0-flash-001": {
         "deprecation_date": "2026-06-01",
@@ -20368,24 +20324,6 @@
         "supports_function_calling": true,
         "supports_tool_choice": true
     },
-    "moonshotai/kimi-k2": {
-        "input_cost_per_token": 5.5e-07,
-        "output_cost_per_token": 2.2e-06,
-        "max_input_tokens": 131000,
-        "metadata": {
-            "notes": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training."
-        },
-        "litellm_provider": "openrouter",
-        "moonshotai/kimi-k2": {
-            "input_cost_per_token": 5.5e-07,
-            "output_cost_per_token": 2.2e-06,
-            "max_input_tokens": 131000,
-            "metadata": {
-                "notes": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "morph/morph-v3-large": {
         "input_cost_per_token": 9e-07,
         "litellm_provider": "openrouter",
@@ -20618,6 +20556,26 @@
         "supports_tool_choice": true,
         "supports_system_messages": true,
         "supports_response_schema": true
+    },
+    "moonshotai/kimi-k2": {
+        "input_cost_per_token": 5.7e-07,
+        "output_cost_per_token": 2.3e-06,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 131072,
+        "metadata": {
+            "notes": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training."
+        },
+        "litellm_provider": "openrouter",
+        "moonshotai/kimi-k2": {
+            "input_cost_per_token": 5.7e-07,
+            "output_cost_per_token": 2.3e-06,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "amazon.nova-2-lite-v1:0": {
         "cache_read_input_token_cost": 7.5e-08,
@@ -26435,26 +26393,6 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
-    "meta-llama/llama-3.1-405b": {
-        "input_cost_per_token": 4e-06,
-        "output_cost_per_token": 4e-06,
-        "max_input_tokens": 32768,
-        "max_output_tokens": 32768,
-        "metadata": {
-            "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This is the base 405B pre-trained version.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-        },
-        "litellm_provider": "openrouter",
-        "meta-llama/llama-3.1-405b": {
-            "input_cost_per_token": 4e-06,
-            "output_cost_per_token": 4e-06,
-            "max_input_tokens": 32768,
-            "max_output_tokens": 32768,
-            "metadata": {
-                "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This is the base 405B pre-trained version.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "dashscope/qwen-max": {
         "input_cost_per_token": 1.6e-06,
         "litellm_provider": "dashscope",
@@ -29610,26 +29548,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "inflection/inflection-3-pi": {
-        "input_cost_per_token": 2.5e-06,
-        "output_cost_per_token": 1e-05,
-        "max_input_tokens": 8000,
-        "max_output_tokens": 1024,
-        "metadata": {
-            "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
-        },
-        "litellm_provider": "openrouter",
-        "inflection/inflection-3-pi": {
-            "input_cost_per_token": 2.5e-06,
-            "output_cost_per_token": 1e-05,
-            "max_input_tokens": 8000,
-            "max_output_tokens": 1024,
-            "metadata": {
-                "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "inflection/inflection-3-productivity": {
         "input_cost_per_token": 2.5e-06,
         "output_cost_per_token": 1e-05,
@@ -29646,6 +29564,26 @@
             "max_output_tokens": 1024,
             "metadata": {
                 "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inflection/inflection-3-pi": {
+        "input_cost_per_token": 2.5e-06,
+        "output_cost_per_token": 1e-05,
+        "max_input_tokens": 8000,
+        "max_output_tokens": 1024,
+        "metadata": {
+            "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
+        },
+        "litellm_provider": "openrouter",
+        "inflection/inflection-3-pi": {
+            "input_cost_per_token": 2.5e-06,
+            "output_cost_per_token": 1e-05,
+            "max_input_tokens": 8000,
+            "max_output_tokens": 1024,
+            "metadata": {
+                "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
             },
             "litellm_provider": "openrouter"
         }
