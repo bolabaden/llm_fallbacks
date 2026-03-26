@@ -5,6 +5,26 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "reka/reka-edge": {
+                "input_cost_per_token": 2e-07,
+                "output_cost_per_token": 2e-07,
+                "max_input_tokens": 16384,
+                "max_output_tokens": 16384,
+                "metadata": {
+                    "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use."
+                },
+                "litellm_provider": "openrouter",
+                "reka/reka-edge": {
+                    "input_cost_per_token": 2e-07,
+                    "output_cost_per_token": 2e-07,
+                    "max_input_tokens": 16384,
+                    "max_output_tokens": 16384,
+                    "metadata": {
+                        "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "xiaomi/mimo-v2-omni": {
                 "input_cost_per_token": 4e-07,
                 "output_cost_per_token": 2e-06,
@@ -2094,68 +2114,6 @@
                     "supports_vision": true,
                     "metadata": {
                         "notes": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "google/gemini-3-pro-preview": {
-                "cache_read_input_token_cost": 2e-07,
-                "cache_read_input_token_cost_above_200k_tokens": 4e-07,
-                "cache_creation_input_token_cost_above_200k_tokens": 2.5e-07,
-                "input_cost_per_token": 2e-06,
-                "input_cost_per_token_above_200k_tokens": 4e-06,
-                "input_cost_per_token_batches": 1e-06,
-                "litellm_provider": "openrouter",
-                "max_audio_length_hours": 8.4,
-                "max_audio_per_prompt": 1,
-                "max_images_per_prompt": 3000,
-                "max_input_tokens": 1048576,
-                "max_output_tokens": 65536,
-                "max_pdf_size_mb": 30,
-                "max_tokens": 65535,
-                "max_video_length": 1,
-                "max_videos_per_prompt": 10,
-                "mode": "chat",
-                "output_cost_per_token": 1.2e-05,
-                "output_cost_per_token_above_200k_tokens": 1.8e-05,
-                "output_cost_per_token_batches": 6e-06,
-                "supported_endpoints": [
-                    "/v1/chat/completions",
-                    "/v1/completions",
-                    "/v1/batch"
-                ],
-                "supported_modalities": [
-                    "text",
-                    "image",
-                    "audio",
-                    "video"
-                ],
-                "supported_output_modalities": [
-                    "text"
-                ],
-                "supports_audio_input": true,
-                "supports_function_calling": true,
-                "supports_pdf_input": true,
-                "supports_prompt_caching": true,
-                "supports_reasoning": true,
-                "supports_response_schema": true,
-                "supports_system_messages": true,
-                "supports_tool_choice": true,
-                "supports_video_input": true,
-                "supports_vision": true,
-                "supports_web_search": true,
-                "input_cost_per_image": 2e-06,
-                "metadata": {
-                    "notes": "Gemini 3 Pro is Google\u2019s flagship frontier model for high-precision multimodal reasoning, combining strong performance across text, image, video, audio, and code with a 1M-token context window. Reasoning Details must be preserved when using multi-turn tool calling, see our docs here: https://openrouter.ai/docs/use-cases/reasoning-tokens#preserving-reasoning-blocks. It delivers state-of-the-art benchmark results in general reasoning, STEM problem solving, factual QA, and multimodal understanding, including leading scores on LMArena, GPQA Diamond, MathArena Apex, MMMU-Pro, and Video-MMMU. Interactions emphasize depth and interpretability: the model is designed to infer intent with minimal prompting and produce direct, insight-focused responses.\n\nBuilt for advanced development and agentic workflows, Gemini 3 Pro provides robust tool-calling, long-horizon planning stability, and strong zero-shot generation for complex UI, visualization, and coding tasks. It excels at agentic coding (SWE-Bench Verified, Terminal-Bench 2.0), multimodal analysis, and structured long-form tasks such as research synthesis, planning, and interactive learning experiences. Suitable applications include autonomous agents, coding assistants, multimodal analytics, scientific reasoning, and high-context information processing."
-                },
-                "google/gemini-3-pro-preview": {
-                    "input_cost_per_token": 2e-06,
-                    "output_cost_per_token": 1.2e-05,
-                    "input_cost_per_image": 2e-06,
-                    "max_input_tokens": 1048576,
-                    "max_output_tokens": 65536,
-                    "metadata": {
-                        "notes": "Gemini 3 Pro is Google\u2019s flagship frontier model for high-precision multimodal reasoning, combining strong performance across text, image, video, audio, and code with a 1M-token context window. Reasoning Details must be preserved when using multi-turn tool calling, see our docs here: https://openrouter.ai/docs/use-cases/reasoning-tokens#preserving-reasoning-blocks. It delivers state-of-the-art benchmark results in general reasoning, STEM problem solving, factual QA, and multimodal understanding, including leading scores on LMArena, GPQA Diamond, MathArena Apex, MMMU-Pro, and Video-MMMU. Interactions emphasize depth and interpretability: the model is designed to infer intent with minimal prompting and produce direct, insight-focused responses.\n\nBuilt for advanced development and agentic workflows, Gemini 3 Pro provides robust tool-calling, long-horizon planning stability, and strong zero-shot generation for complex UI, visualization, and coding tasks. It excels at agentic coding (SWE-Bench Verified, Terminal-Bench 2.0), multimodal analysis, and structured long-form tasks such as research synthesis, planning, and interactive learning experiences. Suitable applications include autonomous agents, coding assistants, multimodal analytics, scientific reasoning, and high-context information processing."
                     },
                     "litellm_provider": "openrouter"
                 }
