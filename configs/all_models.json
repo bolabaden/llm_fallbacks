@@ -4431,6 +4431,26 @@
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
     },
+    "reka/reka-edge": {
+        "input_cost_per_token": 1e-07,
+        "output_cost_per_token": 1e-07,
+        "max_input_tokens": 16384,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use."
+        },
+        "litellm_provider": "openrouter",
+        "reka/reka-edge": {
+            "input_cost_per_token": 1e-07,
+            "output_cost_per_token": 1e-07,
+            "max_input_tokens": 16384,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "friendliai/meta-llama-3.1-8b-instruct": {
         "input_cost_per_token": 1e-07,
         "litellm_provider": "friendliai",
@@ -6736,26 +6756,6 @@
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
     },
-    "stepfun/step-3.5-flash": {
-        "input_cost_per_token": 1e-07,
-        "output_cost_per_token": 3e-07,
-        "max_input_tokens": 256000,
-        "max_output_tokens": 256000,
-        "metadata": {
-            "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts."
-        },
-        "litellm_provider": "openrouter",
-        "stepfun/step-3.5-flash": {
-            "input_cost_per_token": 1e-07,
-            "output_cost_per_token": 3e-07,
-            "max_input_tokens": 256000,
-            "max_output_tokens": 256000,
-            "metadata": {
-                "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "hyperbolic/qwen/qwq-32b": {
         "input_cost_per_token": 2e-07,
         "litellm_provider": "hyperbolic",
@@ -6970,6 +6970,24 @@
         "output_cost_per_token": 2e-07,
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
+    },
+    "stepfun/step-3.5-flash": {
+        "input_cost_per_token": 1e-07,
+        "output_cost_per_token": 3e-07,
+        "max_input_tokens": 262144,
+        "metadata": {
+            "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts."
+        },
+        "litellm_provider": "openrouter",
+        "stepfun/step-3.5-flash": {
+            "input_cost_per_token": 1e-07,
+            "output_cost_per_token": 3e-07,
+            "max_input_tokens": 262144,
+            "metadata": {
+                "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "fireworks_ai/accounts/fireworks/models/code-qwen-1p5-7b": {
         "max_tokens": 65536,
@@ -7469,26 +7487,6 @@
         "supports_function_calling": true,
         "supports_tool_choice": true,
         "supports_response_schema": true
-    },
-    "reka/reka-edge": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 2e-07,
-        "max_input_tokens": 16384,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use."
-        },
-        "litellm_provider": "openrouter",
-        "reka/reka-edge": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 2e-07,
-            "max_input_tokens": 16384,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "mistralai/mistral-small-creative": {
         "input_cost_per_token": 1e-07,
@@ -10546,26 +10544,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "openai/gpt-4o-mini-2024-07-18": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 6e-07,
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-        },
-        "litellm_provider": "openrouter",
-        "openai/gpt-4o-mini-2024-07-18": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 6e-07,
-            "max_input_tokens": 128000,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "openai/gpt-4o-mini": {
         "input_cost_per_token": 1.5e-07,
         "output_cost_per_token": 6e-07,
@@ -10576,6 +10554,26 @@
         },
         "litellm_provider": "openrouter",
         "openai/gpt-4o-mini": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 6e-07,
+            "max_input_tokens": 128000,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openai/gpt-4o-mini-2024-07-18": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 6e-07,
+        "max_input_tokens": 128000,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+        },
+        "litellm_provider": "openrouter",
+        "openai/gpt-4o-mini-2024-07-18": {
             "input_cost_per_token": 1.5e-07,
             "output_cost_per_token": 6e-07,
             "max_input_tokens": 128000,
