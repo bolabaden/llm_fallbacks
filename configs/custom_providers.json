@@ -5,6 +5,26 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "kwaipilot/kat-coder-pro-v2": {
+                "input_cost_per_token": 3e-07,
+                "output_cost_per_token": 1.2e-06,
+                "max_input_tokens": 256000,
+                "max_output_tokens": 80000,
+                "metadata": {
+                    "notes": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT\u2019s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration. It builds on the agentic coding strengths of earlier versions, with a focus on large-scale production environments, multi-system coordination, and seamless integration across modern software stacks, while also supporting web aesthetics generation to produce production-grade landing pages and presentation decks."
+                },
+                "litellm_provider": "openrouter",
+                "kwaipilot/kat-coder-pro-v2": {
+                    "input_cost_per_token": 3e-07,
+                    "output_cost_per_token": 1.2e-06,
+                    "max_input_tokens": 256000,
+                    "max_output_tokens": 80000,
+                    "metadata": {
+                        "notes": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT\u2019s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration. It builds on the agentic coding strengths of earlier versions, with a focus on large-scale production environments, multi-system coordination, and seamless integration across modern software stacks, while also supporting web aesthetics generation to produce production-grade landing pages and presentation decks."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "reka/reka-edge": {
                 "input_cost_per_token": 1e-07,
                 "output_cost_per_token": 1e-07,
@@ -6828,6 +6848,26 @@
                     "litellm_provider": "openrouter"
                 }
             },
+            "anthracite-org/magnum-v4-72b": {
+                "input_cost_per_token": 3e-06,
+                "output_cost_per_token": 5e-06,
+                "max_input_tokens": 16384,
+                "max_output_tokens": 2048,
+                "metadata": {
+                    "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
+                },
+                "litellm_provider": "openrouter",
+                "anthracite-org/magnum-v4-72b": {
+                    "input_cost_per_token": 3e-06,
+                    "output_cost_per_token": 5e-06,
+                    "max_input_tokens": 16384,
+                    "max_output_tokens": 2048,
+                    "metadata": {
+                        "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "anthropic/claude-3.5-sonnet": {
                 "input_cost_per_token": 6e-06,
                 "litellm_provider": "openrouter",
@@ -6852,26 +6892,6 @@
                     "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "New Claude 3.5 Sonnet delivers better-than-Opus capabilities, faster-than-Sonnet speeds, at the same Sonnet prices. Sonnet is particularly good at:\n\n- Coding: Scores ~49% on SWE-Bench Verified, higher than the last best score, and without any fancy prompt scaffolding\n- Data science: Augments human data science expertise; navigates unstructured data while using multiple tools for insights\n- Visual processing: excelling at interpreting charts, graphs, and images, accurately transcribing text to derive insights beyond just the text alone\n- Agentic tasks: exceptional tool use, making it great at agentic tasks (i.e. complex, multi-step problem solving tasks that require engaging with other systems)\n\n#multimodal"
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "anthracite-org/magnum-v4-72b": {
-                "input_cost_per_token": 3e-06,
-                "output_cost_per_token": 5e-06,
-                "max_input_tokens": 16384,
-                "max_output_tokens": 2048,
-                "metadata": {
-                    "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
-                },
-                "litellm_provider": "openrouter",
-                "anthracite-org/magnum-v4-72b": {
-                    "input_cost_per_token": 3e-06,
-                    "output_cost_per_token": 5e-06,
-                    "max_input_tokens": 16384,
-                    "max_output_tokens": 2048,
-                    "metadata": {
-                        "notes": "This is a series of models designed to replicate the prose quality of the Claude 3 models, specifically Sonnet(https://openrouter.ai/anthropic/claude-3.5-sonnet) and Opus(https://openrouter.ai/anthropic/claude-3-opus).\n\nThe model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -6976,24 +6996,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "meta-llama/llama-3.2-1b-instruct": {
-                "input_cost_per_token": 2.7e-08,
-                "output_cost_per_token": 2e-07,
-                "max_input_tokens": 60000,
-                "metadata": {
-                    "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/)."
-                },
-                "litellm_provider": "openrouter",
-                "meta-llama/llama-3.2-1b-instruct": {
-                    "input_cost_per_token": 2.7e-08,
-                    "output_cost_per_token": 2e-07,
-                    "max_input_tokens": 60000,
-                    "metadata": {
-                        "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "meta-llama/llama-3.2-3b-instruct:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
@@ -7026,6 +7028,24 @@
                     "max_input_tokens": 80000,
                     "metadata": {
                         "notes": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes it ideal for applications needing accuracy and efficiency in text generation across multilingual settings.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/)."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "meta-llama/llama-3.2-1b-instruct": {
+                "input_cost_per_token": 2.7e-08,
+                "output_cost_per_token": 2e-07,
+                "max_input_tokens": 60000,
+                "metadata": {
+                    "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/)."
+                },
+                "litellm_provider": "openrouter",
+                "meta-llama/llama-3.2-1b-instruct": {
+                    "input_cost_per_token": 2.7e-08,
+                    "output_cost_per_token": 2e-07,
+                    "max_input_tokens": 60000,
+                    "metadata": {
+                        "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7074,26 +7094,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "cohere/command-r-08-2024": {
-                "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 6e-07,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 4000,
-                "metadata": {
-                    "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
-                },
-                "litellm_provider": "openrouter",
-                "cohere/command-r-08-2024": {
-                    "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 6e-07,
-                    "max_input_tokens": 128000,
-                    "max_output_tokens": 4000,
-                    "metadata": {
-                        "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "cohere/command-r-plus-08-2024": {
                 "input_cost_per_token": 2.5e-06,
                 "output_cost_per_token": 1e-05,
@@ -7110,6 +7110,26 @@
                     "max_output_tokens": 4000,
                     "metadata": {
                         "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint the same.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "cohere/command-r-08-2024": {
+                "input_cost_per_token": 1.5e-07,
+                "output_cost_per_token": 6e-07,
+                "max_input_tokens": 128000,
+                "max_output_tokens": 4000,
+                "metadata": {
+                    "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
+                },
+                "litellm_provider": "openrouter",
+                "cohere/command-r-08-2024": {
+                    "input_cost_per_token": 1.5e-07,
+                    "output_cost_per_token": 6e-07,
+                    "max_input_tokens": 128000,
+                    "max_output_tokens": 4000,
+                    "metadata": {
+                        "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7645,26 +7665,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "openai/gpt-3.5-turbo-0613": {
-                "input_cost_per_token": 1e-06,
-                "output_cost_per_token": 2e-06,
-                "max_input_tokens": 4095,
-                "max_output_tokens": 4096,
-                "metadata": {
-                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                },
-                "litellm_provider": "openrouter",
-                "openai/gpt-3.5-turbo-0613": {
-                    "input_cost_per_token": 1e-06,
-                    "output_cost_per_token": 2e-06,
-                    "max_input_tokens": 4095,
-                    "max_output_tokens": 4096,
-                    "metadata": {
-                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "openai/gpt-4-turbo-preview": {
                 "input_cost_per_token": 1e-05,
                 "output_cost_per_token": 3e-05,
@@ -7684,6 +7684,26 @@
                         "notes": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023.\n\n**Note:** heavily rate limited by OpenAI while in preview."
                     },
                     "supports_function_calling": true,
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "openai/gpt-3.5-turbo-0613": {
+                "input_cost_per_token": 1e-06,
+                "output_cost_per_token": 2e-06,
+                "max_input_tokens": 4095,
+                "max_output_tokens": 4096,
+                "metadata": {
+                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                },
+                "litellm_provider": "openrouter",
+                "openai/gpt-3.5-turbo-0613": {
+                    "input_cost_per_token": 1e-06,
+                    "output_cost_per_token": 2e-06,
+                    "max_input_tokens": 4095,
+                    "max_output_tokens": 4096,
+                    "metadata": {
+                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                    },
                     "litellm_provider": "openrouter"
                 }
             },
@@ -7765,24 +7785,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "mistralai/mistral-7b-instruct-v0.1": {
-                "input_cost_per_token": 1.1e-07,
-                "output_cost_per_token": 1.9e-07,
-                "max_input_tokens": 2824,
-                "metadata": {
-                    "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
-                },
-                "litellm_provider": "openrouter",
-                "mistralai/mistral-7b-instruct-v0.1": {
-                    "input_cost_per_token": 1.1e-07,
-                    "output_cost_per_token": 1.9e-07,
-                    "max_input_tokens": 2824,
-                    "metadata": {
-                        "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "openai/gpt-3.5-turbo-instruct": {
                 "input_cost_per_token": 1.5e-06,
                 "output_cost_per_token": 2e-06,
@@ -7799,6 +7801,24 @@
                     "max_output_tokens": 4096,
                     "metadata": {
                         "notes": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "mistralai/mistral-7b-instruct-v0.1": {
+                "input_cost_per_token": 1.1e-07,
+                "output_cost_per_token": 1.9e-07,
+                "max_input_tokens": 2824,
+                "metadata": {
+                    "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
+                },
+                "litellm_provider": "openrouter",
+                "mistralai/mistral-7b-instruct-v0.1": {
+                    "input_cost_per_token": 1.1e-07,
+                    "output_cost_per_token": 1.9e-07,
+                    "max_input_tokens": 2824,
+                    "metadata": {
+                        "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7895,29 +7915,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "openai/gpt-3.5-turbo": {
-                "input_cost_per_token": 5e-07,
-                "litellm_provider": "openrouter",
-                "max_tokens": 4095,
-                "mode": "chat",
-                "output_cost_per_token": 1.5e-06,
-                "supports_tool_choice": true,
-                "max_input_tokens": 16385,
-                "max_output_tokens": 4096,
-                "metadata": {
-                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                },
-                "openai/gpt-3.5-turbo": {
-                    "input_cost_per_token": 5e-07,
-                    "output_cost_per_token": 1.5e-06,
-                    "max_input_tokens": 16385,
-                    "max_output_tokens": 4096,
-                    "metadata": {
-                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "openai/gpt-4": {
                 "input_cost_per_token": 3e-05,
                 "litellm_provider": "openrouter",
@@ -7957,6 +7954,29 @@
                     "max_output_tokens": 4096,
                     "metadata": {
                         "notes": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "openai/gpt-3.5-turbo": {
+                "input_cost_per_token": 5e-07,
+                "litellm_provider": "openrouter",
+                "max_tokens": 4095,
+                "mode": "chat",
+                "output_cost_per_token": 1.5e-06,
+                "supports_tool_choice": true,
+                "max_input_tokens": 16385,
+                "max_output_tokens": 4096,
+                "metadata": {
+                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                },
+                "openai/gpt-3.5-turbo": {
+                    "input_cost_per_token": 5e-07,
+                    "output_cost_per_token": 1.5e-06,
+                    "max_input_tokens": 16385,
+                    "max_output_tokens": 4096,
+                    "metadata": {
+                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
                     },
                     "litellm_provider": "openrouter"
                 }

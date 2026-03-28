@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-eaf40ae608344718b35101763841b472
+  master_key: sk-fb2b19b378f04986920f4000d660713b
   alerting:
   - slack
   - email
@@ -752,7 +752,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - minimax/minimax-m2.5:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -778,7 +778,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - openrouter/free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -830,7 +830,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - arcee-ai/trinity-large-preview:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -934,7 +934,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - openrouter/bodybuilder:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1012,7 +1012,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - qwen/qwen3-next-80b-a3b-instruct:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1038,7 +1038,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - nvidia/nemotron-nano-9b-v2:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1090,7 +1090,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - openai/gpt-oss-20b:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1116,7 +1116,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - z-ai/glm-4.5-air:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1142,7 +1142,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - qwen/qwen3-coder:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1168,7 +1168,7 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
+    - gemini/lyria-3-pro-preview
   - cognitivecomputations/dolphin-mistral-24b-venice-edition:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
