@@ -68,7 +68,6 @@ openai/gpt-oss-20b:free
 dashscope/qwen3-30b-a3b
 github_copilot/gpt-4o
 github_copilot/gpt-4o-2024-05-13
-mistralai/mistral-small-3.1-24b-instruct:free
 vertex_ai/meta/llama-3.1-70b-instruct-maas
 vertex_ai/meta/llama-3.1-8b-instruct-maas
 vertex_ai/meta/llama-3.2-90b-vision-instruct-maas
@@ -155,7 +154,6 @@ snowflake/mixtral-8x7b
 snowflake/reka-core
 text-completion-codestral/codestral-2405
 text-completion-codestral/codestral-latest
-qwen/qwen3-4b:free
 cognitivecomputations/dolphin-mistral-24b-venice-edition:free
 featherless_ai/featherless-ai/qwerky-72b
 featherless_ai/featherless-ai/qwerky-qwq-32b

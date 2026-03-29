@@ -805,8 +805,8 @@
                 }
             },
             "minimax/minimax-m2.5": {
-                "input_cost_per_token": 2e-07,
-                "output_cost_per_token": 1.17e-06,
+                "input_cost_per_token": 1.9e-07,
+                "output_cost_per_token": 1.15e-06,
                 "cache_read_input_token_cost": 3e-08,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 196608,
@@ -826,8 +826,8 @@
                     "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
                 },
                 "minimax/minimax-m2.5": {
-                    "input_cost_per_token": 2e-07,
-                    "output_cost_per_token": 1.17e-06,
+                    "input_cost_per_token": 1.9e-07,
+                    "output_cost_per_token": 1.15e-06,
                     "cache_read_input_token_cost": 3e-08,
                     "cache_creation_input_token_cost": 3.75e-07,
                     "litellm_provider": "openrouter",
@@ -1026,7 +1026,7 @@
             },
             "moonshotai/kimi-k2.5": {
                 "cache_read_input_token_cost": 1e-07,
-                "input_cost_per_token": 4.5e-07,
+                "input_cost_per_token": 4.2e-07,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 262144,
                 "max_output_tokens": 65535,
@@ -1042,7 +1042,7 @@
                     "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
                 },
                 "moonshotai/kimi-k2.5": {
-                    "input_cost_per_token": 4.5e-07,
+                    "input_cost_per_token": 4.2e-07,
                     "output_cost_per_token": 2.2e-06,
                     "max_input_tokens": 262144,
                     "max_output_tokens": 65535,
@@ -4928,24 +4928,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "qwen/qwen3-4b:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 40960,
-                "metadata": {
-                    "notes": "Qwen3-4B is a 4 billion parameter dense language model from the Qwen3 series, designed to support both general-purpose and reasoning-intensive tasks. It introduces a dual-mode architecture\u2014thinking and non-thinking\u2014allowing dynamic switching between high-precision logical reasoning and efficient dialogue generation. This makes it well-suited for multi-turn chat, instruction following, and complex agent workflows."
-                },
-                "litellm_provider": "openrouter",
-                "qwen/qwen3-4b:free": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "max_input_tokens": 40960,
-                    "metadata": {
-                        "notes": "Qwen3-4B is a 4 billion parameter dense language model from the Qwen3 series, designed to support both general-purpose and reasoning-intensive tasks. It introduces a dual-mode architecture\u2014thinking and non-thinking\u2014allowing dynamic switching between high-precision logical reasoning and efficient dialogue generation. This makes it well-suited for multi-turn chat, instruction following, and complex agent workflows."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "meta-llama/llama-guard-4-12b": {
                 "input_cost_per_token": 1.8e-07,
                 "output_cost_per_token": 1.8e-07,
@@ -5440,30 +5422,6 @@
                     "metadata": {
                         "notes": "The o1 series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o1-pro model uses more compute to think harder and provide consistently better answers."
                     },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "mistralai/mistral-small-3.1-24b-instruct:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 128000,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and vision tasks, including image analysis, programming, mathematical reasoning, and multilingual support across dozens of languages. Equipped with an extensive 128k token context window and optimized for efficient local inference, it supports use cases such as conversational agents, function calling, long-document comprehension, and privacy-sensitive deployments. The updated version is [Mistral Small 3.2](mistralai/mistral-small-3.2-24b-instruct)"
-                },
-                "supports_function_calling": true,
-                "litellm_provider": "openrouter",
-                "mistralai/mistral-small-3.1-24b-instruct:free": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "max_input_tokens": 128000,
-                    "mode": "chat",
-                    "supports_vision": true,
-                    "metadata": {
-                        "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and vision tasks, including image analysis, programming, mathematical reasoning, and multilingual support across dozens of languages. Equipped with an extensive 128k token context window and optimized for efficient local inference, it supports use cases such as conversational agents, function calling, long-document comprehension, and privacy-sensitive deployments. The updated version is [Mistral Small 3.2](mistralai/mistral-small-3.2-24b-instruct)"
-                    },
-                    "supports_function_calling": true,
                     "litellm_provider": "openrouter"
                 }
             },
@@ -8177,27 +8135,6 @@
                 "metadata": {
                     "notes": "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resource devices, such as phones, laptops, and tablets. It supports multimodal inputs\u2014including text, visual data, and audio\u2014enabling diverse tasks such as text generation, speech recognition, translation, and image analysis. Leveraging innovations like Per-Layer Embedding (PLE) caching and the MatFormer architecture, Gemma 3n dynamically manages memory usage and computational load by selectively activating model parameters, significantly reducing runtime resource requirements.\n\nThis model supports a wide linguistic range (trained in over 140 languages) and features a flexible 32K token context window. Gemma 3n can selectively load parameters, optimizing memory and computational efficiency based on the task or device capabilities, making it well-suited for privacy-focused, offline-capable applications and on-device AI solutions. [Read more in the blog post](https://developers.googleblog.com/en/introducing-gemma-3n/)"
                 },
-                "litellm_provider": "openrouter"
-            },
-            "qwen/qwen3-4b:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 40960,
-                "metadata": {
-                    "notes": "Qwen3-4B is a 4 billion parameter dense language model from the Qwen3 series, designed to support both general-purpose and reasoning-intensive tasks. It introduces a dual-mode architecture\u2014thinking and non-thinking\u2014allowing dynamic switching between high-precision logical reasoning and efficient dialogue generation. This makes it well-suited for multi-turn chat, instruction following, and complex agent workflows."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "mistralai/mistral-small-3.1-24b-instruct:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 128000,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and vision tasks, including image analysis, programming, mathematical reasoning, and multilingual support across dozens of languages. Equipped with an extensive 128k token context window and optimized for efficient local inference, it supports use cases such as conversational agents, function calling, long-document comprehension, and privacy-sensitive deployments. The updated version is [Mistral Small 3.2](mistralai/mistral-small-3.2-24b-instruct)"
-                },
-                "supports_function_calling": true,
                 "litellm_provider": "openrouter"
             },
             "google/gemma-3-4b-it:free": {
