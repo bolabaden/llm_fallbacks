@@ -640,8 +640,6 @@
     "arcee-ai/trinity-large-preview:free": {
         "input_cost_per_token": 0.0,
         "output_cost_per_token": 0.0,
-        "input_cost_per_image": 0.0,
-        "input_cost_per_query": 0.0,
         "max_input_tokens": 131000,
         "metadata": {
             "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing. \n\nIt excels in creative writing, storytelling, role-play, chat scenarios, and real-time voice assistance, better than your average reasoning model usually can. But we\u2019re also introducing some of our newer agentic performance. It was trained to navigate well in agent harnesses like OpenCode, Cline, and Kilo Code, and to handle complex toolchains and long, constraint-filled prompts. \n\nThe architecture natively supports very long context windows up to 512k tokens, with the Preview API currently served at 128k context using 8-bit quantization for practical deployment. Trinity-Large-Preview reflects Arcee\u2019s efficiency-first design philosophy, offering a production-oriented frontier model with open weights and permissive licensing suitable for real-world applications and experimentation."
@@ -650,8 +648,6 @@
         "arcee-ai/trinity-large-preview:free": {
             "input_cost_per_token": 0.0,
             "output_cost_per_token": 0.0,
-            "input_cost_per_image": 0.0,
-            "input_cost_per_query": 0.0,
             "max_input_tokens": 131000,
             "metadata": {
                 "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing. \n\nIt excels in creative writing, storytelling, role-play, chat scenarios, and real-time voice assistance, better than your average reasoning model usually can. But we\u2019re also introducing some of our newer agentic performance. It was trained to navigate well in agent harnesses like OpenCode, Cline, and Kilo Code, and to handle complex toolchains and long, constraint-filled prompts. \n\nThe architecture natively supports very long context windows up to 512k tokens, with the Preview API currently served at 128k context using 8-bit quantization for practical deployment. Trinity-Large-Preview reflects Arcee\u2019s efficiency-first design philosophy, offering a production-oriented frontier model with open weights and permissive licensing suitable for real-world applications and experimentation."
@@ -2416,7 +2412,8 @@
         "mode": "chat",
         "output_cost_per_token": 4e-08,
         "supports_audio_input": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "azure_ai/ministral-3b": {
         "input_cost_per_token": 4e-08,
@@ -3416,18 +3413,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true
     },
-    "vertex_ai/gemini-embedding-2-preview": {
-        "input_cost_per_token": 1.5e-07,
-        "litellm_provider": "vertex_ai",
-        "max_input_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "embedding",
-        "output_cost_per_token": 0,
-        "output_vector_size": 3072,
-        "source": "https://ai.google.dev/gemini-api/docs/embeddings#multimodal",
-        "supports_multimodal": true,
-        "uses_embed_content": true
-    },
     "mistral/codestral-embed": {
         "input_cost_per_token": 1.5e-07,
         "litellm_provider": "mistral",
@@ -4176,7 +4161,8 @@
         "mode": "chat",
         "output_cost_per_token": 1e-07,
         "supports_function_calling": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "vercel_ai_gateway/meta/llama-3.2-1b": {
         "input_cost_per_token": 1e-07,
@@ -5480,7 +5466,8 @@
         "supports_function_calling": true,
         "supports_system_messages": true,
         "supports_tool_choice": true,
-        "source": "https://aws.amazon.com/bedrock/pricing/"
+        "source": "https://aws.amazon.com/bedrock/pricing/",
+        "supports_native_structured_output": true
     },
     "novita/openai/gpt-oss-120b": {
         "litellm_provider": "novita",
@@ -5507,7 +5494,8 @@
         "mode": "chat",
         "output_cost_per_token": 1.5e-07,
         "supports_function_calling": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "vercel_ai_gateway/meta/llama-3.2-3b": {
         "input_cost_per_token": 1.5e-07,
@@ -7001,7 +6989,8 @@
         "mode": "chat",
         "output_cost_per_token": 2e-07,
         "supports_function_calling": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "mistral.voxtral-small-24b-2507": {
         "input_cost_per_token": 1e-07,
@@ -7012,7 +7001,8 @@
         "mode": "chat",
         "output_cost_per_token": 3e-07,
         "supports_audio_input": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "azure_ai/phi-4-mini-reasoning": {
         "input_cost_per_token": 8e-08,
@@ -10345,7 +10335,8 @@
         "output_cost_per_token": 6e-07,
         "supports_function_calling": true,
         "supports_reasoning": true,
-        "supports_tool_choice": true
+        "supports_tool_choice": true,
+        "supports_native_structured_output": true
     },
     "azure_ai/gpt-oss-120b": {
         "input_cost_per_token": 1.5e-07,
@@ -10490,7 +10481,8 @@
         "output_cost_per_token": 6e-07,
         "supports_function_calling": true,
         "supports_reasoning": true,
-        "supports_tool_choice": true
+        "supports_tool_choice": true,
+        "supports_native_structured_output": true
     },
     "azure/global-standard/gpt-4o-mini": {
         "input_cost_per_token": 1.5e-07,
@@ -10526,26 +10518,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "openai/gpt-4o-mini": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 6e-07,
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-        },
-        "litellm_provider": "openrouter",
-        "openai/gpt-4o-mini": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 6e-07,
-            "max_input_tokens": 128000,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "openai/gpt-4o-mini-2024-07-18": {
         "input_cost_per_token": 1.5e-07,
         "output_cost_per_token": 6e-07,
@@ -10556,6 +10528,26 @@
         },
         "litellm_provider": "openrouter",
         "openai/gpt-4o-mini-2024-07-18": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 6e-07,
+            "max_input_tokens": 128000,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openai/gpt-4o-mini": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 6e-07,
+        "max_input_tokens": 128000,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+        },
+        "litellm_provider": "openrouter",
+        "openai/gpt-4o-mini": {
             "input_cost_per_token": 1.5e-07,
             "output_cost_per_token": 6e-07,
             "max_input_tokens": 128000,
@@ -12767,7 +12759,8 @@
         "output_cost_per_token": 8.8e-07,
         "supports_function_calling": true,
         "supports_reasoning": true,
-        "supports_tool_choice": true
+        "supports_tool_choice": true,
+        "supports_native_structured_output": true
     },
     "fireworks_ai/accounts/fireworks/models/llama4-maverick-instruct-basic": {
         "input_cost_per_token": 2.2e-07,
@@ -14142,7 +14135,8 @@
         "mode": "chat",
         "output_cost_per_token": 1.2e-06,
         "supports_function_calling": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "thedrummer/skyfall-36b-v2": {
         "input_cost_per_token": 5.5e-07,
@@ -14811,7 +14805,8 @@
         "max_tokens": 8192,
         "mode": "chat",
         "output_cost_per_token": 1.2e-06,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "minimax/minimax-m2-her": {
         "input_cost_per_token": 3e-07,
@@ -17431,7 +17426,8 @@
         "mode": "chat",
         "output_cost_per_token": 1.5e-06,
         "supports_function_calling": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "vercel_ai_gateway/perplexity/sonar": {
         "input_cost_per_token": 1e-06,
@@ -17789,7 +17785,8 @@
         "output_cost_per_token": 1.8e-06,
         "supports_function_calling": true,
         "supports_reasoning": true,
-        "supports_tool_choice": true
+        "supports_tool_choice": true,
+        "supports_native_structured_output": true
     },
     "bedrock/ap-northeast-1/qwen.qwen3-coder-next": {
         "input_cost_per_token": 6e-07,
@@ -18492,7 +18489,8 @@
         "output_cost_per_token": 1.68e-06,
         "supports_function_calling": true,
         "supports_reasoning": true,
-        "supports_tool_choice": true
+        "supports_tool_choice": true,
+        "supports_native_structured_output": true
     },
     "gemini-3.1-flash-lite-preview": {
         "cache_read_input_token_cost": 2.5e-08,
@@ -21348,7 +21346,8 @@
         "mode": "chat",
         "output_cost_per_token": 2.5e-06,
         "supports_reasoning": true,
-        "supports_system_messages": true
+        "supports_system_messages": true,
+        "supports_native_structured_output": true
     },
     "fireworks_ai/accounts/fireworks/models/glm-4p7": {
         "cache_read_input_token_cost": 3e-07,
@@ -21529,7 +21528,8 @@
         "output_cost_per_token": 2.66e-06,
         "supports_function_calling": true,
         "supports_system_messages": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_native_structured_output": true
     },
     "nebius/deepseek-ai/deepseek-r1-0528": {
         "max_tokens": 164000,
@@ -25771,7 +25771,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "anthropic.claude-haiku-4-5@20251001": {
         "cache_creation_input_token_cost": 1.25e-06,
@@ -25794,7 +25795,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_streaming": true
+        "supports_native_streaming": true,
+        "supports_native_structured_output": true
     },
     "azure_ai/claude-haiku-4-5": {
         "cache_creation_input_token_cost": 1.25e-06,
@@ -25879,7 +25881,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "vercel_ai_gateway/anthropic/claude-haiku-4.5": {
         "cache_creation_input_token_cost": 1.25e-06,
@@ -26486,7 +26489,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "eu.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "cache_creation_input_token_cost": 1.375e-06,
@@ -26509,7 +26513,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "jp.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "cache_creation_input_token_cost": 1.375e-06,
@@ -26531,7 +26536,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "cache_creation_input_token_cost": 1.375e-06,
@@ -26553,7 +26559,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "au.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "cache_creation_input_token_cost": 1.375e-06,
@@ -26574,7 +26581,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "xai/grok-4.20-multi-agent-beta-0309": {
         "cache_read_input_token_cost": 2e-07,
@@ -33147,7 +33155,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "global.anthropic.claude-sonnet-4-6": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -33173,7 +33182,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "anthropic.claude-sonnet-4-20250514-v1:0": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -33641,7 +33651,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159
+        "tool_use_system_prompt_tokens": 159,
+        "supports_native_structured_output": true
     },
     "azure_ai/claude-sonnet-4-5": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -33807,7 +33818,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "vercel_ai_gateway/anthropic/claude-3.7-sonnet": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -34498,7 +34510,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "eu.anthropic.claude-sonnet-4-6": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -34524,7 +34537,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "au.anthropic.claude-sonnet-4-6": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -34550,7 +34564,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "au.anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -34580,7 +34595,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "eu.anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -34610,7 +34626,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "jp.anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -34640,7 +34657,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "us.anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -34670,7 +34688,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "bedrock/us-gov-east-1/claude-sonnet-4-5-20250929-v1:0": {
         "input_cost_per_token": 3.3e-06,
@@ -35824,7 +35843,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "global.anthropic.claude-opus-4-6-v1": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35850,7 +35870,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "claude-opus-4-6": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -36039,7 +36060,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159
+        "tool_use_system_prompt_tokens": 159,
+        "supports_native_structured_output": true
     },
     "azure_ai/claude-opus-4-5": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -36140,7 +36162,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159
+        "tool_use_system_prompt_tokens": 159,
+        "supports_native_structured_output": true
     },
     "eu.anthropic.claude-opus-4-5-20251101-v1:0": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -36166,7 +36189,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159
+        "tool_use_system_prompt_tokens": 159,
+        "supports_native_structured_output": true
     },
     "vercel_ai_gateway/anthropic/claude-opus-4.5": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -36585,7 +36609,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "eu.anthropic.claude-opus-4-6-v1": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36611,7 +36636,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "au.anthropic.claude-opus-4-6-v1": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36637,7 +36663,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_native_structured_output": true
     },
     "us.anthropic.claude-opus-4-5-20251101-v1:0": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36663,7 +36690,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159
+        "tool_use_system_prompt_tokens": 159,
+        "supports_native_structured_output": true
     },
     "bedrock/eu-west-3/mistral.mistral-large-2402-v1:0": {
         "input_cost_per_token": 1.04e-05,
@@ -39581,6 +39609,21 @@
         "output_cost_per_token": 0,
         "output_vector_size": 3072,
         "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "uses_embed_content": true
+    },
+    "vertex_ai/gemini-embedding-2-preview": {
+        "input_cost_per_audio_per_second": 0.00016,
+        "input_cost_per_image": 0.00012,
+        "input_cost_per_token": 2e-07,
+        "input_cost_per_video_per_second": 0.00079,
+        "litellm_provider": "vertex_ai",
+        "max_input_tokens": 8192,
+        "max_tokens": 8192,
+        "mode": "embedding",
+        "output_cost_per_token": 0,
+        "output_vector_size": 3072,
+        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "supports_multimodal": true,
         "uses_embed_content": true
     },
     "gemini/gemini-embedding-2-preview": {
