@@ -72,6 +72,66 @@
         "supports_audio_input": true,
         "supports_video_input": true
     },
+    "google/lyria-3-pro-preview": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Full-length songs are priced at $0.08 per song. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Pro can generate full-length songs with verses, choruses, bridges."
+        },
+        "litellm_provider": "openrouter",
+        "google/lyria-3-pro-preview": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 1048576,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Full-length songs are priced at $0.08 per song. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Pro can generate full-length songs with verses, choruses, bridges."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "google/lyria-3-clip-preview": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Clip can generate short clips, loops, previews."
+        },
+        "litellm_provider": "openrouter",
+        "google/lyria-3-clip-preview": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 1048576,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Clip can generate short clips, loops, previews."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "qwen/qwen3.6-plus-preview:free": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus series, featuring an advanced hybrid architecture that improves efficiency and scalability. It delivers stronger reasoning and more reliable agentic behavior compared to the 3.5 series. In benchmarks, it performs at or above leading state-of-the-art models. Designed as a flagship preview, it excels in agentic coding, front-end development, and complex problem-solving.\n\nNote: The model collects prompt and completion data that can be used to improve the model. "
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.6-plus-preview:free": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus series, featuring an advanced hybrid architecture that improves efficiency and scalability. It delivers stronger reasoning and more reliable agentic behavior compared to the 3.5 series. In benchmarks, it performs at or above leading state-of-the-art models. Designed as a flagship preview, it excels in agentic coding, front-end development, and complex problem-solving.\n\nNote: The model collects prompt and completion data that can be used to improve the model. "
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "gemini-flash-experimental": {
         "input_cost_per_character": 0,
         "input_cost_per_token": 0,
@@ -5596,6 +5656,28 @@
             "notes": "UI-TARS-1.5 is a multimodal vision-language agent optimized for GUI-based environments, including desktop interfaces, web browsers, mobile systems, and games. Built by ByteDance, it builds upon the UI-TARS framework with reinforcement learning-based reasoning, enabling robust action planning and execution across virtual interfaces.\n\nThis model achieves state-of-the-art results on a range of interactive and grounding benchmarks, including OSworld, WebVoyager, AndroidWorld, and ScreenSpot. It also demonstrates perfect task completion across diverse Poki games and outperforms prior models in Minecraft agent tasks. UI-TARS-1.5 supports thought decomposition during inference and shows strong scaling across variants, with the 1.5 version notably exceeding the performance of earlier 72B and 7B checkpoints."
         }
     },
+    "rekaai/reka-flash-3": {
+        "input_cost_per_token": 1e-07,
+        "output_cost_per_token": 2e-07,
+        "max_input_tokens": 65536,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Reka Flash 3 is a general-purpose, instruction-tuned large language model with 21 billion parameters, developed by Reka. It excels at general chat, coding tasks, instruction-following, and function calling. Featuring a 32K context length and optimized through reinforcement learning (RLOO), it provides competitive performance comparable to proprietary models within a smaller parameter footprint. Ideal for low-latency, local, or on-device deployments, Reka Flash 3 is compact, supports efficient quantization (down to 11GB at 4-bit precision), and employs explicit reasoning tags (\"<reasoning>\") to indicate its internal thought process.\n\nReka Flash 3 is primarily an English model with limited multilingual understanding capabilities. The model weights are released under the Apache 2.0 license."
+        },
+        "supports_function_calling": true,
+        "litellm_provider": "openrouter",
+        "rekaai/reka-flash-3": {
+            "input_cost_per_token": 1e-07,
+            "output_cost_per_token": 2e-07,
+            "max_input_tokens": 65536,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Reka Flash 3 is a general-purpose, instruction-tuned large language model with 21 billion parameters, developed by Reka. It excels at general chat, coding tasks, instruction-following, and function calling. Featuring a 32K context length and optimized through reinforcement learning (RLOO), it provides competitive performance comparable to proprietary models within a smaller parameter footprint. Ideal for low-latency, local, or on-device deployments, Reka Flash 3 is compact, supports efficient quantization (down to 11GB at 4-bit precision), and employs explicit reasoning tags (\"<reasoning>\") to indicate its internal thought process.\n\nReka Flash 3 is primarily an English model with limited multilingual understanding capabilities. The model weights are released under the Apache 2.0 license."
+            },
+            "supports_function_calling": true,
+            "litellm_provider": "openrouter"
+        }
+    },
     "deepinfra/qwen/qwen3-14b": {
         "max_tokens": 40960,
         "max_input_tokens": 40960,
@@ -10518,26 +10600,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "openai/gpt-4o-mini-2024-07-18": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 6e-07,
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-        },
-        "litellm_provider": "openrouter",
-        "openai/gpt-4o-mini-2024-07-18": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 6e-07,
-            "max_input_tokens": 128000,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "openai/gpt-4o-mini": {
         "input_cost_per_token": 1.5e-07,
         "output_cost_per_token": 6e-07,
@@ -10548,6 +10610,26 @@
         },
         "litellm_provider": "openrouter",
         "openai/gpt-4o-mini": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 6e-07,
+            "max_input_tokens": 128000,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openai/gpt-4o-mini-2024-07-18": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 6e-07,
+        "max_input_tokens": 128000,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+        },
+        "litellm_provider": "openrouter",
+        "openai/gpt-4o-mini-2024-07-18": {
             "input_cost_per_token": 1.5e-07,
             "output_cost_per_token": 6e-07,
             "max_input_tokens": 128000,
@@ -19347,7 +19429,7 @@
         "max_input_tokens": 262144,
         "max_output_tokens": 65536,
         "metadata": {
-            "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - visual grounding, multi-step planning, tool use, and code execution - making it well-suited for complex real-world tasks that span modalities. 256K context window."
+            "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - visual grounding, multi-step planning, tool use, and code execution - making it well-suited for complex real-world tasks that span modalities, 256K context window."
         },
         "litellm_provider": "openrouter",
         "xiaomi/mimo-v2-omni": {
@@ -19356,7 +19438,7 @@
             "max_input_tokens": 262144,
             "max_output_tokens": 65536,
             "metadata": {
-                "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - visual grounding, multi-step planning, tool use, and code execution - making it well-suited for complex real-world tasks that span modalities. 256K context window."
+                "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture. It combines strong multimodal perception with agentic capability - visual grounding, multi-step planning, tool use, and code execution - making it well-suited for complex real-world tasks that span modalities, 256K context window."
             },
             "litellm_provider": "openrouter"
         }

@@ -72,7 +72,10 @@ vertex_ai/meta/llama-3.1-70b-instruct-maas
 vertex_ai/meta/llama-3.1-8b-instruct-maas
 vertex_ai/meta/llama-3.2-90b-vision-instruct-maas
 gigachat/gigachat-2-lite
+google/lyria-3-clip-preview
+google/lyria-3-pro-preview
 nvidia/nemotron-3-super-120b-a12b:free
+qwen/qwen3.6-plus-preview:free
 github_copilot/gpt-4o-2024-08-06
 meta_llama/llama-3.3-70b-instruct
 meta_llama/llama-3.3-8b-instruct
