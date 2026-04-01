@@ -116,7 +116,7 @@
         "input_cost_per_token": 0.0,
         "output_cost_per_token": 0.0,
         "max_input_tokens": 1000000,
-        "max_output_tokens": 65536,
+        "max_output_tokens": 32000,
         "metadata": {
             "notes": "Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus series, featuring an advanced hybrid architecture that improves efficiency and scalability. It delivers stronger reasoning and more reliable agentic behavior compared to the 3.5 series. In benchmarks, it performs at or above leading state-of-the-art models. Designed as a flagship preview, it excels in agentic coding, front-end development, and complex problem-solving.\n\nNote: The model collects prompt and completion data that can be used to improve the model. "
         },
@@ -125,7 +125,7 @@
             "input_cost_per_token": 0.0,
             "output_cost_per_token": 0.0,
             "max_input_tokens": 1000000,
-            "max_output_tokens": 65536,
+            "max_output_tokens": 32000,
             "metadata": {
                 "notes": "Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus series, featuring an advanced hybrid architecture that improves efficiency and scalability. It delivers stronger reasoning and more reliable agentic behavior compared to the 3.5 series. In benchmarks, it performs at or above leading state-of-the-art models. Designed as a flagship preview, it excels in agentic coding, front-end development, and complex problem-solving.\n\nNote: The model collects prompt and completion data that can be used to improve the model. "
             },
@@ -7027,6 +7027,7 @@
         "input_cost_per_token": 1e-07,
         "output_cost_per_token": 3e-07,
         "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
         "metadata": {
             "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts."
         },
@@ -7035,6 +7036,7 @@
             "input_cost_per_token": 1e-07,
             "output_cost_per_token": 3e-07,
             "max_input_tokens": 262144,
+            "max_output_tokens": 65536,
             "metadata": {
                 "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts."
             },
@@ -9941,8 +9943,6 @@
         "output_cost_per_token": 5e-07,
         "max_input_tokens": 2000000,
         "max_output_tokens": 30000,
-        "mode": "chat",
-        "supports_vision": true,
         "metadata": {
             "notes": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
         },
@@ -9952,8 +9952,6 @@
             "output_cost_per_token": 5e-07,
             "max_input_tokens": 2000000,
             "max_output_tokens": 30000,
-            "mode": "chat",
-            "supports_vision": true,
             "metadata": {
                 "notes": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
             },
@@ -9965,8 +9963,6 @@
         "output_cost_per_token": 5e-07,
         "max_input_tokens": 2000000,
         "max_output_tokens": 30000,
-        "mode": "chat",
-        "supports_vision": true,
         "metadata": {
             "notes": "Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a 2M token context window. It comes in two flavors: non-reasoning and reasoning. Read more about the model on xAI's [news post](http://x.ai/news/grok-4-fast).\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
         },
@@ -9976,8 +9972,6 @@
             "output_cost_per_token": 5e-07,
             "max_input_tokens": 2000000,
             "max_output_tokens": 30000,
-            "mode": "chat",
-            "supports_vision": true,
             "metadata": {
                 "notes": "Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a 2M token context window. It comes in two flavors: non-reasoning and reasoning. Read more about the model on xAI's [news post](http://x.ai/news/grok-4-fast).\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
             },
@@ -12654,26 +12648,6 @@
         "supports_vision": true,
         "supports_web_search": true,
         "tpm": 250000
-    },
-    "kwaipilot/kat-coder-pro": {
-        "input_cost_per_token": 2.07e-07,
-        "output_cost_per_token": 8.28e-07,
-        "max_input_tokens": 256000,
-        "max_output_tokens": 128000,
-        "metadata": {
-            "notes": "KAT-Coder-Pro V1 is KwaiKAT's most advanced agentic coding model in the KAT-Coder series. Designed specifically for agentic coding tasks, it excels in real-world software engineering scenarios, achieving 73.4% solve rate on the SWE-Bench Verified benchmark. \n\nThe model has been optimized for tool-use capability, multi-turn interaction, instruction following, generalization, and comprehensive capabilities through a multi-stage training process, including mid-training, supervised fine-tuning (SFT), reinforcement fine-tuning (RFT), and scalable agentic RL."
-        },
-        "litellm_provider": "openrouter",
-        "kwaipilot/kat-coder-pro": {
-            "input_cost_per_token": 2.07e-07,
-            "output_cost_per_token": 8.28e-07,
-            "max_input_tokens": 256000,
-            "max_output_tokens": 128000,
-            "metadata": {
-                "notes": "KAT-Coder-Pro V1 is KwaiKAT's most advanced agentic coding model in the KAT-Coder series. Designed specifically for agentic coding tasks, it excels in real-world software engineering scenarios, achieving 73.4% solve rate on the SWE-Bench Verified benchmark. \n\nThe model has been optimized for tool-use capability, multi-turn interaction, instruction following, generalization, and comprehensive capabilities through a multi-stage training process, including mid-training, supervised fine-tuning (SFT), reinforcement fine-tuning (RFT), and scalable agentic RL."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "qwen/qwen-plus-2025-07-28:thinking": {
         "input_cost_per_token": 2.6e-07,
@@ -15622,6 +15596,68 @@
             "notes": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5:\n\n- Significantly improvements in **code generation**, **code reasoning** and **code fixing**. \n- A more comprehensive foundation for real-world applications such as **Code Agents**. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies.\n\nTo read more about its evaluation results, check out [Qwen 2.5 Coder's blog](https://qwenlm.github.io/blog/qwen2.5-coder-family/)."
         }
     },
+    "minimax/minimax-m2.5": {
+        "input_cost_per_token": 1.6e-07,
+        "output_cost_per_token": 1.1e-06,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        },
+        "minimax/minimax-m2.5": {
+            "input_cost_per_token": 1.6e-07,
+            "output_cost_per_token": 1.1e-06,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+            }
+        }
+    },
+    "openrouter/minimax/minimax-m2.5": {
+        "input_cost_per_token": 1.6e-07,
+        "output_cost_per_token": 1.1e-06,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        }
+    },
     "novita/baidu/ernie-4.5-vl-424b-a47b": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -15877,68 +15913,6 @@
         "supports_function_calling": false,
         "supports_response_schema": true,
         "supports_tool_choice": false
-    },
-    "minimax/minimax-m2.5": {
-        "input_cost_per_token": 1.9e-07,
-        "output_cost_per_token": 1.15e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-        },
-        "minimax/minimax-m2.5": {
-            "input_cost_per_token": 1.9e-07,
-            "output_cost_per_token": 1.15e-06,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-            }
-        }
-    },
-    "openrouter/minimax/minimax-m2.5": {
-        "input_cost_per_token": 1.9e-07,
-        "output_cost_per_token": 1.15e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-        }
     },
     "watsonx/meta-llama/llama-4-maverick-17b": {
         "max_tokens": 128000,
@@ -26171,46 +26145,42 @@
         "supports_xhigh_reasoning_effort": true,
         "supports_minimal_reasoning_effort": false
     },
-    "x-ai/grok-4.20-multi-agent-beta": {
+    "x-ai/grok-4.20-multi-agent": {
         "input_cost_per_token": 2e-06,
         "output_cost_per_token": 6e-06,
         "max_input_tokens": 2000000,
-        "mode": "chat",
-        "supports_vision": true,
         "metadata": {
-            "notes": "Grok 4.20 Multi-Agent Beta is a variant of xAI\u2019s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.\n\nReasoning effort behavior:\n- low / medium: 4 agents\n- high / xhigh: 16 agents"
+            "notes": "Grok 4.20 Multi-Agent is a variant of xAI\u2019s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.\n\nReasoning effort behavior:\n- low / medium: 4 agents\n- high / xhigh: 16 agents"
         },
         "litellm_provider": "openrouter",
-        "x-ai/grok-4.20-multi-agent-beta": {
+        "x-ai/grok-4.20-multi-agent": {
             "input_cost_per_token": 2e-06,
             "output_cost_per_token": 6e-06,
             "max_input_tokens": 2000000,
-            "mode": "chat",
-            "supports_vision": true,
             "metadata": {
-                "notes": "Grok 4.20 Multi-Agent Beta is a variant of xAI\u2019s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.\n\nReasoning effort behavior:\n- low / medium: 4 agents\n- high / xhigh: 16 agents"
+                "notes": "Grok 4.20 Multi-Agent is a variant of xAI\u2019s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.\n\nReasoning effort behavior:\n- low / medium: 4 agents\n- high / xhigh: 16 agents"
             },
             "litellm_provider": "openrouter"
         }
     },
-    "x-ai/grok-4.20-beta": {
+    "x-ai/grok-4.20": {
         "input_cost_per_token": 2e-06,
         "output_cost_per_token": 6e-06,
         "max_input_tokens": 2000000,
         "mode": "chat",
         "supports_vision": true,
         "metadata": {
-            "notes": "Grok 4.20 Beta is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
+            "notes": "Grok 4.20 is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
         },
         "litellm_provider": "openrouter",
-        "x-ai/grok-4.20-beta": {
+        "x-ai/grok-4.20": {
             "input_cost_per_token": 2e-06,
             "output_cost_per_token": 6e-06,
             "max_input_tokens": 2000000,
             "mode": "chat",
             "supports_vision": true,
             "metadata": {
-                "notes": "Grok 4.20 Beta is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
+                "notes": "Grok 4.20 is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.\n\nReasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)"
             },
             "litellm_provider": "openrouter"
         }
@@ -29658,26 +29628,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "inflection/inflection-3-productivity": {
-        "input_cost_per_token": 2.5e-06,
-        "output_cost_per_token": 1e-05,
-        "max_input_tokens": 8000,
-        "max_output_tokens": 1024,
-        "metadata": {
-            "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
-        },
-        "litellm_provider": "openrouter",
-        "inflection/inflection-3-productivity": {
-            "input_cost_per_token": 2.5e-06,
-            "output_cost_per_token": 1e-05,
-            "max_input_tokens": 8000,
-            "max_output_tokens": 1024,
-            "metadata": {
-                "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "inflection/inflection-3-pi": {
         "input_cost_per_token": 2.5e-06,
         "output_cost_per_token": 1e-05,
@@ -29694,6 +29644,26 @@
             "max_output_tokens": 1024,
             "metadata": {
                 "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inflection/inflection-3-productivity": {
+        "input_cost_per_token": 2.5e-06,
+        "output_cost_per_token": 1e-05,
+        "max_input_tokens": 8000,
+        "max_output_tokens": 1024,
+        "metadata": {
+            "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
+        },
+        "litellm_provider": "openrouter",
+        "inflection/inflection-3-productivity": {
+            "input_cost_per_token": 2.5e-06,
+            "output_cost_per_token": 1e-05,
+            "max_input_tokens": 8000,
+            "max_output_tokens": 1024,
+            "metadata": {
+                "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
             },
             "litellm_provider": "openrouter"
         }
@@ -31783,7 +31753,6 @@
         "supports_reasoning": true,
         "supports_tool_choice": true,
         "supports_web_search": true,
-        "supports_vision": true,
         "metadata": {
             "notes": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not exposed, reasoning cannot be disabled, and the reasoning effort cannot be specified. Pricing increases once the total tokens in a given request is greater than 128k tokens. See more details on the [xAI docs](https://docs.x.ai/docs/models/grok-4-0709)"
         },
@@ -31791,8 +31760,6 @@
             "input_cost_per_token": 3e-06,
             "output_cost_per_token": 1.5e-05,
             "max_input_tokens": 256000,
-            "mode": "chat",
-            "supports_vision": true,
             "metadata": {
                 "notes": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not exposed, reasoning cannot be disabled, and the reasoning effort cannot be specified. Pricing increases once the total tokens in a given request is greater than 128k tokens. See more details on the [xAI docs](https://docs.x.ai/docs/models/grok-4-0709)"
             },
@@ -31812,7 +31779,6 @@
         "supports_reasoning": true,
         "supports_tool_choice": true,
         "supports_web_search": true,
-        "supports_vision": true,
         "metadata": {
             "notes": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not exposed, reasoning cannot be disabled, and the reasoning effort cannot be specified. Pricing increases once the total tokens in a given request is greater than 128k tokens. See more details on the [xAI docs](https://docs.x.ai/docs/models/grok-4-0709)"
         }

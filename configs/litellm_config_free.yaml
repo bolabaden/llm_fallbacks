@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-88bb437b9a454005af434b862615184c
+  master_key: sk-c61b5107e64f449fbda541cfab72edc9
   alerting:
   - slack
   - email
@@ -94,7 +94,7 @@ model_list:
     input_cost_per_token: 0.0
     output_cost_per_token: 0.0
     max_input_tokens: 1000000
-    max_output_tokens: 65536
+    max_output_tokens: 32000
     metadata:
       notes: 'Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus
         series, featuring an advanced hybrid architecture that improves efficiency
