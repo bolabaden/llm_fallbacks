@@ -4185,7 +4185,7 @@
         "input_cost_per_token": 5e-08,
         "output_cost_per_token": 1.5e-07,
         "max_input_tokens": 256000,
-        "max_output_tokens": 65536,
+        "max_output_tokens": 32768,
         "metadata": {
             "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
         },
@@ -4194,7 +4194,7 @@
             "input_cost_per_token": 5e-08,
             "output_cost_per_token": 1.5e-07,
             "max_input_tokens": 256000,
-            "max_output_tokens": 65536,
+            "max_output_tokens": 32768,
             "metadata": {
                 "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context."
             },
@@ -4459,7 +4459,7 @@
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
     },
-    "reka/reka-edge": {
+    "rekaai/reka-edge": {
         "input_cost_per_token": 1e-07,
         "output_cost_per_token": 1e-07,
         "max_input_tokens": 16384,
@@ -4468,7 +4468,7 @@
             "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs. This model is optimized specifically to deliver industry-leading performance in image understanding, video analysis, object detection, and agentic tool-use."
         },
         "litellm_provider": "openrouter",
-        "reka/reka-edge": {
+        "rekaai/reka-edge": {
             "input_cost_per_token": 1e-07,
             "output_cost_per_token": 1e-07,
             "max_input_tokens": 16384,
@@ -9356,7 +9356,7 @@
         "output_cost_per_token": 4e-07,
         "input_cost_per_image": 1e-07,
         "max_input_tokens": 1048576,
-        "max_output_tokens": 65536,
+        "max_output_tokens": 65535,
         "metadata": {
             "notes": "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency. It offers improved throughput, faster token generation, and better performance across common benchmarks compared to earlier Flash models. By default, \"thinking\" (i.e. multi-pass reasoning) is disabled to prioritize speed, but developers can enable it via the [Reasoning API parameter](https://openrouter.ai/docs/use-cases/reasoning-tokens) to selectively trade off cost for intelligence. "
         },
@@ -9366,7 +9366,7 @@
             "output_cost_per_token": 4e-07,
             "input_cost_per_image": 1e-07,
             "max_input_tokens": 1048576,
-            "max_output_tokens": 65536,
+            "max_output_tokens": 65535,
             "metadata": {
                 "notes": "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency. It offers improved throughput, faster token generation, and better performance across common benchmarks compared to earlier Flash models. By default, \"thinking\" (i.e. multi-pass reasoning) is disabled to prioritize speed, but developers can enable it via the [Reasoning API parameter](https://openrouter.ai/docs/use-cases/reasoning-tokens) to selectively trade off cost for intelligence. "
             },
@@ -10594,26 +10594,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "openai/gpt-4o-mini": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 6e-07,
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-        },
-        "litellm_provider": "openrouter",
-        "openai/gpt-4o-mini": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 6e-07,
-            "max_input_tokens": 128000,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "openai/gpt-4o-mini-2024-07-18": {
         "input_cost_per_token": 1.5e-07,
         "output_cost_per_token": 6e-07,
@@ -10624,6 +10604,26 @@
         },
         "litellm_provider": "openrouter",
         "openai/gpt-4o-mini-2024-07-18": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 6e-07,
+            "max_input_tokens": 128000,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openai/gpt-4o-mini": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 6e-07,
+        "max_input_tokens": 128000,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.\n\nAs their most advanced small model, it is many multiples more affordable than other recent frontier models, and more than 60% cheaper than [GPT-3.5 Turbo](/models/openai/gpt-3.5-turbo). It maintains SOTA intelligence, while being significantly more cost-effective.\n\nGPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 on chat preferences [common leaderboards](https://arena.lmsys.org/).\n\nCheck out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.\n\n#multimodal"
+        },
+        "litellm_provider": "openrouter",
+        "openai/gpt-4o-mini": {
             "input_cost_per_token": 1.5e-07,
             "output_cost_per_token": 6e-07,
             "max_input_tokens": 128000,
@@ -12958,6 +12958,26 @@
         "supports_tool_choice": true,
         "supports_function_calling": true
     },
+    "arcee-ai/trinity-large-thinking": {
+        "input_cost_per_token": 2.5e-07,
+        "output_cost_per_token": 9e-07,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 80000,
+        "metadata": {
+            "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. It is free in open claw for the first five days. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7"
+        },
+        "litellm_provider": "openrouter",
+        "arcee-ai/trinity-large-thinking": {
+            "input_cost_per_token": 2.5e-07,
+            "output_cost_per_token": 9e-07,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 80000,
+            "metadata": {
+                "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. It is free in open claw for the first five days. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7"
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "bedrock/us-east-1/mistral.mixtral-8x7b-instruct-v0:1": {
         "input_cost_per_token": 4.5e-07,
         "litellm_provider": "bedrock",
@@ -14979,6 +14999,68 @@
         "supports_tool_choice": true,
         "supports_web_search": true
     },
+    "minimax/minimax-m2.5": {
+        "input_cost_per_token": 1.2e-07,
+        "output_cost_per_token": 1e-06,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        },
+        "minimax/minimax-m2.5": {
+            "input_cost_per_token": 1.2e-07,
+            "output_cost_per_token": 1e-06,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+            }
+        }
+    },
+    "openrouter/minimax/minimax-m2.5": {
+        "input_cost_per_token": 1.2e-07,
+        "output_cost_per_token": 1e-06,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
+        }
+    },
     "databricks/databricks-bge-large-en": {
         "input_cost_per_token": 1.0003e-07,
         "input_dbu_cost_per_token": 1.429e-06,
@@ -15594,68 +15676,6 @@
         "supports_tool_choice": true,
         "metadata": {
             "notes": "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (formerly known as CodeQwen). Qwen2.5-Coder brings the following improvements upon CodeQwen1.5:\n\n- Significantly improvements in **code generation**, **code reasoning** and **code fixing**. \n- A more comprehensive foundation for real-world applications such as **Code Agents**. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies.\n\nTo read more about its evaluation results, check out [Qwen 2.5 Coder's blog](https://qwenlm.github.io/blog/qwen2.5-coder-family/)."
-        }
-    },
-    "minimax/minimax-m2.5": {
-        "input_cost_per_token": 1.6e-07,
-        "output_cost_per_token": 1.1e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-        },
-        "minimax/minimax-m2.5": {
-            "input_cost_per_token": 1.6e-07,
-            "output_cost_per_token": 1.1e-06,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
-            }
-        }
-    },
-    "openrouter/minimax/minimax-m2.5": {
-        "input_cost_per_token": 1.6e-07,
-        "output_cost_per_token": 1.1e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
         }
     },
     "novita/baidu/ernie-4.5-vl-424b-a47b": {
@@ -19920,6 +19940,54 @@
             "litellm_provider": "openrouter"
         }
     },
+    "moonshotai/kimi-k2.5": {
+        "cache_read_input_token_cost": 1e-07,
+        "input_cost_per_token": 4e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65535,
+        "max_tokens": 262144,
+        "mode": "chat",
+        "output_cost_per_token": 1.99e-06,
+        "source": "https://openrouter.ai/moonshotai/kimi-k2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_video_input": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
+        },
+        "moonshotai/kimi-k2.5": {
+            "input_cost_per_token": 4e-07,
+            "output_cost_per_token": 1.99e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65535,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/moonshotai/kimi-k2.5": {
+        "cache_read_input_token_cost": 1e-07,
+        "input_cost_per_token": 4e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65535,
+        "max_tokens": 262144,
+        "mode": "chat",
+        "output_cost_per_token": 1.99e-06,
+        "source": "https://openrouter.ai/moonshotai/kimi-k2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_video_input": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
+        }
+    },
     "deepinfra/moonshotai/kimi-k2-instruct": {
         "max_tokens": 131072,
         "max_input_tokens": 131072,
@@ -20172,54 +20240,6 @@
         "supports_function_calling": true,
         "supports_reasoning": true,
         "supports_system_messages": true
-    },
-    "moonshotai/kimi-k2.5": {
-        "cache_read_input_token_cost": 1e-07,
-        "input_cost_per_token": 4.2e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 262144,
-        "max_output_tokens": 65535,
-        "max_tokens": 262144,
-        "mode": "chat",
-        "output_cost_per_token": 2.2e-06,
-        "source": "https://openrouter.ai/moonshotai/kimi-k2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_video_input": true,
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
-        },
-        "moonshotai/kimi-k2.5": {
-            "input_cost_per_token": 4.2e-07,
-            "output_cost_per_token": 2.2e-06,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 65535,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "openrouter/moonshotai/kimi-k2.5": {
-        "cache_read_input_token_cost": 1e-07,
-        "input_cost_per_token": 4.2e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 262144,
-        "max_output_tokens": 65535,
-        "max_tokens": 262144,
-        "mode": "chat",
-        "output_cost_per_token": 2.2e-06,
-        "source": "https://openrouter.ai/moonshotai/kimi-k2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_video_input": true,
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
-        }
     },
     "qwen/qwen3.5-397b-a17b": {
         "input_cost_per_token": 3.9e-07,
@@ -24191,6 +24211,26 @@
         "input_cost_per_image": 5e-07,
         "metadata": {
             "notes": "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance. It delivers near Pro level reasoning and tool use performance with substantially lower latency than larger Gemini variants, making it well suited for interactive development, long running agent loops, and collaborative coding tasks. Compared to Gemini 2.5 Flash, it provides broad quality improvements across reasoning, multimodal understanding, and reliability.\n\nThe model supports a 1M token context window and multimodal inputs including text, images, audio, video, and PDFs, with text output. It includes configurable reasoning via thinking levels (minimal, low, medium, high), structured output, tool use, and automatic context caching. Gemini 3 Flash Preview is optimized for users who want strong reasoning and agentic behavior without the cost or latency of full scale frontier models."
+        }
+    },
+    "z-ai/glm-5v-turbo": {
+        "input_cost_per_token": 1.2e-06,
+        "output_cost_per_token": 4e-06,
+        "max_input_tokens": 202752,
+        "max_output_tokens": 131072,
+        "metadata": {
+            "notes": "GLM-5V-Turbo is Z.ai\u2019s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding, and task execution, and works seamlessly with agents to complete the full loop of \u201cperceive \u2192 plan \u2192 execute\u201c."
+        },
+        "litellm_provider": "openrouter",
+        "z-ai/glm-5v-turbo": {
+            "input_cost_per_token": 1.2e-06,
+            "output_cost_per_token": 4e-06,
+            "max_input_tokens": 202752,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "GLM-5V-Turbo is Z.ai\u2019s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding, and task execution, and works seamlessly with agents to complete the full loop of \u201cperceive \u2192 plan \u2192 execute\u201c."
+            },
+            "litellm_provider": "openrouter"
         }
     },
     "z-ai/glm-5-turbo": {
@@ -29628,26 +29668,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "inflection/inflection-3-pi": {
-        "input_cost_per_token": 2.5e-06,
-        "output_cost_per_token": 1e-05,
-        "max_input_tokens": 8000,
-        "max_output_tokens": 1024,
-        "metadata": {
-            "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
-        },
-        "litellm_provider": "openrouter",
-        "inflection/inflection-3-pi": {
-            "input_cost_per_token": 2.5e-06,
-            "output_cost_per_token": 1e-05,
-            "max_input_tokens": 8000,
-            "max_output_tokens": 1024,
-            "metadata": {
-                "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "inflection/inflection-3-productivity": {
         "input_cost_per_token": 2.5e-06,
         "output_cost_per_token": 1e-05,
@@ -29664,6 +29684,26 @@
             "max_output_tokens": 1024,
             "metadata": {
                 "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inflection/inflection-3-pi": {
+        "input_cost_per_token": 2.5e-06,
+        "output_cost_per_token": 1e-05,
+        "max_input_tokens": 8000,
+        "max_output_tokens": 1024,
+        "metadata": {
+            "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
+        },
+        "litellm_provider": "openrouter",
+        "inflection/inflection-3-pi": {
+            "input_cost_per_token": 2.5e-06,
+            "output_cost_per_token": 1e-05,
+            "max_input_tokens": 8000,
+            "max_output_tokens": 1024,
+            "metadata": {
+                "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
             },
             "litellm_provider": "openrouter"
         }
