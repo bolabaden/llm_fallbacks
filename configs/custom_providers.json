@@ -5,6 +5,48 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "google/gemma-4-31b-it": {
+                "input_cost_per_token": 1.4e-07,
+                "output_cost_per_token": 4e-07,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 131072,
+                "metadata": {
+                    "notes": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license."
+                },
+                "supports_function_calling": true,
+                "litellm_provider": "openrouter",
+                "google/gemma-4-31b-it": {
+                    "input_cost_per_token": 1.4e-07,
+                    "output_cost_per_token": 4e-07,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 131072,
+                    "metadata": {
+                        "notes": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license."
+                    },
+                    "supports_function_calling": true,
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "qwen/qwen3.6-plus:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 1000000,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers major gains in agentic coding, front-end development, and overall reasoning, with a significantly improved \u201cvibe coding\u201d experience. The model excels at complex tasks such as 3D scenes, games, and repository-level problem solving, achieving a 78.8 score on SWE-bench Verified. It represents a substantial leap in both pure-text and multimodal capabilities, performing at the level of leading state-of-the-art models."
+                },
+                "litellm_provider": "openrouter",
+                "qwen/qwen3.6-plus:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "max_input_tokens": 1000000,
+                    "max_output_tokens": 65536,
+                    "metadata": {
+                        "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers major gains in agentic coding, front-end development, and overall reasoning, with a significantly improved \u201cvibe coding\u201d experience. The model excels at complex tasks such as 3D scenes, games, and repository-level problem solving, achieving a 78.8 score on SWE-bench Verified. It represents a substantial leap in both pure-text and multimodal capabilities, performing at the level of leading state-of-the-art models."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "z-ai/glm-5v-turbo": {
                 "input_cost_per_token": 1.2e-06,
                 "output_cost_per_token": 4e-06,
@@ -26,19 +68,19 @@
                 }
             },
             "arcee-ai/trinity-large-thinking": {
-                "input_cost_per_token": 2.5e-07,
-                "output_cost_per_token": 9e-07,
+                "input_cost_per_token": 2.2e-07,
+                "output_cost_per_token": 8.5e-07,
                 "max_input_tokens": 262144,
-                "max_output_tokens": 80000,
+                "max_output_tokens": 262144,
                 "metadata": {
                     "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. It is free in open claw for the first five days. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7"
                 },
                 "litellm_provider": "openrouter",
                 "arcee-ai/trinity-large-thinking": {
-                    "input_cost_per_token": 2.5e-07,
-                    "output_cost_per_token": 9e-07,
+                    "input_cost_per_token": 2.2e-07,
+                    "output_cost_per_token": 8.5e-07,
                     "max_input_tokens": 262144,
-                    "max_output_tokens": 80000,
+                    "max_output_tokens": 262144,
                     "metadata": {
                         "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. It is free in open claw for the first five days. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7"
                     },
@@ -121,26 +163,6 @@
                     "max_output_tokens": 65536,
                     "metadata": {
                         "notes": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Clip can generate short clips, loops, previews."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "qwen/qwen3.6-plus-preview:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 1000000,
-                "max_output_tokens": 32000,
-                "metadata": {
-                    "notes": "Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus series, featuring an advanced hybrid architecture that improves efficiency and scalability. It delivers stronger reasoning and more reliable agentic behavior compared to the 3.5 series. In benchmarks, it performs at or above leading state-of-the-art models. Designed as a flagship preview, it excels in agentic coding, front-end development, and complex problem-solving.\n\nNote: The model collects prompt and completion data that can be used to improve the model. "
-                },
-                "litellm_provider": "openrouter",
-                "qwen/qwen3.6-plus-preview:free": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "max_input_tokens": 1000000,
-                    "max_output_tokens": 32000,
-                    "metadata": {
-                        "notes": "Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus series, featuring an advanced hybrid architecture that improves efficiency and scalability. It delivers stronger reasoning and more reliable agentic behavior compared to the 3.5 series. In benchmarks, it performs at or above leading state-of-the-art models. Designed as a flagship preview, it excels in agentic coding, front-end development, and complex problem-solving.\n\nNote: The model collects prompt and completion data that can be used to improve the model. "
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -901,7 +923,7 @@
                 }
             },
             "minimax/minimax-m2.5": {
-                "input_cost_per_token": 1.2e-07,
+                "input_cost_per_token": 1.18e-07,
                 "output_cost_per_token": 1e-06,
                 "cache_read_input_token_cost": 3e-08,
                 "litellm_provider": "openrouter",
@@ -922,7 +944,7 @@
                     "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning."
                 },
                 "minimax/minimax-m2.5": {
-                    "input_cost_per_token": 1.2e-07,
+                    "input_cost_per_token": 1.18e-07,
                     "output_cost_per_token": 1e-06,
                     "cache_read_input_token_cost": 3e-08,
                     "cache_creation_input_token_cost": 3.75e-07,
@@ -1120,13 +1142,13 @@
             },
             "moonshotai/kimi-k2.5": {
                 "cache_read_input_token_cost": 1e-07,
-                "input_cost_per_token": 4e-07,
+                "input_cost_per_token": 3.827e-07,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 262144,
                 "max_output_tokens": 65535,
                 "max_tokens": 262144,
                 "mode": "chat",
-                "output_cost_per_token": 1.99e-06,
+                "output_cost_per_token": 1.909e-06,
                 "source": "https://openrouter.ai/moonshotai/kimi-k2.5",
                 "supports_function_calling": true,
                 "supports_tool_choice": true,
@@ -1136,8 +1158,8 @@
                     "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed visual and text tokens, it delivers strong performance in general reasoning, visual coding, and agentic tool-calling."
                 },
                 "moonshotai/kimi-k2.5": {
-                    "input_cost_per_token": 4e-07,
-                    "output_cost_per_token": 1.99e-06,
+                    "input_cost_per_token": 3.827e-07,
+                    "output_cost_per_token": 1.909e-06,
                     "max_input_tokens": 262144,
                     "max_output_tokens": 65535,
                     "mode": "chat",
@@ -2531,42 +2553,6 @@
                     "supports_vision": true,
                     "metadata": {
                         "notes": "Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model designed for high-precision understanding and reasoning across text, images, and video. With 32 billion parameters, it combines deep visual perception with advanced text comprehension, enabling fine-grained spatial reasoning, document and scene analysis, and long-horizon video understanding.Robust OCR in 32 languages, and enhanced multimodal fusion through Interleaved-MRoPE and DeepStack architectures. Optimized for agentic interaction and visual tool use, Qwen3-VL-32B delivers state-of-the-art performance for complex real-world multimodal tasks."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "liquid/lfm2-8b-a1b": {
-                "input_cost_per_token": 1e-08,
-                "output_cost_per_token": 2e-08,
-                "max_input_tokens": 32768,
-                "metadata": {
-                    "notes": "LFM2-8B-A1B is an efficient on-device Mixture-of-Experts (MoE) model from Liquid AI\u2019s LFM2 family, built for fast, high-quality inference on edge hardware. It uses 8.3B total parameters with only ~1.5B active per token, delivering strong performance while keeping compute and memory usage low\u2014making it ideal for phones, tablets, and laptops."
-                },
-                "litellm_provider": "openrouter",
-                "liquid/lfm2-8b-a1b": {
-                    "input_cost_per_token": 1e-08,
-                    "output_cost_per_token": 2e-08,
-                    "max_input_tokens": 32768,
-                    "metadata": {
-                        "notes": "LFM2-8B-A1B is an efficient on-device Mixture-of-Experts (MoE) model from Liquid AI\u2019s LFM2 family, built for fast, high-quality inference on edge hardware. It uses 8.3B total parameters with only ~1.5B active per token, delivering strong performance while keeping compute and memory usage low\u2014making it ideal for phones, tablets, and laptops."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "liquid/lfm-2.2-6b": {
-                "input_cost_per_token": 1e-08,
-                "output_cost_per_token": 2e-08,
-                "max_input_tokens": 32768,
-                "metadata": {
-                    "notes": "LFM2 is a new generation of hybrid models developed by Liquid AI, specifically designed for edge AI and on-device deployment. It sets a new standard in terms of quality, speed, and memory efficiency."
-                },
-                "litellm_provider": "openrouter",
-                "liquid/lfm-2.2-6b": {
-                    "input_cost_per_token": 1e-08,
-                    "output_cost_per_token": 2e-08,
-                    "max_input_tokens": 32768,
-                    "metadata": {
-                        "notes": "LFM2 is a new generation of hybrid models developed by Liquid AI, specifically designed for edge AI and on-device deployment. It sets a new standard in terms of quality, speed, and memory efficiency."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7137,26 +7123,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "cohere/command-r-08-2024": {
-                "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 6e-07,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 4000,
-                "metadata": {
-                    "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
-                },
-                "litellm_provider": "openrouter",
-                "cohere/command-r-08-2024": {
-                    "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 6e-07,
-                    "max_input_tokens": 128000,
-                    "max_output_tokens": 4000,
-                    "metadata": {
-                        "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "cohere/command-r-plus-08-2024": {
                 "input_cost_per_token": 2.5e-06,
                 "output_cost_per_token": 1e-05,
@@ -7173,6 +7139,26 @@
                     "max_output_tokens": 4000,
                     "metadata": {
                         "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint the same.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "cohere/command-r-08-2024": {
+                "input_cost_per_token": 1.5e-07,
+                "output_cost_per_token": 6e-07,
+                "max_input_tokens": 128000,
+                "max_output_tokens": 4000,
+                "metadata": {
+                    "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
+                },
+                "litellm_provider": "openrouter",
+                "cohere/command-r-08-2024": {
+                    "input_cost_per_token": 1.5e-07,
+                    "output_cost_per_token": 6e-07,
+                    "max_input_tokens": 128000,
+                    "max_output_tokens": 4000,
+                    "metadata": {
+                        "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and is competitive with the previous version of the larger Command R+ model.\n\nRead the launch post [here](https://docs.cohere.com/changelog/command-gets-refreshed).\n\nUse of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement)."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7708,26 +7694,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "openai/gpt-3.5-turbo-0613": {
-                "input_cost_per_token": 1e-06,
-                "output_cost_per_token": 2e-06,
-                "max_input_tokens": 4095,
-                "max_output_tokens": 4096,
-                "metadata": {
-                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                },
-                "litellm_provider": "openrouter",
-                "openai/gpt-3.5-turbo-0613": {
-                    "input_cost_per_token": 1e-06,
-                    "output_cost_per_token": 2e-06,
-                    "max_input_tokens": 4095,
-                    "max_output_tokens": 4096,
-                    "metadata": {
-                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "openai/gpt-4-turbo-preview": {
                 "input_cost_per_token": 1e-05,
                 "output_cost_per_token": 3e-05,
@@ -7747,6 +7713,26 @@
                         "notes": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023.\n\n**Note:** heavily rate limited by OpenAI while in preview."
                     },
                     "supports_function_calling": true,
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "openai/gpt-3.5-turbo-0613": {
+                "input_cost_per_token": 1e-06,
+                "output_cost_per_token": 2e-06,
+                "max_input_tokens": 4095,
+                "max_output_tokens": 4096,
+                "metadata": {
+                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                },
+                "litellm_provider": "openrouter",
+                "openai/gpt-3.5-turbo-0613": {
+                    "input_cost_per_token": 1e-06,
+                    "output_cost_per_token": 2e-06,
+                    "max_input_tokens": 4095,
+                    "max_output_tokens": 4096,
+                    "metadata": {
+                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                    },
                     "litellm_provider": "openrouter"
                 }
             },
@@ -8026,6 +8012,16 @@
             }
         },
         "free_models": {
+            "qwen/qwen3.6-plus:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 1000000,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers major gains in agentic coding, front-end development, and overall reasoning, with a significantly improved \u201cvibe coding\u201d experience. The model excels at complex tasks such as 3D scenes, games, and repository-level problem solving, achieving a 78.8 score on SWE-bench Verified. It represents a substantial leap in both pure-text and multimodal capabilities, performing at the level of leading state-of-the-art models."
+                },
+                "litellm_provider": "openrouter"
+            },
             "google/lyria-3-pro-preview": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
@@ -8043,16 +8039,6 @@
                 "max_output_tokens": 65536,
                 "metadata": {
                     "notes": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Clip can generate short clips, loops, previews."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "qwen/qwen3.6-plus-preview:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 1000000,
-                "max_output_tokens": 32000,
-                "metadata": {
-                    "notes": "Qwen 3.6 Plus Preview is the next-generation evolution of the Qwen Plus series, featuring an advanced hybrid architecture that improves efficiency and scalability. It delivers stronger reasoning and more reliable agentic behavior compared to the 3.5 series. In benchmarks, it performs at or above leading state-of-the-art models. Designed as a flagship preview, it excels in agentic coding, front-end development, and complex problem-solving.\n\nNote: The model collects prompt and completion data that can be used to improve the model. "
                 },
                 "litellm_provider": "openrouter"
             },

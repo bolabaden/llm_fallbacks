@@ -75,12 +75,12 @@ gigachat/gigachat-2-lite
 google/lyria-3-clip-preview
 google/lyria-3-pro-preview
 nvidia/nemotron-3-super-120b-a12b:free
+qwen/qwen3.6-plus:free
 github_copilot/gpt-4o-2024-08-06
 meta_llama/llama-3.3-70b-instruct
 meta_llama/llama-3.3-8b-instruct
 stepfun/step-3.5-flash:free
 minimax/minimax-m2.5:free
-qwen/qwen3.6-plus-preview:free
 google/gemma-3-12b-it:free
 google/gemma-3-4b-it:free
 arcee-ai/trinity-mini:free
