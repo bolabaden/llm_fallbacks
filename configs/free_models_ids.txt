@@ -451,6 +451,7 @@ standard/1024-x-1792/dall-e-3
 standard/1792-x-1024/dall-e-3
 tavily/search
 tavily/search-advanced
+us.amazon.nova-canvas-v1:0
 vertex_ai/imagegeneration@006
 vertex_ai/imagen-3.0-capability-001
 vertex_ai/imagen-3.0-fast-generate-001
