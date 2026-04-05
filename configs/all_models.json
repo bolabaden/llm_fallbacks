@@ -2792,6 +2792,79 @@
         "output_cost_per_token": 0.0,
         "supports_embedding_image_input": true
     },
+    "oci/cohere.embed-english-v3.0": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 512,
+        "max_tokens": 512,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 1024,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing"
+    },
+    "oci/cohere.embed-english-light-v3.0": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 512,
+        "max_tokens": 512,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 384,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing"
+    },
+    "oci/cohere.embed-multilingual-v3.0": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 512,
+        "max_tokens": 512,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 1024,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing"
+    },
+    "oci/cohere.embed-multilingual-light-v3.0": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 512,
+        "max_tokens": 512,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 384,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing"
+    },
+    "oci/cohere.embed-english-image-v3.0": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 512,
+        "max_tokens": 512,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 1024,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_embedding_image_input": true
+    },
+    "oci/cohere.embed-english-light-image-v3.0": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 512,
+        "max_tokens": 512,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 384,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_embedding_image_input": true
+    },
+    "oci/cohere.embed-multilingual-light-image-v3.0": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 512,
+        "max_tokens": 512,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 384,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_embedding_image_input": true
+    },
     "vercel_ai_gateway/mistral/mistral-embed": {
         "input_cost_per_token": 1e-07,
         "litellm_provider": "vercel_ai_gateway",
@@ -2868,6 +2941,17 @@
         "mode": "embedding",
         "output_cost_per_token": 0.0,
         "output_vector_size": 1536,
+        "supports_embedding_image_input": true
+    },
+    "oci/cohere.embed-v4.0": {
+        "input_cost_per_token": 1.2e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 128000,
+        "max_tokens": 128000,
+        "mode": "embedding",
+        "output_cost_per_token": 0.0,
+        "output_vector_size": 1536,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
         "supports_embedding_image_input": true
     },
     "voyage/voyage-finance-2": {
@@ -3763,6 +3847,18 @@
         "mode": "chat",
         "supports_function_calling": true,
         "supports_response_schema": true
+    },
+    "oci/cohere.command-a-translate-08-2025": {
+        "input_cost_per_token": 9e-08,
+        "litellm_provider": "oci",
+        "max_input_tokens": 256000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 9e-08,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": false,
+        "supports_response_schema": false
     },
     "voyage/voyage-context-3": {
         "input_cost_per_token": 1.8e-07,
@@ -5565,6 +5661,18 @@
         "supports_function_calling": true,
         "supports_tool_choice": false
     },
+    "oci/cohere.command-r-08-2024": {
+        "input_cost_per_token": 1.5e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-07,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
     "vercel_ai_gateway/mistral/pixtral-12b": {
         "input_cost_per_token": 1.5e-07,
         "litellm_provider": "vercel_ai_gateway",
@@ -6346,6 +6454,19 @@
         "supports_function_calling": true,
         "supports_response_schema": true,
         "supports_tool_choice": true,
+        "supports_vision": true
+    },
+    "oci/google.gemini-2.5-flash-lite": {
+        "input_cost_per_token": 7.5e-08,
+        "litellm_provider": "oci",
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 3e-07,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": true,
         "supports_vision": true
     },
     "vercel_ai_gateway/google/gemini-2.0-flash-lite": {
@@ -10343,6 +10464,19 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
+    },
+    "oci/google.gemini-2.5-flash": {
+        "input_cost_per_token": 1.5e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 6e-07,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": true,
+        "supports_vision": true
     },
     "meta-llama/llama-4-maverick": {
         "input_cost_per_token": 1.5e-07,
@@ -14515,6 +14649,30 @@
         "supports_tool_choice": false
     },
     "oci/meta.llama-3.3-70b-instruct": {
+        "input_cost_per_token": 7.2e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 7.2e-07,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
+    "oci/meta.llama-3.1-70b-instruct": {
+        "input_cost_per_token": 7.2e-07,
+        "litellm_provider": "oci",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 7.2e-07,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
+    "oci/meta.llama-3.3-70b-instruct-fp8-dynamic": {
         "input_cost_per_token": 7.2e-07,
         "litellm_provider": "oci",
         "max_input_tokens": 128000,
@@ -21737,6 +21895,18 @@
         "supports_function_calling": true,
         "supports_response_schema": false
     },
+    "oci/cohere.command-a-reasoning-08-2025": {
+        "input_cost_per_token": 1.56e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 256000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 1.56e-06,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
     "oci/cohere.command-latest": {
         "input_cost_per_token": 1.56e-06,
         "litellm_provider": "oci",
@@ -21758,6 +21928,31 @@
         "mode": "chat",
         "output_cost_per_token": 1.56e-06,
         "source": "https://www.oracle.com/cloud/ai/generative-ai/pricing/",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
+    "oci/cohere.command-a-vision-07-2025": {
+        "input_cost_per_token": 1.56e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 1.56e-06,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false,
+        "supports_vision": true
+    },
+    "oci/cohere.command-r-plus-08-2024": {
+        "input_cost_per_token": 1.56e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 1.56e-06,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
         "supports_function_calling": true,
         "supports_response_schema": false
     },
@@ -23473,7 +23668,21 @@
         "output_cost_per_token": 2e-06,
         "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
         "supports_function_calling": true,
-        "supports_response_schema": false
+        "supports_response_schema": false,
+        "supports_vision": true
+    },
+    "oci/meta.llama-3.2-11b-vision-instruct": {
+        "input_cost_per_token": 2e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 4000,
+        "max_tokens": 4000,
+        "mode": "chat",
+        "output_cost_per_token": 2e-06,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false,
+        "supports_vision": true
     },
     "nousresearch/hermes-4-405b": {
         "input_cost_per_token": 1e-06,
@@ -26231,6 +26440,27 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
+    "vertex_ai/claude-haiku-4-5": {
+        "cache_creation_input_token_cost": 1.25e-06,
+        "cache_read_input_token_cost": 1e-07,
+        "input_cost_per_token": 1e-06,
+        "litellm_provider": "vertex_ai-anthropic_models",
+        "max_input_tokens": 200000,
+        "max_output_tokens": 8192,
+        "max_tokens": 8192,
+        "mode": "chat",
+        "output_cost_per_token": 5e-06,
+        "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude/haiku-4-5",
+        "supports_assistant_prefill": true,
+        "supports_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true,
+        "supports_native_streaming": true,
+        "supports_vision": true
+    },
     "vertex_ai/claude-haiku-4-5@20251001": {
         "cache_creation_input_token_cost": 1.25e-06,
         "cache_read_input_token_cost": 1e-07,
@@ -27940,6 +28170,19 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
+    },
+    "oci/google.gemini-2.5-pro": {
+        "input_cost_per_token": 1.25e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1e-05,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": true,
+        "supports_vision": true
     },
     "openai/gpt-5.1": {
         "input_cost_per_token": 1.25e-06,
@@ -29949,26 +30192,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "inflection/inflection-3-productivity": {
-        "input_cost_per_token": 2.5e-06,
-        "output_cost_per_token": 1e-05,
-        "max_input_tokens": 8000,
-        "max_output_tokens": 1024,
-        "metadata": {
-            "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
-        },
-        "litellm_provider": "openrouter",
-        "inflection/inflection-3-productivity": {
-            "input_cost_per_token": 2.5e-06,
-            "output_cost_per_token": 1e-05,
-            "max_input_tokens": 8000,
-            "max_output_tokens": 1024,
-            "metadata": {
-                "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "inflection/inflection-3-pi": {
         "input_cost_per_token": 2.5e-06,
         "output_cost_per_token": 1e-05,
@@ -29985,6 +30208,26 @@
             "max_output_tokens": 1024,
             "metadata": {
                 "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.\n\nPi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inflection/inflection-3-productivity": {
+        "input_cost_per_token": 2.5e-06,
+        "output_cost_per_token": 1e-05,
+        "max_input_tokens": 8000,
+        "max_output_tokens": 1024,
+        "metadata": {
+            "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
+        },
+        "litellm_provider": "openrouter",
+        "inflection/inflection-3-productivity": {
+            "input_cost_per_token": 2.5e-06,
+            "output_cost_per_token": 1e-05,
+            "max_input_tokens": 8000,
+            "max_output_tokens": 1024,
+            "metadata": {
+                "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.\n\nFor emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)\n\nSee [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details."
             },
             "litellm_provider": "openrouter"
         }
@@ -32204,6 +32447,30 @@
         "supports_function_calling": true,
         "supports_response_schema": false
     },
+    "oci/xai.grok-4.20": {
+        "input_cost_per_token": 3e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 131072,
+        "max_tokens": 131072,
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-05,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
+    "oci/xai.grok-4.20-multi-agent": {
+        "input_cost_per_token": 3e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 131072,
+        "max_tokens": 131072,
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-05,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
     "vercel_ai_gateway/xai/grok-3": {
         "input_cost_per_token": 3e-06,
         "litellm_provider": "vercel_ai_gateway",
@@ -32274,6 +32541,21 @@
             },
             "litellm_provider": "openrouter"
         }
+    },
+    "openrouter/anthropic/claude-3.5-sonnet": {
+        "input_cost_per_token": 3e-06,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 200000,
+        "max_output_tokens": 8192,
+        "max_tokens": 8192,
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-05,
+        "supports_assistant_prefill": true,
+        "supports_computer_use": true,
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "tool_use_system_prompt_tokens": 159
     },
     "vertex_ai/claude-3-5-sonnet": {
         "input_cost_per_token": 3e-06,
@@ -35320,6 +35602,42 @@
         "supports_function_calling": true,
         "supports_response_schema": false
     },
+    "oci/xai.grok-4-fast": {
+        "input_cost_per_token": 5e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 131072,
+        "max_tokens": 131072,
+        "mode": "chat",
+        "output_cost_per_token": 2.5e-05,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
+    "oci/xai.grok-4.1-fast": {
+        "input_cost_per_token": 5e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 131072,
+        "max_tokens": 131072,
+        "mode": "chat",
+        "output_cost_per_token": 2.5e-05,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
+    "oci/xai.grok-code-fast-1": {
+        "input_cost_per_token": 5e-06,
+        "litellm_provider": "oci",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 131072,
+        "max_tokens": 131072,
+        "mode": "chat",
+        "output_cost_per_token": 2.5e-05,
+        "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing",
+        "supports_function_calling": true,
+        "supports_response_schema": false
+    },
     "vercel_ai_gateway/xai/grok-3-fast": {
         "input_cost_per_token": 5e-06,
         "litellm_provider": "vercel_ai_gateway",
@@ -36063,52 +36381,6 @@
         "output_cost_per_token": 1.9999700000000004e-06,
         "output_dbu_cost_per_token": 2.8571e-05,
         "source": "https://www.databricks.com/product/pricing/proprietary-foundation-model-serving"
-    },
-    "anthropic/claude-3.5-sonnet": {
-        "input_cost_per_token": 6e-06,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 3e-05,
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159,
-        "metadata": {
-            "notes": "New Claude 3.5 Sonnet delivers better-than-Opus capabilities, faster-than-Sonnet speeds, at the same Sonnet prices. Sonnet is particularly good at:\n\n- Coding: Scores ~49% on SWE-Bench Verified, higher than the last best score, and without any fancy prompt scaffolding\n- Data science: Augments human data science expertise; navigates unstructured data while using multiple tools for insights\n- Visual processing: excelling at interpreting charts, graphs, and images, accurately transcribing text to derive insights beyond just the text alone\n- Agentic tasks: exceptional tool use, making it great at agentic tasks (i.e. complex, multi-step problem solving tasks that require engaging with other systems)\n\n#multimodal"
-        },
-        "anthropic/claude-3.5-sonnet": {
-            "input_cost_per_token": 6e-06,
-            "output_cost_per_token": 3e-05,
-            "max_input_tokens": 200000,
-            "max_output_tokens": 8192,
-            "metadata": {
-                "notes": "New Claude 3.5 Sonnet delivers better-than-Opus capabilities, faster-than-Sonnet speeds, at the same Sonnet prices. Sonnet is particularly good at:\n\n- Coding: Scores ~49% on SWE-Bench Verified, higher than the last best score, and without any fancy prompt scaffolding\n- Data science: Augments human data science expertise; navigates unstructured data while using multiple tools for insights\n- Visual processing: excelling at interpreting charts, graphs, and images, accurately transcribing text to derive insights beyond just the text alone\n- Agentic tasks: exceptional tool use, making it great at agentic tasks (i.e. complex, multi-step problem solving tasks that require engaging with other systems)\n\n#multimodal"
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "openrouter/anthropic/claude-3.5-sonnet": {
-        "input_cost_per_token": 6e-06,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 3e-05,
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "tool_use_system_prompt_tokens": 159,
-        "metadata": {
-            "notes": "New Claude 3.5 Sonnet delivers better-than-Opus capabilities, faster-than-Sonnet speeds, at the same Sonnet prices. Sonnet is particularly good at:\n\n- Coding: Scores ~49% on SWE-Bench Verified, higher than the last best score, and without any fancy prompt scaffolding\n- Data science: Augments human data science expertise; navigates unstructured data while using multiple tools for insights\n- Visual processing: excelling at interpreting charts, graphs, and images, accurately transcribing text to derive insights beyond just the text alone\n- Agentic tasks: exceptional tool use, making it great at agentic tasks (i.e. complex, multi-step problem solving tasks that require engaging with other systems)\n\n#multimodal"
-        }
     },
     "azure/eu/gpt-4o-mini-realtime-preview-2024-12-17": {
         "cache_creation_input_audio_token_cost": 3.3e-07,
