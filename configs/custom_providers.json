@@ -1596,26 +1596,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "allenai/olmo-3.1-32b-think": {
-                "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 5e-07,
-                "max_input_tokens": 65536,
-                "max_output_tokens": 65536,
-                "metadata": {
-                    "notes": "Olmo 3.1 32B Think is a large-scale, 32-billion-parameter model designed for deep reasoning, complex multi-step logic, and advanced instruction following. Building on the Olmo 3 series, version 3.1 delivers refined reasoning behavior and stronger performance across demanding evaluations and nuanced conversational tasks. Developed by Ai2 under the Apache 2.0 license, Olmo 3.1 32B Think continues the Olmo initiative\u2019s commitment to openness, providing full transparency across model weights, code, and training methodology."
-                },
-                "litellm_provider": "openrouter",
-                "allenai/olmo-3.1-32b-think": {
-                    "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 5e-07,
-                    "max_input_tokens": 65536,
-                    "max_output_tokens": 65536,
-                    "metadata": {
-                        "notes": "Olmo 3.1 32B Think is a large-scale, 32-billion-parameter model designed for deep reasoning, complex multi-step logic, and advanced instruction following. Building on the Olmo 3 series, version 3.1 delivers refined reasoning behavior and stronger performance across demanding evaluations and nuanced conversational tasks. Developed by Ai2 under the Apache 2.0 license, Olmo 3.1 32B Think continues the Olmo initiative\u2019s commitment to openness, providing full transparency across model weights, code, and training methodology."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "xiaomi/mimo-v2-flash": {
                 "input_cost_per_token": 9e-08,
                 "output_cost_per_token": 2.9e-07,
