@@ -167,26 +167,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "stepfun/step-3.5-flash:free": {
-        "input_cost_per_token": 0.0,
-        "output_cost_per_token": 0.0,
-        "max_input_tokens": 256000,
-        "max_output_tokens": 256000,
-        "metadata": {
-            "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token...."
-        },
-        "litellm_provider": "openrouter",
-        "stepfun/step-3.5-flash:free": {
-            "input_cost_per_token": 0.0,
-            "output_cost_per_token": 0.0,
-            "max_input_tokens": 256000,
-            "max_output_tokens": 256000,
-            "metadata": {
-                "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token...."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "glm-4-7-251222": {
         "input_cost_per_token": 0.0,
         "litellm_provider": "volcengine",
@@ -15619,66 +15599,6 @@
         "cache_read_input_token_cost": 6e-08,
         "input_cost_per_token_cache_hit": 6e-08
     },
-    "minimax/minimax-m2.1": {
-        "input_cost_per_token": 2.7e-07,
-        "output_cost_per_token": 9.5e-07,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 8192,
-        "max_tokens": 64000,
-        "mode": "chat",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": true,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world..."
-        },
-        "minimax/minimax-m2.1": {
-            "input_cost_per_token": 2.7e-07,
-            "output_cost_per_token": 9.5e-07,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 8192,
-            "metadata": {
-                "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world..."
-            }
-        }
-    },
-    "openrouter/minimax/minimax-m2.1": {
-        "input_cost_per_token": 2.7e-07,
-        "output_cost_per_token": 9.5e-07,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 8192,
-        "max_tokens": 64000,
-        "mode": "chat",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": true,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world..."
-        }
-    },
     "qwen/qwen3-235b-a22b-thinking-2507": {
         "input_cost_per_token": 1.495e-07,
         "litellm_provider": "openrouter",
@@ -15718,6 +15638,66 @@
         "supports_tool_choice": true,
         "metadata": {
             "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144..."
+        }
+    },
+    "minimax/minimax-m2.1": {
+        "input_cost_per_token": 2.9e-07,
+        "output_cost_per_token": 9.5e-07,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "max_tokens": 64000,
+        "mode": "chat",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": true,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world..."
+        },
+        "minimax/minimax-m2.1": {
+            "input_cost_per_token": 2.9e-07,
+            "output_cost_per_token": 9.5e-07,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 196608,
+            "metadata": {
+                "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world..."
+            }
+        }
+    },
+    "openrouter/minimax/minimax-m2.1": {
+        "input_cost_per_token": 2.9e-07,
+        "output_cost_per_token": 9.5e-07,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "max_tokens": 64000,
+        "mode": "chat",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": true,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world..."
         }
     },
     "together_ai/qwen/qwen3-next-80b-a3b-instruct": {
@@ -19083,6 +19063,26 @@
         "supports_web_search": true,
         "supports_native_streaming": true
     },
+    "qwen/qwen3.6-plus": {
+        "input_cost_per_token": 3.25e-07,
+        "output_cost_per_token": 1.95e-06,
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.6-plus": {
+            "input_cost_per_token": 3.25e-07,
+            "output_cost_per_token": 1.95e-06,
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "qwen/qwen3-235b-a22b": {
         "input_cost_per_token": 4.55e-07,
         "output_cost_per_token": 1.82e-06,
@@ -19657,6 +19657,26 @@
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
     },
+    "moonshotai/kimi-k2-0905": {
+        "input_cost_per_token": 4e-07,
+        "output_cost_per_token": 2e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "metadata": {
+            "notes": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32..."
+        },
+        "litellm_provider": "openrouter",
+        "moonshotai/kimi-k2-0905": {
+            "input_cost_per_token": 4e-07,
+            "output_cost_per_token": 2e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "metadata": {
+                "notes": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "fireworks_ai/accounts/fireworks/models/cogito-671b-v2-p1": {
         "max_tokens": 163840,
         "max_input_tokens": 163840,
@@ -20017,24 +20037,6 @@
         "supports_function_calling": true,
         "supports_tool_choice": true
     },
-    "moonshotai/kimi-k2-0905": {
-        "input_cost_per_token": 4e-07,
-        "output_cost_per_token": 2e-06,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32..."
-        },
-        "litellm_provider": "openrouter",
-        "moonshotai/kimi-k2-0905": {
-            "input_cost_per_token": 4e-07,
-            "output_cost_per_token": 2e-06,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "mistralai/mistral-medium-3.1": {
         "input_cost_per_token": 4e-07,
         "output_cost_per_token": 2e-06,
@@ -20295,24 +20297,6 @@
         "supports_function_calling": true,
         "supports_reasoning": true,
         "supports_tool_choice": true
-    },
-    "moonshotai/kimi-k2-thinking": {
-        "input_cost_per_token": 4.7e-07,
-        "output_cost_per_token": 2e-06,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in..."
-        },
-        "litellm_provider": "openrouter",
-        "moonshotai/kimi-k2-thinking": {
-            "input_cost_per_token": 4.7e-07,
-            "output_cost_per_token": 2e-06,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "deepinfra/moonshotai/kimi-k2-instruct": {
         "max_tokens": 131072,
@@ -21726,6 +21710,24 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
+    "moonshotai/kimi-k2-thinking": {
+        "input_cost_per_token": 6e-07,
+        "output_cost_per_token": 2.5e-06,
+        "max_input_tokens": 262144,
+        "metadata": {
+            "notes": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in..."
+        },
+        "litellm_provider": "openrouter",
+        "moonshotai/kimi-k2-thinking": {
+            "input_cost_per_token": 6e-07,
+            "output_cost_per_token": 2.5e-06,
+            "max_input_tokens": 262144,
+            "metadata": {
+                "notes": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "fireworks_ai/accounts/fireworks/models/kimi-k2-instruct": {
         "input_cost_per_token": 6e-07,
         "litellm_provider": "fireworks_ai",
@@ -22319,26 +22321,6 @@
         "output_cost_per_token": 3e-06,
         "supports_function_calling": true,
         "supports_vision": true
-    },
-    "qwen/qwen3.6-plus": {
-        "input_cost_per_token": 5e-07,
-        "output_cost_per_token": 3e-06,
-        "max_input_tokens": 1000000,
-        "max_output_tokens": 65536,
-        "metadata": {
-            "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers..."
-        },
-        "litellm_provider": "openrouter",
-        "qwen/qwen3.6-plus": {
-            "input_cost_per_token": 5e-07,
-            "output_cost_per_token": 3e-06,
-            "max_input_tokens": 1000000,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to the 3.5 series, it delivers..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "google/gemini-3.1-flash-image-preview": {
         "input_cost_per_token": 5e-07,
@@ -24682,24 +24664,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "z-ai/glm-5.1": {
-        "input_cost_per_token": 1.26e-06,
-        "output_cost_per_token": 3.96e-06,
-        "max_input_tokens": 202752,
-        "metadata": {
-            "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-5.1": {
-            "input_cost_per_token": 1.26e-06,
-            "output_cost_per_token": 3.96e-06,
-            "max_input_tokens": 202752,
-            "metadata": {
-                "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "eu.amazon.nova-pro-v1:0": {
         "input_cost_per_token": 1.05e-06,
         "litellm_provider": "bedrock_converse",
@@ -25077,6 +25041,26 @@
         "supports_function_calling": true,
         "supports_tool_choice": true,
         "supports_response_schema": true
+    },
+    "z-ai/glm-5.1": {
+        "input_cost_per_token": 1.395e-06,
+        "output_cost_per_token": 4.4e-06,
+        "max_input_tokens": 202752,
+        "max_output_tokens": 131072,
+        "metadata": {
+            "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
+        },
+        "litellm_provider": "openrouter",
+        "z-ai/glm-5.1": {
+            "input_cost_per_token": 1.395e-06,
+            "output_cost_per_token": 4.4e-06,
+            "max_input_tokens": 202752,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "anthropic.claude-3-5-haiku-20241022-v1:0": {
         "cache_creation_input_token_cost": 1e-06,
@@ -30170,26 +30154,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "inflection/inflection-3-productivity": {
-        "input_cost_per_token": 2.5e-06,
-        "output_cost_per_token": 1e-05,
-        "max_input_tokens": 8000,
-        "max_output_tokens": 1024,
-        "metadata": {
-            "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional..."
-        },
-        "litellm_provider": "openrouter",
-        "inflection/inflection-3-productivity": {
-            "input_cost_per_token": 2.5e-06,
-            "output_cost_per_token": 1e-05,
-            "max_input_tokens": 8000,
-            "max_output_tokens": 1024,
-            "metadata": {
-                "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "inflection/inflection-3-pi": {
         "input_cost_per_token": 2.5e-06,
         "output_cost_per_token": 1e-05,
@@ -30206,6 +30170,26 @@
             "max_output_tokens": 1024,
             "metadata": {
                 "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inflection/inflection-3-productivity": {
+        "input_cost_per_token": 2.5e-06,
+        "output_cost_per_token": 1e-05,
+        "max_input_tokens": 8000,
+        "max_output_tokens": 1024,
+        "metadata": {
+            "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional..."
+        },
+        "litellm_provider": "openrouter",
+        "inflection/inflection-3-productivity": {
+            "input_cost_per_token": 2.5e-06,
+            "output_cost_per_token": 1e-05,
+            "max_input_tokens": 8000,
+            "max_output_tokens": 1024,
+            "metadata": {
+                "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional..."
             },
             "litellm_provider": "openrouter"
         }
