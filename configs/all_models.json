@@ -633,24 +633,6 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
-    "arcee-ai/trinity-mini:free": {
-        "input_cost_per_token": 0.0,
-        "output_cost_per_token": 0.0,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with robust function..."
-        },
-        "litellm_provider": "openrouter",
-        "arcee-ai/trinity-mini:free": {
-            "input_cost_per_token": 0.0,
-            "output_cost_per_token": 0.0,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with robust function..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "meta-llama/llama-3.2-3b-instruct:free": {
         "input_cost_per_token": 0.0,
         "output_cost_per_token": 0.0,
@@ -9740,6 +9722,12 @@
         ],
         "supports_tool_choice": false
     },
+    "baseten/openai/gpt-oss-120b": {
+        "input_cost_per_token": 1e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 5e-07
+    },
     "google.gemma-3-27b-it": {
         "input_cost_per_token": 2.3e-07,
         "litellm_provider": "bedrock_converse",
@@ -11617,7 +11605,8 @@
         "supports_tool_choice": true,
         "supports_url_context": true,
         "supports_vision": true,
-        "supports_web_search": true
+        "supports_web_search": true,
+        "supports_service_tier": true
     },
     "gemini-2.5-flash-lite-preview-09-2025": {
         "cache_read_input_token_cost": 1e-08,
@@ -11709,7 +11698,8 @@
         "supports_url_context": true,
         "supports_vision": true,
         "supports_web_search": true,
-        "tpm": 250000
+        "tpm": 250000,
+        "supports_service_tier": true
     },
     "gemini/gemini-2.5-flash-lite-preview-09-2025": {
         "cache_read_input_token_cost": 1e-08,
@@ -12808,6 +12798,12 @@
         "max_tokens": 8192,
         "mode": "chat",
         "output_cost_per_token": 6.9e-07
+    },
+    "baseten/nvidia/nemotron-120b-a12b": {
+        "input_cost_per_token": 3e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 7.5e-07
     },
     "arcee-ai/trinity-large-thinking": {
         "input_cost_per_token": 2.2e-07,
@@ -15101,6 +15097,12 @@
         "litellm_provider": "fireworks_ai",
         "mode": "chat"
     },
+    "baseten/minimaxai/minimax-m2.5": {
+        "input_cost_per_token": 3e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 1.2e-06
+    },
     "vertex_ai/deepseek-ai/deepseek-ocr-maas": {
         "litellm_provider": "vertex_ai",
         "mode": "ocr",
@@ -15327,6 +15329,12 @@
         "cache_read_input_token_cost": 1.35e-07,
         "input_cost_per_token_cache_hit": 1.35e-07,
         "supports_reasoning": true
+    },
+    "baseten/deepseek-ai/deepseek-v3-0324": {
+        "input_cost_per_token": 7.7e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 7.7e-07
     },
     "bedrock/ap-southeast-2/minimax.minimax-m2.5": {
         "input_cost_per_token": 3.09e-07,
@@ -18131,6 +18139,12 @@
             "litellm_provider": "openrouter"
         }
     },
+    "baseten/deepseek-ai/deepseek-v3.1": {
+        "input_cost_per_token": 5e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-06
+    },
     "replicate/openai/gpt-4.1-mini": {
         "input_cost_per_token": 4e-07,
         "output_cost_per_token": 1.6e-06,
@@ -18957,7 +18971,8 @@
         "supports_video_input": true,
         "supports_vision": true,
         "supports_web_search": true,
-        "supports_native_streaming": true
+        "supports_native_streaming": true,
+        "supports_service_tier": true
     },
     "gemini/gemini-3.1-flash-lite-preview": {
         "cache_read_input_token_cost": 2.5e-08,
@@ -19010,7 +19025,8 @@
         "supports_vision": true,
         "supports_web_search": true,
         "supports_native_streaming": true,
-        "tpm": 250000
+        "tpm": 250000,
+        "supports_service_tier": true
     },
     "vertex_ai/gemini-3.1-flash-lite-preview": {
         "cache_read_input_token_cost": 2.5e-08,
@@ -20913,6 +20929,18 @@
         "tpm": 4000000,
         "rpm": 10
     },
+    "baseten/zai-org/glm-4.7": {
+        "input_cost_per_token": 6e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 2.2e-06
+    },
+    "baseten/zai-org/glm-4.6": {
+        "input_cost_per_token": 6e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 2.2e-06
+    },
     "gemini-2.5-flash-preview-tts": {
         "input_cost_per_token": 3e-07,
         "litellm_provider": "gemini",
@@ -21753,6 +21781,18 @@
         "supports_system_messages": true,
         "supports_native_structured_output": true
     },
+    "baseten/moonshotai/kimi-k2-thinking": {
+        "input_cost_per_token": 6e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 2.5e-06
+    },
+    "baseten/moonshotai/kimi-k2-instruct-0905": {
+        "input_cost_per_token": 6e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 2.5e-06
+    },
     "fireworks_ai/accounts/fireworks/models/glm-4p7": {
         "cache_read_input_token_cost": 3e-07,
         "input_cost_per_token": 6e-07,
@@ -22549,6 +22589,12 @@
         "supports_vision": true,
         "source": "https://aws.amazon.com/bedrock/pricing/"
     },
+    "baseten/moonshotai/kimi-k2.5": {
+        "input_cost_per_token": 6e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 3e-06
+    },
     "bedrock/moonshotai.kimi-k2.5": {
         "input_cost_per_token": 6e-07,
         "litellm_provider": "bedrock",
@@ -22996,7 +23042,8 @@
         "supports_tool_choice": true,
         "supports_url_context": true,
         "supports_vision": true,
-        "supports_web_search": true
+        "supports_web_search": true,
+        "supports_service_tier": true
     },
     "gemini/gemini-2.5-flash": {
         "cache_read_input_token_cost": 3e-08,
@@ -23043,7 +23090,8 @@
         "supports_url_context": true,
         "supports_vision": true,
         "supports_web_search": true,
-        "tpm": 8000000
+        "tpm": 8000000,
+        "supports_service_tier": true
     },
     "gemini-flash-latest": {
         "cache_read_input_token_cost": 3e-08,
@@ -23801,6 +23849,12 @@
         "supports_function_calling": true,
         "supports_tool_choice": true,
         "supports_vision": true
+    },
+    "baseten/zai-org/glm-5": {
+        "input_cost_per_token": 9.5e-07,
+        "litellm_provider": "baseten",
+        "mode": "chat",
+        "output_cost_per_token": 3.15e-06
     },
     "moonshot/kimi-latest-32k": {
         "cache_read_input_token_cost": 1.5e-07,
@@ -24664,6 +24718,24 @@
             "litellm_provider": "openrouter"
         }
     },
+    "z-ai/glm-5.1": {
+        "input_cost_per_token": 1.26e-06,
+        "output_cost_per_token": 3.96e-06,
+        "max_input_tokens": 202752,
+        "metadata": {
+            "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
+        },
+        "litellm_provider": "openrouter",
+        "z-ai/glm-5.1": {
+            "input_cost_per_token": 1.26e-06,
+            "output_cost_per_token": 3.96e-06,
+            "max_input_tokens": 202752,
+            "metadata": {
+                "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "eu.amazon.nova-pro-v1:0": {
         "input_cost_per_token": 1.05e-06,
         "litellm_provider": "bedrock_converse",
@@ -25041,26 +25113,6 @@
         "supports_function_calling": true,
         "supports_tool_choice": true,
         "supports_response_schema": true
-    },
-    "z-ai/glm-5.1": {
-        "input_cost_per_token": 1.395e-06,
-        "output_cost_per_token": 4.4e-06,
-        "max_input_tokens": 202752,
-        "max_output_tokens": 131072,
-        "metadata": {
-            "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-5.1": {
-            "input_cost_per_token": 1.395e-06,
-            "output_cost_per_token": 4.4e-06,
-            "max_input_tokens": 202752,
-            "max_output_tokens": 131072,
-            "metadata": {
-                "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "anthropic.claude-3-5-haiku-20241022-v1:0": {
         "cache_creation_input_token_cost": 1e-06,
@@ -28305,7 +28357,8 @@
         "supports_tool_choice": true,
         "supports_video_input": true,
         "supports_vision": true,
-        "supports_web_search": true
+        "supports_web_search": true,
+        "supports_service_tier": true
     },
     "gemini/gemini-2.5-pro": {
         "cache_read_input_token_cost": 1.25e-07,
@@ -35346,7 +35399,29 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_native_structured_output": true
+    },
+    "bedrock/us-gov-east-1/claude-sonnet-4-5-20250929-v1:0": {
+        "cache_creation_input_token_cost": 4.125e-06,
+        "cache_read_input_token_cost": 3.3e-07,
+        "input_cost_per_token": 3.3e-06,
+        "litellm_provider": "bedrock",
+        "max_input_tokens": 200000,
+        "max_output_tokens": 8192,
+        "max_tokens": 8192,
+        "mode": "chat",
+        "output_cost_per_token": 1.65e-05,
+        "supports_assistant_prefill": true,
+        "supports_computer_use": true,
+        "supports_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "supports_native_structured_output": true
     },
     "bedrock/us-gov-west-1/anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -35366,7 +35441,29 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_native_structured_output": true
+    },
+    "bedrock/us-gov-west-1/claude-sonnet-4-5-20250929-v1:0": {
+        "cache_creation_input_token_cost": 4.125e-06,
+        "cache_read_input_token_cost": 3.3e-07,
+        "input_cost_per_token": 3.3e-06,
+        "litellm_provider": "bedrock",
+        "max_input_tokens": 200000,
+        "max_output_tokens": 8192,
+        "max_tokens": 8192,
+        "mode": "chat",
+        "output_cost_per_token": 1.65e-05,
+        "supports_assistant_prefill": true,
+        "supports_computer_use": true,
+        "supports_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "supports_native_structured_output": true
     },
     "xai/grok-vision-beta": {
         "input_cost_per_image": 5e-06,
@@ -35438,26 +35535,6 @@
         "cache_read_input_token_cost": 3.6e-07,
         "cache_creation_input_token_cost": 4.5e-06
     },
-    "bedrock/us-gov-east-1/claude-sonnet-4-5-20250929-v1:0": {
-        "input_cost_per_token": 3.6e-06,
-        "litellm_provider": "bedrock",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.8e-05,
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "cache_read_input_token_cost": 3.6e-07,
-        "cache_creation_input_token_cost": 4.5e-06
-    },
     "bedrock/us-gov-west-1/anthropic.claude-3-7-sonnet-20250219-v1:0": {
         "cache_creation_input_token_cost": 4.5e-06,
         "cache_read_input_token_cost": 3.6e-07,
@@ -35488,26 +35565,6 @@
         "output_cost_per_token": 1.8e-05,
         "supports_function_calling": true,
         "supports_pdf_input": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "cache_read_input_token_cost": 3.6e-07,
-        "cache_creation_input_token_cost": 4.5e-06
-    },
-    "bedrock/us-gov-west-1/claude-sonnet-4-5-20250929-v1:0": {
-        "input_cost_per_token": 3.6e-06,
-        "litellm_provider": "bedrock",
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 1.8e-05,
-        "supports_assistant_prefill": true,
-        "supports_computer_use": true,
-        "supports_function_calling": true,
-        "supports_pdf_input": true,
-        "supports_prompt_caching": true,
-        "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
@@ -42518,7 +42575,8 @@
         "supports_url_context": true,
         "supports_vision": true,
         "supports_web_search": false,
-        "tpm": 8000000
+        "tpm": 8000000,
+        "supports_service_tier": true
     },
     "gemini/gemini-2.5-flash-image": {
         "cache_read_input_token_cost": 3e-08,
@@ -42568,7 +42626,8 @@
         "supports_url_context": true,
         "supports_vision": true,
         "supports_web_search": true,
-        "tpm": 8000000
+        "tpm": 8000000,
+        "supports_service_tier": true
     },
     "vertex_ai/gemini-2.5-flash-image": {
         "cache_read_input_token_cost": 3e-08,
@@ -43516,7 +43575,8 @@
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_vision": true,
-        "supports_web_search": true
+        "supports_web_search": true,
+        "supports_service_tier": true
     },
     "deep-research-pro-preview-12-2025": {
         "input_cost_per_image": 0.0011,
@@ -43586,7 +43646,8 @@
         "supports_response_schema": true,
         "supports_system_messages": true,
         "supports_vision": true,
-        "supports_web_search": true
+        "supports_web_search": true,
+        "supports_service_tier": true
     },
     "gemini/deep-research-pro-preview-12-2025": {
         "input_cost_per_image": 0.0011,

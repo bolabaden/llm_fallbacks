@@ -121,7 +121,6 @@ google/gemma-3-12b-it:free
 google/gemma-3-4b-it:free
 codestral/codestral-2405
 codestral/codestral-latest
-arcee-ai/trinity-mini:free
 github_copilot/gpt-4
 github_copilot/gpt-4-0613
 heroku/claude-3-5-sonnet-latest

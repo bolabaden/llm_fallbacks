@@ -30,19 +30,17 @@
                 }
             },
             "z-ai/glm-5.1": {
-                "input_cost_per_token": 1.395e-06,
-                "output_cost_per_token": 4.4e-06,
+                "input_cost_per_token": 1.26e-06,
+                "output_cost_per_token": 3.96e-06,
                 "max_input_tokens": 202752,
-                "max_output_tokens": 131072,
                 "metadata": {
                     "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
                 },
                 "litellm_provider": "openrouter",
                 "z-ai/glm-5.1": {
-                    "input_cost_per_token": 1.395e-06,
-                    "output_cost_per_token": 4.4e-06,
+                    "input_cost_per_token": 1.26e-06,
+                    "output_cost_per_token": 3.96e-06,
                     "max_input_tokens": 202752,
-                    "max_output_tokens": 131072,
                     "metadata": {
                         "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
                     },
@@ -2086,24 +2084,6 @@
                     "supports_vision": true,
                     "metadata": {
                         "notes": "Mistral Large 3 2512 is Mistral\u2019s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "arcee-ai/trinity-mini:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 131072,
-                "metadata": {
-                    "notes": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with robust function..."
-                },
-                "litellm_provider": "openrouter",
-                "arcee-ai/trinity-mini:free": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "max_input_tokens": 131072,
-                    "metadata": {
-                        "notes": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with robust function..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -8102,15 +8082,6 @@
                 "output_cost_per_token": -1.0,
                 "metadata": {
                     "notes": "Transform your natural language requests into structured OpenRouter API request objects. Describe what you want to accomplish with AI models, and Body Builder will construct the appropriate API calls. Example:..."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "arcee-ai/trinity-mini:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 131072,
-                "metadata": {
-                    "notes": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with robust function..."
                 },
                 "litellm_provider": "openrouter"
             },

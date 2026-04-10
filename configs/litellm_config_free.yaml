@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-bab406f35b8e400c9910f5a4df122ff6
+  master_key: sk-e5e6fc588e534a058415fe8760ffa197
   alerting:
   - slack
   - email
@@ -214,19 +214,6 @@ model_list:
       notes: Transform your natural language requests into structured OpenRouter API
         request objects. Describe what you want to accomplish with AI models, and
         Body Builder will construct the appropriate API calls. Example:...
-    litellm_provider: openrouter
-- model_name: arcee-ai/trinity-mini:free
-  litellm_params:
-    model: openai/arcee-ai/trinity-mini:free
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 0.0
-    output_cost_per_token: 0.0
-    max_input_tokens: 131072
-    metadata:
-      notes: Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts
-        language model featuring 128 experts with 8 active per token. Engineered for
-        efficient reasoning over long contexts (131k) with robust function...
     litellm_provider: openrouter
 - model_name: nvidia/nemotron-nano-12b-v2-vl:free
   litellm_params:
@@ -771,32 +758,6 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
   - openrouter/bodybuilder:
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - openrouter/openrouter/auto
-    - openrouter/google/lyria-3-pro-preview
-    - openrouter/google/lyria-3-clip-preview
-    - vertex_ai-language-models/gemini-flash-experimental
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - openrouter/openrouter/free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/openai/gpt-oss-20b:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/openrouter/bodybuilder
-    - openrouter/z-ai/glm-4.5-air:free
-    - lemonade/gpt-oss-20b-mxfp4-gguf
-    - lemonade/gpt-oss-120b-mxfp-gguf
-  - arcee-ai/trinity-mini:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
