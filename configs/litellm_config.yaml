@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-3ef3bd5c7a0845f8b010f3fd0d5eeb09
+  master_key: sk-dde4718759144380a72c9ce5bc2b8fa7
   alerting:
   - slack
   - email
@@ -84,9 +84,10 @@ model_list:
     model: openai/z-ai/glm-5.1
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.26e-06
-    output_cost_per_token: 3.96e-06
+    input_cost_per_token: 9.5e-07
+    output_cost_per_token: 3.15e-06
     max_input_tokens: 202752
+    max_output_tokens: 65535
     metadata: &id002
       notes: GLM-5.1 delivers a major leap in coding capability, with particularly
         significant gains in handling long-horizon tasks. Unlike previous models built
@@ -94,9 +95,10 @@ model_list:
         on...
     litellm_provider: openrouter
     z-ai/glm-5.1:
-      input_cost_per_token: 1.26e-06
-      output_cost_per_token: 3.96e-06
+      input_cost_per_token: 9.5e-07
+      output_cost_per_token: 3.15e-06
       max_input_tokens: 202752
+      max_output_tokens: 65535
       metadata: *id002
       litellm_provider: openrouter
 - model_name: google/gemma-4-26b-a4b-it:free
@@ -125,7 +127,7 @@ model_list:
     model: openai/google/gemma-4-26b-a4b-it
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.3e-07
+    input_cost_per_token: 1.2e-07
     output_cost_per_token: 4.0e-07
     max_input_tokens: 262144
     max_output_tokens: 262144
@@ -135,7 +137,7 @@ model_list:
         token during inference — delivering near-31B quality at...
     litellm_provider: openrouter
     google/gemma-4-26b-a4b-it:
-      input_cost_per_token: 1.3e-07
+      input_cost_per_token: 1.2e-07
       output_cost_per_token: 4.0e-07
       max_input_tokens: 262144
       max_output_tokens: 262144
@@ -4105,10 +4107,10 @@ model_list:
     input_cost_per_token: 3.0e-08
     litellm_provider: openrouter
     max_input_tokens: 131072
-    max_output_tokens: 131072
+    max_output_tokens: 32768
     max_tokens: 32768
     mode: chat
-    output_cost_per_token: 1.1e-07
+    output_cost_per_token: 1.4e-07
     source: https://openrouter.ai/openai/gpt-oss-20b
     supports_function_calling: true
     supports_parallel_function_calling: true
@@ -4121,9 +4123,8 @@ model_list:
         with 3.6B active parameters per forward pass, optimized for...
     openai/gpt-oss-20b:
       input_cost_per_token: 3.0e-08
-      output_cost_per_token: 1.1e-07
+      output_cost_per_token: 1.4e-07
       max_input_tokens: 131072
-      max_output_tokens: 131072
       metadata: *id168
       litellm_provider: openrouter
 - model_name: anthropic/claude-opus-4.1
@@ -7308,28 +7309,6 @@ model_list:
       max_output_tokens: 16384
       metadata: *id305
       litellm_provider: openrouter
-- model_name: inflection/inflection-3-pi
-  litellm_params:
-    model: openai/inflection/inflection-3-pi
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 2.5e-06
-    output_cost_per_token: 1.0e-05
-    max_input_tokens: 8000
-    max_output_tokens: 1024
-    metadata: &id306
-      notes: Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including
-        backstory, emotional intelligence, productivity, and safety. It has access
-        to recent news, and excels in scenarios like customer support and roleplay.
-        Pi...
-    litellm_provider: openrouter
-    inflection/inflection-3-pi:
-      input_cost_per_token: 2.5e-06
-      output_cost_per_token: 1.0e-05
-      max_input_tokens: 8000
-      max_output_tokens: 1024
-      metadata: *id306
-      litellm_provider: openrouter
 - model_name: inflection/inflection-3-productivity
   litellm_params:
     model: openai/inflection/inflection-3-productivity
@@ -7339,12 +7318,34 @@ model_list:
     output_cost_per_token: 1.0e-05
     max_input_tokens: 8000
     max_output_tokens: 1024
-    metadata: &id307
+    metadata: &id306
       notes: Inflection 3 Productivity is optimized for following instructions. It
         is better for tasks requiring JSON output or precise adherence to provided
         guidelines. It has access to recent news. For emotional...
     litellm_provider: openrouter
     inflection/inflection-3-productivity:
+      input_cost_per_token: 2.5e-06
+      output_cost_per_token: 1.0e-05
+      max_input_tokens: 8000
+      max_output_tokens: 1024
+      metadata: *id306
+      litellm_provider: openrouter
+- model_name: inflection/inflection-3-pi
+  litellm_params:
+    model: openai/inflection/inflection-3-pi
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 2.5e-06
+    output_cost_per_token: 1.0e-05
+    max_input_tokens: 8000
+    max_output_tokens: 1024
+    metadata: &id307
+      notes: Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including
+        backstory, emotional intelligence, productivity, and safety. It has access
+        to recent news, and excels in scenarios like customer support and roleplay.
+        Pi...
+    litellm_provider: openrouter
+    inflection/inflection-3-pi:
       input_cost_per_token: 2.5e-06
       output_cost_per_token: 1.0e-05
       max_input_tokens: 8000
@@ -7436,8 +7437,8 @@ model_list:
     model: openai/meta-llama/llama-3.2-11b-vision-instruct
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 4.9e-08
-    output_cost_per_token: 4.9e-08
+    input_cost_per_token: 2.45e-07
+    output_cost_per_token: 2.45e-07
     max_input_tokens: 131072
     max_output_tokens: 16384
     mode: chat
@@ -7448,8 +7449,8 @@ model_list:
         such as image captioning and...
     litellm_provider: openrouter
     meta-llama/llama-3.2-11b-vision-instruct:
-      input_cost_per_token: 4.9e-08
-      output_cost_per_token: 4.9e-08
+      input_cost_per_token: 2.45e-07
+      output_cost_per_token: 2.45e-07
       max_input_tokens: 131072
       max_output_tokens: 16384
       mode: chat
@@ -7477,28 +7478,6 @@ model_list:
       max_output_tokens: 16384
       metadata: *id313
       litellm_provider: openrouter
-- model_name: cohere/command-r-08-2024
-  litellm_params:
-    model: openai/cohere/command-r-08-2024
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.5e-07
-    output_cost_per_token: 6.0e-07
-    max_input_tokens: 128000
-    max_output_tokens: 4000
-    metadata: &id314
-      notes: command-r-08-2024 is an update of the [Command R](/models/cohere/command-r)
-        with improved performance for multilingual retrieval-augmented generation
-        (RAG) and tool use. More broadly, it is better at math, code and reasoning
-        and...
-    litellm_provider: openrouter
-    cohere/command-r-08-2024:
-      input_cost_per_token: 1.5e-07
-      output_cost_per_token: 6.0e-07
-      max_input_tokens: 128000
-      max_output_tokens: 4000
-      metadata: *id314
-      litellm_provider: openrouter
 - model_name: cohere/command-r-plus-08-2024
   litellm_params:
     model: openai/cohere/command-r-plus-08-2024
@@ -7508,7 +7487,7 @@ model_list:
     output_cost_per_token: 1.0e-05
     max_input_tokens: 128000
     max_output_tokens: 4000
-    metadata: &id315
+    metadata: &id314
       notes: command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus)
         with roughly 50% higher throughput and 25% lower latencies as compared to
         the previous Command R+ version, while keeping the hardware footprint...
@@ -7516,6 +7495,28 @@ model_list:
     cohere/command-r-plus-08-2024:
       input_cost_per_token: 2.5e-06
       output_cost_per_token: 1.0e-05
+      max_input_tokens: 128000
+      max_output_tokens: 4000
+      metadata: *id314
+      litellm_provider: openrouter
+- model_name: cohere/command-r-08-2024
+  litellm_params:
+    model: openai/cohere/command-r-08-2024
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 1.5e-07
+    output_cost_per_token: 6.0e-07
+    max_input_tokens: 128000
+    max_output_tokens: 4000
+    metadata: &id315
+      notes: command-r-08-2024 is an update of the [Command R](/models/cohere/command-r)
+        with improved performance for multilingual retrieval-augmented generation
+        (RAG) and tool use. More broadly, it is better at math, code and reasoning
+        and...
+    litellm_provider: openrouter
+    cohere/command-r-08-2024:
+      input_cost_per_token: 1.5e-07
+      output_cost_per_token: 6.0e-07
       max_input_tokens: 128000
       max_output_tokens: 4000
       metadata: *id315
@@ -7826,54 +7827,6 @@ model_list:
       max_output_tokens: 8192
       metadata: *id330
       litellm_provider: openrouter
-- model_name: openai/gpt-4o
-  litellm_params:
-    model: openai/gpt-4o
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 2.5e-06
-    litellm_provider: openrouter
-    max_input_tokens: 128000
-    max_output_tokens: 16384
-    max_tokens: 4096
-    mode: chat
-    output_cost_per_token: 1.0e-05
-    supports_function_calling: true
-    supports_parallel_function_calling: true
-    supports_tool_choice: true
-    supports_vision: true
-    metadata: &id331
-      notes: GPT-4o ("o" for "omni") is OpenAI's latest AI model, supporting both
-        text and image inputs with text outputs. It maintains the intelligence level
-        of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...
-    openai/gpt-4o:
-      input_cost_per_token: 2.5e-06
-      output_cost_per_token: 1.0e-05
-      max_input_tokens: 128000
-      max_output_tokens: 16384
-      metadata: *id331
-      litellm_provider: openrouter
-- model_name: openai/gpt-4o:extended
-  litellm_params:
-    model: openai/gpt-4o:extended
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 6.0e-06
-    output_cost_per_token: 1.8e-05
-    max_input_tokens: 128000
-    max_output_tokens: 64000
-    metadata: &id332
-      notes: GPT-4o ("o" for "omni") is OpenAI's latest AI model, supporting both
-        text and image inputs with text outputs. It maintains the intelligence level
-        of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...
-    litellm_provider: openrouter
-    openai/gpt-4o:extended:
-      input_cost_per_token: 6.0e-06
-      output_cost_per_token: 1.8e-05
-      max_input_tokens: 128000
-      max_output_tokens: 64000
-      metadata: *id332
-      litellm_provider: openrouter
 - model_name: openai/gpt-4o-2024-05-13
   litellm_params:
     model: openai/gpt-4o-2024-05-13
@@ -7890,7 +7843,7 @@ model_list:
     supports_parallel_function_calling: true
     supports_tool_choice: true
     supports_vision: true
-    metadata: &id333
+    metadata: &id331
       notes: GPT-4o ("o" for "omni") is OpenAI's latest AI model, supporting both
         text and image inputs with text outputs. It maintains the intelligence level
         of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...
@@ -7899,6 +7852,54 @@ model_list:
       output_cost_per_token: 1.5e-05
       max_input_tokens: 128000
       max_output_tokens: 4096
+      metadata: *id331
+      litellm_provider: openrouter
+- model_name: openai/gpt-4o
+  litellm_params:
+    model: openai/gpt-4o
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 2.5e-06
+    litellm_provider: openrouter
+    max_input_tokens: 128000
+    max_output_tokens: 16384
+    max_tokens: 4096
+    mode: chat
+    output_cost_per_token: 1.0e-05
+    supports_function_calling: true
+    supports_parallel_function_calling: true
+    supports_tool_choice: true
+    supports_vision: true
+    metadata: &id332
+      notes: GPT-4o ("o" for "omni") is OpenAI's latest AI model, supporting both
+        text and image inputs with text outputs. It maintains the intelligence level
+        of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...
+    openai/gpt-4o:
+      input_cost_per_token: 2.5e-06
+      output_cost_per_token: 1.0e-05
+      max_input_tokens: 128000
+      max_output_tokens: 16384
+      metadata: *id332
+      litellm_provider: openrouter
+- model_name: openai/gpt-4o:extended
+  litellm_params:
+    model: openai/gpt-4o:extended
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 6.0e-06
+    output_cost_per_token: 1.8e-05
+    max_input_tokens: 128000
+    max_output_tokens: 64000
+    metadata: &id333
+      notes: GPT-4o ("o" for "omni") is OpenAI's latest AI model, supporting both
+        text and image inputs with text outputs. It maintains the intelligence level
+        of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...
+    litellm_provider: openrouter
+    openai/gpt-4o:extended:
+      input_cost_per_token: 6.0e-06
+      output_cost_per_token: 1.8e-05
+      max_input_tokens: 128000
+      max_output_tokens: 64000
       metadata: *id333
       litellm_provider: openrouter
 - model_name: meta-llama/llama-3-8b-instruct
@@ -8076,6 +8077,29 @@ model_list:
       max_input_tokens: 128000
       metadata: *id340
       litellm_provider: openrouter
+- model_name: openai/gpt-4-turbo-preview
+  litellm_params:
+    model: openai/gpt-4-turbo-preview
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 1.0e-05
+    output_cost_per_token: 3.0e-05
+    max_input_tokens: 128000
+    max_output_tokens: 4096
+    metadata: &id341
+      notes: 'The preview GPT-4 model with improved instruction following, JSON mode,
+        reproducible outputs, parallel function calling, and more. Training data:
+        up to Dec 2023. **Note:** heavily rate limited by OpenAI while...'
+    supports_function_calling: true
+    litellm_provider: openrouter
+    openai/gpt-4-turbo-preview:
+      input_cost_per_token: 1.0e-05
+      output_cost_per_token: 3.0e-05
+      max_input_tokens: 128000
+      max_output_tokens: 4096
+      metadata: *id341
+      supports_function_calling: true
+      litellm_provider: openrouter
 - model_name: openai/gpt-3.5-turbo-0613
   litellm_params:
     model: openai/gpt-3.5-turbo-0613
@@ -8085,7 +8109,7 @@ model_list:
     output_cost_per_token: 2.0e-06
     max_input_tokens: 4095
     max_output_tokens: 4096
-    metadata: &id341
+    metadata: &id342
       notes: 'GPT-3.5 Turbo is OpenAI''s fastest model. It can understand and generate
         natural language or code, and is optimized for chat and traditional completion
         tasks.
@@ -8098,30 +8122,7 @@ model_list:
       output_cost_per_token: 2.0e-06
       max_input_tokens: 4095
       max_output_tokens: 4096
-      metadata: *id341
-      litellm_provider: openrouter
-- model_name: openai/gpt-4-turbo-preview
-  litellm_params:
-    model: openai/gpt-4-turbo-preview
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.0e-05
-    output_cost_per_token: 3.0e-05
-    max_input_tokens: 128000
-    max_output_tokens: 4096
-    metadata: &id342
-      notes: 'The preview GPT-4 model with improved instruction following, JSON mode,
-        reproducible outputs, parallel function calling, and more. Training data:
-        up to Dec 2023. **Note:** heavily rate limited by OpenAI while...'
-    supports_function_calling: true
-    litellm_provider: openrouter
-    openai/gpt-4-turbo-preview:
-      input_cost_per_token: 1.0e-05
-      output_cost_per_token: 3.0e-05
-      max_input_tokens: 128000
-      max_output_tokens: 4096
       metadata: *id342
-      supports_function_calling: true
       litellm_provider: openrouter
 - model_name: mistralai/mixtral-8x7b-instruct
   litellm_params:
@@ -8207,24 +8208,6 @@ model_list:
       metadata: *id346
       supports_function_calling: true
       litellm_provider: openrouter
-- model_name: mistralai/mistral-7b-instruct-v0.1
-  litellm_params:
-    model: openai/mistralai/mistral-7b-instruct-v0.1
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.1e-07
-    output_cost_per_token: 1.9e-07
-    max_input_tokens: 2824
-    metadata: &id347
-      notes: A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks,
-        with optimizations for speed and context length.
-    litellm_provider: openrouter
-    mistralai/mistral-7b-instruct-v0.1:
-      input_cost_per_token: 1.1e-07
-      output_cost_per_token: 1.9e-07
-      max_input_tokens: 2824
-      metadata: *id347
-      litellm_provider: openrouter
 - model_name: openai/gpt-3.5-turbo-instruct
   litellm_params:
     model: openai/gpt-3.5-turbo-instruct
@@ -8234,7 +8217,7 @@ model_list:
     output_cost_per_token: 2.0e-06
     max_input_tokens: 4095
     max_output_tokens: 4096
-    metadata: &id348
+    metadata: &id347
       notes: 'This model is a variant of GPT-3.5 Turbo tuned for instructional prompts
         and omitting chat-related optimizations. Training data: up to Sep 2021.'
     litellm_provider: openrouter
@@ -8243,6 +8226,24 @@ model_list:
       output_cost_per_token: 2.0e-06
       max_input_tokens: 4095
       max_output_tokens: 4096
+      metadata: *id347
+      litellm_provider: openrouter
+- model_name: mistralai/mistral-7b-instruct-v0.1
+  litellm_params:
+    model: openai/mistralai/mistral-7b-instruct-v0.1
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 1.1e-07
+    output_cost_per_token: 1.9e-07
+    max_input_tokens: 2824
+    metadata: &id348
+      notes: A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks,
+        with optimizations for speed and context length.
+    litellm_provider: openrouter
+    mistralai/mistral-7b-instruct-v0.1:
+      input_cost_per_token: 1.1e-07
+      output_cost_per_token: 1.9e-07
+      max_input_tokens: 2824
       metadata: *id348
       litellm_provider: openrouter
 - model_name: openai/gpt-3.5-turbo-16k
@@ -8359,33 +8360,6 @@ model_list:
       max_output_tokens: 4096
       metadata: *id353
       litellm_provider: openrouter
-- model_name: openai/gpt-3.5-turbo
-  litellm_params:
-    model: openai/gpt-3.5-turbo
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 5.0e-07
-    litellm_provider: openrouter
-    max_tokens: 4095
-    mode: chat
-    output_cost_per_token: 1.5e-06
-    supports_tool_choice: true
-    max_input_tokens: 16385
-    max_output_tokens: 4096
-    metadata: &id354
-      notes: 'GPT-3.5 Turbo is OpenAI''s fastest model. It can understand and generate
-        natural language or code, and is optimized for chat and traditional completion
-        tasks.
-
-
-        Training data up to Sep 2021.'
-    openai/gpt-3.5-turbo:
-      input_cost_per_token: 5.0e-07
-      output_cost_per_token: 1.5e-06
-      max_input_tokens: 16385
-      max_output_tokens: 4096
-      metadata: *id354
-      litellm_provider: openrouter
 - model_name: openai/gpt-4
   litellm_params:
     model: openai/gpt-4
@@ -8399,7 +8373,7 @@ model_list:
     supports_tool_choice: true
     max_input_tokens: 8191
     max_output_tokens: 4096
-    metadata: &id355
+    metadata: &id354
       notes: OpenAI's flagship model, GPT-4 is a large-scale multimodal language model
         capable of solving difficult problems with greater accuracy than previous
         models due to its broader general knowledge and advanced reasoning...
@@ -8407,6 +8381,33 @@ model_list:
       input_cost_per_token: 3.0e-05
       output_cost_per_token: 6.0e-05
       max_input_tokens: 8191
+      max_output_tokens: 4096
+      metadata: *id354
+      litellm_provider: openrouter
+- model_name: openai/gpt-3.5-turbo
+  litellm_params:
+    model: openai/gpt-3.5-turbo
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 5.0e-07
+    litellm_provider: openrouter
+    max_tokens: 4095
+    mode: chat
+    output_cost_per_token: 1.5e-06
+    supports_tool_choice: true
+    max_input_tokens: 16385
+    max_output_tokens: 4096
+    metadata: &id355
+      notes: 'GPT-3.5 Turbo is OpenAI''s fastest model. It can understand and generate
+        natural language or code, and is optimized for chat and traditional completion
+        tasks.
+
+
+        Training data up to Sep 2021.'
+    openai/gpt-3.5-turbo:
+      input_cost_per_token: 5.0e-07
+      output_cost_per_token: 1.5e-06
+      max_input_tokens: 16385
       max_output_tokens: 4096
       metadata: *id355
       litellm_provider: openrouter
@@ -16224,7 +16225,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - inflection/inflection-3-pi:
+  - inflection/inflection-3-productivity:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -16250,7 +16251,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - inflection/inflection-3-productivity:
+  - inflection/inflection-3-pi:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -16432,7 +16433,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - cohere/command-r-08-2024:
+  - cohere/command-r-plus-08-2024:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -16458,7 +16459,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - cohere/command-r-plus-08-2024:
+  - cohere/command-r-08-2024:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -16874,6 +16875,32 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
+  - openai/gpt-4o-2024-05-13:
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - openrouter/openrouter/auto
+    - openrouter/google/lyria-3-pro-preview
+    - openrouter/google/lyria-3-clip-preview
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - openrouter/openrouter/free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/openai/gpt-oss-20b:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/openrouter/bodybuilder
+    - openrouter/z-ai/glm-4.5-air:free
+    - lemonade/gpt-oss-20b-mxfp4-gguf
+    - lemonade/gpt-oss-120b-mxfp-gguf
+    - volcengine/deepseek-v3-2-251201
   - openai/gpt-4o:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -16926,32 +16953,6 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - openai/gpt-4o-2024-05-13:
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - openrouter/openrouter/auto
-    - openrouter/google/lyria-3-pro-preview
-    - openrouter/google/lyria-3-clip-preview
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - openrouter/openrouter/free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/openai/gpt-oss-20b:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/openrouter/bodybuilder
-    - openrouter/z-ai/glm-4.5-air:free
-    - lemonade/gpt-oss-20b-mxfp4-gguf
-    - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - meta-llama/llama-3-8b-instruct:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17134,7 +17135,7 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-  - openai/gpt-3.5-turbo-0613:
+  - openai/gpt-4-turbo-preview:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -17160,7 +17161,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - openai/gpt-4-turbo-preview:
+  - openai/gpt-3.5-turbo-0613:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -17290,7 +17291,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - mistralai/mistral-7b-instruct-v0.1:
+  - openai/gpt-3.5-turbo-instruct:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -17316,7 +17317,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - openai/gpt-3.5-turbo-instruct:
+  - mistralai/mistral-7b-instruct-v0.1:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -17472,7 +17473,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - openai/gpt-3.5-turbo:
+  - openai/gpt-4:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto
@@ -17498,7 +17499,7 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-  - openai/gpt-4:
+  - openai/gpt-3.5-turbo:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
     - openrouter/openrouter/auto

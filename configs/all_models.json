@@ -2527,30 +2527,6 @@
         "mode": "chat",
         "supports_tool_choice": false
     },
-    "meta-llama/llama-3.2-11b-vision-instruct": {
-        "input_cost_per_token": 4.9e-08,
-        "output_cost_per_token": 4.9e-08,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 16384,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and..."
-        },
-        "litellm_provider": "openrouter",
-        "meta-llama/llama-3.2-11b-vision-instruct": {
-            "input_cost_per_token": 4.9e-08,
-            "output_cost_per_token": 4.9e-08,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 16384,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "fireworks_ai/accounts/fireworks/models/": {
         "max_tokens": 40960,
         "max_input_tokens": 40960,
@@ -3257,52 +3233,6 @@
         "max_tokens": 131072,
         "supports_system_messages": true
     },
-    "openai/gpt-oss-20b": {
-        "input_cost_per_token": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 131072,
-        "max_output_tokens": 131072,
-        "max_tokens": 32768,
-        "mode": "chat",
-        "output_cost_per_token": 1.1e-07,
-        "source": "https://openrouter.ai/openai/gpt-oss-20b",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
-        },
-        "openai/gpt-oss-20b": {
-            "input_cost_per_token": 3e-08,
-            "output_cost_per_token": 1.1e-07,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 131072,
-            "metadata": {
-                "notes": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "openrouter/openai/gpt-oss-20b": {
-        "input_cost_per_token": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 131072,
-        "max_output_tokens": 131072,
-        "max_tokens": 32768,
-        "mode": "chat",
-        "output_cost_per_token": 1.1e-07,
-        "source": "https://openrouter.ai/openai/gpt-oss-20b",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
-        }
-    },
     "mistralai/mistral-small-3.1-24b-instruct": {
         "input_cost_per_token": 3e-08,
         "litellm_provider": "openrouter",
@@ -3610,6 +3540,51 @@
                 "notes": "Qwen-Turbo, based on Qwen2.5, is a 1M context model that provides fast speed and low cost, suitable for simple tasks."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openai/gpt-oss-20b": {
+        "input_cost_per_token": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 32768,
+        "max_tokens": 32768,
+        "mode": "chat",
+        "output_cost_per_token": 1.4e-07,
+        "source": "https://openrouter.ai/openai/gpt-oss-20b",
+        "supports_function_calling": true,
+        "supports_parallel_function_calling": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
+        },
+        "openai/gpt-oss-20b": {
+            "input_cost_per_token": 3e-08,
+            "output_cost_per_token": 1.4e-07,
+            "max_input_tokens": 131072,
+            "metadata": {
+                "notes": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/openai/gpt-oss-20b": {
+        "input_cost_per_token": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 32768,
+        "max_tokens": 32768,
+        "mode": "chat",
+        "output_cost_per_token": 1.4e-07,
+        "source": "https://openrouter.ai/openai/gpt-oss-20b",
+        "supports_function_calling": true,
+        "supports_parallel_function_calling": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
         }
     },
     "google/gemma-3-12b-it": {
@@ -8760,6 +8735,30 @@
             "litellm_provider": "openrouter"
         }
     },
+    "meta-llama/llama-3.2-11b-vision-instruct": {
+        "input_cost_per_token": 2.45e-07,
+        "output_cost_per_token": 2.45e-07,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 16384,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and..."
+        },
+        "litellm_provider": "openrouter",
+        "meta-llama/llama-3.2-11b-vision-instruct": {
+            "input_cost_per_token": 2.45e-07,
+            "output_cost_per_token": 2.45e-07,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 16384,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "deepinfra/google/gemini-2.0-flash-001": {
         "deprecation_date": "2026-06-01",
         "max_tokens": 1000000,
@@ -9016,6 +9015,26 @@
             "litellm_provider": "openrouter"
         }
     },
+    "google/gemma-4-26b-a4b-it": {
+        "input_cost_per_token": 1.2e-07,
+        "output_cost_per_token": 4e-07,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "metadata": {
+            "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
+        },
+        "litellm_provider": "openrouter",
+        "google/gemma-4-26b-a4b-it": {
+            "input_cost_per_token": 1.2e-07,
+            "output_cost_per_token": 4e-07,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "metadata": {
+                "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "deepinfra/meta-llama/llama-3.3-70b-instruct-turbo": {
         "max_tokens": 131072,
         "max_input_tokens": 131072,
@@ -9115,26 +9134,6 @@
         "supports_function_calling": true,
         "supports_tool_choice": true,
         "supports_response_schema": true
-    },
-    "google/gemma-4-26b-a4b-it": {
-        "input_cost_per_token": 1.3e-07,
-        "output_cost_per_token": 4e-07,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 262144,
-        "metadata": {
-            "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
-        },
-        "litellm_provider": "openrouter",
-        "google/gemma-4-26b-a4b-it": {
-            "input_cost_per_token": 1.3e-07,
-            "output_cost_per_token": 4e-07,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 262144,
-            "metadata": {
-                "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "nebius/qwen/qwen2.5-vl-72b-instruct": {
         "max_tokens": 131072,
@@ -23850,6 +23849,26 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
+    "z-ai/glm-5.1": {
+        "input_cost_per_token": 9.5e-07,
+        "output_cost_per_token": 3.15e-06,
+        "max_input_tokens": 202752,
+        "max_output_tokens": 65535,
+        "metadata": {
+            "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
+        },
+        "litellm_provider": "openrouter",
+        "z-ai/glm-5.1": {
+            "input_cost_per_token": 9.5e-07,
+            "output_cost_per_token": 3.15e-06,
+            "max_input_tokens": 202752,
+            "max_output_tokens": 65535,
+            "metadata": {
+                "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "baseten/zai-org/glm-5": {
         "input_cost_per_token": 9.5e-07,
         "litellm_provider": "baseten",
@@ -24714,24 +24733,6 @@
             "max_output_tokens": 8192,
             "metadata": {
                 "notes": "Qwen-Max, based on Qwen2.5, provides the best inference performance among [Qwen models](/qwen), especially for complex multi-step tasks. It's a large-scale MoE model that has been pretrained on over 20 trillion..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "z-ai/glm-5.1": {
-        "input_cost_per_token": 1.26e-06,
-        "output_cost_per_token": 3.96e-06,
-        "max_input_tokens": 202752,
-        "metadata": {
-            "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-5.1": {
-            "input_cost_per_token": 1.26e-06,
-            "output_cost_per_token": 3.96e-06,
-            "max_input_tokens": 202752,
-            "metadata": {
-                "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on..."
             },
             "litellm_provider": "openrouter"
         }
@@ -30207,26 +30208,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "inflection/inflection-3-pi": {
-        "input_cost_per_token": 2.5e-06,
-        "output_cost_per_token": 1e-05,
-        "max_input_tokens": 8000,
-        "max_output_tokens": 1024,
-        "metadata": {
-            "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi..."
-        },
-        "litellm_provider": "openrouter",
-        "inflection/inflection-3-pi": {
-            "input_cost_per_token": 2.5e-06,
-            "output_cost_per_token": 1e-05,
-            "max_input_tokens": 8000,
-            "max_output_tokens": 1024,
-            "metadata": {
-                "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "inflection/inflection-3-productivity": {
         "input_cost_per_token": 2.5e-06,
         "output_cost_per_token": 1e-05,
@@ -30243,6 +30224,26 @@
             "max_output_tokens": 1024,
             "metadata": {
                 "notes": "Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news. For emotional..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inflection/inflection-3-pi": {
+        "input_cost_per_token": 2.5e-06,
+        "output_cost_per_token": 1e-05,
+        "max_input_tokens": 8000,
+        "max_output_tokens": 1024,
+        "metadata": {
+            "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi..."
+        },
+        "litellm_provider": "openrouter",
+        "inflection/inflection-3-pi": {
+            "input_cost_per_token": 2.5e-06,
+            "output_cost_per_token": 1e-05,
+            "max_input_tokens": 8000,
+            "max_output_tokens": 1024,
+            "metadata": {
+                "notes": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi..."
             },
             "litellm_provider": "openrouter"
         }
