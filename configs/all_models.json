@@ -3233,46 +3233,6 @@
         "max_tokens": 131072,
         "supports_system_messages": true
     },
-    "mistralai/mistral-small-3.1-24b-instruct": {
-        "input_cost_per_token": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_tokens": 32000,
-        "mode": "chat",
-        "output_cost_per_token": 1.1e-07,
-        "supports_tool_choice": true,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 131072,
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
-        },
-        "mistralai/mistral-small-3.1-24b-instruct": {
-            "input_cost_per_token": 3e-08,
-            "output_cost_per_token": 1.1e-07,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 131072,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "openrouter/mistralai/mistral-small-3.1-24b-instruct": {
-        "input_cost_per_token": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_tokens": 32000,
-        "mode": "chat",
-        "output_cost_per_token": 1.1e-07,
-        "supports_tool_choice": true,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 131072,
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
-        }
-    },
     "novita/qwen/qwen2.5-7b-instruct": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -8312,7 +8272,6 @@
             "input_cost_per_token": 5e-08,
             "output_cost_per_token": 4e-07,
             "max_input_tokens": 400000,
-            "max_output_tokens": 128000,
             "metadata": {
                 "notes": "GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to its larger..."
             },
@@ -12165,6 +12124,43 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true
+    },
+    "mistralai/mistral-small-3.1-24b-instruct": {
+        "input_cost_per_token": 3.5e-07,
+        "litellm_provider": "openrouter",
+        "max_tokens": 32000,
+        "mode": "chat",
+        "output_cost_per_token": 5.6e-07,
+        "supports_tool_choice": true,
+        "max_input_tokens": 128000,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
+        },
+        "mistralai/mistral-small-3.1-24b-instruct": {
+            "input_cost_per_token": 3.5e-07,
+            "output_cost_per_token": 5.6e-07,
+            "max_input_tokens": 128000,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/mistralai/mistral-small-3.1-24b-instruct": {
+        "input_cost_per_token": 3.5e-07,
+        "litellm_provider": "openrouter",
+        "max_tokens": 32000,
+        "mode": "chat",
+        "output_cost_per_token": 5.6e-07,
+        "supports_tool_choice": true,
+        "max_input_tokens": 128000,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
+        }
     },
     "azure_ai/meta-llama-3.1-8b-instruct": {
         "input_cost_per_token": 3e-07,
@@ -18806,7 +18802,7 @@
         "input_cost_per_token": 2.5e-07,
         "output_cost_per_token": 2e-06,
         "max_input_tokens": 400000,
-        "max_output_tokens": 100000,
+        "max_output_tokens": 128000,
         "mode": "chat",
         "supports_vision": true,
         "metadata": {
@@ -18817,7 +18813,7 @@
             "input_cost_per_token": 2.5e-07,
             "output_cost_per_token": 2e-06,
             "max_input_tokens": 400000,
-            "max_output_tokens": 100000,
+            "max_output_tokens": 128000,
             "mode": "chat",
             "supports_vision": true,
             "metadata": {
@@ -27848,7 +27844,6 @@
             "input_cost_per_token": 2e-06,
             "output_cost_per_token": 8e-06,
             "max_input_tokens": 1047576,
-            "max_output_tokens": 32768,
             "metadata": {
                 "notes": "GPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and outperforms GPT-4o and..."
             },
@@ -31679,7 +31674,7 @@
         "input_cost_per_token": 1.75e-06,
         "litellm_provider": "openrouter",
         "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
+        "max_output_tokens": 32000,
         "max_tokens": 16384,
         "mode": "chat",
         "output_cost_per_token": 1.4e-05,
@@ -31694,11 +31689,29 @@
             "input_cost_per_token": 1.75e-06,
             "output_cost_per_token": 1.4e-05,
             "max_input_tokens": 128000,
-            "max_output_tokens": 16384,
+            "max_output_tokens": 32000,
             "metadata": {
                 "notes": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively \u201cthink\u201d on..."
             },
             "litellm_provider": "openrouter"
+        }
+    },
+    "openrouter/openai/gpt-5.2-chat": {
+        "input_cost_per_image": 0,
+        "cache_read_input_token_cost": 1.75e-07,
+        "input_cost_per_token": 1.75e-06,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 128000,
+        "max_output_tokens": 32000,
+        "max_tokens": 16384,
+        "mode": "chat",
+        "output_cost_per_token": 1.4e-05,
+        "supports_function_calling": true,
+        "supports_prompt_caching": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively \u201cthink\u201d on..."
         }
     },
     "azure/gpt-5.2-chat": {
@@ -31879,24 +31892,6 @@
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false,
         "supports_minimal_reasoning_effort": true
-    },
-    "openrouter/openai/gpt-5.2-chat": {
-        "input_cost_per_image": 0,
-        "cache_read_input_token_cost": 1.75e-07,
-        "input_cost_per_token": 1.75e-06,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 128000,
-        "max_output_tokens": 16384,
-        "max_tokens": 16384,
-        "mode": "chat",
-        "output_cost_per_token": 1.4e-05,
-        "supports_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "metadata": {
-            "notes": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively \u201cthink\u201d on..."
-        }
     },
     "google/gemini-3.1-pro-preview-customtools": {
         "input_cost_per_token": 2e-06,
@@ -41374,7 +41369,7 @@
         "input_cost_per_token": 3e-06,
         "litellm_provider": "openrouter",
         "max_input_tokens": 200000,
-        "max_output_tokens": 64000,
+        "max_output_tokens": 128000,
         "max_tokens": 128000,
         "mode": "chat",
         "output_cost_per_token": 1.5e-05,
@@ -41392,7 +41387,7 @@
             "input_cost_per_token": 3e-06,
             "output_cost_per_token": 1.5e-05,
             "max_input_tokens": 200000,
-            "max_output_tokens": 64000,
+            "max_output_tokens": 128000,
             "metadata": {
                 "notes": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rapid responses and..."
             },
@@ -41404,7 +41399,7 @@
         "input_cost_per_token": 3e-06,
         "litellm_provider": "openrouter",
         "max_input_tokens": 200000,
-        "max_output_tokens": 64000,
+        "max_output_tokens": 128000,
         "max_tokens": 128000,
         "mode": "chat",
         "output_cost_per_token": 1.5e-05,
@@ -41493,7 +41488,7 @@
         "input_cost_per_token_above_200k_tokens": 6e-06,
         "output_cost_per_token_above_200k_tokens": 2.25e-05,
         "litellm_provider": "openrouter",
-        "max_input_tokens": 200000,
+        "max_input_tokens": 1000000,
         "max_output_tokens": 64000,
         "max_tokens": 64000,
         "mode": "chat",
@@ -41512,7 +41507,7 @@
         "anthropic/claude-sonnet-4": {
             "input_cost_per_token": 3e-06,
             "output_cost_per_token": 1.5e-05,
-            "max_input_tokens": 200000,
+            "max_input_tokens": 1000000,
             "max_output_tokens": 64000,
             "metadata": {
                 "notes": "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, Sonnet 3.7, excelling in both coding and reasoning tasks with improved precision and controllability. Achieving state-of-the-art performance on SWE-bench (72.7%),..."
@@ -41530,7 +41525,7 @@
         "input_cost_per_token_above_200k_tokens": 6e-06,
         "output_cost_per_token_above_200k_tokens": 2.25e-05,
         "litellm_provider": "openrouter",
-        "max_input_tokens": 200000,
+        "max_input_tokens": 1000000,
         "max_output_tokens": 64000,
         "max_tokens": 64000,
         "mode": "chat",
