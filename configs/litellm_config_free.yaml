@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-c2f0fcaf6a5741cd900eb16389d8db46
+  master_key: sk-68d0156a8e9c47f894f7f6cb630091f0
   alerting:
   - slack
   - email
@@ -52,6 +52,20 @@ litellm_settings:
   set_verbose: false
   turn_off_message_logging: false
 model_list:
+- model_name: openrouter/elephant-alpha
+  litellm_params:
+    model: openai/openrouter/elephant-alpha
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 0.0
+    output_cost_per_token: 0.0
+    max_input_tokens: 262144
+    max_output_tokens: 32768
+    metadata:
+      notes: Elephant Alpha is a 100B-parameter text model focused on intelligence
+        efficiency, delivering strong reasoning performance while minimizing token
+        usage. It supports a 256K context window with up to 32K output...
+    litellm_provider: openrouter
 - model_name: google/gemma-4-26b-a4b-it:free
   litellm_params:
     model: openai/google/gemma-4-26b-a4b-it:free
@@ -471,6 +485,32 @@ router_settings:
   enable_pre_call_checks: true
   enable_tag_filtering: true
   fallbacks:
+  - openrouter/elephant-alpha:
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - openrouter/openrouter/auto
+    - openrouter/google/lyria-3-pro-preview
+    - openrouter/google/lyria-3-clip-preview
+    - vertex_ai-language-models/gemini-flash-experimental
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - openrouter/openrouter/free
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/openrouter/bodybuilder
+    - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/gpt-oss-20b-mxfp4-gguf
+    - lemonade/gpt-oss-120b-mxfp-gguf
+    - volcengine/deepseek-v3-2-251201
   - google/gemma-4-26b-a4b-it:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -484,6 +524,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
@@ -496,7 +537,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/gemma-4-31b-it:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -510,6 +550,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - volcengine/kimi-k2-thinking-251104
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
@@ -522,7 +563,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/lyria-3-pro-preview:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -535,6 +575,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -548,7 +589,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/lyria-3-clip-preview:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -561,6 +601,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -574,7 +615,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - nvidia/nemotron-3-super-120b-a12b:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -587,6 +627,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -600,7 +641,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - minimax/minimax-m2.5:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -614,6 +654,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -626,7 +667,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - openrouter/free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -639,6 +679,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -652,7 +693,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - arcee-ai/trinity-large-preview:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -666,6 +706,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -678,7 +719,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - liquid/lfm-2.5-1.2b-thinking:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -692,6 +732,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -704,7 +745,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - liquid/lfm-2.5-1.2b-instruct:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -718,6 +758,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -730,7 +771,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - nvidia/nemotron-3-nano-30b-a3b:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -744,6 +784,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -756,7 +797,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - openrouter/bodybuilder:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -770,6 +810,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -782,7 +823,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - nvidia/nemotron-nano-12b-v2-vl:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -796,6 +836,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -808,7 +849,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - qwen/qwen3-next-80b-a3b-instruct:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -822,6 +862,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -834,7 +875,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - nvidia/nemotron-nano-9b-v2:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -848,6 +888,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -860,7 +901,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - openai/gpt-oss-120b:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -874,6 +914,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -886,7 +927,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - openai/gpt-oss-20b:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -900,6 +940,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -912,7 +953,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - z-ai/glm-4.5-air:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -926,6 +966,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -938,7 +979,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - qwen/qwen3-coder:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -951,6 +991,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -964,7 +1005,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - cognitivecomputations/dolphin-mistral-24b-venice-edition:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -978,6 +1018,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -990,7 +1031,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - google/gemma-3n-e2b-it:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1004,6 +1044,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1016,7 +1057,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - google/gemma-3n-e4b-it:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1030,6 +1070,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1042,7 +1083,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - google/gemma-3-4b-it:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1055,6 +1095,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1068,7 +1109,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/gemma-3-12b-it:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1081,6 +1121,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1094,7 +1135,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/gemma-3-27b-it:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1107,6 +1147,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1120,7 +1161,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - meta-llama/llama-3.3-70b-instruct:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1134,6 +1174,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1146,7 +1187,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - meta-llama/llama-3.2-3b-instruct:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1160,6 +1200,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1172,7 +1213,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - nousresearch/hermes-3-llama-3.1-405b:free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1186,6 +1226,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1198,7 +1239,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   - openrouter/auto:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -1212,6 +1252,7 @@ router_settings:
     - openrouter/openrouter/free
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - lemonade/qwen3-4b-instruct-2507-gguf
+    - openrouter/elephant-alpha
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
@@ -1224,7 +1265,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - volcengine/deepseek-v3-2-251201
   retry_policy:
     AuthenticationErrorRetries: 3
     TimeoutErrorRetries: 3

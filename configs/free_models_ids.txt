@@ -77,6 +77,7 @@ meta_llama/llama-3.3-70b-instruct
 meta_llama/llama-3.3-8b-instruct
 google/gemma-4-26b-a4b-it:free
 google/gemma-4-31b-it:free
+openrouter/elephant-alpha
 google/gemma-3-27b-it:free
 openai/gpt-oss-120b:free
 z-ai/glm-4.5-air:free
