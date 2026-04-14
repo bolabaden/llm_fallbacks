@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import json
 import logging
 import os
+import urllib.request
 
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, Callable, ClassVar, Dict, Iterable
@@ -263,6 +265,8 @@ class CustomProviderConfig(BaseProviderConfig):
     auto_fetch_models: bool = True
     model_specs: Dict[str, LiteLLMBaseModelSpec] = field(default_factory=dict)
     free_models: Dict[str, LiteLLMBaseModelSpec] = field(default_factory=dict)
+    live_model_keys: set[str] = field(default_factory=set)
+    live_fetch_succeeded: bool = False
 
     def __post_init__(self):
         self._requested_models: Any = None
@@ -330,24 +334,36 @@ class CustomProviderConfig(BaseProviderConfig):
                 self.free_models.setdefault(model_name, model_spec.copy()).update(model_spec)
 
     def _process_requested_models(self, models: Dict[str, LiteLLMBaseModelSpec]):
+        parsed_requested_models: Dict[str, LiteLLMBaseModelSpec] = {}
         if self.parse_models_function is not None and self._requested_models is not None:
-            parsed_requested_models: Dict[str, LiteLLMBaseModelSpec] = self.parse_models_function(
+            parsed_requested_models = self.parse_models_function(
                 self.provider_name, self._requested_models
             )
-            models.update(parsed_requested_models)
         elif isinstance(self._requested_models, list) and self._requested_models:
             first_entry = next(iter(self._requested_models))
-            if not isinstance(first_entry, str):
+            if isinstance(first_entry, str):
+                parsed_requested_models = {
+                    model_name: {"litellm_provider": self.provider_name}
+                    for model_name in self._requested_models
+                    if isinstance(model_name, str)
+                }
+            else:
                 print(repr(models))
                 print(f"unsupported format from '{self.base_url}' ({self.provider_name}) see above")
                 return
-            models.update({model.get("name", model.get("model_name")): {} for model in self._requested_models})
         elif isinstance(self._requested_models, dict):
             object_models_list = self._requested_models.get("object")
             if object_models_list == "list":
-                models.update(self._parse_standard_model_response(self.provider_name, self._requested_models))
+                parsed_requested_models = self._parse_standard_model_response(self.provider_name, self._requested_models)
             else:
-                models.update(self._requested_models)
+                parsed_requested_models = self._requested_models
+
+        models.update(parsed_requested_models)
+        if self.live_fetch_succeeded:
+            self.live_model_keys = {
+                _normalize_model_identifier(self.provider_name, model_name)
+                for model_name in parsed_requested_models
+            }
 
     def _parse_models(self):
         models: Dict[str, LiteLLMBaseModelSpec] = (  # pyright: ignore[reportAssignmentType]
@@ -360,6 +376,8 @@ class CustomProviderConfig(BaseProviderConfig):
             if self.custom_get_models_from_api is not None:
                 try:
                     self._requested_models = self.custom_get_models_from_api(self.api_key)
+                    if self._requested_models is not None:
+                        self.live_fetch_succeeded = True
                 except Exception:
                     logger.warning(f"Failed to get models from '{self.custom_get_models_from_api}'.", exc_info=True)
             if self._requested_models is None and self.base_url and self.base_url.strip():
@@ -371,17 +389,23 @@ class CustomProviderConfig(BaseProviderConfig):
 
     def _get_models_from_api(self):
         try:
-            import requests
-
-            response = requests.get(f"{self.base_url}/models", headers={"Authorization": f"Bearer {self.api_key}"})
-            response.raise_for_status()
+            request = urllib.request.Request(
+                f"{self.base_url}/models",
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Accept": "application/json",
+                    "User-Agent": "curl/8.0.0",
+                },
+            )
+            with urllib.request.urlopen(request, timeout=15) as response:
+                self._requested_models = json.loads(response.read().decode("utf-8"))
         except Exception:
             logger.warning(
                 f"Failed to get models from '{self.base_url}/models'. Cached models will be used instead.",
                 exc_info=True,
             )
         else:
-            self._requested_models = response.json()
+            self.live_fetch_succeeded = True
 
 
 def _parse_openrouter_models_response(
@@ -457,6 +481,31 @@ def _parse_openrouter_models_response(
     return parsed_requested_models
 
 
+def _normalize_model_identifier(provider_name: str, model_name: str) -> str:
+    normalized_name = model_name.casefold()
+    if provider_name.casefold() == "openrouter":
+        return normalized_name.replace("openrouter/openrouter/", "openrouter/")
+    return normalized_name
+
+
+def _should_include_base_model(
+    model_name: str,
+    model_spec: LiteLLMBaseModelSpec,
+    live_provider_models: Dict[str, set[str]],
+    seen_model_names: set[str],
+) -> bool:
+    provider_name = str(model_spec.get("litellm_provider", "")).casefold()
+    canonical_name = _normalize_model_identifier(provider_name, model_name)
+
+    if canonical_name in seen_model_names:
+        return False
+
+    if provider_name in live_provider_models and canonical_name not in live_provider_models[provider_name]:
+        return False
+
+    return True
+
+
 if "CUSTOM_PROVIDERS" not in globals():
     CUSTOM_PROVIDERS: list[CustomProviderConfig] = [
         #        CustomProviderConfig(
@@ -476,29 +525,37 @@ if "CUSTOM_PROVIDERS" not in globals():
             parse_models_function=_parse_openrouter_models_response,
         ),
         CustomProviderConfig(
-            provider_name="vertexai",
-            base_url="https://us-central1-aiplatform.googleapis.com/v1",
+            provider_name="openai",
+            base_url="https://api.openai.com/v1",
             api_key_required=False,
-            auto_fetch_models=False,
         ),
         CustomProviderConfig(
-            provider_name="yandex",
-            base_url="https://llm.api.cloud.yandex.net",
+            provider_name="groq",
+            base_url="https://api.groq.com/openai/v1",
             api_key_required=False,
-            auto_fetch_models=False,
         ),
     ]
+
+LIVE_PROVIDER_MODELS: Dict[str, set[str]] = {
+    provider.provider_name.casefold(): provider.live_model_keys
+    for provider in CUSTOM_PROVIDERS
+    if provider.live_fetch_succeeded and provider.live_model_keys
+}
 
 all_configs: Dict[str, LiteLLMBaseModelSpec] = {
     model_name: config for provider in CUSTOM_PROVIDERS for model_name, config in provider.model_specs.items()
 }
-all_configs.update(
-    {
-        model_name: config
-        for model_name, config in BaseProviderConfig.ALL_KNOWN_MODELS.items()
-        if model_name not in all_configs
-    }
-)
+seen_model_names: set[str] = {
+    _normalize_model_identifier(str(config.get("litellm_provider", "")), model_name)
+    for model_name, config in all_configs.items()
+}
+for model_name, config in BaseProviderConfig.ALL_KNOWN_MODELS.items():
+    if not _should_include_base_model(model_name, config, LIVE_PROVIDER_MODELS, seen_model_names):
+        continue
+
+    all_configs[model_name] = config
+    seen_model_names.add(_normalize_model_identifier(str(config.get("litellm_provider", "")), model_name))
+
 ALL_MODELS: list[tuple[str, LiteLLMBaseModelSpec]] = sort_models_by_cost_and_limits(all_configs)
 FREE_MODELS: list[tuple[str, LiteLLMBaseModelSpec]] = sort_models_by_cost_and_limits(all_configs, free_only=True)
 ALL_CHAT_MODELS: list[tuple[str, LiteLLMBaseModelSpec]] = sort_models_by_cost_and_limits(

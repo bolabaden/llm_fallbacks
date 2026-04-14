@@ -27,6 +27,13 @@ def test_get_fallback_list():
     assert isinstance(fallbacks, list)
 
 
+def test_get_fallback_list_prioritizes_openrouter_free_if_available():
+    """Prefer the OpenRouter free router when it is present in the chat fallback list."""
+    fallbacks: list[str] = get_fallback_list("chat")
+    if "openrouter/free" in fallbacks:
+        assert fallbacks[0] == "openrouter/free"
+
+
 def test_filter_models():
     """Test that filter_models returns a list."""
     models: list[str] = filter_models(model_type="chat")

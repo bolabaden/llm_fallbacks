@@ -13,6 +13,8 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
+PRIORITY_MODEL_ORDER: tuple[str, ...] = ("openrouter/free",)
+
 _litellm_models_cache: dict[str, Any] | None = None
 _litellm_models_cache_lock = threading.Lock()
 
@@ -124,8 +126,11 @@ def get_litellm_models(*, test_prepend_provider: bool = False) -> dict[str, Lite
                 .replace("vertex_ai-ai21_models", "vertex_ai")
                 .replace("vertex_ai/vertex_ai/", "vertex_ai/")
                 .replace("fireworks_ai/fireworks_ai/", "fireworks_ai/")
+                .replace("openrouter/openrouter/", "openrouter/")
             )
-        models[model_key] = v
+        existing_spec = models.get(model_key, {})
+        existing_spec.update(v)
+        models[model_key] = existing_spec
 
     return models
 
@@ -205,6 +210,14 @@ def calculate_approx_max_tokens(model_spec: LiteLLMBaseModelSpec) -> float:
     return final_total
 
 
+def get_model_priority_rank(model_name: str) -> int:
+    normalized_name = model_name.casefold().replace("openrouter/openrouter/", "openrouter/")
+    try:
+        return PRIORITY_MODEL_ORDER.index(normalized_name)
+    except ValueError:
+        return len(PRIORITY_MODEL_ORDER)
+
+
 def sort_models_by_cost_and_limits(
     models: dict[str, LiteLLMBaseModelSpec], free_only: bool = False
 ) -> list[tuple[str, LiteLLMBaseModelSpec]]:
@@ -255,11 +268,13 @@ def sort_models_by_cost_and_limits(
 
     # Sort models by cost (low to high)
     # If costs are exactly the same, sort by max tokens (high to low)
-    def _sort_key(x: tuple[str, LiteLLMBaseModelSpec]) -> tuple[float, float]:
+    def _sort_key(x: tuple[str, LiteLLMBaseModelSpec]) -> tuple[int, float, float, str]:
         max_tokens = model_costs[x[0]]["approx_max_tokens"]
         sort_value = (
+            get_model_priority_rank(x[0]),
             _negative_one_to_inf(model_costs[x[0]]["approx_cost_per_token"]),
             float("inf") if max_tokens == -1 else -max_tokens,
+            x[0],
         )
         return sort_value
 
@@ -563,12 +578,20 @@ def get_fallback_list(model_type: str) -> list[str]:
     ------
         ValueError: If model_type is not recognized
     """
+    chat_fallbacks = sort_models_by_cost_and_limits(get_chat_models())
+    try:
+        from llm_fallbacks.config import ALL_CHAT_MODELS
+
+        chat_fallbacks = ALL_CHAT_MODELS
+    except Exception:
+        pass
+
     fallbacks: dict[str, list[tuple[str, LiteLLMBaseModelSpec]]] = {
         "audio_input": sort_models_by_cost_and_limits(get_audio_input_models()),
         "audio_output": sort_models_by_cost_and_limits(get_audio_output_models()),
         "audio_speech": sort_models_by_cost_and_limits(get_audio_speech_models()),
         "audio_transcription": sort_models_by_cost_and_limits(get_audio_transcription_models()),
-        "chat": sort_models_by_cost_and_limits(get_chat_models()),
+        "chat": chat_fallbacks,
         "completion": sort_models_by_cost_and_limits(get_completion_models()),
         "embedding": sort_models_by_cost_and_limits(get_embedding_models()),
         "function_calling": sort_models_by_cost_and_limits(get_function_calling_models()),

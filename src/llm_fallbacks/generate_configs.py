@@ -32,7 +32,7 @@ if not importlib.util.find_spec("llm_fallbacks"):
     sys.path.append(str(Path(__file__).parents[1]))
 
 from llm_fallbacks.config import ALL_MODELS, CUSTOM_PROVIDERS, FREE_MODELS, CustomProviderConfig, LiteLLMYAMLConfig
-from llm_fallbacks.core import calculate_cost_per_token
+from llm_fallbacks.core import calculate_cost_per_token, get_model_priority_rank
 from llm_fallbacks.quality import compute_quality_score
 
 logger = logging.getLogger(__name__)
@@ -90,8 +90,8 @@ def build_free_models_list(free_models: list[tuple[str, dict[str, Any]]]) -> lis
         }
         entries.append(entry)
 
-    # Sort by quality_score descending, then by id for stability
-    entries.sort(key=lambda e: (-e["quality_score"], e["id"]))
+    # Keep pinned fallback entries ahead of raw quality ranking, then sort by quality descending.
+    entries.sort(key=lambda e: (get_model_priority_rank(e["id"]), -e["quality_score"], e["id"]))
     return entries
 
 

@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from llm_fallbacks.config import LiteLLMBaseModelSpec
+from llm_fallbacks.config import ALL_CHAT_MODELS, LiteLLMBaseModelSpec
 from llm_fallbacks.core import (
     get_audio_input_models,
     get_audio_output_models,
@@ -34,7 +34,7 @@ from llm_fallbacks.core import (
 )
 
 # Chat Model Fallbacks
-CHAT_MODEL_PRIORITY_ORDER: list[tuple[str, LiteLLMBaseModelSpec]] = sort_models_by_cost_and_limits(get_chat_models())
+CHAT_MODEL_PRIORITY_ORDER: list[tuple[str, LiteLLMBaseModelSpec]] = ALL_CHAT_MODELS
 
 # Completion Model Fallbacks
 COMPLETION_MODEL_PRIORITY_ORDER: list[tuple[str, LiteLLMBaseModelSpec]] = sort_models_by_cost_and_limits(
