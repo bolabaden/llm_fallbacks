@@ -4805,16 +4805,16 @@
                 }
             },
             "google/gemma-3n-e4b-it": {
-                "input_cost_per_token": 2e-08,
-                "output_cost_per_token": 4e-08,
+                "input_cost_per_token": 6e-08,
+                "output_cost_per_token": 1.2e-07,
                 "max_input_tokens": 32768,
                 "metadata": {
                     "notes": "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resource devices, such as phones, laptops, and tablets. It supports multimodal inputs\u2014including text, visual data, and audio\u2014enabling diverse tasks..."
                 },
                 "litellm_provider": "openrouter",
                 "google/gemma-3n-e4b-it": {
-                    "input_cost_per_token": 2e-08,
-                    "output_cost_per_token": 4e-08,
+                    "input_cost_per_token": 6e-08,
+                    "output_cost_per_token": 1.2e-07,
                     "max_input_tokens": 32768,
                     "metadata": {
                         "notes": "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resource devices, such as phones, laptops, and tablets. It supports multimodal inputs\u2014including text, visual data, and audio\u2014enabling diverse tasks..."
@@ -4944,6 +4944,30 @@
                     "max_input_tokens": 32768,
                     "metadata": {
                         "notes": "Coder\u2011Large is a 32 B\u2011parameter offspring of Qwen 2.5\u2011Instruct that has been further trained on permissively\u2011licensed GitHub, CodeSearchNet and synthetic bug\u2011fix corpora. It supports a 32k context window, enabling multi\u2011file..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "meta-llama/llama-guard-4-12b:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 163840,
+                "max_output_tokens": 65000,
+                "mode": "chat",
+                "supports_vision": true,
+                "metadata": {
+                    "notes": "Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM..."
+                },
+                "litellm_provider": "openrouter",
+                "meta-llama/llama-guard-4-12b:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "max_input_tokens": 163840,
+                    "max_output_tokens": 65000,
+                    "mode": "chat",
+                    "supports_vision": true,
+                    "metadata": {
+                        "notes": "Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -8068,6 +8092,18 @@
                 "max_output_tokens": 2048,
                 "metadata": {
                     "notes": "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resource devices, such as phones, laptops, and tablets. It supports multimodal inputs\u2014including text, visual data, and audio\u2014enabling diverse tasks..."
+                },
+                "litellm_provider": "openrouter"
+            },
+            "meta-llama/llama-guard-4-12b:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 163840,
+                "max_output_tokens": 65000,
+                "mode": "chat",
+                "supports_vision": true,
+                "metadata": {
+                    "notes": "Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM..."
                 },
                 "litellm_provider": "openrouter"
             },
