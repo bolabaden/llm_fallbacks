@@ -203,6 +203,7 @@ gradient_ai/openai-gpt-4o-mini
 perplexity/anthropic/claude-haiku-4-5
 perplexity/anthropic/claude-opus-4-5
 perplexity/anthropic/claude-opus-4-6
+perplexity/anthropic/claude-opus-4-7
 perplexity/anthropic/claude-sonnet-4-5
 perplexity/google/gemini-2.5-flash
 perplexity/google/gemini-2.5-pro
