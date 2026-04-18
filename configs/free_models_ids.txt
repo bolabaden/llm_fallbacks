@@ -18,6 +18,7 @@ github_copilot/gpt-5-mini
 github_copilot/gpt-5.1
 github_copilot/gpt-5.2
 dashscope/qwen3.5-plus
+moonshotai/kimi-k2.5
 dashscope/qwen3-vl-plus
 github_copilot/gpt-4.1
 github_copilot/gpt-4.1-2025-04-14
@@ -62,7 +63,6 @@ zai/glm-4.5-flash
 meta_llama/llama-4-maverick-17b-128e-instruct-fp8
 meta_llama/llama-4-scout-17b-16e-instruct-fp8
 dashscope/qwen3-30b-a3b
-meta-llama/llama-guard-4-12b:free
 github_copilot/gpt-4o
 github_copilot/gpt-4o-2024-05-13
 vertex_ai/meta/llama-3.1-70b-instruct-maas
