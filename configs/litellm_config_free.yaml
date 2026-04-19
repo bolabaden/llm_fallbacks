@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-ac46695338ad49f8a6b57af2513ee60a
+  master_key: sk-c5f322dc5a13427ebb7b7b1d5e1954be
   alerting:
   - slack
   - email
@@ -177,21 +177,6 @@ model_list:
         from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active
         parameters per token using 4-of-256 expert routing. It excels in creative
         writing,...
-    litellm_provider: openrouter
-- model_name: moonshotai/kimi-k2.5
-  litellm_params:
-    model: openai/moonshotai/kimi-k2.5
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 0.0
-    output_cost_per_token: 0.0
-    max_input_tokens: 256000
-    mode: chat
-    supports_vision: true
-    metadata:
-      notes: Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art
-        visual coding capability and a self-directed agent swarm paradigm. Built on
-        Kimi K2 with continued pretraining over approximately 15T mixed...
     litellm_provider: openrouter
 - model_name: liquid/lfm-2.5-1.2b-thinking:free
   litellm_params:
@@ -734,32 +719,6 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-  - moonshotai/kimi-k2.5:
-    - openrouter/free
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - openrouter/google/lyria-3-clip-preview
-    - openrouter/google/lyria-3-pro-preview
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/z-ai/glm-4.5-air:free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/gpt-oss-120b-mxfp-gguf
-    - lemonade/gpt-oss-20b-mxfp4-gguf
-    - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - liquid/lfm-2.5-1.2b-thinking:free:
     - openrouter/free
     - gemini/gemini-exp-1206

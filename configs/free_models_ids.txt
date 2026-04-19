@@ -18,7 +18,6 @@ github_copilot/gpt-5-mini
 github_copilot/gpt-5.1
 github_copilot/gpt-5.2
 dashscope/qwen3.5-plus
-moonshotai/kimi-k2.5
 dashscope/qwen3-vl-plus
 github_copilot/gpt-4.1
 github_copilot/gpt-4.1-2025-04-14
