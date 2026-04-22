@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-e8701e7473624ffeafce3c7f5b37f82f
+  master_key: sk-0afb1411b6d3432e91b901efb40d4a68
   alerting:
   - slack
   - email
@@ -52,9 +52,9 @@ litellm_settings:
   set_verbose: false
   turn_off_message_logging: false
 model_list:
-- model_name: openrouter/elephant-alpha
+- model_name: inclusionai/ling-2.6-flash:free
   litellm_params:
-    model: openai/openrouter/elephant-alpha
+    model: openai/inclusionai/ling-2.6-flash:free
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 0.0
@@ -62,9 +62,21 @@ model_list:
     max_input_tokens: 262144
     max_output_tokens: 32768
     metadata:
-      notes: Elephant Alpha is a 100B-parameter text model focused on intelligence
-        efficiency, delivering strong performance while minimizing token usage. It
-        supports a 256K context window with up to 32K output tokens,...
+      notes: Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B
+        total parameters and 7.4B active parameters, designed for real-world agents
+        that require fast responses, strong execution, and high token efficiency....
+    litellm_provider: openrouter
+- model_name: openrouter/pareto-code
+  litellm_params:
+    model: openai/openrouter/pareto-code
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: -1.0
+    output_cost_per_token: -1.0
+    metadata:
+      notes: The Pareto Router is a way to have OpenRouter always pick a strong coding
+        model for your needs without committing to a specific one. You express a single
+        `min_coding_score` preference...
     litellm_provider: openrouter
 - model_name: google/gemma-4-26b-a4b-it:free
   litellm_params:
@@ -467,9 +479,9 @@ model_list:
     input_cost_per_token: -1.0
     output_cost_per_token: -1.0
     metadata:
-      notes: Your prompt will be processed by a meta-model and routed to one of dozens
-        of models (see below), optimizing for the best possible output. To see which
-        model was used,...
+      notes: '"Your prompt will be processed by a meta-model and routed to one of
+        dozens of models (see below), optimizing for the best possible output. To
+        see which model was used,...'
     litellm_provider: openrouter
 router_settings:
   allowed_fails: 3
@@ -485,10 +497,11 @@ router_settings:
   enable_pre_call_checks: true
   enable_tag_filtering: true
   fallbacks:
-  - openrouter/elephant-alpha:
+  - inclusionai/ling-2.6-flash:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -510,11 +523,37 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
+  - openrouter/pareto-code:
+    - openrouter/free
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
+    - openrouter/google/lyria-3-clip-preview
+    - openrouter/google/lyria-3-pro-preview
+    - vertex_ai-language-models/gemini-flash-experimental
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/gpt-oss-120b-mxfp-gguf
+    - lemonade/gpt-oss-20b-mxfp4-gguf
+    - volcengine/deepseek-v3-2-251201
   - google/gemma-4-26b-a4b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -524,8 +563,8 @@ router_settings:
     - lemonade/qwen3-4b-instruct-2507-gguf
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -536,11 +575,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - google/gemma-4-31b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -550,8 +589,8 @@ router_settings:
     - lemonade/qwen3-4b-instruct-2507-gguf
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -562,11 +601,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - google/lyria-3-pro-preview:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - vertex_ai-language-models/gemini-flash-experimental
     - openrouter/nvidia/nemotron-3-super-120b-a12b:free
@@ -576,8 +615,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -588,11 +627,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - google/lyria-3-clip-preview:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
     - openrouter/nvidia/nemotron-3-super-120b-a12b:free
@@ -602,8 +641,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -614,11 +653,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - nvidia/nemotron-3-super-120b-a12b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -628,8 +667,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -640,11 +679,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - minimax/minimax-m2.5:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -655,8 +694,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -666,10 +705,10 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - openrouter/free:
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - openrouter/nvidia/nemotron-3-super-120b-a12b:free
@@ -679,8 +718,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -692,11 +731,11 @@ router_settings:
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
     - gemini/gemma-3-27b-it
-    - gigachat/gigachat-2-lite
   - arcee-ai/trinity-large-preview:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -707,8 +746,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -718,11 +757,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - liquid/lfm-2.5-1.2b-thinking:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -733,8 +772,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -744,11 +783,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - liquid/lfm-2.5-1.2b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -759,8 +798,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -770,11 +809,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - nvidia/nemotron-3-nano-30b-a3b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -785,8 +824,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
@@ -796,11 +835,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - openrouter/bodybuilder:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -811,8 +850,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -822,11 +861,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - nvidia/nemotron-nano-12b-v2-vl:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -837,8 +876,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -848,11 +887,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - qwen/qwen3-next-80b-a3b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -863,8 +902,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
@@ -874,11 +913,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - nvidia/nemotron-nano-9b-v2:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -889,8 +928,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -900,11 +939,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - openai/gpt-oss-120b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -915,8 +954,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
@@ -926,11 +965,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - openai/gpt-oss-20b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -941,8 +980,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -952,11 +991,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - z-ai/glm-4.5-air:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -967,8 +1006,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -978,11 +1017,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - qwen/qwen3-coder:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -992,8 +1031,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1004,11 +1043,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - cognitivecomputations/dolphin-mistral-24b-venice-edition:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -1019,8 +1058,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1030,11 +1069,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/gemma-3n-e2b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -1045,8 +1084,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1056,11 +1095,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/gemma-3n-e4b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -1071,8 +1110,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1082,11 +1121,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - google/gemma-3-4b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - openrouter/nvidia/nemotron-3-super-120b-a12b:free
@@ -1096,8 +1135,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1108,11 +1147,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - google/gemma-3-12b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - openrouter/nvidia/nemotron-3-super-120b-a12b:free
@@ -1122,8 +1161,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1134,11 +1173,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - google/gemma-3-27b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - openrouter/nvidia/nemotron-3-super-120b-a12b:free
@@ -1148,8 +1187,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1160,11 +1199,11 @@ router_settings:
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
     - zai/glm-4.5-flash
-    - gemini/gemma-3-27b-it
   - meta-llama/llama-3.3-70b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -1175,8 +1214,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1186,11 +1225,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - meta-llama/llama-3.2-3b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -1201,8 +1240,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1212,11 +1251,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - nousresearch/hermes-3-llama-3.1-405b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -1227,8 +1266,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1238,11 +1277,11 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   - openrouter/auto:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - vertex_ai-language-models/gemini-flash-experimental
@@ -1253,8 +1292,8 @@ router_settings:
     - lemonade/qwen3-coder-30b-a3b-instruct-gguf
     - openrouter/google/gemma-4-26b-a4b-it:free
     - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-flash:free
     - volcengine/kimi-k2-thinking-251104
-    - openrouter/elephant-alpha
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
@@ -1264,7 +1303,6 @@ router_settings:
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
     - volcengine/deepseek-v3-2-251201
-    - zai/glm-4.5-flash
   retry_policy:
     AuthenticationErrorRetries: 3
     TimeoutErrorRetries: 3

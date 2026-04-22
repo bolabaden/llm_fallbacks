@@ -399,6 +399,27 @@
     "quality_source": "heuristic_v1"
   },
   {
+    "id": "anthropic.claude-mythos-preview",
+    "provider": "bedrock",
+    "mode": "chat",
+    "is_free": true,
+    "input_cost_per_token": 0,
+    "output_cost_per_token": 0,
+    "context_length": 1000000,
+    "max_output_tokens": 128000,
+    "supports_vision": true,
+    "supports_function_calling": true,
+    "supports_tool_choice": true,
+    "supports_response_schema": false,
+    "supports_system_messages": false,
+    "supports_audio_input": false,
+    "supports_audio_output": false,
+    "supports_pdf_input": false,
+    "supports_prompt_caching": false,
+    "quality_score": 66.32,
+    "quality_source": "heuristic_v1"
+  },
+  {
     "id": "dashscope/qwen3.5-plus",
     "provider": "dashscope",
     "mode": "chat",
@@ -1638,7 +1659,7 @@
     "quality_source": "heuristic_v1"
   },
   {
-    "id": "openrouter/elephant-alpha",
+    "id": "inclusionai/ling-2.6-flash:free",
     "provider": "openrouter",
     "mode": "",
     "is_free": true,

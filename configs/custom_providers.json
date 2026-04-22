@@ -5,9 +5,89 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "openai/gpt-5.4-image-2": {
+                "input_cost_per_token": 8e-06,
+                "output_cost_per_token": 1.5e-05,
+                "max_input_tokens": 272000,
+                "max_output_tokens": 128000,
+                "metadata": {
+                    "notes": "[GPT-5.4](https://openrouter.ai/openai/gpt-5.4) Image 2 combines OpenAI's GPT-5.4 model with state-of-the-art image generation capabilities from GPT Image 2. It enables rich multimodal workflows, allowing users to seamlessly move between reasoning, coding, and..."
+                },
+                "litellm_provider": "openrouter",
+                "openai/gpt-5.4-image-2": {
+                    "input_cost_per_token": 8e-06,
+                    "output_cost_per_token": 1.5e-05,
+                    "max_input_tokens": 272000,
+                    "max_output_tokens": 128000,
+                    "metadata": {
+                        "notes": "[GPT-5.4](https://openrouter.ai/openai/gpt-5.4) Image 2 combines OpenAI's GPT-5.4 model with state-of-the-art image generation capabilities from GPT Image 2. It enables rich multimodal workflows, allowing users to seamlessly move between reasoning, coding, and..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "inclusionai/ling-2.6-flash:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 32768,
+                "metadata": {
+                    "notes": "Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency...."
+                },
+                "litellm_provider": "openrouter",
+                "inclusionai/ling-2.6-flash:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 32768,
+                    "metadata": {
+                        "notes": "Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency...."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "~anthropic/claude-opus-latest": {
+                "input_cost_per_token": 5e-06,
+                "output_cost_per_token": 2.5e-05,
+                "max_input_tokens": 1000000,
+                "max_output_tokens": 128000,
+                "mode": "chat",
+                "supports_vision": true,
+                "metadata": {
+                    "notes": "This model always redirects to the latest model in the Claude Opus family."
+                },
+                "litellm_provider": "openrouter",
+                "~anthropic/claude-opus-latest": {
+                    "input_cost_per_token": 5e-06,
+                    "output_cost_per_token": 2.5e-05,
+                    "max_input_tokens": 1000000,
+                    "max_output_tokens": 128000,
+                    "mode": "chat",
+                    "supports_vision": true,
+                    "metadata": {
+                        "notes": "This model always redirects to the latest model in the Claude Opus family."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "openrouter/pareto-code": {
+                "input_cost_per_token": -1.0,
+                "output_cost_per_token": -1.0,
+                "metadata": {
+                    "notes": "The Pareto Router is a way to have OpenRouter always pick a strong coding model for your needs without committing to a specific one. You express a single `min_coding_score` preference..."
+                },
+                "litellm_provider": "openrouter",
+                "openrouter/pareto-code": {
+                    "input_cost_per_token": -1.0,
+                    "output_cost_per_token": -1.0,
+                    "metadata": {
+                        "notes": "The Pareto Router is a way to have OpenRouter always pick a strong coding model for your needs without committing to a specific one. You express a single `min_coding_score` preference..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "moonshotai/kimi-k2.6": {
-                "input_cost_per_token": 6e-07,
-                "output_cost_per_token": 2.8e-06,
+                "input_cost_per_token": 8e-07,
+                "output_cost_per_token": 3.5e-06,
                 "max_input_tokens": 262144,
                 "max_output_tokens": 262144,
                 "mode": "chat",
@@ -17,8 +97,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "moonshotai/kimi-k2.6": {
-                    "input_cost_per_token": 6e-07,
-                    "output_cost_per_token": 2.8e-06,
+                    "input_cost_per_token": 8e-07,
+                    "output_cost_per_token": 3.5e-06,
                     "max_input_tokens": 262144,
                     "max_output_tokens": 262144,
                     "mode": "chat",
@@ -49,26 +129,6 @@
                     "supports_vision": true,
                     "metadata": {
                         "notes": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "openrouter/elephant-alpha": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 262144,
-                "max_output_tokens": 32768,
-                "metadata": {
-                    "notes": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong performance while minimizing token usage. It supports a 256K context window with up to 32K output tokens,..."
-                },
-                "litellm_provider": "openrouter",
-                "openrouter/elephant-alpha": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "max_input_tokens": 262144,
-                    "max_output_tokens": 32768,
-                    "metadata": {
-                        "notes": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong performance while minimizing token usage. It supports a 256K context window with up to 32K output tokens,..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -138,17 +198,19 @@
                 }
             },
             "google/gemma-4-26b-a4b-it": {
-                "input_cost_per_token": 8e-08,
+                "input_cost_per_token": 7e-08,
                 "output_cost_per_token": 3.5e-07,
                 "max_input_tokens": 262144,
+                "max_output_tokens": 262144,
                 "metadata": {
                     "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
                 },
                 "litellm_provider": "openrouter",
                 "google/gemma-4-26b-a4b-it": {
-                    "input_cost_per_token": 8e-08,
+                    "input_cost_per_token": 7e-08,
                     "output_cost_per_token": 3.5e-07,
                     "max_input_tokens": 262144,
+                    "max_output_tokens": 262144,
                     "metadata": {
                         "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
                     },
@@ -1164,13 +1226,13 @@
                 }
             },
             "z-ai/glm-5": {
-                "input_cost_per_token": 7.2e-07,
+                "input_cost_per_token": 6.5e-07,
                 "litellm_provider": "openrouter",
-                "max_input_tokens": 80000,
-                "max_output_tokens": 131072,
+                "max_input_tokens": 202752,
+                "max_output_tokens": 128000,
                 "max_tokens": 128000,
                 "mode": "chat",
-                "output_cost_per_token": 2.3e-06,
+                "output_cost_per_token": 2.08e-06,
                 "source": "https://openrouter.ai/z-ai/glm-5",
                 "supports_function_calling": true,
                 "supports_reasoning": true,
@@ -1179,10 +1241,9 @@
                     "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading..."
                 },
                 "z-ai/glm-5": {
-                    "input_cost_per_token": 7.2e-07,
-                    "output_cost_per_token": 2.3e-06,
-                    "max_input_tokens": 80000,
-                    "max_output_tokens": 131072,
+                    "input_cost_per_token": 6.5e-07,
+                    "output_cost_per_token": 2.08e-06,
+                    "max_input_tokens": 202752,
                     "metadata": {
                         "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading..."
                     },
@@ -6002,7 +6063,7 @@
                 "max_audio_length_hours": 8.4,
                 "max_audio_per_prompt": 1,
                 "max_images_per_prompt": 3000,
-                "max_input_tokens": 1048576,
+                "max_input_tokens": 1000000,
                 "max_output_tokens": 8192,
                 "max_pdf_size_mb": 30,
                 "max_tokens": 8192,
@@ -6024,7 +6085,7 @@
                     "input_cost_per_token": 1e-07,
                     "output_cost_per_token": 4e-07,
                     "input_cost_per_image": 1e-07,
-                    "max_input_tokens": 1048576,
+                    "max_input_tokens": 1000000,
                     "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It..."
@@ -6588,19 +6649,19 @@
                 }
             },
             "meta-llama/llama-3.3-70b-instruct": {
-                "input_cost_per_token": 1.2e-07,
-                "output_cost_per_token": 3.8e-07,
+                "input_cost_per_token": 1e-07,
+                "output_cost_per_token": 3.2e-07,
                 "max_input_tokens": 131072,
-                "max_output_tokens": 131072,
+                "max_output_tokens": 16384,
                 "metadata": {
                     "notes": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model..."
                 },
                 "litellm_provider": "openrouter",
                 "meta-llama/llama-3.3-70b-instruct": {
-                    "input_cost_per_token": 1.2e-07,
-                    "output_cost_per_token": 3.8e-07,
+                    "input_cost_per_token": 1e-07,
+                    "output_cost_per_token": 3.2e-07,
                     "max_input_tokens": 131072,
-                    "max_output_tokens": 131072,
+                    "max_output_tokens": 16384,
                     "metadata": {
                         "notes": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model..."
                     },
@@ -7646,14 +7707,14 @@
                 "input_cost_per_token": -1.0,
                 "output_cost_per_token": -1.0,
                 "metadata": {
-                    "notes": "Your prompt will be processed by a meta-model and routed to one of dozens of models (see below), optimizing for the best possible output. To see which model was used,..."
+                    "notes": "\"Your prompt will be processed by a meta-model and routed to one of dozens of models (see below), optimizing for the best possible output. To see which model was used,..."
                 },
                 "litellm_provider": "openrouter",
                 "openrouter/auto": {
                     "input_cost_per_token": -1.0,
                     "output_cost_per_token": -1.0,
                     "metadata": {
-                        "notes": "Your prompt will be processed by a meta-model and routed to one of dozens of models (see below), optimizing for the best possible output. To see which model was used,..."
+                        "notes": "\"Your prompt will be processed by a meta-model and routed to one of dozens of models (see below), optimizing for the best possible output. To see which model was used,..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7878,13 +7939,21 @@
             }
         },
         "free_models": {
-            "openrouter/elephant-alpha": {
+            "inclusionai/ling-2.6-flash:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
                 "max_input_tokens": 262144,
                 "max_output_tokens": 32768,
                 "metadata": {
-                    "notes": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong performance while minimizing token usage. It supports a 256K context window with up to 32K output tokens,..."
+                    "notes": "Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency...."
+                },
+                "litellm_provider": "openrouter"
+            },
+            "openrouter/pareto-code": {
+                "input_cost_per_token": -1.0,
+                "output_cost_per_token": -1.0,
+                "metadata": {
+                    "notes": "The Pareto Router is a way to have OpenRouter always pick a strong coding model for your needs without committing to a specific one. You express a single `min_coding_score` preference..."
                 },
                 "litellm_provider": "openrouter"
             },
@@ -8167,7 +8236,7 @@
                 "input_cost_per_token": -1.0,
                 "output_cost_per_token": -1.0,
                 "metadata": {
-                    "notes": "Your prompt will be processed by a meta-model and routed to one of dozens of models (see below), optimizing for the best possible output. To see which model was used,..."
+                    "notes": "\"Your prompt will be processed by a meta-model and routed to one of dozens of models (see below), optimizing for the best possible output. To see which model was used,..."
                 },
                 "litellm_provider": "openrouter"
             }
