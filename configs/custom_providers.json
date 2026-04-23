@@ -5,6 +5,46 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "xiaomi/mimo-v2.5-pro": {
+                "input_cost_per_token": 1e-06,
+                "output_cost_per_token": 3e-06,
+                "max_input_tokens": 1048576,
+                "max_output_tokens": 131072,
+                "metadata": {
+                    "notes": "MiMo-V2.5-Pro is Xiaomi\u2019s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro...."
+                },
+                "litellm_provider": "openrouter",
+                "xiaomi/mimo-v2.5-pro": {
+                    "input_cost_per_token": 1e-06,
+                    "output_cost_per_token": 3e-06,
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 131072,
+                    "metadata": {
+                        "notes": "MiMo-V2.5-Pro is Xiaomi\u2019s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro...."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "xiaomi/mimo-v2.5": {
+                "input_cost_per_token": 4e-07,
+                "output_cost_per_token": 2e-06,
+                "max_input_tokens": 1048576,
+                "max_output_tokens": 131072,
+                "metadata": {
+                    "notes": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding..."
+                },
+                "litellm_provider": "openrouter",
+                "xiaomi/mimo-v2.5": {
+                    "input_cost_per_token": 4e-07,
+                    "output_cost_per_token": 2e-06,
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 131072,
+                    "metadata": {
+                        "notes": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "openai/gpt-5.4-image-2": {
                 "input_cost_per_token": 8e-06,
                 "output_cost_per_token": 1.5e-05,
@@ -85,11 +125,34 @@
                     "litellm_provider": "openrouter"
                 }
             },
+            "baidu/qianfan-ocr-fast:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 65536,
+                "max_output_tokens": 28672,
+                "mode": "chat",
+                "supports_vision": true,
+                "metadata": {
+                    "notes": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR."
+                },
+                "litellm_provider": "openrouter",
+                "baidu/qianfan-ocr-fast:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "max_input_tokens": 65536,
+                    "max_output_tokens": 28672,
+                    "mode": "chat",
+                    "supports_vision": true,
+                    "metadata": {
+                        "notes": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "moonshotai/kimi-k2.6": {
-                "input_cost_per_token": 8e-07,
+                "input_cost_per_token": 7.5e-07,
                 "output_cost_per_token": 3.5e-06,
                 "max_input_tokens": 262144,
-                "max_output_tokens": 262144,
                 "mode": "chat",
                 "supports_vision": true,
                 "metadata": {
@@ -97,10 +160,9 @@
                 },
                 "litellm_provider": "openrouter",
                 "moonshotai/kimi-k2.6": {
-                    "input_cost_per_token": 8e-07,
+                    "input_cost_per_token": 7.5e-07,
                     "output_cost_per_token": 3.5e-06,
                     "max_input_tokens": 262144,
-                    "max_output_tokens": 262144,
                     "mode": "chat",
                     "supports_vision": true,
                     "metadata": {
@@ -110,16 +172,29 @@
                 }
             },
             "anthropic/claude-opus-4.7": {
+                "cache_creation_input_token_cost": 6.25e-06,
+                "cache_read_input_token_cost": 5e-07,
                 "input_cost_per_token": 5e-06,
-                "output_cost_per_token": 2.5e-05,
+                "litellm_provider": "openrouter",
                 "max_input_tokens": 1000000,
                 "max_output_tokens": 128000,
+                "max_tokens": 128000,
                 "mode": "chat",
+                "output_cost_per_token": 2.5e-05,
+                "supports_assistant_prefill": false,
+                "supports_computer_use": true,
+                "supports_function_calling": true,
+                "supports_pdf_input": true,
+                "supports_prompt_caching": true,
+                "supports_reasoning": true,
+                "supports_response_schema": true,
+                "supports_tool_choice": true,
                 "supports_vision": true,
+                "supports_xhigh_reasoning_effort": true,
+                "tool_use_system_prompt_tokens": 346,
                 "metadata": {
                     "notes": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..."
                 },
-                "litellm_provider": "openrouter",
                 "anthropic/claude-opus-4.7": {
                     "input_cost_per_token": 5e-06,
                     "output_cost_per_token": 2.5e-05,
@@ -199,18 +274,16 @@
             },
             "google/gemma-4-26b-a4b-it": {
                 "input_cost_per_token": 7e-08,
-                "output_cost_per_token": 3.5e-07,
+                "output_cost_per_token": 3.4e-07,
                 "max_input_tokens": 262144,
-                "max_output_tokens": 262144,
                 "metadata": {
                     "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
                 },
                 "litellm_provider": "openrouter",
                 "google/gemma-4-26b-a4b-it": {
                     "input_cost_per_token": 7e-08,
-                    "output_cost_per_token": 3.5e-07,
+                    "output_cost_per_token": 3.4e-07,
                     "max_input_tokens": 262144,
-                    "max_output_tokens": 262144,
                     "metadata": {
                         "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
                     },
@@ -1364,17 +1437,17 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "arcee-ai/trinity-large-preview:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
+            "arcee-ai/trinity-large-preview": {
+                "input_cost_per_token": 1.5e-07,
+                "output_cost_per_token": 4.5e-07,
                 "max_input_tokens": 131000,
                 "metadata": {
                     "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing. It excels in creative writing,..."
                 },
                 "litellm_provider": "openrouter",
-                "arcee-ai/trinity-large-preview:free": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
+                "arcee-ai/trinity-large-preview": {
+                    "input_cost_per_token": 1.5e-07,
+                    "output_cost_per_token": 4.5e-07,
                     "max_input_tokens": 131000,
                     "metadata": {
                         "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing. It excels in creative writing,..."
@@ -2300,7 +2373,7 @@
                 "input_cost_per_token_cache_hit": 2.8e-08,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 131072,
-                "max_output_tokens": 32768,
+                "max_output_tokens": 65536,
                 "max_tokens": 163840,
                 "mode": "chat",
                 "output_cost_per_token": 3.78e-07,
@@ -2317,7 +2390,7 @@
                     "input_cost_per_token_cache_hit": 2.8e-08,
                     "litellm_provider": "openrouter",
                     "max_input_tokens": 131072,
-                    "max_output_tokens": 32768,
+                    "max_output_tokens": 65536,
                     "max_tokens": 163840,
                     "mode": "chat",
                     "output_cost_per_token": 3.78e-07,
@@ -2441,24 +2514,6 @@
                     "max_output_tokens": 30000,
                     "metadata": {
                         "notes": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window. Reasoning can be enabled/disabled using..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "deepcogito/cogito-v2.1-671b": {
-                "input_cost_per_token": 1.25e-06,
-                "output_cost_per_token": 1.25e-06,
-                "max_input_tokens": 128000,
-                "metadata": {
-                    "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning..."
-                },
-                "litellm_provider": "openrouter",
-                "deepcogito/cogito-v2.1-671b": {
-                    "input_cost_per_token": 1.25e-06,
-                    "output_cost_per_token": 1.25e-06,
-                    "max_input_tokens": 128000,
-                    "metadata": {
-                        "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -4183,13 +4238,13 @@
                 }
             },
             "qwen/qwen3-235b-a22b-thinking-2507": {
-                "input_cost_per_token": 1.3e-07,
+                "input_cost_per_token": 1.495e-07,
                 "litellm_provider": "openrouter",
-                "max_input_tokens": 262144,
+                "max_input_tokens": 131072,
                 "max_output_tokens": 262144,
                 "max_tokens": 262144,
                 "mode": "chat",
-                "output_cost_per_token": 6e-07,
+                "output_cost_per_token": 1.495e-06,
                 "source": "https://openrouter.ai/qwen/qwen3-235b-a22b-thinking-2507",
                 "supports_function_calling": true,
                 "supports_reasoning": true,
@@ -4198,10 +4253,9 @@
                     "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144..."
                 },
                 "qwen/qwen3-235b-a22b-thinking-2507": {
-                    "input_cost_per_token": 1.3e-07,
-                    "output_cost_per_token": 6e-07,
-                    "max_input_tokens": 262144,
-                    "max_output_tokens": 262144,
+                    "input_cost_per_token": 1.495e-07,
+                    "output_cost_per_token": 1.495e-06,
+                    "max_input_tokens": 131072,
                     "metadata": {
                         "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144..."
                     },
@@ -6063,7 +6117,7 @@
                 "max_audio_length_hours": 8.4,
                 "max_audio_per_prompt": 1,
                 "max_images_per_prompt": 3000,
-                "max_input_tokens": 1000000,
+                "max_input_tokens": 1048576,
                 "max_output_tokens": 8192,
                 "max_pdf_size_mb": 30,
                 "max_tokens": 8192,
@@ -6085,7 +6139,7 @@
                     "input_cost_per_token": 1e-07,
                     "output_cost_per_token": 4e-07,
                     "input_cost_per_image": 1e-07,
-                    "max_input_tokens": 1000000,
+                    "max_input_tokens": 1048576,
                     "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It..."
@@ -7957,6 +8011,18 @@
                 },
                 "litellm_provider": "openrouter"
             },
+            "baidu/qianfan-ocr-fast:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 65536,
+                "max_output_tokens": 28672,
+                "mode": "chat",
+                "supports_vision": true,
+                "metadata": {
+                    "notes": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR."
+                },
+                "litellm_provider": "openrouter"
+            },
             "google/gemma-4-26b-a4b-it:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
@@ -8024,15 +8090,6 @@
                 "supports_vision": true,
                 "metadata": {
                     "notes": "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that..."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "arcee-ai/trinity-large-preview:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 131000,
-                "metadata": {
-                    "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing. It excels in creative writing,..."
                 },
                 "litellm_provider": "openrouter"
             },

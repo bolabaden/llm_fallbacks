@@ -79,6 +79,7 @@ google/gemma-4-26b-a4b-it:free
 google/gemma-4-31b-it:free
 inclusionai/ling-2.6-flash:free
 google/gemma-3-27b-it:free
+baidu/qianfan-ocr-fast:free
 openai/gpt-oss-120b:free
 z-ai/glm-4.5-air:free
 github_copilot/gpt-4-o-preview
@@ -130,7 +131,6 @@ heroku/claude-4-sonnet
 meta-llama/llama-3.2-3b-instruct:free
 nousresearch/hermes-3-llama-3.1-405b:free
 publicai/bsc-lt/salamandra-7b-instruct-tools-16k
-arcee-ai/trinity-large-preview:free
 fireworks_ai/accounts/fireworks/models/qwen3-embedding-4b
 fireworks_ai/accounts/fireworks/models/qwen3-reranker-0p6b
 fireworks_ai/accounts/fireworks/models/qwen3-reranker-4b
