@@ -72,11 +72,13 @@ gigachat/gigachat-2-lite
 google/lyria-3-clip-preview
 google/lyria-3-pro-preview
 nvidia/nemotron-3-super-120b-a12b:free
+tencent/hy3-preview:free
 github_copilot/gpt-4o-2024-08-06
 meta_llama/llama-3.3-70b-instruct
 meta_llama/llama-3.3-8b-instruct
 google/gemma-4-26b-a4b-it:free
 google/gemma-4-31b-it:free
+inclusionai/ling-2.6-1t:free
 inclusionai/ling-2.6-flash:free
 google/gemma-3-27b-it:free
 baidu/qianfan-ocr-fast:free
@@ -306,6 +308,8 @@ black_forest_labs/flux-pro-1.1
 black_forest_labs/flux-pro-1.1-ultra
 dall-e-2
 dall-e-3
+dashscope/qwen-image-2.0
+dashscope/qwen-image-2.0-pro
 dataforseo/search
 doubao-embedding
 doubao-embedding-large

@@ -164,6 +164,26 @@
             "litellm_provider": "openrouter"
         }
     },
+    "tencent/hy3-preview:free": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "metadata": {
+            "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to..."
+        },
+        "litellm_provider": "openrouter",
+        "tencent/hy3-preview:free": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "metadata": {
+                "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "qwen/qwen3-coder:free": {
         "input_cost_per_token": 0.0,
         "output_cost_per_token": 0.0,
@@ -260,6 +280,26 @@
             "max_output_tokens": 32768,
             "metadata": {
                 "notes": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inclusionai/ling-2.6-1t:free": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 32768,
+        "metadata": {
+            "notes": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company\u2019s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It uses a \u201cfast..."
+        },
+        "litellm_provider": "openrouter",
+        "inclusionai/ling-2.6-1t:free": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 32768,
+            "metadata": {
+                "notes": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company\u2019s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It uses a \u201cfast..."
             },
             "litellm_provider": "openrouter"
         }
@@ -1967,6 +2007,24 @@
         "supports_system_messages": true,
         "supports_tool_choice": true
     },
+    "mistralai/mistral-nemo": {
+        "input_cost_per_token": 1e-08,
+        "output_cost_per_token": 3e-08,
+        "max_input_tokens": 131072,
+        "metadata": {
+            "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
+        },
+        "litellm_provider": "openrouter",
+        "mistralai/mistral-nemo": {
+            "input_cost_per_token": 1e-08,
+            "output_cost_per_token": 3e-08,
+            "max_input_tokens": 131072,
+            "metadata": {
+                "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "nebius/qwen/qwen2.5-coder-7b": {
         "max_tokens": 32768,
         "max_input_tokens": 32768,
@@ -2155,26 +2213,6 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
-    },
-    "mistralai/mistral-nemo": {
-        "input_cost_per_token": 2e-08,
-        "output_cost_per_token": 4e-08,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
-        },
-        "litellm_provider": "openrouter",
-        "mistralai/mistral-nemo": {
-            "input_cost_per_token": 2e-08,
-            "output_cost_per_token": 4e-08,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "lambda_ai/hermes3-8b": {
         "input_cost_per_token": 2.5e-08,
@@ -6403,6 +6441,24 @@
         "supports_response_schema": true,
         "supports_vision": true
     },
+    "google/gemma-4-26b-a4b-it": {
+        "input_cost_per_token": 6e-08,
+        "output_cost_per_token": 3.3e-07,
+        "max_input_tokens": 262144,
+        "metadata": {
+            "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
+        },
+        "litellm_provider": "openrouter",
+        "google/gemma-4-26b-a4b-it": {
+            "input_cost_per_token": 6e-08,
+            "output_cost_per_token": 3.3e-07,
+            "max_input_tokens": 262144,
+            "metadata": {
+                "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "meta-llama/llama-3.2-3b-instruct": {
         "input_cost_per_token": 5.1e-08,
         "output_cost_per_token": 3.4e-07,
@@ -7644,24 +7700,6 @@
         "litellm_provider": "together_ai",
         "mode": "chat",
         "output_cost_per_token": 2e-07
-    },
-    "google/gemma-4-26b-a4b-it": {
-        "input_cost_per_token": 7e-08,
-        "output_cost_per_token": 3.4e-07,
-        "max_input_tokens": 262144,
-        "metadata": {
-            "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
-        },
-        "litellm_provider": "openrouter",
-        "google/gemma-4-26b-a4b-it": {
-            "input_cost_per_token": 7e-08,
-            "output_cost_per_token": 3.4e-07,
-            "max_input_tokens": 262144,
-            "metadata": {
-                "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "groq/openai/gpt-oss-safeguard-20b": {
         "cache_read_input_token_cost": 3.7e-08,
@@ -15361,6 +15399,46 @@
         "supports_tool_choice": true,
         "supports_system_messages": true
     },
+    "minimax/minimax-m2.5": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 1.15e-06,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 8192,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
+        },
+        "minimax/minimax-m2.5": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 1.15e-06,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 8192,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
+            }
+        }
+    },
     "xai/grok-code-fast": {
         "cache_read_input_token_cost": 2e-08,
         "input_cost_per_token": 2e-07,
@@ -15483,46 +15561,6 @@
         "max_tokens": 4096,
         "mode": "chat",
         "output_cost_per_token": 1e-06
-    },
-    "minimax/minimax-m2.5": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 1.2e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
-        },
-        "minimax/minimax-m2.5": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 1.2e-06,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
-            }
-        }
     },
     "qwen/qwen3.5-27b": {
         "input_cost_per_token": 1.95e-07,
@@ -19384,6 +19422,24 @@
         "supports_tool_choice": true,
         "supports_function_calling": true
     },
+    "deepcogito/cogito-v2.1-671b": {
+        "input_cost_per_token": 1.25e-06,
+        "output_cost_per_token": 1.25e-06,
+        "max_input_tokens": 128000,
+        "metadata": {
+            "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning..."
+        },
+        "litellm_provider": "openrouter",
+        "deepcogito/cogito-v2.1-671b": {
+            "input_cost_per_token": 1.25e-06,
+            "output_cost_per_token": 1.25e-06,
+            "max_input_tokens": 128000,
+            "metadata": {
+                "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "together_ai/deepseek-ai/deepseek-v3": {
         "input_cost_per_token": 1.25e-06,
         "litellm_provider": "together_ai",
@@ -19693,20 +19749,8 @@
         "supports_tool_choice": true,
         "source": "https://aws.amazon.com/bedrock/pricing/"
     },
-    "replicate/deepseek-ai/deepseek-v3.1": {
-        "input_cost_per_token": 6.72e-07,
-        "output_cost_per_token": 2.016e-06,
-        "litellm_provider": "replicate",
-        "mode": "chat",
-        "max_input_tokens": 163840,
-        "max_output_tokens": 163840,
-        "max_tokens": 163840,
-        "supports_function_calling": true,
-        "supports_reasoning": true,
-        "supports_system_messages": true
-    },
     "z-ai/glm-5": {
-        "input_cost_per_token": 6.5e-07,
+        "input_cost_per_token": 6e-07,
         "litellm_provider": "openrouter",
         "max_input_tokens": 202752,
         "max_output_tokens": 128000,
@@ -19721,7 +19765,7 @@
             "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading..."
         },
         "z-ai/glm-5": {
-            "input_cost_per_token": 6.5e-07,
+            "input_cost_per_token": 6e-07,
             "output_cost_per_token": 2.08e-06,
             "max_input_tokens": 202752,
             "metadata": {
@@ -19729,6 +19773,18 @@
             },
             "litellm_provider": "openrouter"
         }
+    },
+    "replicate/deepseek-ai/deepseek-v3.1": {
+        "input_cost_per_token": 6.72e-07,
+        "output_cost_per_token": 2.016e-06,
+        "litellm_provider": "replicate",
+        "mode": "chat",
+        "max_input_tokens": 163840,
+        "max_output_tokens": 163840,
+        "max_tokens": 163840,
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_system_messages": true
     },
     "qwen/qwen3.5-397b-a17b": {
         "input_cost_per_token": 3.9e-07,
@@ -23015,28 +23071,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "moonshotai/kimi-k2.6": {
-        "input_cost_per_token": 7.5e-07,
-        "output_cost_per_token": 3.5e-06,
-        "max_input_tokens": 262144,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
-        },
-        "litellm_provider": "openrouter",
-        "moonshotai/kimi-k2.6": {
-            "input_cost_per_token": 7.5e-07,
-            "output_cost_per_token": 3.5e-06,
-            "max_input_tokens": 262144,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "vertex_ai/zai-org/glm-5-maas": {
         "cache_read_input_token_cost": 1e-07,
         "input_cost_per_token": 1e-06,
@@ -23846,6 +23880,30 @@
         "supports_web_search": true,
         "supports_none_reasoning_effort": false,
         "supports_xhigh_reasoning_effort": false
+    },
+    "moonshotai/kimi-k2.6": {
+        "input_cost_per_token": 7.448e-07,
+        "output_cost_per_token": 4.655e-06,
+        "max_input_tokens": 256000,
+        "max_output_tokens": 65536,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
+        },
+        "litellm_provider": "openrouter",
+        "moonshotai/kimi-k2.6": {
+            "input_cost_per_token": 7.448e-07,
+            "output_cost_per_token": 4.655e-06,
+            "max_input_tokens": 256000,
+            "max_output_tokens": 65536,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "openai/o3-mini": {
         "input_cost_per_token": 1.1e-06,
@@ -32374,6 +32432,7 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 159,
+        "supports_minimal_reasoning_effort": true,
         "metadata": {
             "notes": "Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with..."
         },
@@ -32445,7 +32504,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_minimal_reasoning_effort": true
     },
     "apac.anthropic.claude-sonnet-4-20250514-v1:0": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -32497,7 +32557,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_minimal_reasoning_effort": true
     },
     "claude-4-sonnet-20250514": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -32586,7 +32647,8 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_vision": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_minimal_reasoning_effort": true
     },
     "eu.anthropic.claude-sonnet-4-20250514-v1:0": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -32673,7 +32735,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_minimal_reasoning_effort": true
     },
     "us.anthropic.claude-sonnet-4-20250514-v1:0": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -32777,7 +32840,8 @@
             "search_context_size_high": 0.01,
             "search_context_size_low": 0.01,
             "search_context_size_medium": 0.01
-        }
+        },
+        "supports_minimal_reasoning_effort": true
     },
     "vertex_ai/claude-sonnet-4-6@default": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -32803,7 +32867,8 @@
             "search_context_size_high": 0.01,
             "search_context_size_low": 0.01,
             "search_context_size_medium": 0.01
-        }
+        },
+        "supports_minimal_reasoning_effort": true
     },
     "vertex_ai/claude-sonnet-4@20250514": {
         "cache_creation_input_token_cost": 3.75e-06,
@@ -33770,7 +33835,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_minimal_reasoning_effort": true
     },
     "eu.anthropic.claude-sonnet-4-6": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -33797,7 +33863,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_minimal_reasoning_effort": true
     },
     "us.anthropic.claude-sonnet-4-6": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -33824,7 +33891,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_minimal_reasoning_effort": true
     },
     "au.anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "cache_creation_input_token_cost": 4.125e-06,
@@ -35086,6 +35154,42 @@
         "output_dbu_cost_per_token": 2.8571e-05,
         "source": "https://www.databricks.com/product/pricing/proprietary-foundation-model-serving"
     },
+    "gpt-5.5": {
+        "cache_read_input_token_cost": 5e-07,
+        "input_cost_per_token": 5e-06,
+        "litellm_provider": "openai",
+        "max_input_tokens": 272000,
+        "max_output_tokens": 128000,
+        "max_tokens": 128000,
+        "mode": "chat",
+        "output_cost_per_token": 3e-05,
+        "supported_endpoints": [
+            "/v1/chat/completions",
+            "/v1/batch",
+            "/v1/responses"
+        ],
+        "supported_modalities": [
+            "text",
+            "image"
+        ],
+        "supported_output_modalities": [
+            "text"
+        ],
+        "supports_function_calling": true,
+        "supports_native_streaming": true,
+        "supports_parallel_function_calling": true,
+        "supports_pdf_input": true,
+        "supports_prompt_caching": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_system_messages": true,
+        "supports_tool_choice": true,
+        "supports_service_tier": true,
+        "supports_vision": true,
+        "supports_none_reasoning_effort": true,
+        "supports_xhigh_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
+    },
     "azure/eu/gpt-4o-mini-realtime-preview-2024-12-17": {
         "cache_creation_input_audio_token_cost": 3.3e-07,
         "cache_read_input_token_cost": 3.3e-07,
@@ -35150,7 +35254,8 @@
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
         "supports_native_structured_output": true,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "anthropic.claude-opus-4-7": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35178,7 +35283,9 @@
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "anthropic/claude-opus-4.6": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35198,6 +35305,7 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
+        "supports_minimal_reasoning_effort": true,
         "metadata": {
             "notes": "Opus 4.6 is Anthropic\u2019s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective..."
         },
@@ -35281,7 +35389,8 @@
             "us": 1.1,
             "fast": 6.0
         },
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "claude-opus-4-6-20260205": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35313,7 +35422,8 @@
             "us": 1.1,
             "fast": 6.0
         },
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "claude-opus-4-7": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35345,7 +35455,9 @@
         "provider_specific_entry": {
             "us": 1.1,
             "fast": 6.0
-        }
+        },
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "claude-opus-4-7-20260416": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35377,7 +35489,9 @@
         "provider_specific_entry": {
             "us": 1.1,
             "fast": 6.0
-        }
+        },
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "global.anthropic.claude-opus-4-6-v1": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35405,7 +35519,8 @@
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
         "supports_native_structured_output": true,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "global.anthropic.claude-opus-4-7": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35433,7 +35548,9 @@
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "vertex_ai/claude-opus-4-6": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35460,7 +35577,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "vertex_ai/claude-opus-4-6@default": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35487,7 +35605,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "vertex_ai/claude-opus-4-7": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35514,7 +35633,9 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "vertex_ai/claude-opus-4-7@default": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35541,7 +35662,9 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
-        "tool_use_system_prompt_tokens": 346
+        "tool_use_system_prompt_tokens": 346,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "azure_ai/claude-opus-4-6": {
         "input_cost_per_token": 5e-06,
@@ -35569,7 +35692,8 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 159,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "azure_ai/claude-opus-4-7": {
         "input_cost_per_token": 5e-06,
@@ -35597,7 +35721,9 @@
         "supports_tool_choice": true,
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
-        "tool_use_system_prompt_tokens": 159
+        "tool_use_system_prompt_tokens": 159,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "anthropic.claude-opus-4-5-20251101-v1:0": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -35791,7 +35917,8 @@
         "supports_reasoning": true,
         "supports_response_schema": true,
         "supports_tool_choice": true,
-        "supports_vision": true
+        "supports_vision": true,
+        "supports_minimal_reasoning_effort": true
     },
     "vertex_ai/claude-opus-4-5": {
         "cache_creation_input_token_cost": 6.25e-06,
@@ -36152,7 +36279,8 @@
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
         "supports_native_structured_output": true,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "au.anthropic.claude-opus-4-7": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36180,7 +36308,9 @@
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "eu.anthropic.claude-opus-4-6-v1": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36208,7 +36338,8 @@
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
         "supports_native_structured_output": true,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "eu.anthropic.claude-opus-4-7": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36236,7 +36367,9 @@
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "us.anthropic.claude-opus-4-6-v1": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36264,7 +36397,8 @@
         "supports_vision": true,
         "tool_use_system_prompt_tokens": 346,
         "supports_native_structured_output": true,
-        "supports_max_reasoning_effort": true
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "us.anthropic.claude-opus-4-7": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -36292,7 +36426,9 @@
         "supports_vision": true,
         "supports_xhigh_reasoning_effort": true,
         "tool_use_system_prompt_tokens": 346,
-        "supports_native_structured_output": true
+        "supports_native_structured_output": true,
+        "supports_max_reasoning_effort": true,
+        "supports_minimal_reasoning_effort": true
     },
     "us.anthropic.claude-opus-4-5-20251101-v1:0": {
         "cache_creation_input_token_cost": 6.875e-06,
@@ -44178,6 +44314,22 @@
             "/v1/ocr"
         ],
         "source": "https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/"
+    },
+    "dashscope/qwen-image-2.0": {
+        "litellm_provider": "dashscope",
+        "mode": "image_generation",
+        "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+        "supported_endpoints": [
+            "/v1/images/generations"
+        ]
+    },
+    "dashscope/qwen-image-2.0-pro": {
+        "litellm_provider": "dashscope",
+        "mode": "image_generation",
+        "source": "https://www.alibabacloud.com/help/en/model-studio/models",
+        "supported_endpoints": [
+            "/v1/images/generations"
+        ]
     },
     "exa_ai/search": {
         "litellm_provider": "exa_ai",

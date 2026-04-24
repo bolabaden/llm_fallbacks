@@ -5,6 +5,46 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "inclusionai/ling-2.6-1t:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 32768,
+                "metadata": {
+                    "notes": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company\u2019s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It uses a \u201cfast..."
+                },
+                "litellm_provider": "openrouter",
+                "inclusionai/ling-2.6-1t:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 32768,
+                    "metadata": {
+                        "notes": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company\u2019s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It uses a \u201cfast..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "tencent/hy3-preview:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 262144,
+                "metadata": {
+                    "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to..."
+                },
+                "litellm_provider": "openrouter",
+                "tencent/hy3-preview:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 262144,
+                    "metadata": {
+                        "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "xiaomi/mimo-v2.5-pro": {
                 "input_cost_per_token": 1e-06,
                 "output_cost_per_token": 3e-06,
@@ -150,9 +190,10 @@
                 }
             },
             "moonshotai/kimi-k2.6": {
-                "input_cost_per_token": 7.5e-07,
-                "output_cost_per_token": 3.5e-06,
-                "max_input_tokens": 262144,
+                "input_cost_per_token": 7.448e-07,
+                "output_cost_per_token": 4.655e-06,
+                "max_input_tokens": 256000,
+                "max_output_tokens": 65536,
                 "mode": "chat",
                 "supports_vision": true,
                 "metadata": {
@@ -160,9 +201,10 @@
                 },
                 "litellm_provider": "openrouter",
                 "moonshotai/kimi-k2.6": {
-                    "input_cost_per_token": 7.5e-07,
-                    "output_cost_per_token": 3.5e-06,
-                    "max_input_tokens": 262144,
+                    "input_cost_per_token": 7.448e-07,
+                    "output_cost_per_token": 4.655e-06,
+                    "max_input_tokens": 256000,
+                    "max_output_tokens": 65536,
                     "mode": "chat",
                     "supports_vision": true,
                     "metadata": {
@@ -273,16 +315,16 @@
                 }
             },
             "google/gemma-4-26b-a4b-it": {
-                "input_cost_per_token": 7e-08,
-                "output_cost_per_token": 3.4e-07,
+                "input_cost_per_token": 6e-08,
+                "output_cost_per_token": 3.3e-07,
                 "max_input_tokens": 262144,
                 "metadata": {
                     "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
                 },
                 "litellm_provider": "openrouter",
                 "google/gemma-4-26b-a4b-it": {
-                    "input_cost_per_token": 7e-08,
-                    "output_cost_per_token": 3.4e-07,
+                    "input_cost_per_token": 6e-08,
+                    "output_cost_per_token": 3.3e-07,
                     "max_input_tokens": 262144,
                     "metadata": {
                         "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
@@ -1166,6 +1208,7 @@
                 "supports_tool_choice": true,
                 "supports_vision": true,
                 "tool_use_system_prompt_tokens": 159,
+                "supports_minimal_reasoning_effort": true,
                 "metadata": {
                     "notes": "Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with..."
                 },
@@ -1260,11 +1303,11 @@
             },
             "minimax/minimax-m2.5": {
                 "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 1.2e-06,
+                "output_cost_per_token": 1.15e-06,
                 "cache_read_input_token_cost": 3e-08,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 196608,
-                "max_output_tokens": 65536,
+                "max_output_tokens": 8192,
                 "max_tokens": 65536,
                 "mode": "chat",
                 "source": "https://openrouter.ai/minimax/minimax-m2.5",
@@ -1281,7 +1324,7 @@
                 },
                 "minimax/minimax-m2.5": {
                     "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 1.2e-06,
+                    "output_cost_per_token": 1.15e-06,
                     "cache_read_input_token_cost": 3e-08,
                     "cache_creation_input_token_cost": 3.75e-07,
                     "litellm_provider": "openrouter",
@@ -1292,14 +1335,14 @@
                     "supports_reasoning": true,
                     "supports_system_messages": true,
                     "max_input_tokens": 196608,
-                    "max_output_tokens": 65536,
+                    "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
                     }
                 }
             },
             "z-ai/glm-5": {
-                "input_cost_per_token": 6.5e-07,
+                "input_cost_per_token": 6e-07,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 202752,
                 "max_output_tokens": 128000,
@@ -1314,7 +1357,7 @@
                     "notes": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading..."
                 },
                 "z-ai/glm-5": {
-                    "input_cost_per_token": 6.5e-07,
+                    "input_cost_per_token": 6e-07,
                     "output_cost_per_token": 2.08e-06,
                     "max_input_tokens": 202752,
                     "metadata": {
@@ -1361,6 +1404,7 @@
                 "supports_tool_choice": true,
                 "supports_vision": true,
                 "tool_use_system_prompt_tokens": 346,
+                "supports_minimal_reasoning_effort": true,
                 "metadata": {
                     "notes": "Opus 4.6 is Anthropic\u2019s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective..."
                 },
@@ -2514,6 +2558,24 @@
                     "max_output_tokens": 30000,
                     "metadata": {
                         "notes": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window. Reasoning can be enabled/disabled using..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "deepcogito/cogito-v2.1-671b": {
+                "input_cost_per_token": 1.25e-06,
+                "output_cost_per_token": 1.25e-06,
+                "max_input_tokens": 128000,
+                "metadata": {
+                    "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning..."
+                },
+                "litellm_provider": "openrouter",
+                "deepcogito/cogito-v2.1-671b": {
+                    "input_cost_per_token": 1.25e-06,
+                    "output_cost_per_token": 1.25e-06,
+                    "max_input_tokens": 128000,
+                    "metadata": {
+                        "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models. This model is trained using self play with reinforcement learning..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7345,19 +7407,17 @@
                 }
             },
             "mistralai/mistral-nemo": {
-                "input_cost_per_token": 2e-08,
-                "output_cost_per_token": 4e-08,
+                "input_cost_per_token": 1e-08,
+                "output_cost_per_token": 3e-08,
                 "max_input_tokens": 131072,
-                "max_output_tokens": 16384,
                 "metadata": {
                     "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
                 },
                 "litellm_provider": "openrouter",
                 "mistralai/mistral-nemo": {
-                    "input_cost_per_token": 2e-08,
-                    "output_cost_per_token": 4e-08,
+                    "input_cost_per_token": 1e-08,
+                    "output_cost_per_token": 3e-08,
                     "max_input_tokens": 131072,
-                    "max_output_tokens": 16384,
                     "metadata": {
                         "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
                     },
@@ -7993,6 +8053,26 @@
             }
         },
         "free_models": {
+            "inclusionai/ling-2.6-1t:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 32768,
+                "metadata": {
+                    "notes": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company\u2019s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale. It uses a \u201cfast..."
+                },
+                "litellm_provider": "openrouter"
+            },
+            "tencent/hy3-preview:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 262144,
+                "metadata": {
+                    "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to..."
+                },
+                "litellm_provider": "openrouter"
+            },
             "inclusionai/ling-2.6-flash:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
