@@ -13158,32 +13158,6 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
-    "qwen/qwen3-coder": {
-        "input_cost_per_token": 2.2e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 262144,
-        "max_output_tokens": 65536,
-        "max_tokens": 262100,
-        "mode": "chat",
-        "output_cost_per_token": 1e-06,
-        "source": "https://openrouter.ai/qwen/qwen3-coder",
-        "supports_tool_choice": true,
-        "supports_function_calling": true,
-        "metadata": {
-            "notes": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over..."
-        },
-        "qwen/qwen3-coder": {
-            "input_cost_per_token": 2.2e-07,
-            "output_cost_per_token": 1e-06,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over..."
-            },
-            "supports_function_calling": true,
-            "litellm_provider": "openrouter"
-        }
-    },
     "novita/qwen/qwen3-omni-30b-a3b-instruct": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -13725,6 +13699,26 @@
             "text"
         ],
         "supports_tool_choice": false
+    },
+    "deepseek/deepseek-v4-pro": {
+        "input_cost_per_token": 4.35e-07,
+        "output_cost_per_token": 8.7e-07,
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 384000,
+        "metadata": {
+            "notes": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,..."
+        },
+        "litellm_provider": "openrouter",
+        "deepseek/deepseek-v4-pro": {
+            "input_cost_per_token": 4.35e-07,
+            "output_cost_per_token": 8.7e-07,
+            "max_input_tokens": 1048576,
+            "max_output_tokens": 384000,
+            "metadata": {
+                "notes": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "novita/zai-org/glm-4.6v": {
         "litellm_provider": "novita",
@@ -17478,6 +17472,32 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_response_schema": true
+    },
+    "qwen/qwen3-coder": {
+        "input_cost_per_token": 2.2e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "max_tokens": 262100,
+        "mode": "chat",
+        "output_cost_per_token": 1.8e-06,
+        "source": "https://openrouter.ai/qwen/qwen3-coder",
+        "supports_tool_choice": true,
+        "supports_function_calling": true,
+        "metadata": {
+            "notes": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over..."
+        },
+        "qwen/qwen3-coder": {
+            "input_cost_per_token": 2.2e-07,
+            "output_cost_per_token": 1.8e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over..."
+            },
+            "supports_function_calling": true,
+            "litellm_provider": "openrouter"
+        }
     },
     "qwen.qwen3-coder-480b-a35b-v1:0": {
         "input_cost_per_token": 2.2e-07,
@@ -23866,26 +23886,6 @@
             "max_output_tokens": 8192,
             "metadata": {
                 "notes": "Qwen-Max, based on Qwen2.5, provides the best inference performance among [Qwen models](/qwen), especially for complex multi-step tasks. It's a large-scale MoE model that has been pretrained on over 20 trillion..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "deepseek/deepseek-v4-pro": {
-        "input_cost_per_token": 1.74e-06,
-        "output_cost_per_token": 3.48e-06,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 384000,
-        "metadata": {
-            "notes": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,..."
-        },
-        "litellm_provider": "openrouter",
-        "deepseek/deepseek-v4-pro": {
-            "input_cost_per_token": 1.74e-06,
-            "output_cost_per_token": 3.48e-06,
-            "max_input_tokens": 1048576,
-            "max_output_tokens": 384000,
-            "metadata": {
-                "notes": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,..."
             },
             "litellm_provider": "openrouter"
         }
