@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-d8eb30db31d14f7395500b314b64f4b5
+  master_key: sk-a9c485cbef284500b5f76e20c0c9992a
   alerting:
   - slack
   - email
@@ -5159,7 +5159,7 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 7.5e-08
     litellm_provider: openrouter
-    max_tokens: 32000
+    max_tokens: 128000
     mode: chat
     output_cost_per_token: 2.0e-07
     supports_tool_choice: true
@@ -6083,11 +6083,12 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 3.5e-07
     litellm_provider: openrouter
-    max_tokens: 32000
+    max_tokens: 131072
     mode: chat
     output_cost_per_token: 5.6e-07
     supports_tool_choice: true
     max_input_tokens: 128000
+    max_output_tokens: 131072
     supports_vision: true
     metadata: &id248
       notes: Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small
@@ -6637,7 +6638,7 @@ model_list:
     max_audio_length_hours: 8.4
     max_audio_per_prompt: 1
     max_images_per_prompt: 3000
-    max_input_tokens: 1048576
+    max_input_tokens: 1000000
     max_output_tokens: 8192
     max_pdf_size_mb: 30
     max_tokens: 8192
@@ -6661,7 +6662,7 @@ model_list:
       input_cost_per_token: 1.0e-07
       output_cost_per_token: 4.0e-07
       input_cost_per_image: 1.0e-07
-      max_input_tokens: 1048576
+      max_input_tokens: 1000000
       max_output_tokens: 8192
       metadata: *id273
       litellm_provider: openrouter
@@ -7545,27 +7546,6 @@ model_list:
       max_output_tokens: 16384
       metadata: *id312
       litellm_provider: openrouter
-- model_name: inflection/inflection-3-productivity
-  litellm_params:
-    model: openai/inflection/inflection-3-productivity
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 2.5e-06
-    output_cost_per_token: 1.0e-05
-    max_input_tokens: 8000
-    max_output_tokens: 1024
-    metadata: &id313
-      notes: Inflection 3 Productivity is optimized for following instructions. It
-        is better for tasks requiring JSON output or precise adherence to provided
-        guidelines. It has access to recent news. For emotional...
-    litellm_provider: openrouter
-    inflection/inflection-3-productivity:
-      input_cost_per_token: 2.5e-06
-      output_cost_per_token: 1.0e-05
-      max_input_tokens: 8000
-      max_output_tokens: 1024
-      metadata: *id313
-      litellm_provider: openrouter
 - model_name: inflection/inflection-3-pi
   litellm_params:
     model: openai/inflection/inflection-3-pi
@@ -7575,13 +7555,34 @@ model_list:
     output_cost_per_token: 1.0e-05
     max_input_tokens: 8000
     max_output_tokens: 1024
-    metadata: &id314
+    metadata: &id313
       notes: Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including
         backstory, emotional intelligence, productivity, and safety. It has access
         to recent news, and excels in scenarios like customer support and roleplay.
         Pi...
     litellm_provider: openrouter
     inflection/inflection-3-pi:
+      input_cost_per_token: 2.5e-06
+      output_cost_per_token: 1.0e-05
+      max_input_tokens: 8000
+      max_output_tokens: 1024
+      metadata: *id313
+      litellm_provider: openrouter
+- model_name: inflection/inflection-3-productivity
+  litellm_params:
+    model: openai/inflection/inflection-3-productivity
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 2.5e-06
+    output_cost_per_token: 1.0e-05
+    max_input_tokens: 8000
+    max_output_tokens: 1024
+    metadata: &id314
+      notes: Inflection 3 Productivity is optimized for following instructions. It
+        is better for tasks requiring JSON output or precise adherence to provided
+        guidelines. It has access to recent news. For emotional...
+    litellm_provider: openrouter
+    inflection/inflection-3-productivity:
       input_cost_per_token: 2.5e-06
       output_cost_per_token: 1.0e-05
       max_input_tokens: 8000
@@ -7609,46 +7610,6 @@ model_list:
       max_output_tokens: 32768
       metadata: *id315
       litellm_provider: openrouter
-- model_name: meta-llama/llama-3.2-3b-instruct:free
-  litellm_params:
-    model: openai/meta-llama/llama-3.2-3b-instruct:free
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 0.0
-    output_cost_per_token: 0.0
-    max_input_tokens: 131072
-    metadata: &id316
-      notes: Llama 3.2 3B is a 3-billion-parameter multilingual large language model,
-        optimized for advanced natural language processing tasks like dialogue generation,
-        reasoning, and summarization. Designed with the latest transformer architecture,
-        it...
-    litellm_provider: openrouter
-    meta-llama/llama-3.2-3b-instruct:free:
-      input_cost_per_token: 0.0
-      output_cost_per_token: 0.0
-      max_input_tokens: 131072
-      metadata: *id316
-      litellm_provider: openrouter
-- model_name: meta-llama/llama-3.2-3b-instruct
-  litellm_params:
-    model: openai/meta-llama/llama-3.2-3b-instruct
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 5.1e-08
-    output_cost_per_token: 3.4e-07
-    max_input_tokens: 80000
-    metadata: &id317
-      notes: Llama 3.2 3B is a 3-billion-parameter multilingual large language model,
-        optimized for advanced natural language processing tasks like dialogue generation,
-        reasoning, and summarization. Designed with the latest transformer architecture,
-        it...
-    litellm_provider: openrouter
-    meta-llama/llama-3.2-3b-instruct:
-      input_cost_per_token: 5.1e-08
-      output_cost_per_token: 3.4e-07
-      max_input_tokens: 80000
-      metadata: *id317
-      litellm_provider: openrouter
 - model_name: meta-llama/llama-3.2-1b-instruct
   litellm_params:
     model: openai/meta-llama/llama-3.2-1b-instruct
@@ -7657,7 +7618,7 @@ model_list:
     input_cost_per_token: 2.7e-08
     output_cost_per_token: 2.0e-07
     max_input_tokens: 60000
-    metadata: &id318
+    metadata: &id316
       notes: Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently
         performing natural language tasks, such as summarization, dialogue, and multilingual
         text analysis. Its smaller size allows it to operate...
@@ -7666,7 +7627,7 @@ model_list:
       input_cost_per_token: 2.7e-08
       output_cost_per_token: 2.0e-07
       max_input_tokens: 60000
-      metadata: *id318
+      metadata: *id316
       litellm_provider: openrouter
 - model_name: meta-llama/llama-3.2-11b-vision-instruct
   litellm_params:
@@ -7679,7 +7640,7 @@ model_list:
     max_output_tokens: 16384
     mode: chat
     supports_vision: true
-    metadata: &id319
+    metadata: &id317
       notes: Llama 3.2 11B Vision is a multimodal model with 11 billion parameters,
         designed to handle tasks combining visual and textual data. It excels in tasks
         such as image captioning and...
@@ -7691,6 +7652,46 @@ model_list:
       max_output_tokens: 16384
       mode: chat
       supports_vision: true
+      metadata: *id317
+      litellm_provider: openrouter
+- model_name: meta-llama/llama-3.2-3b-instruct:free
+  litellm_params:
+    model: openai/meta-llama/llama-3.2-3b-instruct:free
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 0.0
+    output_cost_per_token: 0.0
+    max_input_tokens: 131072
+    metadata: &id318
+      notes: Llama 3.2 3B is a 3-billion-parameter multilingual large language model,
+        optimized for advanced natural language processing tasks like dialogue generation,
+        reasoning, and summarization. Designed with the latest transformer architecture,
+        it...
+    litellm_provider: openrouter
+    meta-llama/llama-3.2-3b-instruct:free:
+      input_cost_per_token: 0.0
+      output_cost_per_token: 0.0
+      max_input_tokens: 131072
+      metadata: *id318
+      litellm_provider: openrouter
+- model_name: meta-llama/llama-3.2-3b-instruct
+  litellm_params:
+    model: openai/meta-llama/llama-3.2-3b-instruct
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 5.1e-08
+    output_cost_per_token: 3.4e-07
+    max_input_tokens: 80000
+    metadata: &id319
+      notes: Llama 3.2 3B is a 3-billion-parameter multilingual large language model,
+        optimized for advanced natural language processing tasks like dialogue generation,
+        reasoning, and summarization. Designed with the latest transformer architecture,
+        it...
+    litellm_provider: openrouter
+    meta-llama/llama-3.2-3b-instruct:
+      input_cost_per_token: 5.1e-08
+      output_cost_per_token: 3.4e-07
+      max_input_tokens: 80000
       metadata: *id319
       litellm_provider: openrouter
 - model_name: qwen/qwen-2.5-72b-instruct
@@ -7698,8 +7699,8 @@ model_list:
     model: openai/qwen/qwen-2.5-72b-instruct
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.2e-07
-    output_cost_per_token: 3.9e-07
+    input_cost_per_token: 3.6e-07
+    output_cost_per_token: 4.0e-07
     max_input_tokens: 32768
     max_output_tokens: 16384
     metadata: &id320
@@ -7708,32 +7709,11 @@ model_list:
         and has greatly improved capabilities in coding and...'
     litellm_provider: openrouter
     qwen/qwen-2.5-72b-instruct:
-      input_cost_per_token: 1.2e-07
-      output_cost_per_token: 3.9e-07
+      input_cost_per_token: 3.6e-07
+      output_cost_per_token: 4.0e-07
       max_input_tokens: 32768
       max_output_tokens: 16384
       metadata: *id320
-      litellm_provider: openrouter
-- model_name: cohere/command-r-plus-08-2024
-  litellm_params:
-    model: openai/cohere/command-r-plus-08-2024
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 2.5e-06
-    output_cost_per_token: 1.0e-05
-    max_input_tokens: 128000
-    max_output_tokens: 4000
-    metadata: &id321
-      notes: command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus)
-        with roughly 50% higher throughput and 25% lower latencies as compared to
-        the previous Command R+ version, while keeping the hardware footprint...
-    litellm_provider: openrouter
-    cohere/command-r-plus-08-2024:
-      input_cost_per_token: 2.5e-06
-      output_cost_per_token: 1.0e-05
-      max_input_tokens: 128000
-      max_output_tokens: 4000
-      metadata: *id321
       litellm_provider: openrouter
 - model_name: cohere/command-r-08-2024
   litellm_params:
@@ -7744,7 +7724,7 @@ model_list:
     output_cost_per_token: 6.0e-07
     max_input_tokens: 128000
     max_output_tokens: 4000
-    metadata: &id322
+    metadata: &id321
       notes: command-r-08-2024 is an update of the [Command R](/models/cohere/command-r)
         with improved performance for multilingual retrieval-augmented generation
         (RAG) and tool use. More broadly, it is better at math, code and reasoning
@@ -7753,6 +7733,27 @@ model_list:
     cohere/command-r-08-2024:
       input_cost_per_token: 1.5e-07
       output_cost_per_token: 6.0e-07
+      max_input_tokens: 128000
+      max_output_tokens: 4000
+      metadata: *id321
+      litellm_provider: openrouter
+- model_name: cohere/command-r-plus-08-2024
+  litellm_params:
+    model: openai/cohere/command-r-plus-08-2024
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 2.5e-06
+    output_cost_per_token: 1.0e-05
+    max_input_tokens: 128000
+    max_output_tokens: 4000
+    metadata: &id322
+      notes: command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus)
+        with roughly 50% higher throughput and 25% lower latencies as compared to
+        the previous Command R+ version, while keeping the hardware footprint...
+    litellm_provider: openrouter
+    cohere/command-r-plus-08-2024:
+      input_cost_per_token: 2.5e-06
+      output_cost_per_token: 1.0e-05
       max_input_tokens: 128000
       max_output_tokens: 4000
       metadata: *id322
@@ -7882,27 +7883,6 @@ model_list:
       max_output_tokens: 16384
       metadata: *id328
       litellm_provider: openrouter
-- model_name: meta-llama/llama-3.1-8b-instruct
-  litellm_params:
-    model: openai/meta-llama/llama-3.1-8b-instruct
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 2.0e-08
-    output_cost_per_token: 5.0e-08
-    max_input_tokens: 16384
-    max_output_tokens: 16384
-    metadata: &id329
-      notes: Meta's latest class of model (Llama 3.1) launched with a variety of sizes
-        & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated
-        strong performance compared to...
-    litellm_provider: openrouter
-    meta-llama/llama-3.1-8b-instruct:
-      input_cost_per_token: 2.0e-08
-      output_cost_per_token: 5.0e-08
-      max_input_tokens: 16384
-      max_output_tokens: 16384
-      metadata: *id329
-      litellm_provider: openrouter
 - model_name: meta-llama/llama-3.1-70b-instruct
   litellm_params:
     model: openai/meta-llama/llama-3.1-70b-instruct
@@ -7912,7 +7892,7 @@ model_list:
     output_cost_per_token: 4.0e-07
     max_input_tokens: 131072
     max_output_tokens: 16384
-    metadata: &id330
+    metadata: &id329
       notes: Meta's latest class of model (Llama 3.1) launched with a variety of sizes
         & flavors. This 70B instruct-tuned version is optimized for high quality dialogue
         usecases. It has demonstrated strong...
@@ -7921,6 +7901,27 @@ model_list:
       input_cost_per_token: 4.0e-07
       output_cost_per_token: 4.0e-07
       max_input_tokens: 131072
+      max_output_tokens: 16384
+      metadata: *id329
+      litellm_provider: openrouter
+- model_name: meta-llama/llama-3.1-8b-instruct
+  litellm_params:
+    model: openai/meta-llama/llama-3.1-8b-instruct
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 2.0e-08
+    output_cost_per_token: 5.0e-08
+    max_input_tokens: 16384
+    max_output_tokens: 16384
+    metadata: &id330
+      notes: Meta's latest class of model (Llama 3.1) launched with a variety of sizes
+        & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated
+        strong performance compared to...
+    litellm_provider: openrouter
+    meta-llama/llama-3.1-8b-instruct:
+      input_cost_per_token: 2.0e-08
+      output_cost_per_token: 5.0e-08
+      max_input_tokens: 16384
       max_output_tokens: 16384
       metadata: *id330
       litellm_provider: openrouter
@@ -8102,6 +8103,30 @@ model_list:
       max_output_tokens: 16384
       metadata: *id338
       litellm_provider: openrouter
+- model_name: meta-llama/llama-3-70b-instruct
+  litellm_params:
+    model: openai/meta-llama/llama-3-70b-instruct
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 5.1e-07
+    litellm_provider: openrouter
+    max_tokens: 8000
+    mode: chat
+    output_cost_per_token: 7.4e-07
+    supports_tool_choice: true
+    max_input_tokens: 8192
+    max_output_tokens: 8000
+    metadata: &id339
+      notes: Meta's latest class of model (Llama 3) launched with a variety of sizes
+        & flavors. This 70B instruct-tuned version was optimized for high quality
+        dialogue usecases. It has demonstrated strong...
+    meta-llama/llama-3-70b-instruct:
+      input_cost_per_token: 5.1e-07
+      output_cost_per_token: 7.4e-07
+      max_input_tokens: 8192
+      max_output_tokens: 8000
+      metadata: *id339
+      litellm_provider: openrouter
 - model_name: meta-llama/llama-3-8b-instruct
   litellm_params:
     model: openai/meta-llama/llama-3-8b-instruct
@@ -8111,7 +8136,7 @@ model_list:
     output_cost_per_token: 4.0e-08
     max_input_tokens: 8192
     max_output_tokens: 16384
-    metadata: &id339
+    metadata: &id340
       notes: Meta's latest class of model (Llama 3) launched with a variety of sizes
         & flavors. This 8B instruct-tuned version was optimized for high quality dialogue
         usecases. It has demonstrated strong...
@@ -8121,30 +8146,6 @@ model_list:
       output_cost_per_token: 4.0e-08
       max_input_tokens: 8192
       max_output_tokens: 16384
-      metadata: *id339
-      litellm_provider: openrouter
-- model_name: meta-llama/llama-3-70b-instruct
-  litellm_params:
-    model: openai/meta-llama/llama-3-70b-instruct
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 5.1e-07
-    litellm_provider: openrouter
-    max_tokens: 8192
-    mode: chat
-    output_cost_per_token: 7.4e-07
-    supports_tool_choice: true
-    max_input_tokens: 8192
-    max_output_tokens: 8000
-    metadata: &id340
-      notes: Meta's latest class of model (Llama 3) launched with a variety of sizes
-        & flavors. This 70B instruct-tuned version was optimized for high quality
-        dialogue usecases. It has demonstrated strong...
-    meta-llama/llama-3-70b-instruct:
-      input_cost_per_token: 5.1e-07
-      output_cost_per_token: 7.4e-07
-      max_input_tokens: 8192
-      max_output_tokens: 8000
       metadata: *id340
       litellm_provider: openrouter
 - model_name: mistralai/mixtral-8x22b-instruct
@@ -8159,6 +8160,7 @@ model_list:
     output_cost_per_token: 6.0e-06
     supports_tool_choice: true
     max_input_tokens: 65536
+    max_output_tokens: 65536
     metadata: &id341
       notes: 'Mistral''s official instruct fine-tuned version of [Mixtral 8x22B](/models/mistralai/mixtral-8x22b).
         It uses 39B active parameters out of 141B, offering unparalleled cost efficiency
@@ -8228,7 +8230,7 @@ model_list:
     input_cost_per_image: 0.0004
     input_cost_per_token: 2.5e-07
     litellm_provider: openrouter
-    max_tokens: 200000
+    max_tokens: 4096
     mode: chat
     output_cost_per_token: 1.25e-06
     supports_function_calling: true
@@ -8262,11 +8264,12 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 2.0e-06
     litellm_provider: openrouter
-    max_tokens: 32000
+    max_tokens: 8191
     mode: chat
     output_cost_per_token: 6.0e-06
     supports_tool_choice: true
     max_input_tokens: 128000
+    max_output_tokens: 8191
     metadata: &id345
       notes: This is Mistral AI's flagship model, Mistral Large 2 (version `mistral-large-2407`).
         It's a proprietary weights-available model and excels at reasoning, code,
@@ -8277,29 +8280,6 @@ model_list:
       max_input_tokens: 128000
       metadata: *id345
       litellm_provider: openrouter
-- model_name: openai/gpt-4-turbo-preview
-  litellm_params:
-    model: openai/gpt-4-turbo-preview
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.0e-05
-    output_cost_per_token: 3.0e-05
-    max_input_tokens: 128000
-    max_output_tokens: 4096
-    metadata: &id346
-      notes: 'The preview GPT-4 model with improved instruction following, JSON mode,
-        reproducible outputs, parallel function calling, and more. Training data:
-        up to Dec 2023. **Note:** heavily rate limited by OpenAI while...'
-    supports_function_calling: true
-    litellm_provider: openrouter
-    openai/gpt-4-turbo-preview:
-      input_cost_per_token: 1.0e-05
-      output_cost_per_token: 3.0e-05
-      max_input_tokens: 128000
-      max_output_tokens: 4096
-      metadata: *id346
-      supports_function_calling: true
-      litellm_provider: openrouter
 - model_name: openai/gpt-3.5-turbo-0613
   litellm_params:
     model: openai/gpt-3.5-turbo-0613
@@ -8309,7 +8289,7 @@ model_list:
     output_cost_per_token: 2.0e-06
     max_input_tokens: 4095
     max_output_tokens: 4096
-    metadata: &id347
+    metadata: &id346
       notes: 'GPT-3.5 Turbo is OpenAI''s fastest model. It can understand and generate
         natural language or code, and is optimized for chat and traditional completion
         tasks.
@@ -8322,7 +8302,30 @@ model_list:
       output_cost_per_token: 2.0e-06
       max_input_tokens: 4095
       max_output_tokens: 4096
+      metadata: *id346
+      litellm_provider: openrouter
+- model_name: openai/gpt-4-turbo-preview
+  litellm_params:
+    model: openai/gpt-4-turbo-preview
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 1.0e-05
+    output_cost_per_token: 3.0e-05
+    max_input_tokens: 128000
+    max_output_tokens: 4096
+    metadata: &id347
+      notes: 'The preview GPT-4 model with improved instruction following, JSON mode,
+        reproducible outputs, parallel function calling, and more. Training data:
+        up to Dec 2023. **Note:** heavily rate limited by OpenAI while...'
+    supports_function_calling: true
+    litellm_provider: openrouter
+    openai/gpt-4-turbo-preview:
+      input_cost_per_token: 1.0e-05
+      output_cost_per_token: 3.0e-05
+      max_input_tokens: 128000
+      max_output_tokens: 4096
       metadata: *id347
+      supports_function_calling: true
       litellm_provider: openrouter
 - model_name: mistralai/mixtral-8x7b-instruct
   litellm_params:
@@ -8408,6 +8411,24 @@ model_list:
       metadata: *id351
       supports_function_calling: true
       litellm_provider: openrouter
+- model_name: mistralai/mistral-7b-instruct-v0.1
+  litellm_params:
+    model: openai/mistralai/mistral-7b-instruct-v0.1
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 1.1e-07
+    output_cost_per_token: 1.9e-07
+    max_input_tokens: 2824
+    metadata: &id352
+      notes: A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks,
+        with optimizations for speed and context length.
+    litellm_provider: openrouter
+    mistralai/mistral-7b-instruct-v0.1:
+      input_cost_per_token: 1.1e-07
+      output_cost_per_token: 1.9e-07
+      max_input_tokens: 2824
+      metadata: *id352
+      litellm_provider: openrouter
 - model_name: openai/gpt-3.5-turbo-instruct
   litellm_params:
     model: openai/gpt-3.5-turbo-instruct
@@ -8417,7 +8438,7 @@ model_list:
     output_cost_per_token: 2.0e-06
     max_input_tokens: 4095
     max_output_tokens: 4096
-    metadata: &id352
+    metadata: &id353
       notes: 'This model is a variant of GPT-3.5 Turbo tuned for instructional prompts
         and omitting chat-related optimizations. Training data: up to Sep 2021.'
     litellm_provider: openrouter
@@ -8426,24 +8447,6 @@ model_list:
       output_cost_per_token: 2.0e-06
       max_input_tokens: 4095
       max_output_tokens: 4096
-      metadata: *id352
-      litellm_provider: openrouter
-- model_name: mistralai/mistral-7b-instruct-v0.1
-  litellm_params:
-    model: openai/mistralai/mistral-7b-instruct-v0.1
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.1e-07
-    output_cost_per_token: 1.9e-07
-    max_input_tokens: 2824
-    metadata: &id353
-      notes: A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks,
-        with optimizations for speed and context length.
-    litellm_provider: openrouter
-    mistralai/mistral-7b-instruct-v0.1:
-      input_cost_per_token: 1.1e-07
-      output_cost_per_token: 1.9e-07
-      max_input_tokens: 2824
       metadata: *id353
       litellm_provider: openrouter
 - model_name: openai/gpt-3.5-turbo-16k
@@ -8453,7 +8456,7 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 3.0e-06
     litellm_provider: openrouter
-    max_tokens: 16383
+    max_tokens: 4096
     mode: chat
     output_cost_per_token: 4.0e-06
     supports_tool_choice: true
@@ -8477,7 +8480,7 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 7.5e-07
     litellm_provider: openrouter
-    max_tokens: 8000
+    max_tokens: 2000
     mode: chat
     output_cost_per_token: 1.0e-06
     supports_tool_choice: true
@@ -8500,7 +8503,7 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 4.5e-07
     litellm_provider: openrouter
-    max_tokens: 6144
+    max_tokens: 4096
     mode: chat
     output_cost_per_token: 6.5e-07
     supports_tool_choice: true
@@ -8539,51 +8542,6 @@ model_list:
       max_output_tokens: 4096
       metadata: *id357
       litellm_provider: openrouter
-- model_name: openai/gpt-4-0314
-  litellm_params:
-    model: openai/gpt-4-0314
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 3.0e-05
-    output_cost_per_token: 6.0e-05
-    max_input_tokens: 8191
-    max_output_tokens: 4096
-    metadata: &id358
-      notes: 'GPT-4-0314 is the first version of GPT-4 released, with a context length
-        of 8,192 tokens, and was supported until June 14. Training data: up to Sep
-        2021.'
-    litellm_provider: openrouter
-    openai/gpt-4-0314:
-      input_cost_per_token: 3.0e-05
-      output_cost_per_token: 6.0e-05
-      max_input_tokens: 8191
-      max_output_tokens: 4096
-      metadata: *id358
-      litellm_provider: openrouter
-- model_name: openai/gpt-4
-  litellm_params:
-    model: openai/gpt-4
-    api_base: https://openrouter.ai/api/v1
-    api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 3.0e-05
-    litellm_provider: openrouter
-    max_tokens: 8192
-    mode: chat
-    output_cost_per_token: 6.0e-05
-    supports_tool_choice: true
-    max_input_tokens: 8191
-    max_output_tokens: 4096
-    metadata: &id359
-      notes: OpenAI's flagship model, GPT-4 is a large-scale multimodal language model
-        capable of solving difficult problems with greater accuracy than previous
-        models due to its broader general knowledge and advanced reasoning...
-    openai/gpt-4:
-      input_cost_per_token: 3.0e-05
-      output_cost_per_token: 6.0e-05
-      max_input_tokens: 8191
-      max_output_tokens: 4096
-      metadata: *id359
-      litellm_provider: openrouter
 - model_name: openai/gpt-3.5-turbo
   litellm_params:
     model: openai/gpt-3.5-turbo
@@ -8591,13 +8549,13 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 5.0e-07
     litellm_provider: openrouter
-    max_tokens: 4095
+    max_tokens: 4096
     mode: chat
     output_cost_per_token: 1.5e-06
     supports_tool_choice: true
     max_input_tokens: 16385
     max_output_tokens: 4096
-    metadata: &id360
+    metadata: &id358
       notes: 'GPT-3.5 Turbo is OpenAI''s fastest model. It can understand and generate
         natural language or code, and is optimized for chat and traditional completion
         tasks.
@@ -8608,6 +8566,51 @@ model_list:
       input_cost_per_token: 5.0e-07
       output_cost_per_token: 1.5e-06
       max_input_tokens: 16385
+      max_output_tokens: 4096
+      metadata: *id358
+      litellm_provider: openrouter
+- model_name: openai/gpt-4-0314
+  litellm_params:
+    model: openai/gpt-4-0314
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 3.0e-05
+    output_cost_per_token: 6.0e-05
+    max_input_tokens: 8191
+    max_output_tokens: 4096
+    metadata: &id359
+      notes: 'GPT-4-0314 is the first version of GPT-4 released, with a context length
+        of 8,192 tokens, and was supported until June 14. Training data: up to Sep
+        2021.'
+    litellm_provider: openrouter
+    openai/gpt-4-0314:
+      input_cost_per_token: 3.0e-05
+      output_cost_per_token: 6.0e-05
+      max_input_tokens: 8191
+      max_output_tokens: 4096
+      metadata: *id359
+      litellm_provider: openrouter
+- model_name: openai/gpt-4
+  litellm_params:
+    model: openai/gpt-4
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    input_cost_per_token: 3.0e-05
+    litellm_provider: openrouter
+    max_tokens: 4096
+    mode: chat
+    output_cost_per_token: 6.0e-05
+    supports_tool_choice: true
+    max_input_tokens: 8191
+    max_output_tokens: 4096
+    metadata: &id360
+      notes: OpenAI's flagship model, GPT-4 is a large-scale multimodal language model
+        capable of solving difficult problems with greater accuracy than previous
+        models due to its broader general knowledge and advanced reasoning...
+    openai/gpt-4:
+      input_cost_per_token: 3.0e-05
+      output_cost_per_token: 6.0e-05
+      max_input_tokens: 8191
       max_output_tokens: 4096
       metadata: *id360
       litellm_provider: openrouter
@@ -16607,32 +16610,6 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - inflection/inflection-3-productivity:
-    - openrouter/free
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - bedrock/anthropic.claude-mythos-preview
-    - openrouter/google/lyria-3-clip-preview
-    - openrouter/google/lyria-3-pro-preview
-    - vertex_ai-language-models/gemini-flash-experimental
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/tencent/hy3-preview:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - openrouter/inclusionai/ling-2.6-1t:free
-    - openrouter/inclusionai/ling-2.6-flash:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/z-ai/glm-4.5-air:free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/gpt-oss-120b-mxfp-gguf
   - inflection/inflection-3-pi:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -16659,59 +16636,33 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
+  - inflection/inflection-3-productivity:
+    - openrouter/free
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
+    - openrouter/google/lyria-3-clip-preview
+    - openrouter/google/lyria-3-pro-preview
+    - vertex_ai-language-models/gemini-flash-experimental
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/tencent/hy3-preview:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-1t:free
+    - openrouter/inclusionai/ling-2.6-flash:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/gpt-oss-120b-mxfp-gguf
   - thedrummer/rocinante-12b:
-    - openrouter/free
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - bedrock/anthropic.claude-mythos-preview
-    - openrouter/google/lyria-3-clip-preview
-    - openrouter/google/lyria-3-pro-preview
-    - vertex_ai-language-models/gemini-flash-experimental
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/tencent/hy3-preview:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - openrouter/inclusionai/ling-2.6-1t:free
-    - openrouter/inclusionai/ling-2.6-flash:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/z-ai/glm-4.5-air:free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/gpt-oss-120b-mxfp-gguf
-  - meta-llama/llama-3.2-3b-instruct:free:
-    - openrouter/free
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - bedrock/anthropic.claude-mythos-preview
-    - openrouter/google/lyria-3-clip-preview
-    - openrouter/google/lyria-3-pro-preview
-    - vertex_ai-language-models/gemini-flash-experimental
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/tencent/hy3-preview:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - openrouter/inclusionai/ling-2.6-1t:free
-    - openrouter/inclusionai/ling-2.6-flash:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/z-ai/glm-4.5-air:free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/gpt-oss-120b-mxfp-gguf
-  - meta-llama/llama-3.2-3b-instruct:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -16789,6 +16740,58 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
+  - meta-llama/llama-3.2-3b-instruct:free:
+    - openrouter/free
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
+    - openrouter/google/lyria-3-clip-preview
+    - openrouter/google/lyria-3-pro-preview
+    - vertex_ai-language-models/gemini-flash-experimental
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/tencent/hy3-preview:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-1t:free
+    - openrouter/inclusionai/ling-2.6-flash:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/gpt-oss-120b-mxfp-gguf
+  - meta-llama/llama-3.2-3b-instruct:
+    - openrouter/free
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
+    - openrouter/google/lyria-3-clip-preview
+    - openrouter/google/lyria-3-pro-preview
+    - vertex_ai-language-models/gemini-flash-experimental
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/tencent/hy3-preview:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-1t:free
+    - openrouter/inclusionai/ling-2.6-flash:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/gpt-oss-120b-mxfp-gguf
   - qwen/qwen-2.5-72b-instruct:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -16815,7 +16818,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - cohere/command-r-plus-08-2024:
+  - cohere/command-r-08-2024:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -16841,7 +16844,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - cohere/command-r-08-2024:
+  - cohere/command-r-plus-08-2024:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17023,7 +17026,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - meta-llama/llama-3.1-8b-instruct:
+  - meta-llama/llama-3.1-70b-instruct:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17049,7 +17052,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - meta-llama/llama-3.1-70b-instruct:
+  - meta-llama/llama-3.1-8b-instruct:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17283,32 +17286,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
-  - meta-llama/llama-3-8b-instruct:
-    - openrouter/free
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - bedrock/anthropic.claude-mythos-preview
-    - openrouter/google/lyria-3-clip-preview
-    - openrouter/google/lyria-3-pro-preview
-    - vertex_ai-language-models/gemini-flash-experimental
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/tencent/hy3-preview:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - openrouter/inclusionai/ling-2.6-1t:free
-    - openrouter/inclusionai/ling-2.6-flash:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/z-ai/glm-4.5-air:free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/gpt-oss-120b-mxfp-gguf
   - meta-llama/llama-3-70b-instruct:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -17335,6 +17312,32 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
+  - meta-llama/llama-3-8b-instruct:
+    - openrouter/free
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
+    - openrouter/google/lyria-3-clip-preview
+    - openrouter/google/lyria-3-pro-preview
+    - vertex_ai-language-models/gemini-flash-experimental
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/tencent/hy3-preview:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-1t:free
+    - openrouter/inclusionai/ling-2.6-flash:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/gpt-oss-120b-mxfp-gguf
   - mistralai/mixtral-8x22b-instruct:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -17465,7 +17468,7 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
-  - openai/gpt-4-turbo-preview:
+  - openai/gpt-3.5-turbo-0613:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17491,7 +17494,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - openai/gpt-3.5-turbo-0613:
+  - openai/gpt-4-turbo-preview:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17621,7 +17624,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - openai/gpt-3.5-turbo-instruct:
+  - mistralai/mistral-7b-instruct-v0.1:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17647,7 +17650,7 @@ router_settings:
     - openrouter/z-ai/glm-4.5-air:free
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-  - mistralai/mistral-7b-instruct-v0.1:
+  - openai/gpt-3.5-turbo-instruct:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114
@@ -17777,6 +17780,32 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
     - lemonade/gpt-oss-20b-mxfp4-gguf
+  - openai/gpt-3.5-turbo:
+    - openrouter/free
+    - gemini/gemini-exp-1206
+    - gemini/gemini-exp-1114
+    - bedrock/anthropic.claude-mythos-preview
+    - openrouter/google/lyria-3-clip-preview
+    - openrouter/google/lyria-3-pro-preview
+    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
+    - openrouter/tencent/hy3-preview:free
+    - openrouter/qwen/qwen3-coder:free
+    - volcengine/glm-4-7-251222
+    - lemonade/qwen3-4b-instruct-2507-gguf
+    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
+    - openrouter/google/gemma-4-26b-a4b-it:free
+    - openrouter/google/gemma-4-31b-it:free
+    - openrouter/inclusionai/ling-2.6-1t:free
+    - openrouter/inclusionai/ling-2.6-flash:free
+    - volcengine/kimi-k2-thinking-251104
+    - openrouter/openai/gpt-oss-120b:free
+    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
+    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
+    - lemonade/gpt-oss-120b-mxfp-gguf
+    - lemonade/gpt-oss-20b-mxfp4-gguf
   - openai/gpt-4-0314:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -17804,32 +17833,6 @@ router_settings:
     - openrouter/minimax/minimax-m2.5:free
     - lemonade/gpt-oss-120b-mxfp-gguf
   - openai/gpt-4:
-    - openrouter/free
-    - gemini/gemini-exp-1206
-    - gemini/gemini-exp-1114
-    - bedrock/anthropic.claude-mythos-preview
-    - openrouter/google/lyria-3-clip-preview
-    - openrouter/google/lyria-3-pro-preview
-    - openrouter/nvidia/nemotron-3-super-120b-a12b:free
-    - openrouter/tencent/hy3-preview:free
-    - openrouter/qwen/qwen3-coder:free
-    - volcengine/glm-4-7-251222
-    - lemonade/qwen3-4b-instruct-2507-gguf
-    - lemonade/qwen3-coder-30b-a3b-instruct-gguf
-    - openrouter/google/gemma-4-26b-a4b-it:free
-    - openrouter/google/gemma-4-31b-it:free
-    - openrouter/inclusionai/ling-2.6-1t:free
-    - openrouter/inclusionai/ling-2.6-flash:free
-    - volcengine/kimi-k2-thinking-251104
-    - openrouter/openai/gpt-oss-120b:free
-    - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
-    - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
-    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
-    - openrouter/z-ai/glm-4.5-air:free
-    - openrouter/minimax/minimax-m2.5:free
-    - lemonade/gpt-oss-120b-mxfp-gguf
-    - lemonade/gpt-oss-20b-mxfp4-gguf
-  - openai/gpt-3.5-turbo:
     - openrouter/free
     - gemini/gemini-exp-1206
     - gemini/gemini-exp-1114

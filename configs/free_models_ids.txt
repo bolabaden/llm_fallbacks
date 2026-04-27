@@ -54,6 +54,10 @@ dashscope/qwen-plus-2025-09-11
 dashscope/qwen-plus-latest
 gemini/learnlm-1.5-pro-experimental
 deepseek-v3-2-251201
+heroku/claude-3-5-haiku
+heroku/claude-3-5-sonnet-latest
+heroku/claude-3-7-sonnet
+heroku/claude-4-sonnet
 gigachat/gigachat-2-max
 gigachat/gigachat-2-pro
 qwen/qwen3-coder:free
@@ -89,6 +93,7 @@ github_copilot/gpt-4o-mini
 github_copilot/gpt-4o-mini-2024-07-18
 nvidia/nemotron-nano-12b-v2-vl:free
 github_copilot/claude-opus-41
+gradient_ai/alibaba-qwen3-32b
 gemini-flash-experimental
 snowflake/jamba-1.5-large
 snowflake/jamba-1.5-mini
@@ -103,6 +108,8 @@ publicai/allenai/olmo-3-32b-think
 publicai/allenai/olmo-3-7b-instruct
 publicai/allenai/olmo-3-7b-think
 qwen/qwen3-next-80b-a3b-instruct:free
+gradient_ai/openai-gpt-4o
+gradient_ai/openai-gpt-4o-mini
 nvidia/nemotron-3-nano-30b-a3b:free
 openai/gpt-oss-20b:free
 snowflake/llama3.1-405b
@@ -127,9 +134,6 @@ codestral/codestral-2405
 codestral/codestral-latest
 github_copilot/gpt-4
 github_copilot/gpt-4-0613
-heroku/claude-3-5-sonnet-latest
-heroku/claude-3-7-sonnet
-heroku/claude-4-sonnet
 meta-llama/llama-3.2-3b-instruct:free
 nousresearch/hermes-3-llama-3.1-405b:free
 publicai/bsc-lt/salamandra-7b-instruct-tools-16k
@@ -145,7 +149,6 @@ amazon.rerank-v1:0
 cohere.rerank-v3-5:0
 github_copilot/gpt-3.5-turbo
 github_copilot/gpt-3.5-turbo-0613
-heroku/claude-3-5-haiku
 meta-llama/llama-3.3-70b-instruct:free
 publicai/aisingapore/gemma-sea-lion-v4-27b-it
 publicai/bsc-lt/alia-40b-instruct_q8_0
@@ -200,8 +203,6 @@ standard/1024-x-1536/gpt-image-1.5
 standard/1024-x-1536/gpt-image-1.5-2025-12-16
 standard/1536-x-1024/gpt-image-1.5
 standard/1536-x-1024/gpt-image-1.5-2025-12-16
-gradient_ai/openai-gpt-4o
-gradient_ai/openai-gpt-4o-mini
 perplexity/anthropic/claude-haiku-4-5
 perplexity/anthropic/claude-opus-4-5
 perplexity/anthropic/claude-opus-4-6
@@ -347,7 +348,6 @@ gigachat/embeddings-2
 gigachat/embeddingsgigar
 github_copilot/gpt-41-copilot
 google_pse/search
-gradient_ai/alibaba-qwen3-32b
 hd/1024-x-1024/dall-e-3
 hd/1024-x-1792/dall-e-3
 hd/1792-x-1024/dall-e-3
