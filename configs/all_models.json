@@ -2007,24 +2007,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true
     },
-    "mistralai/mistral-nemo": {
-        "input_cost_per_token": 1e-08,
-        "output_cost_per_token": 3e-08,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
-        },
-        "litellm_provider": "openrouter",
-        "mistralai/mistral-nemo": {
-            "input_cost_per_token": 1e-08,
-            "output_cost_per_token": 3e-08,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "nebius/qwen/qwen2.5-coder-7b": {
         "max_tokens": 32768,
         "max_input_tokens": 32768,
@@ -2213,6 +2195,26 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
+    },
+    "mistralai/mistral-nemo": {
+        "input_cost_per_token": 2e-08,
+        "output_cost_per_token": 4e-08,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
+        },
+        "litellm_provider": "openrouter",
+        "mistralai/mistral-nemo": {
+            "input_cost_per_token": 2e-08,
+            "output_cost_per_token": 4e-08,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "lambda_ai/hermes3-8b": {
         "input_cost_per_token": 2.5e-08,
@@ -12770,6 +12772,26 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
+    "qwen/qwen3.6-35b-a3b": {
+        "input_cost_per_token": 1.612e-07,
+        "output_cost_per_token": 9.6525e-07,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.6-35b-a3b": {
+            "input_cost_per_token": 1.612e-07,
+            "output_cost_per_token": 9.6525e-07,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "deepinfra/deepseek-ai/deepseek-v3-0324": {
         "max_tokens": 163840,
         "max_input_tokens": 163840,
@@ -13622,7 +13644,7 @@
         "max_audio_length_hours": 8.4,
         "max_audio_per_prompt": 1,
         "max_images_per_prompt": 3000,
-        "max_input_tokens": 1000000,
+        "max_input_tokens": 1048576,
         "max_output_tokens": 8192,
         "max_pdf_size_mb": 30,
         "max_tokens": 8192,
@@ -13644,7 +13666,7 @@
             "input_cost_per_token": 1e-07,
             "output_cost_per_token": 4e-07,
             "input_cost_per_image": 1e-07,
-            "max_input_tokens": 1000000,
+            "max_input_tokens": 1048576,
             "max_output_tokens": 8192,
             "metadata": {
                 "notes": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It..."
@@ -15687,6 +15709,26 @@
         "supports_function_calling": false,
         "supports_response_schema": true,
         "supports_tool_choice": false
+    },
+    "qwen/qwen3.6-flash": {
+        "input_cost_per_token": 2.5e-07,
+        "output_cost_per_token": 1.5e-06,
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Qwen3.6 Flash is a fast, efficient language model from Alibaba's Qwen 3.6 series. It supports text, image, and video input with a 1M token context window. Tiered pricing kicks in..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.6-flash": {
+            "input_cost_per_token": 2.5e-07,
+            "output_cost_per_token": 1.5e-06,
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen3.6 Flash is a fast, efficient language model from Alibaba's Qwen 3.6 series. It supports text, image, and video input with a 1M token context window. Tiered pricing kicks in..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "watsonx/meta-llama/llama-4-maverick-17b": {
         "max_tokens": 128000,
@@ -19697,6 +19739,26 @@
         "supports_tool_choice": true,
         "supports_function_calling": true
     },
+    "qwen/qwen3.6-27b": {
+        "input_cost_per_token": 5e-07,
+        "output_cost_per_token": 2e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities \u2014 accepting text, image, and video inputs..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.6-27b": {
+            "input_cost_per_token": 5e-07,
+            "output_cost_per_token": 2e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities \u2014 accepting text, image, and video inputs..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "deepcogito/cogito-v2.1-671b": {
         "input_cost_per_token": 1.25e-06,
         "output_cost_per_token": 1.25e-06,
@@ -20200,6 +20262,26 @@
             "max_output_tokens": 32768,
             "metadata": {
                 "notes": "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "qwen/qwen3.5-plus-20260420": {
+        "input_cost_per_token": 4e-07,
+        "output_cost_per_token": 2.4e-06,
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibaba. It accepts text, image, and video input and produces text output, with a 1M token context window. This..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.5-plus-20260420": {
+            "input_cost_per_token": 4e-07,
+            "output_cost_per_token": 2.4e-06,
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibaba. It accepts text, image, and video input and produces text output, with a 1M token context window. This..."
             },
             "litellm_provider": "openrouter"
         }
@@ -22876,6 +22958,28 @@
             "litellm_provider": "openrouter"
         }
     },
+    "~google/gemini-flash-latest": {
+        "input_cost_per_token": 5e-07,
+        "output_cost_per_token": 3e-06,
+        "input_cost_per_image": 5e-07,
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the Google Gemini Flash family."
+        },
+        "litellm_provider": "openrouter",
+        "~google/gemini-flash-latest": {
+            "input_cost_per_token": 5e-07,
+            "output_cost_per_token": 3e-06,
+            "input_cost_per_image": 5e-07,
+            "max_input_tokens": 1048576,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the Google Gemini Flash family."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "hyperbolic/moonshotai/kimi-k2-instruct": {
         "input_cost_per_token": 2e-06,
         "litellm_provider": "hyperbolic",
@@ -24210,6 +24314,26 @@
             "litellm_provider": "openrouter"
         }
     },
+    "~openai/gpt-mini-latest": {
+        "input_cost_per_token": 7.5e-07,
+        "output_cost_per_token": 4.5e-06,
+        "max_input_tokens": 400000,
+        "max_output_tokens": 128000,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the OpenAI GPT Mini family."
+        },
+        "litellm_provider": "openrouter",
+        "~openai/gpt-mini-latest": {
+            "input_cost_per_token": 7.5e-07,
+            "output_cost_per_token": 4.5e-06,
+            "max_input_tokens": 400000,
+            "max_output_tokens": 128000,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the OpenAI GPT Mini family."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "azure/gpt-5.4-mini": {
         "cache_read_input_token_cost": 7.5e-08,
         "input_cost_per_token": 7.5e-07,
@@ -24302,6 +24426,30 @@
             "supports_vision": true,
             "metadata": {
                 "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "~moonshotai/kimi-latest": {
+        "input_cost_per_token": 7.448e-07,
+        "output_cost_per_token": 4.655e-06,
+        "max_input_tokens": 256000,
+        "max_output_tokens": 65536,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the MoonshotAI Kimi family."
+        },
+        "litellm_provider": "openrouter",
+        "~moonshotai/kimi-latest": {
+            "input_cost_per_token": 7.448e-07,
+            "output_cost_per_token": 4.655e-06,
+            "max_input_tokens": 256000,
+            "max_output_tokens": 65536,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the MoonshotAI Kimi family."
             },
             "litellm_provider": "openrouter"
         }
@@ -24657,6 +24805,30 @@
         "output_cost_per_token": 3e-06,
         "supports_function_calling": true,
         "supports_tool_choice": true
+    },
+    "~anthropic/claude-haiku-latest": {
+        "input_cost_per_token": 1e-06,
+        "output_cost_per_token": 5e-06,
+        "max_input_tokens": 200000,
+        "max_output_tokens": 64000,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the Anthropic Claude Haiku family."
+        },
+        "litellm_provider": "openrouter",
+        "~anthropic/claude-haiku-latest": {
+            "input_cost_per_token": 1e-06,
+            "output_cost_per_token": 5e-06,
+            "max_input_tokens": 200000,
+            "max_output_tokens": 64000,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the Anthropic Claude Haiku family."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "perplexity/sonar-reasoning": {
         "input_cost_per_token": 1e-06,
@@ -26769,6 +26941,26 @@
         "output_cost_per_token": 6e-06,
         "supports_system_messages": true,
         "supports_tool_choice": true
+    },
+    "qwen/qwen3.6-max-preview": {
+        "input_cost_per_token": 1.3e-06,
+        "output_cost_per_token": 7.8e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic coding, tool use, and..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.6-max-preview": {
+            "input_cost_per_token": 1.3e-06,
+            "output_cost_per_token": 7.8e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic coding, tool use, and..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "databricks/databricks-meta-llama-3-1-8b-instruct": {
         "input_cost_per_token": 1.5000999999999998e-07,
@@ -31210,6 +31402,28 @@
             "litellm_provider": "openrouter"
         }
     },
+    "~google/gemini-pro-latest": {
+        "input_cost_per_token": 2e-06,
+        "output_cost_per_token": 1.2e-05,
+        "input_cost_per_image": 2e-06,
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the Google Gemini Pro family."
+        },
+        "litellm_provider": "openrouter",
+        "~google/gemini-pro-latest": {
+            "input_cost_per_token": 2e-06,
+            "output_cost_per_token": 1.2e-05,
+            "input_cost_per_image": 2e-06,
+            "max_input_tokens": 1048576,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the Google Gemini Pro family."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "google/gemini-3-pro-image-preview": {
         "input_cost_per_token": 2e-06,
         "output_cost_per_token": 1.2e-05,
@@ -31580,6 +31794,30 @@
         "supports_tool_choice": true,
         "supports_service_tier": true,
         "supports_vision": true
+    },
+    "~anthropic/claude-sonnet-latest": {
+        "input_cost_per_token": 3e-06,
+        "output_cost_per_token": 1.5e-05,
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the Anthropic Claude Sonnet family."
+        },
+        "litellm_provider": "openrouter",
+        "~anthropic/claude-sonnet-latest": {
+            "input_cost_per_token": 3e-06,
+            "output_cost_per_token": 1.5e-05,
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the Anthropic Claude Sonnet family."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "vercel_ai_gateway/xai/grok-4": {
         "input_cost_per_token": 3e-06,
@@ -35697,6 +35935,26 @@
             "max_output_tokens": 128000,
             "metadata": {
                 "notes": "GPT-5.5 is OpenAI\u2019s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "~openai/gpt-latest": {
+        "input_cost_per_token": 5e-06,
+        "output_cost_per_token": 3e-05,
+        "max_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the OpenAI GPT family."
+        },
+        "litellm_provider": "openrouter",
+        "~openai/gpt-latest": {
+            "input_cost_per_token": 5e-06,
+            "output_cost_per_token": 3e-05,
+            "max_input_tokens": 1050000,
+            "max_output_tokens": 128000,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the OpenAI GPT family."
             },
             "litellm_provider": "openrouter"
         }
