@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-2c9fe062832b49319fbdee932c44cf5b
+  master_key: sk-33734dd6e87e4e1eac69de598651cd96
   alerting:
   - slack
   - email
@@ -6986,7 +6986,7 @@ model_list:
     max_audio_length_hours: 8.4
     max_audio_per_prompt: 1
     max_images_per_prompt: 3000
-    max_input_tokens: 1048576
+    max_input_tokens: 1000000
     max_output_tokens: 8192
     max_pdf_size_mb: 30
     max_tokens: 8192
@@ -7010,7 +7010,7 @@ model_list:
       input_cost_per_token: 1.0e-07
       output_cost_per_token: 4.0e-07
       input_cost_per_image: 1.0e-07
-      max_input_tokens: 1048576
+      max_input_tokens: 1000000
       max_output_tokens: 8192
       metadata: *id289
       litellm_provider: openrouter
