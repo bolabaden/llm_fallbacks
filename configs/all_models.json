@@ -12811,26 +12811,6 @@
         "supports_response_schema": true,
         "supports_tool_choice": true
     },
-    "qwen/qwen3.6-35b-a3b": {
-        "input_cost_per_token": 1.612e-07,
-        "output_cost_per_token": 9.6525e-07,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 65536,
-        "metadata": {
-            "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated..."
-        },
-        "litellm_provider": "openrouter",
-        "qwen/qwen3.6-35b-a3b": {
-            "input_cost_per_token": 1.612e-07,
-            "output_cost_per_token": 9.6525e-07,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "deepinfra/deepseek-ai/deepseek-v3-0324": {
         "max_tokens": 163840,
         "max_input_tokens": 163840,
@@ -12841,6 +12821,53 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
+    },
+    "qwen/qwen3.5-35b-a3b": {
+        "input_cost_per_token": 1.5e-07,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "output_cost_per_token": 1e-06,
+        "source": "https://openrouter.ai/qwen/qwen3.5-35b-a3b",
+        "supports_function_calling": true,
+        "supports_reasoning": true,
+        "supports_tool_choice": true,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall..."
+        },
+        "qwen/qwen3.5-35b-a3b": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 1e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "metadata": {
+                "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "qwen/qwen3.6-35b-a3b": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 1e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "metadata": {
+            "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3.6-35b-a3b": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 1e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "metadata": {
+                "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "bedrock/us-east-1/mistral.mixtral-8x7b-instruct-v0:1": {
         "input_cost_per_token": 4.5e-07,
@@ -13703,7 +13730,7 @@
         "max_audio_length_hours": 8.4,
         "max_audio_per_prompt": 1,
         "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
+        "max_input_tokens": 1000000,
         "max_output_tokens": 8192,
         "max_pdf_size_mb": 30,
         "max_tokens": 8192,
@@ -13725,7 +13752,7 @@
             "input_cost_per_token": 1e-07,
             "output_cost_per_token": 4e-07,
             "input_cost_per_image": 1e-07,
-            "max_input_tokens": 1048576,
+            "max_input_tokens": 1000000,
             "max_output_tokens": 8192,
             "metadata": {
                 "notes": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It..."
@@ -14358,33 +14385,6 @@
             "max_output_tokens": 128000,
             "metadata": {
                 "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "qwen/qwen3.5-35b-a3b": {
-        "input_cost_per_token": 1.625e-07,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 262144,
-        "max_output_tokens": 65536,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "output_cost_per_token": 1.3e-06,
-        "source": "https://openrouter.ai/qwen/qwen3.5-35b-a3b",
-        "supports_function_calling": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "supports_vision": true,
-        "metadata": {
-            "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall..."
-        },
-        "qwen/qwen3.5-35b-a3b": {
-            "input_cost_per_token": 1.625e-07,
-            "output_cost_per_token": 1.3e-06,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall..."
             },
             "litellm_provider": "openrouter"
         }
@@ -27013,6 +27013,28 @@
         "tool_use_system_prompt_tokens": 346,
         "supports_native_structured_output": true,
         "supports_pdf_input": true
+    },
+    "mistralai/mistral-medium-3-5": {
+        "input_cost_per_token": 1.5e-06,
+        "output_cost_per_token": 7.5e-06,
+        "max_input_tokens": 262144,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex..."
+        },
+        "litellm_provider": "openrouter",
+        "mistralai/mistral-medium-3-5": {
+            "input_cost_per_token": 1.5e-06,
+            "output_cost_per_token": 7.5e-06,
+            "max_input_tokens": 262144,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "ft:gpt-3.5-turbo-0125": {
         "input_cost_per_token": 3e-06,
@@ -41670,7 +41692,7 @@
         "input_cost_per_token": 3e-06,
         "litellm_provider": "openrouter",
         "max_input_tokens": 200000,
-        "max_output_tokens": 128000,
+        "max_output_tokens": 64000,
         "max_tokens": 128000,
         "mode": "chat",
         "output_cost_per_token": 1.5e-05,
@@ -41688,7 +41710,7 @@
             "input_cost_per_token": 3e-06,
             "output_cost_per_token": 1.5e-05,
             "max_input_tokens": 200000,
-            "max_output_tokens": 128000,
+            "max_output_tokens": 64000,
             "metadata": {
                 "notes": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rapid responses and..."
             },
