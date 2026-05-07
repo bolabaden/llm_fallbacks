@@ -5,6 +5,26 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "baidu/cobuddy:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool..."
+                },
+                "litellm_provider": "openrouter",
+                "baidu/cobuddy:free": {
+                    "input_cost_per_token": 0.0,
+                    "output_cost_per_token": 0.0,
+                    "max_input_tokens": 131072,
+                    "max_output_tokens": 65536,
+                    "metadata": {
+                        "notes": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "openai/gpt-chat-latest": {
                 "input_cost_per_token": 5e-06,
                 "output_cost_per_token": 3e-05,
@@ -236,10 +256,10 @@
                 }
             },
             "~moonshotai/kimi-latest": {
-                "input_cost_per_token": 7.4e-07,
-                "output_cost_per_token": 3.49e-06,
-                "max_input_tokens": 262142,
-                "max_output_tokens": 262142,
+                "input_cost_per_token": 7.5e-07,
+                "output_cost_per_token": 3.5e-06,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 16384,
                 "mode": "chat",
                 "supports_vision": true,
                 "metadata": {
@@ -247,10 +267,10 @@
                 },
                 "litellm_provider": "openrouter",
                 "~moonshotai/kimi-latest": {
-                    "input_cost_per_token": 7.4e-07,
-                    "output_cost_per_token": 3.49e-06,
-                    "max_input_tokens": 262142,
-                    "max_output_tokens": 262142,
+                    "input_cost_per_token": 7.5e-07,
+                    "output_cost_per_token": 3.5e-06,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 16384,
                     "mode": "chat",
                     "supports_vision": true,
                     "metadata": {
@@ -690,10 +710,10 @@
                 }
             },
             "moonshotai/kimi-k2.6": {
-                "input_cost_per_token": 7.4e-07,
-                "output_cost_per_token": 3.49e-06,
-                "max_input_tokens": 262142,
-                "max_output_tokens": 262142,
+                "input_cost_per_token": 7.5e-07,
+                "output_cost_per_token": 3.5e-06,
+                "max_input_tokens": 262144,
+                "max_output_tokens": 16384,
                 "mode": "chat",
                 "supports_vision": true,
                 "metadata": {
@@ -701,10 +721,10 @@
                 },
                 "litellm_provider": "openrouter",
                 "moonshotai/kimi-k2.6": {
-                    "input_cost_per_token": 7.4e-07,
-                    "output_cost_per_token": 3.49e-06,
-                    "max_input_tokens": 262142,
-                    "max_output_tokens": 262142,
+                    "input_cost_per_token": 7.5e-07,
+                    "output_cost_per_token": 3.5e-06,
+                    "max_input_tokens": 262144,
+                    "max_output_tokens": 16384,
                     "mode": "chat",
                     "supports_vision": true,
                     "metadata": {
@@ -1927,7 +1947,7 @@
                 }
             },
             "qwen/qwen3-coder-next": {
-                "input_cost_per_token": 1.2e-07,
+                "input_cost_per_token": 1.1e-07,
                 "output_cost_per_token": 8e-07,
                 "max_input_tokens": 262144,
                 "max_output_tokens": 262144,
@@ -1936,7 +1956,7 @@
                 },
                 "litellm_provider": "openrouter",
                 "qwen/qwen3-coder-next": {
-                    "input_cost_per_token": 1.2e-07,
+                    "input_cost_per_token": 1.1e-07,
                     "output_cost_per_token": 8e-07,
                     "max_input_tokens": 262144,
                     "max_output_tokens": 262144,
@@ -2228,26 +2248,6 @@
                     "supports_vision": true,
                     "metadata": {
                         "notes": "GPT-5.2-Codex is an upgraded version of GPT-5.1-Codex optimized for software engineering and coding workflows. It is designed for both interactive development sessions and long, independent execution of complex engineering tasks...."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "allenai/olmo-3.1-32b-instruct": {
-                "input_cost_per_token": 2e-07,
-                "output_cost_per_token": 6e-07,
-                "max_input_tokens": 65536,
-                "max_output_tokens": 16384,
-                "metadata": {
-                    "notes": "Olmo 3.1 32B Instruct is a large-scale, 32-billion-parameter instruction-tuned language model engineered for high-performance conversational AI, multi-turn dialogue, and practical instruction following. As part of the Olmo 3.1 family, this..."
-                },
-                "litellm_provider": "openrouter",
-                "allenai/olmo-3.1-32b-instruct": {
-                    "input_cost_per_token": 2e-07,
-                    "output_cost_per_token": 6e-07,
-                    "max_input_tokens": 65536,
-                    "max_output_tokens": 16384,
-                    "metadata": {
-                        "notes": "Olmo 3.1 32B Instruct is a large-scale, 32-billion-parameter instruction-tuned language model engineered for high-performance conversational AI, multi-turn dialogue, and practical instruction following. As part of the Olmo 3.1 family, this..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -2885,8 +2885,8 @@
                 }
             },
             "deepseek/deepseek-v3.2-speciale": {
-                "input_cost_per_token": 4e-07,
-                "output_cost_per_token": 1.2e-06,
+                "input_cost_per_token": 2.87e-07,
+                "output_cost_per_token": 4.31e-07,
                 "max_input_tokens": 163840,
                 "max_output_tokens": 163840,
                 "metadata": {
@@ -2894,8 +2894,8 @@
                 },
                 "litellm_provider": "openrouter",
                 "deepseek/deepseek-v3.2-speciale": {
-                    "input_cost_per_token": 4e-07,
-                    "output_cost_per_token": 1.2e-06,
+                    "input_cost_per_token": 2.87e-07,
+                    "output_cost_per_token": 4.31e-07,
                     "max_input_tokens": 163840,
                     "max_output_tokens": 163840,
                     "metadata": {
@@ -3281,26 +3281,6 @@
                     "output_cost_per_token": 0.0,
                     "max_input_tokens": 128000,
                     "max_output_tokens": 128000,
-                    "metadata": {
-                        "notes": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba\u2019s..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "nvidia/nemotron-nano-12b-v2-vl": {
-                "input_cost_per_token": 2e-07,
-                "output_cost_per_token": 6e-07,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 16384,
-                "metadata": {
-                    "notes": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba\u2019s..."
-                },
-                "litellm_provider": "openrouter",
-                "nvidia/nemotron-nano-12b-v2-vl": {
-                    "input_cost_per_token": 2e-07,
-                    "output_cost_per_token": 6e-07,
-                    "max_input_tokens": 131072,
-                    "max_output_tokens": 16384,
                     "metadata": {
                         "notes": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba\u2019s..."
                     },
@@ -7990,19 +7970,19 @@
                 }
             },
             "meta-llama/llama-3-8b-instruct": {
-                "input_cost_per_token": 3e-08,
+                "input_cost_per_token": 4e-08,
                 "output_cost_per_token": 4e-08,
                 "max_input_tokens": 8192,
-                "max_output_tokens": 16384,
+                "max_output_tokens": 8192,
                 "metadata": {
                     "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
                 },
                 "litellm_provider": "openrouter",
                 "meta-llama/llama-3-8b-instruct": {
-                    "input_cost_per_token": 3e-08,
+                    "input_cost_per_token": 4e-08,
                     "output_cost_per_token": 4e-08,
                     "max_input_tokens": 8192,
-                    "max_output_tokens": 16384,
+                    "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
                     },
@@ -8468,6 +8448,16 @@
             }
         },
         "free_models": {
+            "baidu/cobuddy:free": {
+                "input_cost_per_token": 0.0,
+                "output_cost_per_token": 0.0,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 65536,
+                "metadata": {
+                    "notes": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool..."
+                },
+                "litellm_provider": "openrouter"
+            },
             "openrouter/owl-alpha": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,

@@ -86,6 +86,7 @@ google/gemma-4-26b-a4b-it:free
 google/gemma-4-31b-it:free
 inclusionai/ling-2.6-1t:free
 baidu/qianfan-ocr-fast:free
+baidu/cobuddy:free
 openai/gpt-oss-120b:free
 z-ai/glm-4.5-air:free
 github_copilot/gpt-4-o-preview

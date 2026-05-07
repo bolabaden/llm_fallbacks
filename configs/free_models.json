@@ -1848,6 +1848,27 @@
     "quality_source": "heuristic_v1"
   },
   {
+    "id": "baidu/cobuddy:free",
+    "provider": "openrouter",
+    "mode": "",
+    "is_free": true,
+    "input_cost_per_token": 0.0,
+    "output_cost_per_token": 0.0,
+    "context_length": 131072,
+    "max_output_tokens": 65536,
+    "supports_vision": false,
+    "supports_function_calling": false,
+    "supports_tool_choice": false,
+    "supports_response_schema": false,
+    "supports_system_messages": false,
+    "supports_audio_input": false,
+    "supports_audio_output": false,
+    "supports_pdf_input": false,
+    "supports_prompt_caching": false,
+    "quality_score": 36.84,
+    "quality_source": "heuristic_v1"
+  },
+  {
     "id": "openai/gpt-oss-120b:free",
     "provider": "openrouter",
     "mode": "",

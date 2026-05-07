@@ -475,6 +475,26 @@
             "litellm_provider": "openrouter"
         }
     },
+    "baidu/cobuddy:free": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool..."
+        },
+        "litellm_provider": "openrouter",
+        "baidu/cobuddy:free": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "lemonade/gpt-oss-120b-mxfp-gguf": {
         "input_cost_per_token": 0,
         "litellm_provider": "lemonade",
@@ -2262,26 +2282,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "meta-llama/llama-3-8b-instruct": {
-        "input_cost_per_token": 3e-08,
-        "output_cost_per_token": 4e-08,
-        "max_input_tokens": 8192,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
-        },
-        "litellm_provider": "openrouter",
-        "meta-llama/llama-3-8b-instruct": {
-            "input_cost_per_token": 3e-08,
-            "output_cost_per_token": 4e-08,
-            "max_input_tokens": 8192,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "novita/qwen/qwen3-embedding-0.6b": {
         "litellm_provider": "novita",
         "mode": "embedding",
@@ -2423,6 +2423,26 @@
         "max_output_tokens": 8192,
         "max_tokens": 8192,
         "supports_system_messages": true
+    },
+    "meta-llama/llama-3-8b-instruct": {
+        "input_cost_per_token": 4e-08,
+        "output_cost_per_token": 4e-08,
+        "max_input_tokens": 8192,
+        "max_output_tokens": 8192,
+        "metadata": {
+            "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
+        },
+        "litellm_provider": "openrouter",
+        "meta-llama/llama-3-8b-instruct": {
+            "input_cost_per_token": 4e-08,
+            "output_cost_per_token": 4e-08,
+            "max_input_tokens": 8192,
+            "max_output_tokens": 8192,
+            "metadata": {
+                "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "fireworks_ai/accounts/fireworks/models/flux-kontext-pro": {
         "max_tokens": 4096,
@@ -10028,6 +10048,26 @@
             "litellm_provider": "openrouter"
         }
     },
+    "deepseek/deepseek-v3.2-speciale": {
+        "input_cost_per_token": 2.87e-07,
+        "output_cost_per_token": 4.31e-07,
+        "max_input_tokens": 163840,
+        "max_output_tokens": 163840,
+        "metadata": {
+            "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention (DSA) for efficient long-context processing, then scales post-training reinforcement learning..."
+        },
+        "litellm_provider": "openrouter",
+        "deepseek/deepseek-v3.2-speciale": {
+            "input_cost_per_token": 2.87e-07,
+            "output_cost_per_token": 4.31e-07,
+            "max_input_tokens": 163840,
+            "max_output_tokens": 163840,
+            "metadata": {
+                "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention (DSA) for efficient long-context processing, then scales post-training reinforcement learning..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "deepinfra/qwen/qwen3-235b-a22b": {
         "max_tokens": 40960,
         "max_input_tokens": 40960,
@@ -11105,26 +11145,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "nvidia/nemotron-nano-12b-v2-vl": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 6e-07,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba\u2019s..."
-        },
-        "litellm_provider": "openrouter",
-        "nvidia/nemotron-nano-12b-v2-vl": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 6e-07,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba\u2019s..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "vercel_ai_gateway/meta/llama-4-maverick": {
         "input_cost_per_token": 2e-07,
         "litellm_provider": "vercel_ai_gateway",
@@ -11230,26 +11250,6 @@
         "supports_parallel_function_calling": true,
         "supports_system_messages": true,
         "supports_tool_choice": true
-    },
-    "allenai/olmo-3.1-32b-instruct": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 6e-07,
-        "max_input_tokens": 65536,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "Olmo 3.1 32B Instruct is a large-scale, 32-billion-parameter instruction-tuned language model engineered for high-performance conversational AI, multi-turn dialogue, and practical instruction following. As part of the Olmo 3.1 family, this..."
-        },
-        "litellm_provider": "openrouter",
-        "allenai/olmo-3.1-32b-instruct": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 6e-07,
-            "max_input_tokens": 65536,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "Olmo 3.1 32B Instruct is a large-scale, 32-billion-parameter instruction-tuned language model engineered for high-performance conversational AI, multi-turn dialogue, and practical instruction following. As part of the Olmo 3.1 family, this..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "vercel_ai_gateway/alibaba/qwen-3-235b": {
         "input_cost_per_token": 2e-07,
@@ -11936,6 +11936,26 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
+    "qwen/qwen3-coder-next": {
+        "input_cost_per_token": 1.1e-07,
+        "output_cost_per_token": 8e-07,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "metadata": {
+            "notes": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per..."
+        },
+        "litellm_provider": "openrouter",
+        "qwen/qwen3-coder-next": {
+            "input_cost_per_token": 1.1e-07,
+            "output_cost_per_token": 8e-07,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "metadata": {
+                "notes": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "mistralai/mistral-small-3.1-24b-instruct": {
         "input_cost_per_token": 3.5e-07,
         "litellm_provider": "openrouter",
@@ -11971,26 +11991,6 @@
         "output_cost_per_token": 6.1e-07,
         "source": "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/metagenai.meta-llama-3-1-8b-instruct-offer?tab=PlansAndPrice",
         "supports_tool_choice": true
-    },
-    "qwen/qwen3-coder-next": {
-        "input_cost_per_token": 1.2e-07,
-        "output_cost_per_token": 8e-07,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 262144,
-        "metadata": {
-            "notes": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per..."
-        },
-        "litellm_provider": "openrouter",
-        "qwen/qwen3-coder-next": {
-            "input_cost_per_token": 1.2e-07,
-            "output_cost_per_token": 8e-07,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 262144,
-            "metadata": {
-                "notes": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "deepseek/deepseek-chat-v3.1": {
         "input_cost_per_token": 1.5e-07,
@@ -15139,26 +15139,6 @@
         "supports_tool_choice": true,
         "supports_system_messages": true,
         "supports_response_schema": true
-    },
-    "deepseek/deepseek-v3.2-speciale": {
-        "input_cost_per_token": 4e-07,
-        "output_cost_per_token": 1.2e-06,
-        "max_input_tokens": 163840,
-        "max_output_tokens": 163840,
-        "metadata": {
-            "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention (DSA) for efficient long-context processing, then scales post-training reinforcement learning..."
-        },
-        "litellm_provider": "openrouter",
-        "deepseek/deepseek-v3.2-speciale": {
-            "input_cost_per_token": 4e-07,
-            "output_cost_per_token": 1.2e-06,
-            "max_input_tokens": 163840,
-            "max_output_tokens": 163840,
-            "metadata": {
-                "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention (DSA) for efficient long-context processing, then scales post-training reinforcement learning..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "dashscope/qwen-plus": {
         "input_cost_per_token": 4e-07,
@@ -23590,54 +23570,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "moonshotai/kimi-k2.6": {
-        "input_cost_per_token": 7.4e-07,
-        "output_cost_per_token": 3.49e-06,
-        "max_input_tokens": 262142,
-        "max_output_tokens": 262142,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
-        },
-        "litellm_provider": "openrouter",
-        "moonshotai/kimi-k2.6": {
-            "input_cost_per_token": 7.4e-07,
-            "output_cost_per_token": 3.49e-06,
-            "max_input_tokens": 262142,
-            "max_output_tokens": 262142,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "~moonshotai/kimi-latest": {
-        "input_cost_per_token": 7.4e-07,
-        "output_cost_per_token": 3.49e-06,
-        "max_input_tokens": 262142,
-        "max_output_tokens": 262142,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "This model always redirects to the latest model in the MoonshotAI Kimi family."
-        },
-        "litellm_provider": "openrouter",
-        "~moonshotai/kimi-latest": {
-            "input_cost_per_token": 7.4e-07,
-            "output_cost_per_token": 3.49e-06,
-            "max_input_tokens": 262142,
-            "max_output_tokens": 262142,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "This model always redirects to the latest model in the MoonshotAI Kimi family."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "switchpoint/router": {
         "input_cost_per_token": 8.5e-07,
         "litellm_provider": "openrouter",
@@ -23657,6 +23589,54 @@
             "max_input_tokens": 131072,
             "metadata": {
                 "notes": "Switchpoint AI's router instantly analyzes your request and directs it to the optimal AI from an ever-evolving library. As the world of LLMs advances, our router gets smarter, ensuring you..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "moonshotai/kimi-k2.6": {
+        "input_cost_per_token": 7.5e-07,
+        "output_cost_per_token": 3.5e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 16384,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
+        },
+        "litellm_provider": "openrouter",
+        "moonshotai/kimi-k2.6": {
+            "input_cost_per_token": 7.5e-07,
+            "output_cost_per_token": 3.5e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 16384,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "~moonshotai/kimi-latest": {
+        "input_cost_per_token": 7.5e-07,
+        "output_cost_per_token": 3.5e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 16384,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the MoonshotAI Kimi family."
+        },
+        "litellm_provider": "openrouter",
+        "~moonshotai/kimi-latest": {
+            "input_cost_per_token": 7.5e-07,
+            "output_cost_per_token": 3.5e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 16384,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the MoonshotAI Kimi family."
             },
             "litellm_provider": "openrouter"
         }
