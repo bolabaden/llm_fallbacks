@@ -84,7 +84,6 @@ meta_llama/llama-3.3-8b-instruct
 nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
 google/gemma-4-26b-a4b-it:free
 google/gemma-4-31b-it:free
-inclusionai/ling-2.6-1t:free
 baidu/qianfan-ocr-fast:free
 baidu/cobuddy:free
 openai/gpt-oss-120b:free
