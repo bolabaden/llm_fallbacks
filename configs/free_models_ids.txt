@@ -77,7 +77,6 @@ arcee-ai/trinity-large-thinking:free
 deepseek/deepseek-v4-flash:free
 google/lyria-3-clip-preview
 google/lyria-3-pro-preview
-inclusionai/ring-2.6-1t:free
 nvidia/nemotron-3-super-120b-a12b:free
 openrouter/owl-alpha
 github_copilot/gpt-4o-2024-08-06

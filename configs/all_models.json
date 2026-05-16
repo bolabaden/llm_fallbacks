@@ -261,26 +261,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "inclusionai/ring-2.6-1t:free": {
-        "input_cost_per_token": 0.0,
-        "output_cost_per_token": 0.0,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 65536,
-        "metadata": {
-            "notes": "Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, built for real-world agent workflows that require both strong capability and operational efficiency. It is optimized for coding agents, tool..."
-        },
-        "litellm_provider": "openrouter",
-        "inclusionai/ring-2.6-1t:free": {
-            "input_cost_per_token": 0.0,
-            "output_cost_per_token": 0.0,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 65536,
-            "metadata": {
-                "notes": "Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, built for real-world agent workflows that require both strong capability and operational efficiency. It is optimized for coding agents, tool..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "lemonade/qwen3-4b-instruct-2507-gguf": {
         "input_cost_per_token": 0,
         "litellm_provider": "lemonade",
@@ -3030,7 +3010,7 @@
     },
     "ibm-granite/granite-4.0-h-micro": {
         "input_cost_per_token": 1.7e-08,
-        "output_cost_per_token": 1.1e-07,
+        "output_cost_per_token": 1.12e-07,
         "max_input_tokens": 131000,
         "metadata": {
             "notes": "Granite-4.0-H-Micro is a 3B parameter from the Granite 4 family of models. These models are the latest in a series of models released by IBM. They are fine-tuned for long..."
@@ -3038,7 +3018,7 @@
         "litellm_provider": "openrouter",
         "ibm-granite/granite-4.0-h-micro": {
             "input_cost_per_token": 1.7e-08,
-            "output_cost_per_token": 1.1e-07,
+            "output_cost_per_token": 1.12e-07,
             "max_input_tokens": 131000,
             "metadata": {
                 "notes": "Granite-4.0-H-Micro is a 3B parameter from the Granite 4 family of models. These models are the latest in a series of models released by IBM. They are fine-tuned for long..."
@@ -4684,7 +4664,7 @@
     },
     "meta-llama/llama-3.2-1b-instruct": {
         "input_cost_per_token": 2.7e-08,
-        "output_cost_per_token": 2e-07,
+        "output_cost_per_token": 2.01e-07,
         "max_input_tokens": 60000,
         "metadata": {
             "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate..."
@@ -4692,7 +4672,7 @@
         "litellm_provider": "openrouter",
         "meta-llama/llama-3.2-1b-instruct": {
             "input_cost_per_token": 2.7e-08,
-            "output_cost_per_token": 2e-07,
+            "output_cost_per_token": 2.01e-07,
             "max_input_tokens": 60000,
             "metadata": {
                 "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate..."
@@ -5851,6 +5831,24 @@
             "litellm_provider": "openrouter"
         }
     },
+    "deepseek/deepseek-v4-flash": {
+        "input_cost_per_token": 1.12e-07,
+        "output_cost_per_token": 2.24e-07,
+        "max_input_tokens": 1048575,
+        "metadata": {
+            "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
+        },
+        "litellm_provider": "openrouter",
+        "deepseek/deepseek-v4-flash": {
+            "input_cost_per_token": 1.12e-07,
+            "output_cost_per_token": 2.24e-07,
+            "max_input_tokens": 1048575,
+            "metadata": {
+                "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "qwen/qwen3-14b": {
         "input_cost_per_token": 1e-07,
         "output_cost_per_token": 2.4e-07,
@@ -6289,26 +6287,6 @@
         "source": "https://techcommunity.microsoft.com/blog/Azure-AI-Services-blog/announcing-new-phi-pricing-empowering-your-business-with-small-language-models/4395112",
         "supports_function_calling": true
     },
-    "deepseek/deepseek-v4-flash": {
-        "input_cost_per_token": 1.26e-07,
-        "output_cost_per_token": 2.52e-07,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 131072,
-        "metadata": {
-            "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
-        },
-        "litellm_provider": "openrouter",
-        "deepseek/deepseek-v4-flash": {
-            "input_cost_per_token": 1.26e-07,
-            "output_cost_per_token": 2.52e-07,
-            "max_input_tokens": 1048576,
-            "max_output_tokens": 131072,
-            "metadata": {
-                "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "deepinfra/meta-llama/llama-4-scout-17b-16e-instruct": {
         "max_tokens": 327680,
         "max_input_tokens": 327680,
@@ -6415,6 +6393,24 @@
         "supports_tool_choice": true,
         "supports_function_calling": true
     },
+    "meta-llama/llama-3.2-3b-instruct": {
+        "input_cost_per_token": 5.09e-08,
+        "output_cost_per_token": 3.35e-07,
+        "max_input_tokens": 80000,
+        "metadata": {
+            "notes": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it..."
+        },
+        "litellm_provider": "openrouter",
+        "meta-llama/llama-3.2-3b-instruct": {
+            "input_cost_per_token": 5.09e-08,
+            "output_cost_per_token": 3.35e-07,
+            "max_input_tokens": 80000,
+            "metadata": {
+                "notes": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "qwen/qwen3-30b-a3b-instruct-2507": {
         "input_cost_per_token": 9e-08,
         "output_cost_per_token": 3e-07,
@@ -6463,24 +6459,6 @@
             "max_input_tokens": 262144,
             "metadata": {
                 "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "meta-llama/llama-3.2-3b-instruct": {
-        "input_cost_per_token": 5.1e-08,
-        "output_cost_per_token": 3.4e-07,
-        "max_input_tokens": 80000,
-        "metadata": {
-            "notes": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it..."
-        },
-        "litellm_provider": "openrouter",
-        "meta-llama/llama-3.2-3b-instruct": {
-            "input_cost_per_token": 5.1e-08,
-            "output_cost_per_token": 3.4e-07,
-            "max_input_tokens": 80000,
-            "metadata": {
-                "notes": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it..."
             },
             "litellm_provider": "openrouter"
         }
@@ -8797,24 +8775,6 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
-    "meta-llama/llama-guard-3-8b": {
-        "input_cost_per_token": 4.8e-07,
-        "output_cost_per_token": 3e-08,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "Llama Guard 3 is a Llama-3.1-8B pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification)..."
-        },
-        "litellm_provider": "openrouter",
-        "meta-llama/llama-guard-3-8b": {
-            "input_cost_per_token": 4.8e-07,
-            "output_cost_per_token": 3e-08,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "Llama Guard 3 is a Llama-3.1-8B pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification)..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "deepinfra/qwen/qwen2.5-72b-instruct": {
         "max_tokens": 32768,
         "max_input_tokens": 32768,
@@ -8825,6 +8785,24 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
+    },
+    "meta-llama/llama-guard-3-8b": {
+        "input_cost_per_token": 4.84e-07,
+        "output_cost_per_token": 3e-08,
+        "max_input_tokens": 131072,
+        "metadata": {
+            "notes": "Llama Guard 3 is a Llama-3.1-8B pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification)..."
+        },
+        "litellm_provider": "openrouter",
+        "meta-llama/llama-guard-3-8b": {
+            "input_cost_per_token": 4.84e-07,
+            "output_cost_per_token": 3e-08,
+            "max_input_tokens": 131072,
+            "metadata": {
+                "notes": "Llama Guard 3 is a Llama-3.1-8B pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification)..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "deepinfra/meta-llama/llama-3.3-70b-instruct-turbo": {
         "max_tokens": 131072,
@@ -9726,46 +9704,6 @@
         "supports_tool_choice": true,
         "supports_function_calling": true
     },
-    "x-ai/grok-4-fast": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 5e-07,
-        "max_input_tokens": 2000000,
-        "max_output_tokens": 30000,
-        "metadata": {
-            "notes": "Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a 2M token context window. It comes in two flavors: non-reasoning and reasoning. Read more about the model..."
-        },
-        "litellm_provider": "openrouter",
-        "x-ai/grok-4-fast": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 5e-07,
-            "max_input_tokens": 2000000,
-            "max_output_tokens": 30000,
-            "metadata": {
-                "notes": "Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a 2M token context window. It comes in two flavors: non-reasoning and reasoning. Read more about the model..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "x-ai/grok-4.1-fast": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 5e-07,
-        "max_input_tokens": 2000000,
-        "max_output_tokens": 30000,
-        "metadata": {
-            "notes": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window. Reasoning can be enabled/disabled using..."
-        },
-        "litellm_provider": "openrouter",
-        "x-ai/grok-4.1-fast": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 5e-07,
-            "max_input_tokens": 2000000,
-            "max_output_tokens": 30000,
-            "metadata": {
-                "notes": "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-world use cases like customer support and deep research. 2M context window. Reasoning can be enabled/disabled using..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "azure_ai/grok-4-1-fast-non-reasoning": {
         "input_cost_per_token": 2e-07,
         "output_cost_per_token": 5e-07,
@@ -9933,6 +9871,26 @@
             "max_output_tokens": 65536,
             "metadata": {
                 "notes": "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSeek as an intermediate step between V3.1 and future architectures. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "inclusionai/ring-2.6-1t": {
+        "input_cost_per_token": 7.5e-08,
+        "output_cost_per_token": 6.25e-07,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65536,
+        "metadata": {
+            "notes": "Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, built for real-world agent workflows that require both strong capability and operational efficiency. It is optimized for coding agents, tool..."
+        },
+        "litellm_provider": "openrouter",
+        "inclusionai/ring-2.6-1t": {
+            "input_cost_per_token": 7.5e-08,
+            "output_cost_per_token": 6.25e-07,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65536,
+            "metadata": {
+                "notes": "Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, built for real-world agent workflows that require both strong capability and operational efficiency. It is optimized for coding agents, tool..."
             },
             "litellm_provider": "openrouter"
         }
@@ -11138,42 +11096,6 @@
         "supports_tool_choice": true,
         "supports_vision": false
     },
-    "x-ai/grok-3-mini": {
-        "input_cost_per_token": 3e-07,
-        "output_cost_per_token": 5e-07,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "A lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible."
-        },
-        "litellm_provider": "openrouter",
-        "x-ai/grok-3-mini": {
-            "input_cost_per_token": 3e-07,
-            "output_cost_per_token": 5e-07,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "A lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "x-ai/grok-3-mini-beta": {
-        "input_cost_per_token": 3e-07,
-        "output_cost_per_token": 5e-07,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "Grok 3 Mini is a lightweight, smaller thinking model. Unlike traditional models that generate answers immediately, Grok 3 Mini thinks before responding. It\u2019s ideal for reasoning-heavy tasks that don\u2019t demand..."
-        },
-        "litellm_provider": "openrouter",
-        "x-ai/grok-3-mini-beta": {
-            "input_cost_per_token": 3e-07,
-            "output_cost_per_token": 5e-07,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "Grok 3 Mini is a lightweight, smaller thinking model. Unlike traditional models that generate answers immediately, Grok 3 Mini thinks before responding. It\u2019s ideal for reasoning-heavy tasks that don\u2019t demand..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "deepinfra/mistralai/mixtral-8x7b-instruct-v0.1": {
         "max_tokens": 32768,
         "max_input_tokens": 32768,
@@ -11864,6 +11786,31 @@
         "supports_tool_choice": true,
         "supports_vision": true
     },
+    "mistralai/mistral-small-3.1-24b-instruct": {
+        "input_cost_per_token": 3.51e-07,
+        "litellm_provider": "openrouter",
+        "max_tokens": 131072,
+        "mode": "chat",
+        "output_cost_per_token": 5.55e-07,
+        "supports_tool_choice": true,
+        "max_input_tokens": 128000,
+        "max_output_tokens": 131072,
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
+        },
+        "mistralai/mistral-small-3.1-24b-instruct": {
+            "input_cost_per_token": 3.51e-07,
+            "output_cost_per_token": 5.55e-07,
+            "max_input_tokens": 128000,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "azure/eu/gpt-4o-mini-2024-07-18": {
         "cache_read_input_token_cost": 8.3e-08,
         "input_cost_per_token": 1.65e-07,
@@ -11912,31 +11859,6 @@
             "max_output_tokens": 262144,
             "metadata": {
                 "notes": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "mistralai/mistral-small-3.1-24b-instruct": {
-        "input_cost_per_token": 3.5e-07,
-        "litellm_provider": "openrouter",
-        "max_tokens": 131072,
-        "mode": "chat",
-        "output_cost_per_token": 5.6e-07,
-        "supports_tool_choice": true,
-        "max_input_tokens": 128000,
-        "max_output_tokens": 131072,
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
-        },
-        "mistralai/mistral-small-3.1-24b-instruct": {
-            "input_cost_per_token": 3.5e-07,
-            "output_cost_per_token": 5.6e-07,
-            "max_input_tokens": 128000,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and..."
             },
             "litellm_provider": "openrouter"
         }
@@ -15542,26 +15464,6 @@
         "supports_response_schema": true,
         "supports_tool_choice": true,
         "supports_web_search": true
-    },
-    "x-ai/grok-code-fast-1": {
-        "input_cost_per_token": 2e-07,
-        "output_cost_per_token": 1.5e-06,
-        "max_input_tokens": 256000,
-        "max_output_tokens": 10000,
-        "metadata": {
-            "notes": "Grok Code Fast 1 is a speedy and economical reasoning model that excels at agentic coding. With reasoning traces visible in the response, developers can steer Grok Code for high-quality..."
-        },
-        "litellm_provider": "openrouter",
-        "x-ai/grok-code-fast-1": {
-            "input_cost_per_token": 2e-07,
-            "output_cost_per_token": 1.5e-06,
-            "max_input_tokens": 256000,
-            "max_output_tokens": 10000,
-            "metadata": {
-                "notes": "Grok Code Fast 1 is a speedy and economical reasoning model that excels at agentic coding. With reasoning traces visible in the response, developers can steer Grok Code for high-quality..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "sao10k/l3.1-euryale-70b": {
         "input_cost_per_token": 8.5e-07,
@@ -32052,32 +31954,6 @@
         "supports_function_calling": true,
         "supports_tool_choice": true
     },
-    "x-ai/grok-4": {
-        "input_cost_per_token": 3e-06,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 256000,
-        "max_output_tokens": 256000,
-        "max_tokens": 256000,
-        "mode": "chat",
-        "output_cost_per_token": 1.5e-05,
-        "source": "https://openrouter.ai/x-ai/grok-4",
-        "supports_function_calling": true,
-        "supports_reasoning": true,
-        "supports_tool_choice": true,
-        "supports_web_search": true,
-        "metadata": {
-            "notes": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not..."
-        },
-        "x-ai/grok-4": {
-            "input_cost_per_token": 3e-06,
-            "output_cost_per_token": 1.5e-05,
-            "max_input_tokens": 256000,
-            "metadata": {
-                "notes": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "xai/grok-4": {
         "input_cost_per_token": 3e-06,
         "litellm_provider": "xai",
@@ -32444,42 +32320,6 @@
         "mode": "chat",
         "output_cost_per_token": 1.5e-05,
         "supports_tool_choice": true
-    },
-    "x-ai/grok-3": {
-        "input_cost_per_token": 3e-06,
-        "output_cost_per_token": 1.5e-05,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in..."
-        },
-        "litellm_provider": "openrouter",
-        "x-ai/grok-3": {
-            "input_cost_per_token": 3e-06,
-            "output_cost_per_token": 1.5e-05,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "x-ai/grok-3-beta": {
-        "input_cost_per_token": 3e-06,
-        "output_cost_per_token": 1.5e-05,
-        "max_input_tokens": 131072,
-        "metadata": {
-            "notes": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in..."
-        },
-        "litellm_provider": "openrouter",
-        "x-ai/grok-3-beta": {
-            "input_cost_per_token": 3e-06,
-            "output_cost_per_token": 1.5e-05,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "replicate/anthropic/claude-3.7-sonnet": {
         "input_cost_per_token": 3e-06,
