@@ -2070,6 +2070,24 @@
         "supports_tool_choice": true,
         "supports_function_calling": true
     },
+    "mistralai/mistral-nemo": {
+        "input_cost_per_token": 2e-08,
+        "output_cost_per_token": 3e-08,
+        "max_input_tokens": 131072,
+        "metadata": {
+            "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
+        },
+        "litellm_provider": "openrouter",
+        "mistralai/mistral-nemo": {
+            "input_cost_per_token": 2e-08,
+            "output_cost_per_token": 3e-08,
+            "max_input_tokens": 131072,
+            "metadata": {
+                "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "voyage/rerank-2.5": {
         "input_cost_per_token": 5e-08,
         "litellm_provider": "voyage",
@@ -2160,26 +2178,6 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
-    },
-    "mistralai/mistral-nemo": {
-        "input_cost_per_token": 2e-08,
-        "output_cost_per_token": 4e-08,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
-        },
-        "litellm_provider": "openrouter",
-        "mistralai/mistral-nemo": {
-            "input_cost_per_token": 2e-08,
-            "output_cost_per_token": 4e-08,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA. The model is multilingual, supporting English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese,..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "lambda_ai/hermes3-8b": {
         "input_cost_per_token": 2.5e-08,
@@ -4622,6 +4620,33 @@
         "supports_tool_choice": true,
         "supports_function_calling": true
     },
+    "openai/gpt-oss-120b": {
+        "input_cost_per_token": 3.9e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 32768,
+        "max_tokens": 32768,
+        "mode": "chat",
+        "output_cost_per_token": 1.8e-07,
+        "source": "https://openrouter.ai/openai/gpt-oss-120b",
+        "supports_function_calling": true,
+        "supports_parallel_function_calling": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
+        },
+        "openai/gpt-oss-120b": {
+            "input_cost_per_token": 3.9e-08,
+            "output_cost_per_token": 1.8e-07,
+            "max_input_tokens": 131072,
+            "metadata": {
+                "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "gemini/gemini-1.5-flash": {
         "deprecation_date": "2025-09-29",
         "input_cost_per_token": 7.5e-08,
@@ -4651,34 +4676,6 @@
             "max_input_tokens": 60000,
             "metadata": {
                 "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "openai/gpt-oss-120b": {
-        "input_cost_per_token": 3.9e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 131072,
-        "max_output_tokens": 131072,
-        "max_tokens": 32768,
-        "mode": "chat",
-        "output_cost_per_token": 1.9e-07,
-        "source": "https://openrouter.ai/openai/gpt-oss-120b",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
-        },
-        "openai/gpt-oss-120b": {
-            "input_cost_per_token": 3.9e-08,
-            "output_cost_per_token": 1.9e-07,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 131072,
-            "metadata": {
-                "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
             },
             "litellm_provider": "openrouter"
         }
@@ -6448,6 +6445,24 @@
         "supports_response_schema": true,
         "supports_vision": true
     },
+    "google/gemma-4-26b-a4b-it": {
+        "input_cost_per_token": 6e-08,
+        "output_cost_per_token": 3.3e-07,
+        "max_input_tokens": 262144,
+        "metadata": {
+            "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
+        },
+        "litellm_provider": "openrouter",
+        "google/gemma-4-26b-a4b-it": {
+            "input_cost_per_token": 6e-08,
+            "output_cost_per_token": 3.3e-07,
+            "max_input_tokens": 262144,
+            "metadata": {
+                "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "fireworks_ai/accounts/fireworks/models/qwen3-4b-instruct-2507": {
         "max_tokens": 262144,
         "max_input_tokens": 262144,
@@ -7697,26 +7712,6 @@
         "litellm_provider": "together_ai",
         "mode": "chat",
         "output_cost_per_token": 2e-07
-    },
-    "google/gemma-4-26b-a4b-it": {
-        "input_cost_per_token": 7e-08,
-        "output_cost_per_token": 3.4e-07,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
-        },
-        "litellm_provider": "openrouter",
-        "google/gemma-4-26b-a4b-it": {
-            "input_cost_per_token": 7e-08,
-            "output_cost_per_token": 3.4e-07,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "groq/openai/gpt-oss-safeguard-20b": {
         "cache_read_input_token_cost": 3.7e-08,
@@ -9008,6 +9003,24 @@
             "litellm_provider": "openrouter"
         }
     },
+    "nvidia/nemotron-3-super-120b-a12b": {
+        "input_cost_per_token": 9e-08,
+        "output_cost_per_token": 4.5e-07,
+        "max_input_tokens": 262144,
+        "metadata": {
+            "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
+        },
+        "litellm_provider": "openrouter",
+        "nvidia/nemotron-3-super-120b-a12b": {
+            "input_cost_per_token": 9e-08,
+            "output_cost_per_token": 4.5e-07,
+            "max_input_tokens": 262144,
+            "metadata": {
+                "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "novita/qwen/qwen3-30b-a3b-fp8": {
         "litellm_provider": "novita",
         "mode": "chat",
@@ -9302,26 +9315,6 @@
         "supports_assistant_prefill": true,
         "supports_response_schema": true,
         "supports_tool_choice": true
-    },
-    "nvidia/nemotron-3-super-120b-a12b": {
-        "input_cost_per_token": 1e-07,
-        "output_cost_per_token": 5e-07,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 16384,
-        "metadata": {
-            "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
-        },
-        "litellm_provider": "openrouter",
-        "nvidia/nemotron-3-super-120b-a12b": {
-            "input_cost_per_token": 1e-07,
-            "output_cost_per_token": 5e-07,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 16384,
-            "metadata": {
-                "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "nousresearch/hermes-3-llama-3.1-70b": {
         "input_cost_per_token": 3e-07,
@@ -13568,7 +13561,7 @@
         "max_audio_length_hours": 8.4,
         "max_audio_per_prompt": 1,
         "max_images_per_prompt": 3000,
-        "max_input_tokens": 1048576,
+        "max_input_tokens": 1000000,
         "max_output_tokens": 8192,
         "max_pdf_size_mb": 30,
         "max_tokens": 8192,
@@ -13590,7 +13583,7 @@
             "input_cost_per_token": 1e-07,
             "output_cost_per_token": 4e-07,
             "input_cost_per_image": 1e-07,
-            "max_input_tokens": 1048576,
+            "max_input_tokens": 1000000,
             "max_output_tokens": 8192,
             "metadata": {
                 "notes": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It..."
