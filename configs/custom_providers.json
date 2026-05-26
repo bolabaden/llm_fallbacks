@@ -4177,26 +4177,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "alibaba/tongyi-deepresearch-30b-a3b": {
-                "input_cost_per_token": 9e-08,
-                "output_cost_per_token": 4.5e-07,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 131072,
-                "metadata": {
-                    "notes": "Tongyi DeepResearch is an agentic large language model developed by Tongyi Lab, with 30 billion total parameters activating only 3 billion per token. It's optimized for long-horizon, deep information-seeking tasks..."
-                },
-                "litellm_provider": "openrouter",
-                "alibaba/tongyi-deepresearch-30b-a3b": {
-                    "input_cost_per_token": 9e-08,
-                    "output_cost_per_token": 4.5e-07,
-                    "max_input_tokens": 131072,
-                    "max_output_tokens": 131072,
-                    "metadata": {
-                        "notes": "Tongyi DeepResearch is an agentic large language model developed by Tongyi Lab, with 30 billion total parameters activating only 3 billion per token. It's optimized for long-horizon, deep information-seeking tasks..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "qwen/qwen3-coder-flash": {
                 "input_cost_per_token": 1.95e-07,
                 "output_cost_per_token": 9.75e-07,
@@ -6903,13 +6883,13 @@
                 }
             },
             "deepseek/deepseek-chat": {
-                "input_cost_per_token": 3.2e-07,
+                "input_cost_per_token": 2.288e-07,
                 "litellm_provider": "openrouter",
-                "max_input_tokens": 163840,
-                "max_output_tokens": 16384,
+                "max_input_tokens": 128000,
+                "max_output_tokens": 16000,
                 "max_tokens": 8192,
                 "mode": "chat",
-                "output_cost_per_token": 8.9e-07,
+                "output_cost_per_token": 9.144e-07,
                 "supports_prompt_caching": true,
                 "supports_tool_choice": true,
                 "cache_creation_input_token_cost": 0.0,
@@ -6931,14 +6911,14 @@
                 "deepseek/deepseek-chat": {
                     "cache_creation_input_token_cost": 0.0,
                     "cache_read_input_token_cost": 2.8e-08,
-                    "input_cost_per_token": 3.2e-07,
+                    "input_cost_per_token": 2.288e-07,
                     "input_cost_per_token_cache_hit": 2.8e-08,
                     "litellm_provider": "openrouter",
-                    "max_input_tokens": 163840,
-                    "max_output_tokens": 16384,
+                    "max_input_tokens": 128000,
+                    "max_output_tokens": 16000,
                     "max_tokens": 8192,
                     "mode": "chat",
-                    "output_cost_per_token": 8.9e-07,
+                    "output_cost_per_token": 9.144e-07,
                     "source": "https://api-docs.deepseek.com/quick_start/pricing",
                     "supported_endpoints": [
                         "/v1/chat/completions"
