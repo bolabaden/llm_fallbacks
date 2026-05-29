@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-b0ffb15b3f2b4b52a337792df3f860c1
+  master_key: sk-5c8cf02eb1a44332a272eb38c146ab6e
   alerting:
   - slack
   - email
@@ -228,7 +228,7 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     input_cost_per_token: 0.0
     output_cost_per_token: 0.0
-    max_input_tokens: 262144
+    max_input_tokens: 196608
     max_output_tokens: 8192
     metadata:
       notes: MiniMax-M2.5 is a SOTA large language model designed for real-world productivity.
@@ -500,12 +500,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -526,12 +526,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - poolside/laguna-xs.2:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -552,12 +552,12 @@ router_settings:
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - poolside/laguna-m.1:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -578,12 +578,12 @@ router_settings:
     - openrouter/google/gemma-4-31b-it:free
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - deepseek/deepseek-v4-flash:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -604,12 +604,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - openrouter/pareto-code:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -631,11 +631,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - moonshotai/kimi-k2.6:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -656,12 +656,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
     - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
   - google/gemma-4-26b-a4b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -682,12 +682,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - google/gemma-4-31b-it:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -708,12 +708,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - google/lyria-3-pro-preview:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -734,12 +734,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - google/lyria-3-clip-preview:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -760,12 +760,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - nvidia/nemotron-3-super-120b-a12b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -786,12 +786,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - minimax/minimax-m2.5:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -837,13 +837,13 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
     - openrouter/z-ai/glm-4.5-air:free
+    - openrouter/minimax/minimax-m2.5:free
   - liquid/lfm-2.5-1.2b-thinking:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -865,11 +865,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - liquid/lfm-2.5-1.2b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -891,11 +891,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - nvidia/nemotron-3-nano-30b-a3b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -917,11 +917,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - openrouter/bodybuilder:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -943,11 +943,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - nvidia/nemotron-nano-12b-v2-vl:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -969,11 +969,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/z-ai/glm-4.5-air:free
   - qwen/qwen3-next-80b-a3b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -995,11 +995,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - nvidia/nemotron-nano-9b-v2:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1021,11 +1021,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - openai/gpt-oss-120b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1047,11 +1047,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - openai/gpt-oss-20b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1073,11 +1073,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - z-ai/glm-4.5-air:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1099,11 +1099,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - qwen/qwen3-coder:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1124,12 +1124,12 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
+    - openrouter/z-ai/glm-4.5-air:free
   - cognitivecomputations/dolphin-mistral-24b-venice-edition:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1151,11 +1151,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - meta-llama/llama-3.3-70b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1177,11 +1177,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - meta-llama/llama-3.2-3b-instruct:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1203,11 +1203,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - nousresearch/hermes-3-llama-3.1-405b:free:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1229,11 +1229,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   - openrouter/auto:
     - openrouter/free
     - gemini/gemini-exp-1206
@@ -1255,11 +1255,11 @@ router_settings:
     - volcengine/kimi-k2-thinking-251104
     - openrouter/poolside/laguna-m.1:free
     - openrouter/poolside/laguna-xs.2:free
-    - openrouter/minimax/minimax-m2.5:free
     - openrouter/moonshotai/kimi-k2.6:free
     - openrouter/openai/gpt-oss-120b:free
     - openrouter/qwen/qwen3-next-80b-a3b-instruct:free
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
+    - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
   retry_policy:
     AuthenticationErrorRetries: 3
     TimeoutErrorRetries: 3

@@ -5,6 +5,66 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "stepfun/step-3.7-flash": {
+                "input_cost_per_token": 2e-07,
+                "output_cost_per_token": 1.15e-06,
+                "max_input_tokens": 256000,
+                "max_output_tokens": 256000,
+                "metadata": {
+                    "notes": "Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters..."
+                },
+                "litellm_provider": "openrouter",
+                "stepfun/step-3.7-flash": {
+                    "input_cost_per_token": 2e-07,
+                    "output_cost_per_token": 1.15e-06,
+                    "max_input_tokens": 256000,
+                    "max_output_tokens": 256000,
+                    "metadata": {
+                        "notes": "Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "anthropic/claude-opus-4.8-fast": {
+                "input_cost_per_token": 1e-05,
+                "output_cost_per_token": 5e-05,
+                "max_input_tokens": 1000000,
+                "max_output_tokens": 128000,
+                "metadata": {
+                    "notes": "Fast-mode variant of [Opus 4.8](/anthropic/claude-opus-4.8) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 4.8.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+                },
+                "litellm_provider": "openrouter",
+                "anthropic/claude-opus-4.8-fast": {
+                    "input_cost_per_token": 1e-05,
+                    "output_cost_per_token": 5e-05,
+                    "max_input_tokens": 1000000,
+                    "max_output_tokens": 128000,
+                    "metadata": {
+                        "notes": "Fast-mode variant of [Opus 4.8](/anthropic/claude-opus-4.8) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 4.8.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "anthropic/claude-opus-4.8": {
+                "input_cost_per_token": 5e-06,
+                "output_cost_per_token": 2.5e-05,
+                "max_input_tokens": 1000000,
+                "max_output_tokens": 128000,
+                "metadata": {
+                    "notes": "Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token..."
+                },
+                "litellm_provider": "openrouter",
+                "anthropic/claude-opus-4.8": {
+                    "input_cost_per_token": 5e-06,
+                    "output_cost_per_token": 2.5e-05,
+                    "max_input_tokens": 1000000,
+                    "max_output_tokens": 128000,
+                    "metadata": {
+                        "notes": "Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "qwen/qwen3.7-max": {
                 "input_cost_per_token": 1.25e-06,
                 "output_cost_per_token": 3.75e-06,
@@ -725,19 +785,17 @@
                 }
             },
             "tencent/hy3-preview": {
-                "input_cost_per_token": 6.6e-08,
-                "output_cost_per_token": 2.6e-07,
+                "input_cost_per_token": 6.3e-08,
+                "output_cost_per_token": 2.1e-07,
                 "max_input_tokens": 262144,
-                "max_output_tokens": 262144,
                 "metadata": {
                     "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to..."
                 },
                 "litellm_provider": "openrouter",
                 "tencent/hy3-preview": {
-                    "input_cost_per_token": 6.6e-08,
-                    "output_cost_per_token": 2.6e-07,
+                    "input_cost_per_token": 6.3e-08,
+                    "output_cost_per_token": 2.1e-07,
                     "max_input_tokens": 262144,
-                    "max_output_tokens": 262144,
                     "metadata": {
                         "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to..."
                     },
@@ -882,30 +940,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "baidu/qianfan-ocr-fast": {
-                "input_cost_per_token": 6.8e-07,
-                "output_cost_per_token": 2.81e-06,
-                "max_input_tokens": 65536,
-                "max_output_tokens": 28672,
-                "mode": "chat",
-                "supports_vision": true,
-                "metadata": {
-                    "notes": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR."
-                },
-                "litellm_provider": "openrouter",
-                "baidu/qianfan-ocr-fast": {
-                    "input_cost_per_token": 6.8e-07,
-                    "output_cost_per_token": 2.81e-06,
-                    "max_input_tokens": 65536,
-                    "max_output_tokens": 28672,
-                    "mode": "chat",
-                    "supports_vision": true,
-                    "metadata": {
-                        "notes": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "moonshotai/kimi-k2.6:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
@@ -973,7 +1007,6 @@
                 "supports_tool_choice": true,
                 "supports_vision": true,
                 "supports_xhigh_reasoning_effort": true,
-                "tool_use_system_prompt_tokens": 346,
                 "metadata": {
                     "notes": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..."
                 },
@@ -1952,8 +1985,6 @@
                 "supports_max_reasoning_effort": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 159,
-                "supports_minimal_reasoning_effort": true,
                 "metadata": {
                     "notes": "Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with..."
                 },
@@ -2027,7 +2058,7 @@
             "minimax/minimax-m2.5:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
-                "max_input_tokens": 262144,
+                "max_input_tokens": 196608,
                 "max_output_tokens": 8192,
                 "metadata": {
                     "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
@@ -2036,7 +2067,7 @@
                 "minimax/minimax-m2.5:free": {
                     "input_cost_per_token": 0.0,
                     "output_cost_per_token": 0.0,
-                    "max_input_tokens": 262144,
+                    "max_input_tokens": 196608,
                     "max_output_tokens": 8192,
                     "metadata": {
                         "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
@@ -2147,8 +2178,6 @@
                 "supports_max_reasoning_effort": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 346,
-                "supports_minimal_reasoning_effort": true,
                 "metadata": {
                     "notes": "Opus 4.6 is Anthropic\u2019s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective..."
                 },
@@ -3082,26 +3111,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "deepseek/deepseek-v3.2-speciale": {
-                "input_cost_per_token": 2.87e-07,
-                "output_cost_per_token": 4.31e-07,
-                "max_input_tokens": 163840,
-                "max_output_tokens": 163840,
-                "metadata": {
-                    "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention (DSA) for efficient long-context processing, then scales post-training reinforcement learning..."
-                },
-                "litellm_provider": "openrouter",
-                "deepseek/deepseek-v3.2-speciale": {
-                    "input_cost_per_token": 2.87e-07,
-                    "output_cost_per_token": 4.31e-07,
-                    "max_input_tokens": 163840,
-                    "max_output_tokens": 163840,
-                    "metadata": {
-                        "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance. It builds on DeepSeek Sparse Attention (DSA) for efficient long-context processing, then scales post-training reinforcement learning..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "deepseek/deepseek-v3.2": {
                 "input_cost_per_token": 2.52e-07,
                 "input_cost_per_token_cache_hit": 2.8e-08,
@@ -3171,12 +3180,11 @@
                 "supports_assistant_prefill": true,
                 "supports_computer_use": true,
                 "supports_function_calling": true,
-                "supports_minimal_reasoning_effort": true,
                 "supports_prompt_caching": true,
                 "supports_reasoning": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 159,
+                "supports_output_config": true,
                 "metadata": {
                     "notes": "Claude Opus 4.5 is Anthropic\u2019s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competitive performance across real-world coding and..."
                 },
@@ -3603,7 +3611,6 @@
                 "supports_reasoning": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 346,
                 "metadata": {
                     "notes": "Claude Haiku 4.5 is Anthropic\u2019s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4\u2019s performance..."
                 },
@@ -3905,7 +3912,6 @@
                 "supports_reasoning": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 159,
                 "metadata": {
                     "notes": "Claude Sonnet 4.5 is Anthropic\u2019s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-bench Verified, with..."
                 },
@@ -4786,7 +4792,6 @@
                 "supports_reasoning": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 159,
                 "metadata": {
                     "notes": "Claude Opus 4.1 is an updated version of Anthropic\u2019s flagship model, offering improved performance in coding, reasoning, and agentic tasks. It achieves 74.5% on SWE-bench Verified and shows notable gains..."
                 },
@@ -4901,7 +4906,7 @@
             },
             "z-ai/glm-4.5-air": {
                 "input_cost_per_token": 1.25e-07,
-                "output_cost_per_token": 8.4e-07,
+                "output_cost_per_token": 8.5e-07,
                 "max_input_tokens": 131070,
                 "max_output_tokens": 131070,
                 "metadata": {
@@ -4910,7 +4915,7 @@
                 "litellm_provider": "openrouter",
                 "z-ai/glm-4.5-air": {
                     "input_cost_per_token": 1.25e-07,
-                    "output_cost_per_token": 8.4e-07,
+                    "output_cost_per_token": 8.5e-07,
                     "max_input_tokens": 131070,
                     "max_output_tokens": 131070,
                     "metadata": {
@@ -5523,7 +5528,6 @@
                 "supports_reasoning": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 159,
                 "metadata": {
                     "notes": "Claude Opus 4 is benchmarked as the world\u2019s best coding model, at time of release, bringing sustained performance on complex, long-running tasks and agent workflows. It sets new benchmarks in..."
                 },
@@ -5560,7 +5564,6 @@
                 "supports_reasoning": true,
                 "supports_tool_choice": true,
                 "supports_vision": true,
-                "tool_use_system_prompt_tokens": 159,
                 "metadata": {
                     "notes": "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, Sonnet 3.7, excelling in both coding and reasoning tasks with improved precision and controllability. Achieving state-of-the-art performance on SWE-bench (72.7%),..."
                 },
@@ -7335,6 +7338,26 @@
                     "litellm_provider": "openrouter"
                 }
             },
+            "meta-llama/llama-3.2-1b-instruct": {
+                "input_cost_per_token": 2.7e-08,
+                "output_cost_per_token": 2.01e-07,
+                "max_input_tokens": 60000,
+                "max_output_tokens": 60000,
+                "metadata": {
+                    "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate..."
+                },
+                "litellm_provider": "openrouter",
+                "meta-llama/llama-3.2-1b-instruct": {
+                    "input_cost_per_token": 2.7e-08,
+                    "output_cost_per_token": 2.01e-07,
+                    "max_input_tokens": 60000,
+                    "max_output_tokens": 60000,
+                    "metadata": {
+                        "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "meta-llama/llama-3.2-11b-vision-instruct": {
                 "input_cost_per_token": 2.45e-07,
                 "output_cost_per_token": 2.45e-07,
@@ -7355,26 +7378,6 @@
                     "supports_vision": true,
                     "metadata": {
                         "notes": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "meta-llama/llama-3.2-1b-instruct": {
-                "input_cost_per_token": 2.7e-08,
-                "output_cost_per_token": 2.01e-07,
-                "max_input_tokens": 60000,
-                "max_output_tokens": 60000,
-                "metadata": {
-                    "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate..."
-                },
-                "litellm_provider": "openrouter",
-                "meta-llama/llama-3.2-1b-instruct": {
-                    "input_cost_per_token": 2.7e-08,
-                    "output_cost_per_token": 2.01e-07,
-                    "max_input_tokens": 60000,
-                    "max_output_tokens": 60000,
-                    "metadata": {
-                        "notes": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7437,26 +7440,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "cohere/command-r-plus-08-2024": {
-                "input_cost_per_token": 2.5e-06,
-                "output_cost_per_token": 1e-05,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 4000,
-                "metadata": {
-                    "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint..."
-                },
-                "litellm_provider": "openrouter",
-                "cohere/command-r-plus-08-2024": {
-                    "input_cost_per_token": 2.5e-06,
-                    "output_cost_per_token": 1e-05,
-                    "max_input_tokens": 128000,
-                    "max_output_tokens": 4000,
-                    "metadata": {
-                        "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "cohere/command-r-08-2024": {
                 "input_cost_per_token": 1.5e-07,
                 "output_cost_per_token": 6e-07,
@@ -7473,6 +7456,26 @@
                     "max_output_tokens": 4000,
                     "metadata": {
                         "notes": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "cohere/command-r-plus-08-2024": {
+                "input_cost_per_token": 2.5e-06,
+                "output_cost_per_token": 1e-05,
+                "max_input_tokens": 128000,
+                "max_output_tokens": 4000,
+                "metadata": {
+                    "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint..."
+                },
+                "litellm_provider": "openrouter",
+                "cohere/command-r-plus-08-2024": {
+                    "input_cost_per_token": 2.5e-06,
+                    "output_cost_per_token": 1e-05,
+                    "max_input_tokens": 128000,
+                    "max_output_tokens": 4000,
+                    "metadata": {
+                        "notes": "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/command-r-plus) with roughly 50% higher throughput and 25% lower latencies as compared to the previous Command R+ version, while keeping the hardware footprint..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7595,26 +7598,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "meta-llama/llama-3.1-70b-instruct": {
-                "input_cost_per_token": 4e-07,
-                "output_cost_per_token": 4e-07,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 16384,
-                "metadata": {
-                    "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong..."
-                },
-                "litellm_provider": "openrouter",
-                "meta-llama/llama-3.1-70b-instruct": {
-                    "input_cost_per_token": 4e-07,
-                    "output_cost_per_token": 4e-07,
-                    "max_input_tokens": 131072,
-                    "max_output_tokens": 16384,
-                    "metadata": {
-                        "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "meta-llama/llama-3.1-8b-instruct": {
                 "input_cost_per_token": 2e-08,
                 "output_cost_per_token": 5e-08,
@@ -7631,6 +7614,26 @@
                     "max_output_tokens": 16384,
                     "metadata": {
                         "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "meta-llama/llama-3.1-70b-instruct": {
+                "input_cost_per_token": 4e-07,
+                "output_cost_per_token": 4e-07,
+                "max_input_tokens": 131072,
+                "max_output_tokens": 16384,
+                "metadata": {
+                    "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong..."
+                },
+                "litellm_provider": "openrouter",
+                "meta-llama/llama-3.1-70b-instruct": {
+                    "input_cost_per_token": 4e-07,
+                    "output_cost_per_token": 4e-07,
+                    "max_input_tokens": 131072,
+                    "max_output_tokens": 16384,
+                    "metadata": {
+                        "notes": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7653,26 +7656,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "openai/gpt-4o-mini-2024-07-18": {
-                "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 6e-07,
-                "max_input_tokens": 128000,
-                "max_output_tokens": 16384,
-                "metadata": {
-                    "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable..."
-                },
-                "litellm_provider": "openrouter",
-                "openai/gpt-4o-mini-2024-07-18": {
-                    "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 6e-07,
-                    "max_input_tokens": 128000,
-                    "max_output_tokens": 16384,
-                    "metadata": {
-                        "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "openai/gpt-4o-mini": {
                 "input_cost_per_token": 1.5e-07,
                 "output_cost_per_token": 6e-07,
@@ -7683,6 +7666,26 @@
                 },
                 "litellm_provider": "openrouter",
                 "openai/gpt-4o-mini": {
+                    "input_cost_per_token": 1.5e-07,
+                    "output_cost_per_token": 6e-07,
+                    "max_input_tokens": 128000,
+                    "max_output_tokens": 16384,
+                    "metadata": {
+                        "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "openai/gpt-4o-mini-2024-07-18": {
+                "input_cost_per_token": 1.5e-07,
+                "output_cost_per_token": 6e-07,
+                "max_input_tokens": 128000,
+                "max_output_tokens": 16384,
+                "metadata": {
+                    "notes": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable..."
+                },
+                "litellm_provider": "openrouter",
+                "openai/gpt-4o-mini-2024-07-18": {
                     "input_cost_per_token": 1.5e-07,
                     "output_cost_per_token": 6e-07,
                     "max_input_tokens": 128000,
@@ -7805,26 +7808,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "meta-llama/llama-3-8b-instruct": {
-                "input_cost_per_token": 4e-08,
-                "output_cost_per_token": 4e-08,
-                "max_input_tokens": 8192,
-                "max_output_tokens": 8192,
-                "metadata": {
-                    "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
-                },
-                "litellm_provider": "openrouter",
-                "meta-llama/llama-3-8b-instruct": {
-                    "input_cost_per_token": 4e-08,
-                    "output_cost_per_token": 4e-08,
-                    "max_input_tokens": 8192,
-                    "max_output_tokens": 8192,
-                    "metadata": {
-                        "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "meta-llama/llama-3-70b-instruct": {
                 "input_cost_per_token": 5.1e-07,
                 "litellm_provider": "openrouter",
@@ -7844,6 +7827,26 @@
                     "max_output_tokens": 8000,
                     "metadata": {
                         "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "meta-llama/llama-3-8b-instruct": {
+                "input_cost_per_token": 4e-08,
+                "output_cost_per_token": 4e-08,
+                "max_input_tokens": 8192,
+                "max_output_tokens": 8192,
+                "metadata": {
+                    "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
+                },
+                "litellm_provider": "openrouter",
+                "meta-llama/llama-3-8b-instruct": {
+                    "input_cost_per_token": 4e-08,
+                    "output_cost_per_token": 4e-08,
+                    "max_input_tokens": 8192,
+                    "max_output_tokens": 8192,
+                    "metadata": {
+                        "notes": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -7966,6 +7969,26 @@
                     "litellm_provider": "openrouter"
                 }
             },
+            "openai/gpt-3.5-turbo-0613": {
+                "input_cost_per_token": 1e-06,
+                "output_cost_per_token": 2e-06,
+                "max_input_tokens": 4095,
+                "max_output_tokens": 4096,
+                "metadata": {
+                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                },
+                "litellm_provider": "openrouter",
+                "openai/gpt-3.5-turbo-0613": {
+                    "input_cost_per_token": 1e-06,
+                    "output_cost_per_token": 2e-06,
+                    "max_input_tokens": 4095,
+                    "max_output_tokens": 4096,
+                    "metadata": {
+                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "openai/gpt-4-turbo-preview": {
                 "input_cost_per_token": 1e-05,
                 "output_cost_per_token": 3e-05,
@@ -7985,26 +8008,6 @@
                         "notes": "The preview GPT-4 model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Dec 2023. **Note:** heavily rate limited by OpenAI while..."
                     },
                     "supports_function_calling": true,
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "openai/gpt-3.5-turbo-0613": {
-                "input_cost_per_token": 1e-06,
-                "output_cost_per_token": 2e-06,
-                "max_input_tokens": 4095,
-                "max_output_tokens": 4096,
-                "metadata": {
-                    "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                },
-                "litellm_provider": "openrouter",
-                "openai/gpt-3.5-turbo-0613": {
-                    "input_cost_per_token": 1e-06,
-                    "output_cost_per_token": 2e-06,
-                    "max_input_tokens": 4095,
-                    "max_output_tokens": 4096,
-                    "metadata": {
-                        "notes": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-                    },
                     "litellm_provider": "openrouter"
                 }
             },
@@ -8046,26 +8049,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "mistralai/mistral-7b-instruct-v0.1": {
-                "input_cost_per_token": 1.1e-07,
-                "output_cost_per_token": 1.9e-07,
-                "max_input_tokens": 2824,
-                "max_output_tokens": 2824,
-                "metadata": {
-                    "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
-                },
-                "litellm_provider": "openrouter",
-                "mistralai/mistral-7b-instruct-v0.1": {
-                    "input_cost_per_token": 1.1e-07,
-                    "output_cost_per_token": 1.9e-07,
-                    "max_input_tokens": 2824,
-                    "max_output_tokens": 2824,
-                    "metadata": {
-                        "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "openai/gpt-3.5-turbo-instruct": {
                 "input_cost_per_token": 1.5e-06,
                 "output_cost_per_token": 2e-06,
@@ -8082,6 +8065,26 @@
                     "max_output_tokens": 4096,
                     "metadata": {
                         "notes": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "mistralai/mistral-7b-instruct-v0.1": {
+                "input_cost_per_token": 1.1e-07,
+                "output_cost_per_token": 1.9e-07,
+                "max_input_tokens": 2824,
+                "max_output_tokens": 2824,
+                "metadata": {
+                    "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
+                },
+                "litellm_provider": "openrouter",
+                "mistralai/mistral-7b-instruct-v0.1": {
+                    "input_cost_per_token": 1.1e-07,
+                    "output_cost_per_token": 1.9e-07,
+                    "max_input_tokens": 2824,
+                    "max_output_tokens": 2824,
+                    "metadata": {
+                        "notes": "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with optimizations for speed and context length."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -8368,7 +8371,7 @@
             "minimax/minimax-m2.5:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
-                "max_input_tokens": 262144,
+                "max_input_tokens": 196608,
                 "max_output_tokens": 8192,
                 "metadata": {
                     "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
