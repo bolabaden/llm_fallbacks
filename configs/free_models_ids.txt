@@ -113,13 +113,8 @@ gradient_ai/openai-gpt-4o
 gradient_ai/openai-gpt-4o-mini
 nvidia/nemotron-3-nano-30b-a3b:free
 openai/gpt-oss-20b:free
-snowflake/llama3.1-405b
-snowflake/llama3.1-70b
-snowflake/llama3.1-8b
 snowflake/llama3.2-1b
 snowflake/llama3.2-3b
-snowflake/llama3.3-70b
-snowflake/mistral-large2
 vertex_ai/meta/llama3-405b-instruct-maas
 vertex_ai/meta/llama3-70b-instruct-maas
 vertex_ai/meta/llama3-8b-instruct-maas
@@ -153,7 +148,6 @@ publicai/aisingapore/gemma-sea-lion-v4-27b-it
 publicai/bsc-lt/alia-40b-instruct_q8_0
 together_ai/mistralai/mistral-small-24b-instruct-2501
 together_ai/togethercomputer/codellama-34b-instruct
-snowflake/deepseek-r1
 snowflake/mistral-7b
 snowflake/mistral-large
 snowflake/mixtral-8x7b
@@ -170,7 +164,6 @@ omni-moderation-latest
 text-moderation-007
 text-moderation-latest
 text-moderation-stable
-snowflake/claude-3-5-sonnet
 sarvam/sarvam-m
 1024-x-1024/gpt-image-1.5
 1024-x-1024/gpt-image-1.5-2025-12-16
@@ -224,7 +217,6 @@ snowflake/gemma-7b
 snowflake/llama3-70b
 snowflake/llama3-8b
 snowflake/snowflake-llama-3.1-405b
-snowflake/snowflake-llama-3.3-70b
 github_copilot/text-embedding-3-small
 github_copilot/text-embedding-3-small-inference
 github_copilot/text-embedding-ada-002
@@ -256,6 +248,8 @@ amazon.nova-canvas-v1:0
 amazon.titan-image-generator-v1
 amazon.titan-image-generator-v2
 amazon.titan-image-generator-v2:0
+apiserpent/deep_search
+apiserpent/search
 azure/container
 azure/hd/1024-x-1024/dall-e-3
 azure/hd/1024-x-1792/dall-e-3
@@ -322,10 +316,12 @@ fal_ai/fal-ai/bytedance/seedream/v3/text-to-image
 fal_ai/fal-ai/flux-pro/v1.1
 fal_ai/fal-ai/flux-pro/v1.1-ultra
 fal_ai/fal-ai/flux/schnell
+fal_ai/fal-ai/gemini-25-flash-image
 fal_ai/fal-ai/ideogram/v3
 fal_ai/fal-ai/imagen4/preview
 fal_ai/fal-ai/imagen4/preview/fast
 fal_ai/fal-ai/imagen4/preview/ultra
+fal_ai/fal-ai/nano-banana
 fal_ai/fal-ai/recraft/v3/text-to-image
 fal_ai/fal-ai/stable-diffusion-v35-medium
 firecrawl/search
@@ -464,3 +460,4 @@ vertex_ai/imagen-4.0-generate-001
 vertex_ai/imagen-4.0-ultra-generate-001
 vertex_ai/mistral-ocr-2505
 vertex_ai/search_api
+you_com/search
