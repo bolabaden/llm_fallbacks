@@ -501,26 +501,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "z-ai/glm-4.5-air:free": {
-        "input_cost_per_token": 0.0,
-        "output_cost_per_token": 0.0,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 96000,
-        "metadata": {
-            "notes": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-4.5-air:free": {
-            "input_cost_per_token": 0.0,
-            "output_cost_per_token": 0.0,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 96000,
-            "metadata": {
-                "notes": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "lemonade/gpt-oss-120b-mxfp-gguf": {
         "input_cost_per_token": 0,
         "litellm_provider": "lemonade",
@@ -4176,24 +4156,6 @@
         "supports_vision": true,
         "supports_function_calling": true,
         "supports_tool_choice": true
-    },
-    "z-ai/glm-4-32b": {
-        "input_cost_per_token": 1e-07,
-        "output_cost_per_token": 1e-07,
-        "max_input_tokens": 128000,
-        "metadata": {
-            "notes": "GLM 4 32B is a cost-effective foundation language model. It can efficiently perform complex tasks and has significantly enhanced capabilities in tool use, online search, and code-related intelligent tasks. It..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-4-32b": {
-            "input_cost_per_token": 1e-07,
-            "output_cost_per_token": 1e-07,
-            "max_input_tokens": 128000,
-            "metadata": {
-                "notes": "GLM 4 32B is a cost-effective foundation language model. It can efficiently perform complex tasks and has significantly enhanced capabilities in tool use, online search, and code-related intelligent tasks. It..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "fireworks_ai/accounts/fireworks/models/qwen3-0p6b": {
         "max_tokens": 40960,
@@ -12967,6 +12929,26 @@
         "supports_system_messages": true,
         "supports_response_schema": true
     },
+    "z-ai/glm-4.6v": {
+        "input_cost_per_token": 3e-07,
+        "output_cost_per_token": 9e-07,
+        "max_input_tokens": 131072,
+        "max_output_tokens": 32768,
+        "metadata": {
+            "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media. It supports up to 128K tokens, processes complex page layouts..."
+        },
+        "litellm_provider": "openrouter",
+        "z-ai/glm-4.6v": {
+            "input_cost_per_token": 3e-07,
+            "output_cost_per_token": 9e-07,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 32768,
+            "metadata": {
+                "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media. It supports up to 128K tokens, processes complex page layouts..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "gpt-4o-mini": {
         "cache_read_input_token_cost": 7.5e-08,
         "cache_read_input_token_cost_priority": 1.25e-07,
@@ -13064,26 +13046,6 @@
         "supports_system_messages": true,
         "supports_tool_choice": true,
         "supports_vision": true
-    },
-    "z-ai/glm-4.6v": {
-        "input_cost_per_token": 3e-07,
-        "output_cost_per_token": 9e-07,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 24000,
-        "metadata": {
-            "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media. It supports up to 128K tokens, processes complex page layouts..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-4.6v": {
-            "input_cost_per_token": 3e-07,
-            "output_cost_per_token": 9e-07,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 24000,
-            "metadata": {
-                "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media. It supports up to 128K tokens, processes complex page layouts..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "ai21.jamba-instruct-v1:0": {
         "input_cost_per_token": 5e-07,
@@ -13876,6 +13838,26 @@
         "supports_reasoning": true,
         "supports_tool_choice": true
     },
+    "minimax/minimax-m2.7": {
+        "input_cost_per_token": 2.7e-07,
+        "output_cost_per_token": 1.08e-06,
+        "max_input_tokens": 204800,
+        "max_output_tokens": 131072,
+        "metadata": {
+            "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
+        },
+        "litellm_provider": "openrouter",
+        "minimax/minimax-m2.7": {
+            "input_cost_per_token": 2.7e-07,
+            "output_cost_per_token": 1.08e-06,
+            "max_input_tokens": 204800,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "qwen.qwen3-next-80b-a3b": {
         "input_cost_per_token": 1.5e-07,
         "litellm_provider": "bedrock_converse",
@@ -14253,6 +14235,46 @@
             "litellm_provider": "openrouter"
         }
     },
+    "minimax/minimax-m2.5": {
+        "input_cost_per_token": 1.5e-07,
+        "output_cost_per_token": 9e-07,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
+        },
+        "minimax/minimax-m2.5": {
+            "input_cost_per_token": 1.5e-07,
+            "output_cost_per_token": 9e-07,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 196608,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
+            }
+        }
+    },
     "azure/gpt-5.4-nano": {
         "cache_read_input_token_cost": 2e-08,
         "input_cost_per_token": 2e-07,
@@ -14428,26 +14450,6 @@
         "mode": "chat",
         "output_cost_per_token": 3.7e-07,
         "supports_tool_choice": true
-    },
-    "minimax/minimax-m2.7": {
-        "input_cost_per_token": 2.79e-07,
-        "output_cost_per_token": 1.2e-06,
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "metadata": {
-            "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
-        },
-        "litellm_provider": "openrouter",
-        "minimax/minimax-m2.7": {
-            "input_cost_per_token": 2.79e-07,
-            "output_cost_per_token": 1.2e-06,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 196608,
-            "metadata": {
-                "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "qwen/qwen3-vl-8b-thinking": {
         "input_cost_per_token": 1.17e-07,
@@ -15678,46 +15680,6 @@
         "supports_parallel_function_calling": true,
         "supports_tool_choice": true,
         "supports_system_messages": true
-    },
-    "minimax/minimax-m2.5": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 1.15e-06,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
-        },
-        "minimax/minimax-m2.5": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 1.15e-06,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 196608,
-            "metadata": {
-                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
-            }
-        }
     },
     "xai/grok-code-fast": {
         "cache_read_input_token_cost": 2e-08,
@@ -23927,26 +23889,6 @@
         "supports_response_schema": true,
         "supports_vision": true
     },
-    "arcee-ai/maestro-reasoning": {
-        "input_cost_per_token": 9e-07,
-        "output_cost_per_token": 3.3e-06,
-        "max_input_tokens": 131072,
-        "max_output_tokens": 32000,
-        "metadata": {
-            "notes": "Maestro Reasoning is Arcee's flagship analysis model: a 32 B\u2011parameter derivative of Qwen 2.5\u201132 B tuned with DPO and chain\u2011of\u2011thought RL for step\u2011by\u2011step logic. Compared to the earlier 7 B..."
-        },
-        "litellm_provider": "openrouter",
-        "arcee-ai/maestro-reasoning": {
-            "input_cost_per_token": 9e-07,
-            "output_cost_per_token": 3.3e-06,
-            "max_input_tokens": 131072,
-            "max_output_tokens": 32000,
-            "metadata": {
-                "notes": "Maestro Reasoning is Arcee's flagship analysis model: a 32 B\u2011parameter derivative of Qwen 2.5\u201132 B tuned with DPO and chain\u2011of\u2011thought RL for step\u2011by\u2011step logic. Compared to the earlier 7 B..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "switchpoint/router": {
         "input_cost_per_token": 8.5e-07,
         "litellm_provider": "openrouter",
@@ -24709,7 +24651,7 @@
     "z-ai/glm-5-turbo": {
         "input_cost_per_token": 1.2e-06,
         "output_cost_per_token": 4e-06,
-        "max_input_tokens": 202752,
+        "max_input_tokens": 262144,
         "max_output_tokens": 131072,
         "metadata": {
             "notes": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows..."
@@ -24718,30 +24660,10 @@
         "z-ai/glm-5-turbo": {
             "input_cost_per_token": 1.2e-06,
             "output_cost_per_token": 4e-06,
-            "max_input_tokens": 202752,
+            "max_input_tokens": 262144,
             "max_output_tokens": 131072,
             "metadata": {
                 "notes": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "z-ai/glm-5v-turbo": {
-        "input_cost_per_token": 1.2e-06,
-        "output_cost_per_token": 4e-06,
-        "max_input_tokens": 202752,
-        "max_output_tokens": 131072,
-        "metadata": {
-            "notes": "GLM-5V-Turbo is Z.ai\u2019s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding,..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-5v-turbo": {
-            "input_cost_per_token": 1.2e-06,
-            "output_cost_per_token": 4e-06,
-            "max_input_tokens": 202752,
-            "max_output_tokens": 131072,
-            "metadata": {
-                "notes": "GLM-5V-Turbo is Z.ai\u2019s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding,..."
             },
             "litellm_provider": "openrouter"
         }
@@ -39071,6 +38993,26 @@
         "mode": "chat",
         "supports_video_input": true
     },
+    "anthropic/claude-fable-5": {
+        "input_cost_per_token": 1e-05,
+        "output_cost_per_token": 5e-05,
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "metadata": {
+            "notes": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and..."
+        },
+        "litellm_provider": "openrouter",
+        "anthropic/claude-fable-5": {
+            "input_cost_per_token": 1e-05,
+            "output_cost_per_token": 5e-05,
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "metadata": {
+                "notes": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "anthropic/claude-opus-4.8-fast": {
         "input_cost_per_token": 1e-05,
         "output_cost_per_token": 5e-05,
@@ -39087,6 +39029,26 @@
             "max_output_tokens": 128000,
             "metadata": {
                 "notes": "Fast-mode variant of [Opus 4.8](/anthropic/claude-opus-4.8) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 4.8.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
+    "~anthropic/claude-fable-latest": {
+        "input_cost_per_token": 1e-05,
+        "output_cost_per_token": 5e-05,
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "metadata": {
+            "notes": "This model always redirects to the latest model in the Claude Fable family."
+        },
+        "litellm_provider": "openrouter",
+        "~anthropic/claude-fable-latest": {
+            "input_cost_per_token": 1e-05,
+            "output_cost_per_token": 5e-05,
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "metadata": {
+                "notes": "This model always redirects to the latest model in the Claude Fable family."
             },
             "litellm_provider": "openrouter"
         }

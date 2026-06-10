@@ -90,7 +90,6 @@ poolside/laguna-m.1:free
 poolside/laguna-xs.2:free
 nvidia/nemotron-3.5-content-safety:free
 openai/gpt-oss-120b:free
-z-ai/glm-4.5-air:free
 github_copilot/gpt-4-o-preview
 github_copilot/gpt-4o-mini
 github_copilot/gpt-4o-mini-2024-07-18

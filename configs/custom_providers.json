@@ -5,6 +5,46 @@
         "api_env_key_name": "OPENROUTER_API_KEY",
         "api_key_required": false,
         "model_specs": {
+            "~anthropic/claude-fable-latest": {
+                "input_cost_per_token": 1e-05,
+                "output_cost_per_token": 5e-05,
+                "max_input_tokens": 1000000,
+                "max_output_tokens": 128000,
+                "metadata": {
+                    "notes": "This model always redirects to the latest model in the Claude Fable family."
+                },
+                "litellm_provider": "openrouter",
+                "~anthropic/claude-fable-latest": {
+                    "input_cost_per_token": 1e-05,
+                    "output_cost_per_token": 5e-05,
+                    "max_input_tokens": 1000000,
+                    "max_output_tokens": 128000,
+                    "metadata": {
+                        "notes": "This model always redirects to the latest model in the Claude Fable family."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
+            "anthropic/claude-fable-5": {
+                "input_cost_per_token": 1e-05,
+                "output_cost_per_token": 5e-05,
+                "max_input_tokens": 1000000,
+                "max_output_tokens": 128000,
+                "metadata": {
+                    "notes": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and..."
+                },
+                "litellm_provider": "openrouter",
+                "anthropic/claude-fable-5": {
+                    "input_cost_per_token": 1e-05,
+                    "output_cost_per_token": 5e-05,
+                    "max_input_tokens": 1000000,
+                    "max_output_tokens": 128000,
+                    "metadata": {
+                        "notes": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and..."
+                    },
+                    "litellm_provider": "openrouter"
+                }
+            },
             "nex-agi/nex-n2-pro:free": {
                 "input_cost_per_token": 0.0,
                 "output_cost_per_token": 0.0,
@@ -1308,26 +1348,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "z-ai/glm-5v-turbo": {
-                "input_cost_per_token": 1.2e-06,
-                "output_cost_per_token": 4e-06,
-                "max_input_tokens": 202752,
-                "max_output_tokens": 131072,
-                "metadata": {
-                    "notes": "GLM-5V-Turbo is Z.ai\u2019s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding,..."
-                },
-                "litellm_provider": "openrouter",
-                "z-ai/glm-5v-turbo": {
-                    "input_cost_per_token": 1.2e-06,
-                    "output_cost_per_token": 4e-06,
-                    "max_input_tokens": 202752,
-                    "max_output_tokens": 131072,
-                    "metadata": {
-                        "notes": "GLM-5V-Turbo is Z.ai\u2019s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding,..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "arcee-ai/trinity-large-thinking": {
                 "input_cost_per_token": 2.2e-07,
                 "output_cost_per_token": 8.5e-07,
@@ -1465,19 +1485,19 @@
                 }
             },
             "minimax/minimax-m2.7": {
-                "input_cost_per_token": 2.79e-07,
-                "output_cost_per_token": 1.2e-06,
-                "max_input_tokens": 196608,
-                "max_output_tokens": 196608,
+                "input_cost_per_token": 2.7e-07,
+                "output_cost_per_token": 1.08e-06,
+                "max_input_tokens": 204800,
+                "max_output_tokens": 131072,
                 "metadata": {
                     "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
                 },
                 "litellm_provider": "openrouter",
                 "minimax/minimax-m2.7": {
-                    "input_cost_per_token": 2.79e-07,
-                    "output_cost_per_token": 1.2e-06,
-                    "max_input_tokens": 196608,
-                    "max_output_tokens": 196608,
+                    "input_cost_per_token": 2.7e-07,
+                    "output_cost_per_token": 1.08e-06,
+                    "max_input_tokens": 204800,
+                    "max_output_tokens": 131072,
                     "metadata": {
                         "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
                     },
@@ -1549,7 +1569,7 @@
             "z-ai/glm-5-turbo": {
                 "input_cost_per_token": 1.2e-06,
                 "output_cost_per_token": 4e-06,
-                "max_input_tokens": 202752,
+                "max_input_tokens": 262144,
                 "max_output_tokens": 131072,
                 "metadata": {
                     "notes": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows..."
@@ -1558,7 +1578,7 @@
                 "z-ai/glm-5-turbo": {
                     "input_cost_per_token": 1.2e-06,
                     "output_cost_per_token": 4e-06,
-                    "max_input_tokens": 202752,
+                    "max_input_tokens": 262144,
                     "max_output_tokens": 131072,
                     "metadata": {
                         "notes": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows..."
@@ -2178,7 +2198,7 @@
             },
             "minimax/minimax-m2.5": {
                 "input_cost_per_token": 1.5e-07,
-                "output_cost_per_token": 1.15e-06,
+                "output_cost_per_token": 9e-07,
                 "cache_read_input_token_cost": 3e-08,
                 "litellm_provider": "openrouter",
                 "max_input_tokens": 196608,
@@ -2199,7 +2219,7 @@
                 },
                 "minimax/minimax-m2.5": {
                     "input_cost_per_token": 1.5e-07,
-                    "output_cost_per_token": 1.15e-06,
+                    "output_cost_per_token": 9e-07,
                     "cache_read_input_token_cost": 3e-08,
                     "cache_creation_input_token_cost": 3.75e-07,
                     "litellm_provider": "openrouter",
@@ -2954,7 +2974,7 @@
                 "input_cost_per_token": 3e-07,
                 "output_cost_per_token": 9e-07,
                 "max_input_tokens": 131072,
-                "max_output_tokens": 24000,
+                "max_output_tokens": 32768,
                 "metadata": {
                     "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media. It supports up to 128K tokens, processes complex page layouts..."
                 },
@@ -2963,7 +2983,7 @@
                     "input_cost_per_token": 3e-07,
                     "output_cost_per_token": 9e-07,
                     "max_input_tokens": 131072,
-                    "max_output_tokens": 24000,
+                    "max_output_tokens": 32768,
                     "metadata": {
                         "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media. It supports up to 128K tokens, processes complex page layouts..."
                     },
@@ -4880,26 +4900,6 @@
                     "litellm_provider": "openrouter"
                 }
             },
-            "z-ai/glm-4.5-air:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 96000,
-                "metadata": {
-                    "notes": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter..."
-                },
-                "litellm_provider": "openrouter",
-                "z-ai/glm-4.5-air:free": {
-                    "input_cost_per_token": 0.0,
-                    "output_cost_per_token": 0.0,
-                    "max_input_tokens": 131072,
-                    "max_output_tokens": 96000,
-                    "metadata": {
-                        "notes": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
             "z-ai/glm-4.5-air": {
                 "input_cost_per_token": 1.25e-07,
                 "output_cost_per_token": 8.5e-07,
@@ -4942,24 +4942,6 @@
                     "max_output_tokens": 262144,
                     "metadata": {
                         "notes": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "z-ai/glm-4-32b": {
-                "input_cost_per_token": 1e-07,
-                "output_cost_per_token": 1e-07,
-                "max_input_tokens": 128000,
-                "metadata": {
-                    "notes": "GLM 4 32B is a cost-effective foundation language model. It can efficiently perform complex tasks and has significantly enhanced capabilities in tool use, online search, and code-related intelligent tasks. It..."
-                },
-                "litellm_provider": "openrouter",
-                "z-ai/glm-4-32b": {
-                    "input_cost_per_token": 1e-07,
-                    "output_cost_per_token": 1e-07,
-                    "max_input_tokens": 128000,
-                    "metadata": {
-                        "notes": "GLM 4 32B is a cost-effective foundation language model. It can efficiently perform complex tasks and has significantly enhanced capabilities in tool use, online search, and code-related intelligent tasks. It..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -5574,26 +5556,6 @@
                     "max_output_tokens": 65535,
                     "metadata": {
                         "notes": "Gemini 2.5 Pro is Google\u2019s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs \u201cthinking\u201d capabilities, enabling it to reason through responses with enhanced accuracy..."
-                    },
-                    "litellm_provider": "openrouter"
-                }
-            },
-            "arcee-ai/maestro-reasoning": {
-                "input_cost_per_token": 9e-07,
-                "output_cost_per_token": 3.3e-06,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 32000,
-                "metadata": {
-                    "notes": "Maestro Reasoning is Arcee's flagship analysis model: a 32 B\u2011parameter derivative of Qwen 2.5\u201132 B tuned with DPO and chain\u2011of\u2011thought RL for step\u2011by\u2011step logic. Compared to the earlier 7 B..."
-                },
-                "litellm_provider": "openrouter",
-                "arcee-ai/maestro-reasoning": {
-                    "input_cost_per_token": 9e-07,
-                    "output_cost_per_token": 3.3e-06,
-                    "max_input_tokens": 131072,
-                    "max_output_tokens": 32000,
-                    "metadata": {
-                        "notes": "Maestro Reasoning is Arcee's flagship analysis model: a 32 B\u2011parameter derivative of Qwen 2.5\u201132 B tuned with DPO and chain\u2011of\u2011thought RL for step\u2011by\u2011step logic. Compared to the earlier 7 B..."
                     },
                     "litellm_provider": "openrouter"
                 }
@@ -8188,16 +8150,6 @@
                 "max_output_tokens": 8192,
                 "metadata": {
                     "notes": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
-                },
-                "litellm_provider": "openrouter"
-            },
-            "z-ai/glm-4.5-air:free": {
-                "input_cost_per_token": 0.0,
-                "output_cost_per_token": 0.0,
-                "max_input_tokens": 131072,
-                "max_output_tokens": 96000,
-                "metadata": {
-                    "notes": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter..."
                 },
                 "litellm_provider": "openrouter"
             },
