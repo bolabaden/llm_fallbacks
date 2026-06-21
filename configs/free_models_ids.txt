@@ -397,6 +397,7 @@ sagemaker/meta-textgeneration-llama-2-70b
 sagemaker/meta-textgeneration-llama-2-70b-b-f
 sagemaker/meta-textgeneration-llama-2-7b
 sagemaker/meta-textgeneration-llama-2-7b-f
+scaleway/openai/whisper-large-v3
 searxng/search
 serper/search
 sora-2
@@ -449,6 +450,7 @@ standard/1024-x-1792/dall-e-3
 standard/1792-x-1024/dall-e-3
 tavily/search
 tavily/search-advanced
+tinyfish/search
 us.amazon.nova-canvas-v1:0
 vertex_ai/imagegeneration@006
 vertex_ai/imagen-3.0-capability-001
