@@ -185,30 +185,6 @@
         "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
         "uses_embed_content": true
     },
-    "nex-agi/nex-n2-pro:free": {
-        "input_cost_per_token": 0.0,
-        "output_cost_per_token": 0.0,
-        "max_input_tokens": 262144,
-        "max_output_tokens": 262144,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces..."
-        },
-        "litellm_provider": "openrouter",
-        "nex-agi/nex-n2-pro:free": {
-            "input_cost_per_token": 0.0,
-            "output_cost_per_token": 0.0,
-            "max_input_tokens": 262144,
-            "max_output_tokens": 262144,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "nvidia/nemotron-3-super-120b-a12b:free": {
         "input_cost_per_token": 0.0,
         "output_cost_per_token": 0.0,
@@ -248,6 +224,30 @@
                 "notes": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over..."
             },
             "supports_function_calling": true,
+            "litellm_provider": "openrouter"
+        }
+    },
+    "nex-agi/nex-n2-pro:free": {
+        "input_cost_per_token": 0.0,
+        "output_cost_per_token": 0.0,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 256000,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces..."
+        },
+        "litellm_provider": "openrouter",
+        "nex-agi/nex-n2-pro:free": {
+            "input_cost_per_token": 0.0,
+            "output_cost_per_token": 0.0,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 256000,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces..."
+            },
             "litellm_provider": "openrouter"
         }
     },
@@ -21600,6 +21600,30 @@
         "input_cost_per_token_cache_hit": 1.1e-07,
         "supports_reasoning": true
     },
+    "nex-agi/nex-n2-pro": {
+        "input_cost_per_token": 5e-07,
+        "output_cost_per_token": 2.5e-06,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 262144,
+        "mode": "chat",
+        "supports_vision": true,
+        "metadata": {
+            "notes": "Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces..."
+        },
+        "litellm_provider": "openrouter",
+        "nex-agi/nex-n2-pro": {
+            "input_cost_per_token": 5e-07,
+            "output_cost_per_token": 2.5e-06,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 262144,
+            "mode": "chat",
+            "supports_vision": true,
+            "metadata": {
+                "notes": "Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "crusoe/deepseek-ai/deepseek-v3-0324": {
         "input_cost_per_token": 1.5e-06,
         "litellm_provider": "crusoe",
@@ -24667,8 +24691,8 @@
     "moonshotai/kimi-k2.6": {
         "input_cost_per_token": 6.6e-07,
         "output_cost_per_token": 3.5e-06,
-        "max_input_tokens": 262142,
-        "max_output_tokens": 262142,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65535,
         "mode": "chat",
         "supports_vision": true,
         "metadata": {
@@ -24678,8 +24702,8 @@
         "moonshotai/kimi-k2.6": {
             "input_cost_per_token": 6.6e-07,
             "output_cost_per_token": 3.5e-06,
-            "max_input_tokens": 262142,
-            "max_output_tokens": 262142,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65535,
             "mode": "chat",
             "supports_vision": true,
             "metadata": {
@@ -24691,8 +24715,8 @@
     "~moonshotai/kimi-latest": {
         "input_cost_per_token": 6.6e-07,
         "output_cost_per_token": 3.5e-06,
-        "max_input_tokens": 262142,
-        "max_output_tokens": 262142,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 65535,
         "mode": "chat",
         "supports_vision": true,
         "metadata": {
@@ -24702,8 +24726,8 @@
         "~moonshotai/kimi-latest": {
             "input_cost_per_token": 6.6e-07,
             "output_cost_per_token": 3.5e-06,
-            "max_input_tokens": 262142,
-            "max_output_tokens": 262142,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 65535,
             "mode": "chat",
             "supports_vision": true,
             "metadata": {
@@ -25318,30 +25342,6 @@
         "supports_response_schema": true,
         "supports_vision": true
     },
-    "anthropic/claude-3.5-haiku": {
-        "input_cost_per_token": 8e-07,
-        "output_cost_per_token": 4e-06,
-        "max_input_tokens": 200000,
-        "max_output_tokens": 8192,
-        "mode": "chat",
-        "supports_vision": true,
-        "metadata": {
-            "notes": "Claude 3.5 Haiku features offers enhanced capabilities in speed, coding accuracy, and tool use. Engineered to excel in real-time applications, it delivers quick response times that are essential for dynamic..."
-        },
-        "litellm_provider": "openrouter",
-        "anthropic/claude-3.5-haiku": {
-            "input_cost_per_token": 8e-07,
-            "output_cost_per_token": 4e-06,
-            "max_input_tokens": 200000,
-            "max_output_tokens": 8192,
-            "mode": "chat",
-            "supports_vision": true,
-            "metadata": {
-                "notes": "Claude 3.5 Haiku features offers enhanced capabilities in speed, coding accuracy, and tool use. Engineered to excel in real-time applications, it delivers quick response times that are essential for dynamic..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "gradient_ai/anthropic-claude-3.5-haiku": {
         "input_cost_per_token": 8e-07,
         "litellm_provider": "gradient_ai",
@@ -25406,6 +25406,26 @@
         "supports_system_messages": true,
         "supports_reasoning": true,
         "source": "https://serverless.tensormesh.ai/v1/models/openrouter"
+    },
+    "z-ai/glm-5.2": {
+        "input_cost_per_token": 1e-06,
+        "output_cost_per_token": 4e-06,
+        "max_input_tokens": 1048576,
+        "max_output_tokens": 32768,
+        "metadata": {
+            "notes": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
+        },
+        "litellm_provider": "openrouter",
+        "z-ai/glm-5.2": {
+            "input_cost_per_token": 1e-06,
+            "output_cost_per_token": 4e-06,
+            "max_input_tokens": 1048576,
+            "max_output_tokens": 32768,
+            "metadata": {
+                "notes": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
+            },
+            "litellm_provider": "openrouter"
+        }
     },
     "cerebras/zai-glm-4.6": {
         "deprecation_date": "2026-01-20",
@@ -25731,26 +25751,6 @@
             "max_output_tokens": 128000,
             "metadata": {
                 "notes": "This model always redirects to the latest model in the OpenAI GPT Mini family."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
-    "z-ai/glm-5.2": {
-        "input_cost_per_token": 1.2e-06,
-        "output_cost_per_token": 4.1e-06,
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 131072,
-        "metadata": {
-            "notes": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
-        },
-        "litellm_provider": "openrouter",
-        "z-ai/glm-5.2": {
-            "input_cost_per_token": 1.2e-06,
-            "output_cost_per_token": 4.1e-06,
-            "max_input_tokens": 1048576,
-            "max_output_tokens": 131072,
-            "metadata": {
-                "notes": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
             },
             "litellm_provider": "openrouter"
         }
