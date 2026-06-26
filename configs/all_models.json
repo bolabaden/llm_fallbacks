@@ -3693,6 +3693,34 @@
         "supports_function_calling": true,
         "supports_response_schema": true
     },
+    "openai/gpt-oss-120b": {
+        "input_cost_per_token": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 131072,
+        "max_output_tokens": 131072,
+        "max_tokens": 32768,
+        "mode": "chat",
+        "output_cost_per_token": 1.5e-07,
+        "source": "https://openrouter.ai/openai/gpt-oss-120b",
+        "supports_function_calling": true,
+        "supports_parallel_function_calling": true,
+        "supports_reasoning": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true,
+        "metadata": {
+            "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
+        },
+        "openai/gpt-oss-120b": {
+            "input_cost_per_token": 3e-08,
+            "output_cost_per_token": 1.5e-07,
+            "max_input_tokens": 131072,
+            "max_output_tokens": 131072,
+            "metadata": {
+                "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "oci/cohere.command-a-translate-08-2025": {
         "input_cost_per_token": 9e-08,
         "litellm_provider": "oci",
@@ -4682,33 +4710,6 @@
             "litellm_provider": "openrouter"
         }
     },
-    "openai/gpt-oss-120b": {
-        "input_cost_per_token": 3.9e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 131072,
-        "max_output_tokens": 32768,
-        "max_tokens": 32768,
-        "mode": "chat",
-        "output_cost_per_token": 1.8e-07,
-        "source": "https://openrouter.ai/openai/gpt-oss-120b",
-        "supports_function_calling": true,
-        "supports_parallel_function_calling": true,
-        "supports_reasoning": true,
-        "supports_response_schema": true,
-        "supports_tool_choice": true,
-        "metadata": {
-            "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
-        },
-        "openai/gpt-oss-120b": {
-            "input_cost_per_token": 3.9e-08,
-            "output_cost_per_token": 1.8e-07,
-            "max_input_tokens": 131072,
-            "metadata": {
-                "notes": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
-            },
-            "litellm_provider": "openrouter"
-        }
-    },
     "gemini/gemini-1.5-flash": {
         "deprecation_date": "2025-09-29",
         "input_cost_per_token": 7.5e-08,
@@ -5198,6 +5199,62 @@
             },
             "supports_function_calling": true,
             "litellm_provider": "openrouter"
+        }
+    },
+    "deepseek/deepseek-v4-flash": {
+        "cache_creation_input_token_cost": 0.0,
+        "cache_read_input_token_cost": 2.8e-09,
+        "input_cost_per_token": 9e-08,
+        "input_cost_per_token_cache_hit": 2.8e-09,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 1000000,
+        "max_output_tokens": 65536,
+        "max_tokens": 8192,
+        "mode": "chat",
+        "output_cost_per_token": 1.8e-07,
+        "source": "https://api-docs.deepseek.com/quick_start/pricing",
+        "supported_endpoints": [
+            "/v1/chat/completions"
+        ],
+        "supports_assistant_prefill": true,
+        "supports_function_calling": true,
+        "supports_native_streaming": true,
+        "supports_parallel_function_calling": true,
+        "supports_prompt_caching": true,
+        "supports_response_schema": true,
+        "supports_system_messages": true,
+        "supports_tool_choice": true,
+        "supports_vision": false,
+        "metadata": {
+            "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
+        },
+        "deepseek/deepseek-v4-flash": {
+            "cache_creation_input_token_cost": 0.0,
+            "cache_read_input_token_cost": 2.8e-09,
+            "input_cost_per_token": 9e-08,
+            "input_cost_per_token_cache_hit": 2.8e-09,
+            "litellm_provider": "openrouter",
+            "max_input_tokens": 1000000,
+            "max_output_tokens": 65536,
+            "max_tokens": 8192,
+            "mode": "chat",
+            "output_cost_per_token": 1.8e-07,
+            "source": "https://api-docs.deepseek.com/quick_start/pricing",
+            "supported_endpoints": [
+                "/v1/chat/completions"
+            ],
+            "supports_assistant_prefill": true,
+            "supports_function_calling": true,
+            "supports_native_streaming": true,
+            "supports_parallel_function_calling": true,
+            "supports_prompt_caching": true,
+            "supports_response_schema": true,
+            "supports_system_messages": true,
+            "supports_tool_choice": true,
+            "supports_vision": false,
+            "metadata": {
+                "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
+            }
         }
     },
     "replicate/ibm-granite/granite-3.3-8b-instruct": {
@@ -5884,62 +5941,6 @@
         "supports_prompt_caching": true,
         "supports_response_schema": true,
         "supports_vision": true
-    },
-    "deepseek/deepseek-v4-flash": {
-        "cache_creation_input_token_cost": 0.0,
-        "cache_read_input_token_cost": 2.8e-09,
-        "input_cost_per_token": 8.9e-08,
-        "input_cost_per_token_cache_hit": 2.8e-09,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 1048576,
-        "max_output_tokens": 8192,
-        "max_tokens": 8192,
-        "mode": "chat",
-        "output_cost_per_token": 2.24e-07,
-        "source": "https://api-docs.deepseek.com/quick_start/pricing",
-        "supported_endpoints": [
-            "/v1/chat/completions"
-        ],
-        "supports_assistant_prefill": true,
-        "supports_function_calling": true,
-        "supports_native_streaming": true,
-        "supports_parallel_function_calling": true,
-        "supports_prompt_caching": true,
-        "supports_response_schema": true,
-        "supports_system_messages": true,
-        "supports_tool_choice": true,
-        "supports_vision": false,
-        "metadata": {
-            "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
-        },
-        "deepseek/deepseek-v4-flash": {
-            "cache_creation_input_token_cost": 0.0,
-            "cache_read_input_token_cost": 2.8e-09,
-            "input_cost_per_token": 8.9e-08,
-            "input_cost_per_token_cache_hit": 2.8e-09,
-            "litellm_provider": "openrouter",
-            "max_input_tokens": 1048576,
-            "max_output_tokens": 8192,
-            "max_tokens": 8192,
-            "mode": "chat",
-            "output_cost_per_token": 2.24e-07,
-            "source": "https://api-docs.deepseek.com/quick_start/pricing",
-            "supported_endpoints": [
-                "/v1/chat/completions"
-            ],
-            "supports_assistant_prefill": true,
-            "supports_function_calling": true,
-            "supports_native_streaming": true,
-            "supports_parallel_function_calling": true,
-            "supports_prompt_caching": true,
-            "supports_response_schema": true,
-            "supports_system_messages": true,
-            "supports_tool_choice": true,
-            "supports_vision": false,
-            "metadata": {
-                "notes": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and..."
-            }
-        }
     },
     "novita/google/gemma-3-27b-it": {
         "litellm_provider": "novita",
@@ -8794,6 +8795,26 @@
         "output_cost_per_token": 2.4e-07,
         "supports_system_messages": true
     },
+    "nvidia/nemotron-3-super-120b-a12b": {
+        "input_cost_per_token": 8.5e-08,
+        "output_cost_per_token": 4e-07,
+        "max_input_tokens": 262144,
+        "max_output_tokens": 16384,
+        "metadata": {
+            "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
+        },
+        "litellm_provider": "openrouter",
+        "nvidia/nemotron-3-super-120b-a12b": {
+            "input_cost_per_token": 8.5e-08,
+            "output_cost_per_token": 4e-07,
+            "max_input_tokens": 262144,
+            "max_output_tokens": 16384,
+            "metadata": {
+                "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "deepinfra/google/gemini-2.0-flash-001": {
         "deprecation_date": "2026-06-01",
         "max_tokens": 1000000,
@@ -9259,24 +9280,6 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
-    },
-    "nvidia/nemotron-3-super-120b-a12b": {
-        "input_cost_per_token": 9e-08,
-        "output_cost_per_token": 4.5e-07,
-        "max_input_tokens": 262144,
-        "metadata": {
-            "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
-        },
-        "litellm_provider": "openrouter",
-        "nvidia/nemotron-3-super-120b-a12b": {
-            "input_cost_per_token": 9e-08,
-            "output_cost_per_token": 4.5e-07,
-            "max_input_tokens": 262144,
-            "metadata": {
-                "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "novita/qwen/qwen3-30b-a3b-fp8": {
         "litellm_provider": "novita",
@@ -12200,6 +12203,26 @@
         "supports_response_schema": false,
         "supports_tool_choice": true
     },
+    "minimax/minimax-m2.7": {
+        "input_cost_per_token": 1.8e-07,
+        "output_cost_per_token": 7.2e-07,
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "metadata": {
+            "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
+        },
+        "litellm_provider": "openrouter",
+        "minimax/minimax-m2.7": {
+            "input_cost_per_token": 1.8e-07,
+            "output_cost_per_token": 7.2e-07,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 196608,
+            "metadata": {
+                "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
+            },
+            "litellm_provider": "openrouter"
+        }
+    },
     "pinstripes/ps/qwen3-coder-30b-a3b": {
         "max_tokens": 131072,
         "max_input_tokens": 131072,
@@ -12744,6 +12767,46 @@
         "input_cost_per_token": 5e-07,
         "litellm_provider": "fireworks_ai",
         "output_cost_per_token": 5e-07
+    },
+    "minimax/minimax-m2.5": {
+        "input_cost_per_token": 1.2e-07,
+        "output_cost_per_token": 4.8e-07,
+        "cache_read_input_token_cost": 3e-08,
+        "litellm_provider": "openrouter",
+        "max_input_tokens": 196608,
+        "max_output_tokens": 196608,
+        "max_tokens": 65536,
+        "mode": "chat",
+        "source": "https://openrouter.ai/minimax/minimax-m2.5",
+        "supports_function_calling": true,
+        "supports_tool_choice": true,
+        "supports_reasoning": true,
+        "supports_vision": false,
+        "supports_prompt_caching": true,
+        "supports_computer_use": false,
+        "cache_creation_input_token_cost": 3.75e-07,
+        "supports_system_messages": true,
+        "metadata": {
+            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
+        },
+        "minimax/minimax-m2.5": {
+            "input_cost_per_token": 1.2e-07,
+            "output_cost_per_token": 4.8e-07,
+            "cache_read_input_token_cost": 3e-08,
+            "cache_creation_input_token_cost": 3.75e-07,
+            "litellm_provider": "openrouter",
+            "mode": "chat",
+            "supports_function_calling": true,
+            "supports_tool_choice": true,
+            "supports_prompt_caching": true,
+            "supports_reasoning": true,
+            "supports_system_messages": true,
+            "max_input_tokens": 196608,
+            "max_output_tokens": 196608,
+            "metadata": {
+                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
+            }
+        }
     },
     "deepseek/deepseek-chat-v3.1": {
         "input_cost_per_token": 2.1e-07,
@@ -13464,26 +13527,6 @@
         "mode": "chat",
         "supports_tool_choice": true,
         "supports_function_calling": true
-    },
-    "minimax/minimax-m2.7": {
-        "input_cost_per_token": 2.4e-07,
-        "output_cost_per_token": 9.6e-07,
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "metadata": {
-            "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
-        },
-        "litellm_provider": "openrouter",
-        "minimax/minimax-m2.7": {
-            "input_cost_per_token": 2.4e-07,
-            "output_cost_per_token": 9.6e-07,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 196608,
-            "metadata": {
-                "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent..."
-            },
-            "litellm_provider": "openrouter"
-        }
     },
     "cerebras/llama3.1-70b": {
         "input_cost_per_token": 6e-07,
@@ -14921,46 +14964,6 @@
                 "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency..."
             },
             "litellm_provider": "openrouter"
-        }
-    },
-    "minimax/minimax-m2.5": {
-        "input_cost_per_token": 1.5e-07,
-        "output_cost_per_token": 9e-07,
-        "cache_read_input_token_cost": 3e-08,
-        "litellm_provider": "openrouter",
-        "max_input_tokens": 196608,
-        "max_output_tokens": 196608,
-        "max_tokens": 65536,
-        "mode": "chat",
-        "source": "https://openrouter.ai/minimax/minimax-m2.5",
-        "supports_function_calling": true,
-        "supports_tool_choice": true,
-        "supports_reasoning": true,
-        "supports_vision": false,
-        "supports_prompt_caching": true,
-        "supports_computer_use": false,
-        "cache_creation_input_token_cost": 3.75e-07,
-        "supports_system_messages": true,
-        "metadata": {
-            "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
-        },
-        "minimax/minimax-m2.5": {
-            "input_cost_per_token": 1.5e-07,
-            "output_cost_per_token": 9e-07,
-            "cache_read_input_token_cost": 3e-08,
-            "cache_creation_input_token_cost": 3.75e-07,
-            "litellm_provider": "openrouter",
-            "mode": "chat",
-            "supports_function_calling": true,
-            "supports_tool_choice": true,
-            "supports_prompt_caching": true,
-            "supports_reasoning": true,
-            "supports_system_messages": true,
-            "max_input_tokens": 196608,
-            "max_output_tokens": 196608,
-            "metadata": {
-                "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1..."
-            }
         }
     },
     "azure/gpt-5.4-nano": {
@@ -23565,8 +23568,6 @@
         "input_cost_per_token": 1.25e-06,
         "output_cost_per_token": 2.5e-06,
         "max_input_tokens": 1000000,
-        "mode": "chat",
-        "supports_vision": true,
         "metadata": {
             "notes": "Grok 4.3 is a reasoning model from xAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual..."
         },
@@ -23575,8 +23576,6 @@
             "input_cost_per_token": 1.25e-06,
             "output_cost_per_token": 2.5e-06,
             "max_input_tokens": 1000000,
-            "mode": "chat",
-            "supports_vision": true,
             "metadata": {
                 "notes": "Grok 4.3 is a reasoning model from xAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual..."
             },

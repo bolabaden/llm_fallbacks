@@ -11,7 +11,7 @@ cache:
   ttl: 600
   type: redis
 general_settings:
-  master_key: sk-25e70722cf3642678c62d2a88b0e97c6
+  master_key: sk-99286925b0934c82ab75a644fee1a5c3
   alerting:
   - slack
   - email
@@ -697,8 +697,6 @@ model_list:
     input_cost_per_token: 1.25e-06
     output_cost_per_token: 2.5e-06
     max_input_tokens: 1000000
-    mode: chat
-    supports_vision: true
     metadata: &id027
       notes: Grok 4.3 is a reasoning model from xAI. It accepts text and image inputs
         with text output, and is suited for agentic workflows, instruction-following
@@ -708,8 +706,6 @@ model_list:
       input_cost_per_token: 1.25e-06
       output_cost_per_token: 2.5e-06
       max_input_tokens: 1000000
-      mode: chat
-      supports_vision: true
       metadata: *id027
       litellm_provider: openrouter
 - model_name: ibm-granite/granite-4.1-8b
@@ -1236,14 +1232,14 @@ model_list:
     api_key: os.environ/OPENROUTER_API_KEY
     cache_creation_input_token_cost: 0.0
     cache_read_input_token_cost: 2.8e-09
-    input_cost_per_token: 8.9e-08
+    input_cost_per_token: 9.0e-08
     input_cost_per_token_cache_hit: 2.8e-09
     litellm_provider: openrouter
-    max_input_tokens: 1048576
-    max_output_tokens: 8192
+    max_input_tokens: 1000000
+    max_output_tokens: 65536
     max_tokens: 8192
     mode: chat
-    output_cost_per_token: 2.24e-07
+    output_cost_per_token: 1.8e-07
     source: https://api-docs.deepseek.com/quick_start/pricing
     supported_endpoints: &id052
     - /v1/chat/completions
@@ -1263,14 +1259,14 @@ model_list:
     deepseek/deepseek-v4-flash:
       cache_creation_input_token_cost: 0.0
       cache_read_input_token_cost: 2.8e-09
-      input_cost_per_token: 8.9e-08
+      input_cost_per_token: 9.0e-08
       input_cost_per_token_cache_hit: 2.8e-09
       litellm_provider: openrouter
-      max_input_tokens: 1048576
-      max_output_tokens: 8192
+      max_input_tokens: 1000000
+      max_output_tokens: 65536
       max_tokens: 8192
       mode: chat
-      output_cost_per_token: 2.24e-07
+      output_cost_per_token: 1.8e-07
       source: https://api-docs.deepseek.com/quick_start/pricing
       supported_endpoints: *id052
       supports_assistant_prefill: true
@@ -1851,8 +1847,8 @@ model_list:
     model: openai/minimax/minimax-m2.7
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 2.4e-07
-    output_cost_per_token: 9.6e-07
+    input_cost_per_token: 1.8e-07
+    output_cost_per_token: 7.2e-07
     max_input_tokens: 196608
     max_output_tokens: 196608
     metadata: &id079
@@ -1862,8 +1858,8 @@ model_list:
         multi-agent...
     litellm_provider: openrouter
     minimax/minimax-m2.7:
-      input_cost_per_token: 2.4e-07
-      output_cost_per_token: 9.6e-07
+      input_cost_per_token: 1.8e-07
+      output_cost_per_token: 7.2e-07
       max_input_tokens: 196608
       max_output_tokens: 196608
       metadata: *id079
@@ -1980,18 +1976,20 @@ model_list:
     model: openai/nvidia/nemotron-3-super-120b-a12b
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 9.0e-08
-    output_cost_per_token: 4.5e-07
+    input_cost_per_token: 8.5e-08
+    output_cost_per_token: 4.0e-07
     max_input_tokens: 262144
+    max_output_tokens: 16384
     metadata: &id085
       notes: NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating
         just 12B parameters for maximum compute efficiency and accuracy in complex
         multi-agent applications. Built on a hybrid Mamba-Transformer...
     litellm_provider: openrouter
     nvidia/nemotron-3-super-120b-a12b:
-      input_cost_per_token: 9.0e-08
-      output_cost_per_token: 4.5e-07
+      input_cost_per_token: 8.5e-08
+      output_cost_per_token: 4.0e-07
       max_input_tokens: 262144
+      max_output_tokens: 16384
       metadata: *id085
       litellm_provider: openrouter
 - model_name: bytedance-seed/seed-2.0-lite
@@ -2594,8 +2592,8 @@ model_list:
     model: openai/minimax/minimax-m2.5
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 1.5e-07
-    output_cost_per_token: 9.0e-07
+    input_cost_per_token: 1.2e-07
+    output_cost_per_token: 4.8e-07
     cache_read_input_token_cost: 3.0e-08
     litellm_provider: openrouter
     max_input_tokens: 196608
@@ -2616,8 +2614,8 @@ model_list:
         Trained in a diverse range of complex real-world digital working environments,
         M2.5 builds upon the coding expertise of M2.1...
     minimax/minimax-m2.5:
-      input_cost_per_token: 1.5e-07
-      output_cost_per_token: 9.0e-07
+      input_cost_per_token: 1.2e-07
+      output_cost_per_token: 4.8e-07
       cache_read_input_token_cost: 3.0e-08
       cache_creation_input_token_cost: 3.75e-07
       litellm_provider: openrouter
@@ -5133,13 +5131,13 @@ model_list:
     model: openai/gpt-oss-120b
     api_base: https://openrouter.ai/api/v1
     api_key: os.environ/OPENROUTER_API_KEY
-    input_cost_per_token: 3.9e-08
+    input_cost_per_token: 3.0e-08
     litellm_provider: openrouter
     max_input_tokens: 131072
-    max_output_tokens: 32768
+    max_output_tokens: 131072
     max_tokens: 32768
     mode: chat
-    output_cost_per_token: 1.8e-07
+    output_cost_per_token: 1.5e-07
     source: https://openrouter.ai/openai/gpt-oss-120b
     supports_function_calling: true
     supports_parallel_function_calling: true
@@ -5152,9 +5150,10 @@ model_list:
         production use cases. It activates 5.1B parameters per forward pass and is
         optimized...
     openai/gpt-oss-120b:
-      input_cost_per_token: 3.9e-08
-      output_cost_per_token: 1.8e-07
+      input_cost_per_token: 3.0e-08
+      output_cost_per_token: 1.5e-07
       max_input_tokens: 131072
+      max_output_tokens: 131072
       metadata: *id208
       litellm_provider: openrouter
 - model_name: openai/gpt-oss-20b:free
@@ -9074,6 +9073,7 @@ router_settings:
     - openrouter/google/lyria-3-clip-preview
     - openrouter/google/lyria-3-pro-preview
     - openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+    - vertex_ai-language-models/gemini-flash-experimental
     - openrouter/nvidia/nemotron-3-super-120b-a12b:free
     - openrouter/qwen/qwen3-coder:free
     - volcengine/glm-4-7-251222
@@ -9090,7 +9090,6 @@ router_settings:
     - openrouter/nvidia/nemotron-3-nano-30b-a3b:free
     - openrouter/nvidia/nemotron-nano-12b-v2-vl:free
     - lemonade/gpt-oss-120b-mxfp-gguf
-    - lemonade/gpt-oss-20b-mxfp4-gguf
   - ibm-granite/granite-4.1-8b:
     - openrouter/free
     - gemini/gemini-exp-1206
