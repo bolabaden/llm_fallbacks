@@ -78,7 +78,6 @@ google/lyria-3-clip-preview
 google/lyria-3-pro-preview
 nvidia/nemotron-3-super-120b-a12b:free
 nvidia/nemotron-3-ultra-550b-a55b:free
-openrouter/owl-alpha
 github_copilot/gpt-4o-2024-08-06
 meta_llama/llama-3.3-70b-instruct
 meta_llama/llama-3.3-8b-instruct
@@ -329,6 +328,7 @@ fal_ai/fal-ai/imagen4/preview/ultra
 fal_ai/fal-ai/nano-banana
 fal_ai/fal-ai/recraft/v3/text-to-image
 fal_ai/fal-ai/stable-diffusion-v35-medium
+fallback_generalizations
 firecrawl/search
 fireworks-ai-default
 fireworks_ai/accounts/fireworks/models/fireworks-asr-large
